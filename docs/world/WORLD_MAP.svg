@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1180" width="1600" height="1180">
+<rect width="1600" height="1180" fill="#111c18"/>
+<style>text{font-family:DejaVu Sans,Arial,sans-serif}.title{font-size:29px;font-weight:700;fill:#eae4cb}.meta{font-size:14px;fill:#9bb09f}.sector{font-size:16px;fill:#a7b8aa;opacity:.65}.legend{font-size:13px;fill:#dfebdb}.idx{font-size:14px;font-weight:700;fill:#c8ab79}.small{font-size:13px;fill:#c1d0bf}</style>
+<text x="48" y="50" class="title">WELESZA · MAPA DOLINY NIEMIRU / v0.2</text>
+<text x="49" y="82" class="meta">PROJEKT v0.2 · 12 SEKTORÓW · 28 MIEJSC · 30 TRAS · BEZ EKRANÓW ŁADOWANIA</text>
+<rect x="48" y="134" width="1056" height="792" fill="#26362c" stroke="#657e67" stroke-width="1"/>
+<ellipse cx="444" cy="270" rx="160" ry="125" fill="#89734d" opacity=".15"/>
+<ellipse cx="790" cy="570" rx="260" ry="235" fill="#607750" opacity=".12"/>
+<ellipse cx="900" cy="745" rx="170" ry="150" fill="#6b6352" opacity=".1"/>
+<ellipse cx="444" cy="255" rx="110" ry="90" fill="none" stroke="#ad956c" stroke-width="3" stroke-dasharray="7 5"/>
+<rect x="46" y="135" width="264" height="264" fill="none" stroke="#8a9d90" stroke-opacity=".3" stroke-dasharray="5 6"/>
+<text x="58" y="155" class="sector">S00</text>
+<rect x="310" y="135" width="264" height="264" fill="none" stroke="#8a9d90" stroke-opacity=".3" stroke-dasharray="5 6"/>
+<text x="322" y="155" class="sector">S01</text>
+<rect x="574" y="135" width="264" height="264" fill="none" stroke="#8a9d90" stroke-opacity=".3" stroke-dasharray="5 6"/>
+<text x="586" y="155" class="sector">S02</text>
+<rect x="838" y="135" width="264" height="264" fill="none" stroke="#8a9d90" stroke-opacity=".3" stroke-dasharray="5 6"/>
+<text x="850" y="155" class="sector">S03</text>
+<rect x="46" y="399" width="264" height="264" fill="none" stroke="#8a9d90" stroke-opacity=".3" stroke-dasharray="5 6"/>
+<text x="58" y="419" class="sector">S10</text>
+<rect x="310" y="399" width="264" height="264" fill="none" stroke="#8a9d90" stroke-opacity=".3" stroke-dasharray="5 6"/>
+<text x="322" y="419" class="sector">S11</text>
+<rect x="574" y="399" width="264" height="264" fill="none" stroke="#8a9d90" stroke-opacity=".3" stroke-dasharray="5 6"/>
+<text x="586" y="419" class="sector">S12</text>
+<rect x="838" y="399" width="264" height="264" fill="none" stroke="#8a9d90" stroke-opacity=".3" stroke-dasharray="5 6"/>
+<text x="850" y="419" class="sector">S13</text>
+<rect x="46" y="663" width="264" height="264" fill="none" stroke="#8a9d90" stroke-opacity=".3" stroke-dasharray="5 6"/>
+<text x="58" y="683" class="sector">S20</text>
+<rect x="310" y="663" width="264" height="264" fill="none" stroke="#8a9d90" stroke-opacity=".3" stroke-dasharray="5 6"/>
+<text x="322" y="683" class="sector">S21</text>
+<rect x="574" y="663" width="264" height="264" fill="none" stroke="#8a9d90" stroke-opacity=".3" stroke-dasharray="5 6"/>
+<text x="586" y="683" class="sector">S22</text>
+<rect x="838" y="663" width="264" height="264" fill="none" stroke="#8a9d90" stroke-opacity=".3" stroke-dasharray="5 6"/>
+<text x="850" y="683" class="sector">S23</text>
+<path d="M442.0,240.6 L442.0,179.0" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M442.0,240.6 L442.0,179.0" fill="none" stroke="#c9b28c" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M442.0,240.6 L503.6,192.2" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M442.0,240.6 L503.6,192.2" fill="none" stroke="#c9b28c" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M442.0,240.6 L371.6,187.8" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M442.0,240.6 L371.6,187.8" fill="none" stroke="#c9b28c" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M442.0,240.6 L380.4,258.2" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M442.0,240.6 L380.4,258.2" fill="none" stroke="#c9b28c" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M442.0,240.6 L521.2,280.2" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M442.0,240.6 L521.2,280.2" fill="none" stroke="#c9b28c" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M521.2,280.2 L477.2,315.4" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M521.2,280.2 L477.2,315.4" fill="none" stroke="#c9b28c" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M442.0,240.6 L446.4,284.6 L442.0,341.8" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M442.0,240.6 L446.4,284.6 L442.0,341.8" fill="none" stroke="#c9b28c" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M442.0,341.8 L477.2,315.4" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M442.0,341.8 L477.2,315.4" fill="none" stroke="#c9b28c" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M442.0,341.8 L446.4,390.2 L442.0,429.8" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M442.0,341.8 L446.4,390.2 L442.0,429.8" fill="none" stroke="#cfc8ab" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M442.0,429.8 L384.8,460.6 L340.8,495.8 L292.4,509.0" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M442.0,429.8 L384.8,460.6 L340.8,495.8 L292.4,509.0" fill="none" stroke="#cfc8ab" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M292.4,509.0 L226.4,517.8 L156.0,548.6" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M292.4,509.0 L226.4,517.8 L156.0,548.6" fill="none" stroke="#cfc8ab" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M292.4,509.0 L257.2,535.4 L261.6,575.0 L283.6,597.0" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M292.4,509.0 L257.2,535.4 L261.6,575.0 L283.6,597.0" fill="none" stroke="#94b496" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M283.6,597.0 L336.4,588.2 L349.6,544.2 L292.4,509.0" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M283.6,597.0 L336.4,588.2 L349.6,544.2 L292.4,509.0" fill="none" stroke="#94b496" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M442.0,429.8 L398.0,495.8 L393.6,570.6" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M442.0,429.8 L398.0,495.8 L393.6,570.6" fill="none" stroke="#869b88" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M442.0,429.8 L516.8,487.0 L600.4,548.6" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M442.0,429.8 L516.8,487.0 L600.4,548.6" fill="none" stroke="#cfc8ab" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M600.4,548.6 L574.0,592.6 L547.6,632.2" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M600.4,548.6 L574.0,592.6 L547.6,632.2" fill="none" stroke="#b2ba8b" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M600.4,548.6 L631.2,605.8 L701.6,641.0" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M600.4,548.6 L631.2,605.8 L701.6,641.0" fill="none" stroke="#b2ba8b" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M600.4,548.6 L662.0,539.8 L710.4,544.2" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M600.4,548.6 L662.0,539.8 L710.4,544.2" fill="none" stroke="#b2ba8b" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M600.4,548.6 L521.2,614.6 L450.8,707.0" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M600.4,548.6 L521.2,614.6 L450.8,707.0" fill="none" stroke="#869b88" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M600.4,548.6 L662.0,627.8 L723.6,698.2" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M600.4,548.6 L662.0,627.8 L723.6,698.2" fill="none" stroke="#869b88" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M723.6,698.2 L750.0,751.0 L794.0,795.0" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M723.6,698.2 L750.0,751.0 L794.0,795.0" fill="none" stroke="#869b88" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M600.4,548.6 L679.6,500.2 L767.6,456.2" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M600.4,548.6 L679.6,500.2 L767.6,456.2" fill="none" stroke="#cfc8ab" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M767.6,456.2 L802.8,495.8" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M767.6,456.2 L802.8,495.8" fill="none" stroke="#869b88" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M767.6,456.2 L776.4,399.0 L811.6,377.0" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M767.6,456.2 L776.4,399.0 L811.6,377.0" fill="none" stroke="#869b88" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M767.6,456.2 L824.8,443.0 L895.2,478.2" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M767.6,456.2 L824.8,443.0 L895.2,478.2" fill="none" stroke="#cfc8ab" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M895.2,478.2 L926.0,491.4 L939.2,517.8" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M895.2,478.2 L926.0,491.4 L939.2,517.8" fill="none" stroke="#ab9ac4" stroke-width="3.2" stroke-dasharray="7 7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M767.6,456.2 L741.2,377.0 L618.0,385.8 L516.8,390.2 L442.0,429.8" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M767.6,456.2 L741.2,377.0 L618.0,385.8 L516.8,390.2 L442.0,429.8" fill="none" stroke="#c9ae72" stroke-width="3.2" stroke-dasharray="7 7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M600.4,548.6 L688.4,583.8 L750.0,592.6 L829.2,579.4" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M600.4,548.6 L688.4,583.8 L750.0,592.6 L829.2,579.4" fill="none" stroke="#d59c72" stroke-width="3.2" stroke-dasharray="7 7" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M829.2,579.4 L908.4,588.2 L983.2,623.4" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M829.2,579.4 L908.4,588.2 L983.2,623.4" fill="none" stroke="#d9ad8d" stroke-width="3.2"  stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M983.2,623.4 L1018.4,614.6 L1044.8,592.6" fill="none" stroke="#111a15" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M983.2,623.4 L1018.4,614.6 L1044.8,592.6" fill="none" stroke="#d59c72" stroke-width="3.2" stroke-dasharray="7 7" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="442.0" cy="179.0" r="13.5" fill="#afd5be" stroke="#111a15" stroke-width="2"/>
+<text x="442.0" y="183.2" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">1</text>
+<circle cx="503.6" cy="192.2" r="13.5" fill="#c2baa0" stroke="#111a15" stroke-width="2"/>
+<text x="503.6" y="196.4" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">2</text>
+<circle cx="371.6" cy="187.8" r="13.5" fill="#c2baa0" stroke="#111a15" stroke-width="2"/>
+<text x="371.6" y="192.0" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">3</text>
+<circle cx="380.4" cy="258.2" r="13.5" fill="#c2baa0" stroke="#111a15" stroke-width="2"/>
+<text x="380.4" y="262.4" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">4</text>
+<circle cx="442.0" cy="240.6" r="13.5" fill="#d6be85" stroke="#111a15" stroke-width="2"/>
+<text x="442.0" y="244.8" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">5</text>
+<circle cx="521.2" cy="280.2" r="13.5" fill="#c2baa0" stroke="#111a15" stroke-width="2"/>
+<text x="521.2" y="284.4" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">6</text>
+<circle cx="477.2" cy="315.4" r="13.5" fill="#c2baa0" stroke="#111a15" stroke-width="2"/>
+<text x="477.2" y="319.6" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">7</text>
+<circle cx="442.0" cy="341.8" r="13.5" fill="#d6be85" stroke="#111a15" stroke-width="2"/>
+<text x="442.0" y="346.0" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">8</text>
+<circle cx="442.0" cy="429.8" r="13.5" fill="#d6be85" stroke="#111a15" stroke-width="2"/>
+<text x="442.0" y="434.0" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">9</text>
+<circle cx="292.4" cy="509.0" r="13.5" fill="#c2baa0" stroke="#111a15" stroke-width="2"/>
+<text x="292.4" y="513.2" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">10</text>
+<circle cx="156.0" cy="548.6" r="13.5" fill="#c2baa0" stroke="#111a15" stroke-width="2"/>
+<text x="156.0" y="552.8" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">11</text>
+<circle cx="283.6" cy="597.0" r="13.5" fill="#c2baa0" stroke="#111a15" stroke-width="2"/>
+<text x="283.6" y="601.2" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">12</text>
+<circle cx="393.6" cy="570.6" r="13.5" fill="#c2baa0" stroke="#111a15" stroke-width="2"/>
+<text x="393.6" y="574.8" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">13</text>
+<circle cx="600.4" cy="548.6" r="13.5" fill="#d6be85" stroke="#111a15" stroke-width="2"/>
+<text x="600.4" y="552.8" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">14</text>
+<circle cx="547.6" cy="632.2" r="13.5" fill="#d6be85" stroke="#111a15" stroke-width="2"/>
+<text x="547.6" y="636.4" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">15</text>
+<circle cx="701.6" cy="641.0" r="13.5" fill="#d6be85" stroke="#111a15" stroke-width="2"/>
+<text x="701.6" y="645.2" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">16</text>
+<circle cx="710.4" cy="544.2" r="13.5" fill="#d6be85" stroke="#111a15" stroke-width="2"/>
+<text x="710.4" y="548.4" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">17</text>
+<circle cx="450.8" cy="707.0" r="13.5" fill="#c2baa0" stroke="#111a15" stroke-width="2"/>
+<text x="450.8" y="711.2" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">18</text>
+<circle cx="723.6" cy="698.2" r="13.5" fill="#c2baa0" stroke="#111a15" stroke-width="2"/>
+<text x="723.6" y="702.4" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">19</text>
+<circle cx="794.0" cy="795.0" r="13.5" fill="#dca17f" stroke="#111a15" stroke-width="2"/>
+<text x="794.0" y="799.2" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">20</text>
+<circle cx="767.6" cy="456.2" r="13.5" fill="#c2baa0" stroke="#111a15" stroke-width="2"/>
+<text x="767.6" y="460.4" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">21</text>
+<circle cx="802.8" cy="495.8" r="13.5" fill="#c2baa0" stroke="#111a15" stroke-width="2"/>
+<text x="802.8" y="500.0" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">22</text>
+<circle cx="811.6" cy="377.0" r="13.5" fill="#c2baa0" stroke="#111a15" stroke-width="2"/>
+<text x="811.6" y="381.2" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">23</text>
+<circle cx="895.2" cy="478.2" r="13.5" fill="#dca17f" stroke="#111a15" stroke-width="2"/>
+<text x="895.2" y="482.4" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">24</text>
+<circle cx="939.2" cy="517.8" r="13.5" fill="#c2baa0" stroke="#111a15" stroke-width="2"/>
+<text x="939.2" y="522.0" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">25</text>
+<circle cx="829.2" cy="579.4" r="13.5" fill="#c2baa0" stroke="#111a15" stroke-width="2"/>
+<text x="829.2" y="583.6" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">26</text>
+<circle cx="983.2" cy="623.4" r="13.5" fill="#dca17f" stroke="#111a15" stroke-width="2"/>
+<text x="983.2" y="627.6" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">27</text>
+<circle cx="1044.8" cy="592.6" r="13.5" fill="#afd5be" stroke="#111a15" stroke-width="2"/>
+<text x="1044.8" y="596.8" font-size="11" font-weight="bold" fill="#17221c" text-anchor="middle">28</text>
+<text x="1155" y="146" font-size="18" font-weight="bold" fill="#efe8ce">LEGENDA MIEJSC</text>
+<text x="1155" y="171" class="idx">01</text><text x="1186" y="171" class="legend">Źródło w skale</text>
+<text x="1155" y="200" class="idx">02</text><text x="1186" y="200" class="legend">Strażnica Niemiru</text>
+<text x="1155" y="229" class="idx">03</text><text x="1186" y="229" class="legend">Domy przy palisadzie</text>
+<text x="1155" y="258" class="idx">04</text><text x="1186" y="258" class="legend">Dom gościnny</text>
+<text x="1155" y="287" class="idx">05</text><text x="1186" y="287" class="legend">Plac Niemiru</text>
+<text x="1155" y="316" class="idx">06</text><text x="1186" y="316" class="legend">Kuźnia i zielarka</text>
+<text x="1155" y="345" class="idx">07</text><text x="1186" y="345" class="legend">Dziedziniec ćwiczeń</text>
+<text x="1155" y="374" class="idx">08</text><text x="1186" y="374" class="legend">Brama Niemiru</text>
+<text x="1155" y="403" class="idx">09</text><text x="1186" y="403" class="legend">Rozstaj pod pochylonym drzewem</text>
+<text x="1155" y="432" class="idx">10</text><text x="1186" y="432" class="legend">Porzucony wóz</text>
+<text x="1155" y="461" class="idx">11</text><text x="1186" y="461" class="legend">Brzeg i zerwany most</text>
+<text x="1155" y="490" class="idx">12</text><text x="1186" y="490" class="legend">Oznaczone drzewo</text>
+<text x="1155" y="519" class="idx">13</text><text x="1186" y="519" class="legend">Cmentarne miejsce / buty</text>
+<text x="1155" y="548" class="idx">14</text><text x="1186" y="548" class="legend">Węzeł kamiennych dróg</text>
+<text x="1155" y="577" class="idx">15</text><text x="1186" y="577" class="legend">Słup cały</text>
+<text x="1155" y="606" class="idx">16</text><text x="1186" y="606" class="legend">Słup powalony</text>
+<text x="1155" y="635" class="idx">17</text><text x="1186" y="635" class="legend">Słup rozbity</text>
+<text x="1155" y="664" class="idx">18</text><text x="1186" y="664" class="legend">Polana z pieśnią</text>
+<text x="1155" y="693" class="idx">19</text><text x="1186" y="693" class="legend">Ślady sideł</text>
+<text x="1155" y="722" class="idx">20</text><text x="1186" y="722" class="legend">Jama Zbieracza</text>
+<text x="1155" y="751" class="idx">21</text><text x="1186" y="751" class="legend">Obóz węglarzy</text>
+<text x="1155" y="780" class="idx">22</text><text x="1186" y="780" class="legend">Narzędzia pod korą</text>
+<text x="1155" y="809" class="idx">23</text><text x="1186" y="809" class="legend">Leśne schronienie</text>
+<text x="1155" y="838" class="idx">24</text><text x="1186" y="838" class="legend">Leśna strażnica / Dźwigacz</text>
+<text x="1155" y="867" class="idx">25</text><text x="1186" y="867" class="legend">Komora korzeni i latarni</text>
+<text x="1155" y="896" class="idx">26</text><text x="1186" y="896" class="legend">Odsłonięty dawny trakt</text>
+<text x="1155" y="925" class="idx">27</text><text x="1186" y="925" class="legend">Arena Stróża</text>
+<text x="1155" y="954" class="idx">28</text><text x="1186" y="954" class="legend">Suchy szlak (granica demo)</text>
+<text x="1154" y="1043" class="small">Pełna lista połączeń:</text>
+<text x="1154" y="1066" class="small">world-layout.v0.2.json</text>
+<text x="46" y="984" class="meta">Sektory S00–S23 są podziałem PROJEKTOWYM; nie wymuszają scen ani streamingu.</text>
+<text x="46" y="1012" class="meta">Współrzędne i skala są ROBOCZE. To mapa opisanego DEMO, nie nieznanych przyszłych krain.</text>
+<text x="46" y="1040" class="meta">Drogi kreskowane: bramki fabularne (mechanizm otwarty). Pętla: wariant A na rysunku, B — do decyzji autora.</text>
+
+<!-- Kotwice do kontroli sektorów; nie przesuwają geometrii miejsc. -->
+<g aria-label="owner-sector S11" opacity=".96"><rect x="560.6" y="604.2" rx="4" width="42" height="17" fill="#0c241d" stroke="#f4d28e" stroke-width="1"/><text x="566.6" y="616.2" font-family="DejaVu Sans" font-weight="700" font-size="12" fill="#ffe0a0">S11</text></g>
+<g aria-label="owner-sector S12" opacity=".96"><rect x="714.6" y="613.0" rx="4" width="42" height="17" fill="#0c241d" stroke="#f4d28e" stroke-width="1"/><text x="720.6" y="625.0" font-family="DejaVu Sans" font-weight="700" font-size="12" fill="#ffe0a0">S12</text></g>
+<g aria-label="owner-sector S12" opacity=".96"><rect x="723.4" y="516.2" rx="4" width="42" height="17" fill="#0c241d" stroke="#f4d28e" stroke-width="1"/><text x="729.4" y="528.2" font-family="DejaVu Sans" font-weight="700" font-size="12" fill="#ffe0a0">S12</text></g>
+<g aria-label="owner-sector S13" opacity=".96"><rect x="1057.8" y="564.6" rx="4" width="42" height="17" fill="#0c241d" stroke="#f4d28e" stroke-width="1"/><text x="1063.8" y="576.6" font-family="DejaVu Sans" font-weight="700" font-size="12" fill="#ffe0a0">S13</text></g>
+</svg>
