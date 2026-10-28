@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="PackedScene" path="res://actors/enemies/enemy.tscn" id="1"]
+[ext_resource type="Script" path="res://actors/enemies/zdziczaly-pies/dog.gd" id="2"]
+[ext_resource type="Script" path="res://core/combat/attack_profile.gd" id="3"]
+
+[sub_resource type="Resource" id="1"]
+script = ExtResource("3")
+damage = 14.0
+parryable = false
+guard_cost = 20.0
+cost = 10.0
+lunge_distance = 200.0
+lunge_duration = 0.2
+recovery = 0.2
+miss_recovery = 1.2
+
+[sub_resource type="Resource" id="2"]
+script = ExtResource("3")
+damage = 8.0
+parryable = false
+guard_cost = 12.0
+cost = 6.0
+recovery = 0.3
+miss_recovery = 0.4
+
+[node name="ZdziczalyPies" instance=ExtResource("1")]
+script = ExtResource("2")
+walk_speed = 150.0
+aggro_radius = 380.0
+leash_radius = 700.0
+leap = SubResource("1")
+bite = SubResource("2")
+
+[node name="Combat" parent="." index="4"]
+max_health = 40.0
+hit_reach = 50.0

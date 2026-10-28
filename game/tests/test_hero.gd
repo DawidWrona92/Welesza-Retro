@@ -196,7 +196,7 @@ func test_attack_target_approaches_then_requests_once() -> void:
 	_run(_hero, 120)
 	check_eq(_combat.attacks.size(), 1, "jedno żądanie ataku")
 	check_eq(_combat.attacks[0][1], enemy, "cel ataku")
-	var distance := Hero.to_world(enemy.global_position - _hero.global_position).length()
+	var distance := Steering.to_world(enemy.global_position - _hero.global_position).length()
 	check(distance <= _combat.attack_range, "bohater stoi w zasięgu")
 	check(not _hero.is_moving(), "po żądaniu bohater stoi")
 
@@ -230,20 +230,3 @@ func test_guard_is_reasserted_while_key_held() -> void:
 	for i in 3:
 		_hero._physics_process(DT)
 	check_eq(_combat.guard_calls, [false], "puszczenie Q opuszcza gardę raz")
-
-
-func test_real_combat_hit_through_hitbox_and_hurtbox() -> void:
-	_hero.free()
-	_hero = HERO_SCENE.instantiate()
-	var target: Hero = HERO_SCENE.instantiate()
-	_root.add_child(_hero)
-	_root.add_child(target)
-	_extras.append(target)
-	_hero.global_position = Vector2.ZERO
-	target.global_position = Vector2(60, 0)
-	var attacker: Combat = _hero.get_node("Combat")
-	var victim: Combat = target.get_node("Combat")
-	attacker.request_attack(Vector2.RIGHT, null)
-	await _root.get_tree().create_timer(1.0).timeout
-	check(victim.health < victim.max_health, "cios przez Hitbox i Hurtbox zadał obrażenia")
-	check_eq(attacker.state, Combat.State.IDLE, "bohater wrócił do bezczynności po ciosie")

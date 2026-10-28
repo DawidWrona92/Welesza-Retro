@@ -34,7 +34,8 @@ texture={
 2d_physics/layer_1="world"
 2d_physics/layer_2="hero"
 2d_physics/layer_3="enemies"
-2d_physics/layer_4="hurtbox"
+2d_physics/layer_4="hero_hurtbox"
+2d_physics/layer_5="enemy_hurtbox"
 
 [rendering]
 
