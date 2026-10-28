@@ -36,6 +36,12 @@ Magia jest rzadka, otoczona strachem i tajemnicą. Kontrolują ją:
 
 Magia zostawia ślady materialne: oszronione okno w środku lata, sen psa, który nie śpi, pęknięty dzban. Cena magii to strach, plotka, dystans, proces albo wygnanie — nie punkty. Magia miesza się z rzemiosłem, medycyną i dogmatem jak alchemia w realnym średniowieczu; ścisłą granicę zna tylko krąg czarodziejów, i to jest ich jedyna tajemnica.
 
+### Magia gracza (decyzje autora)
+
+- **Demo:** bohater nie rzuca zaklęć. Używa magicznych przedmiotów o ograniczonej liczbie użyć, które trzeba naładować; ewentualnie umiejętności obdarowane przez bogów. Zasada: **używa, nie rozumie** — przedmiot działa, nikt nie wyjaśni dlaczego.
+- **Pełna gra:** gracz otrzymuje dostęp do magii (zakres i forma do ustalenia przy projektowaniu rozwoju postaci).
+- Interwencje boskie mogą zdarzać się w scenariuszach jako **jednorazowe i niewyjaśnialne** (wzorzec: Melisandre z „Gry o Tron”). Przykład: gracz pada po dwóch ciosach bossa, woła bogów o pomoc — i ma w dłoniach płonący miecz; po starciu wszystko znika. Który bóg to sprawił, stary czy nowy, a może tylko cudza magia — nikt się nie dowie, także twórcy. Tak samo wskrzeszenia i inne cuda: są, ale skąd — pytanie otwarte dla wszystkich.
+
 ## Imperium
 
 Na kontynencie istniało dawnie imperium. Zniknęło; kiedy i dlaczego — nie ustalamy (wymiar tajemnic wyżej). Jedyne twarde świadectwo to architektura, wszędzie: fundamenty, słupy, drogi, piece, kominy, pod późniejszymi osadami.
@@ -52,7 +58,7 @@ Ludzie nie wiedzą, że to „imperium”. Znają „stare kamienie” i „drog
 
 ## Religie i wiara
 
-Religia jest realnym zjawiskiem społecznym; jej skuteczność nadprzyrodzona pozostaje nieprzeweryfikowana. To był cud czy przypadek, kto jest świętym a kto nie — nikt nie rozstrzygnie. Jedni znają dogmaty lepiej; w sąsiedniej wiosce robią to „inaczej” i obie strony uważają się za pobożne.
+Religia jest realnym zjawiskiem społecznym. W świecie istnieją religie, chramy i kilku bogów — **w różnych miejscach różni bogowie**; nie ma jednego panteonu dla całej krainy. „Co jest na górze” pozostaje pytaniem otwartym dla wszystkich, także dla twórców. To był cud czy przypadek, kto jest świętym a kto nie — nikt nie rozstrzygnie. Jedni znają dogmaty lepiej; w sąsiedniej wiosce czczą innego boga albo tego samego inaczej i obie strony uważają się za pobożne.
 
 **Zachód:** wiara ustrukturyzowana (hierarchia, dogmat, pismo, odruchy inkwizycyjne wobec nieznanej magii). Wygląda pewnie, bo pewność jest jej produktem. Kapłan wie, że jego obrzęd działa i że sąsiedni jest zabobonem — czy to wiedza, czy buta, gracz się nie dowie. Funkcja: realnie naucza, leczy, spisuje — i realnie przeszkadza.
 
