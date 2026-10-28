@@ -87,7 +87,7 @@ Trzy kamienne słupy w dowolnej kolejności. Nie wymagamy zabicia każdego napot
 
 ## 8. Otwarte kwestie przed detalowaniem geometrii
 
-1. Czy docelowa kamera pozostaje stała w jednym kierunku, czy dopuszczamy obrót? Od tego zależy czytelność bram i budynków.
+1. Kamera: stała izometria 2:1 bez obrotu ([SILNIK.md](../SILNIK.md)).
 2. Silnik: Godot 4, gra 2D ([decyzja warunkowa](../SILNIK.md)). Reprezentacja podłoża i fizyki — otwarte.
 3. Wymiary świata — dopiero po ustaleniu D, B, U, A, V w walce.
 4. Wymagana „niemożliwość” pętli: rysunek zachowuje **wariant A jako makietę**; **wariant B** może zmieniać relacje przestrzenne bez widocznego ekranu ładowania. Ostateczna decyzja autora jest otwarta: [porównanie](VARIANTS.md).

@@ -1,6 +1,6 @@
 # Walka
 
-Status: decyzje autora oraz oznaczone propozycje pakietu 01 do walidacji. Wartości liczbowe są robocze; nie przeprowadzono testów gry ani balansu.
+Status: część I to ustalenia autora, część II to pakiet 01 do walidacji.
 Powiązania: [mechaniki](mechaniki.md), [przeciwnicy](przeciwnicy.md).
 
 ## Część I — ustalenia autora i zatwierdzony kierunek
@@ -10,13 +10,12 @@ Powiązania: [mechaniki](mechaniki.md), [przeciwnicy](przeciwnicy.md).
 - LPM odpowiada za chodzenie i atak. PPM uruchamia umiejętność.
 - Atak wymaga kliknięcia; przytrzymanie nie uruchamia ciągłego atakowania.
 - Unik i parada mogą przerwać rozpoczęty atak. Autor chce świadomej decyzji między kontynuacją wiązanki a obroną; nie blokujemy przerwania po rozpoczęciu zamachu.
-- Dalsze propozycje przedstawiamy większymi pakietami do walidacji, zamiast pytać osobno o każdą regułę.
 - Unik: osobny klawisz, odskok w kierunku kursora, zgodnie z zaakceptowaną rekomendacją.
 - Parada: osobny klawisz; przytrzymanie utrzymuje gardę, a dobre wyczucie momentu daje dodatkowy efekt. Rodzaj efektu, okno czasowe i koszt gardy pozostają otwarte.
 - Przeciw potworom i zwierzętom używamy uniku; przeciw ludziom walczącym bronią i podobnym uzbrojonym wrogom, np. szkieletom lub zombie, dostępne są unik i parada.
 - Bezładne klikanie daje podstawowy atak. Kliknięcia w rytm uruchamiają wiązankę ciosów, z większymi obrażeniami kolejnych uderzeń.
 - Rozwój umiejętności zwiększa maksymalną długość łańcucha i jego premie. Inspiracją są Gothic oraz Wiedźmin 1. Nie ustalono osobnego katalogu wielu rodzajów kombinacji.
-- Trafienia dystansowe wynikają z lotu pocisku i sytuacji w świecie, bez losowego testu pudła. Umiejętności wpływają na możliwości bohatera, pancerz na skutek trafienia; szczegóły przedstawiono w pakiecie do walidacji.
+- Trafienia dystansowe wynikają z lotu pocisku i sytuacji w świecie, bez losowego testu pudła. Umiejętności wpływają na możliwości bohatera, pancerz na skutek trafienia; szczegóły w części II.
 
 ### Rozwój wiązanki — robocze wartości autora
 
@@ -54,7 +53,7 @@ Takie podejście pozwala uczyć się rytmu i pozycji. Widoczny kontakt broni z n
 
 Autor zaakceptował deterministyczny lot pocisku: kierunek celowania, dystans, ruch celu i przeszkody rozstrzygają kontakt. Sposób wskazania punktu celowania, ewentualne wspomaganie oraz rola umiejętności łuczniczych wymagają ustalenia.
 
-Umiejętność bohatera może wpływać na czas przygotowania strzału, przeładowanie albo dostępne techniki zamiast na losową szansę chybienia. To propozycje, nie zatwierdzone parametry. Nie przyjmujemy automatycznie pocisków naprowadzanych ani trafienia gwarantowanego kliknięciem przeciwnika.
+Umiejętność bohatera może wpływać na czas przygotowania strzału, przeładowanie albo dostępne techniki zamiast na losową szansę chybienia. Nie przyjmujemy automatycznie pocisków naprowadzanych ani trafienia gwarantowanego kliknięciem przeciwnika.
 
 Pancerz uwzględniamy na etapie skutku trafienia: redukcji obrażeń lub przebicia, a nie celności. Konkretnego modelu przebicia nie zatwierdzono. Nie ustalono również celowania w części ciała ani osobnego trybu przytrzymania do celowania.
 
@@ -62,13 +61,11 @@ Pancerz uwzględniamy na etapie skutku trafienia: redukcji obrażeń lub przebic
 
 - Moment na następny cios powinien wynikać z animacji i mieć czytelny sygnał; opcjonalne wsparcie wizualne wymaga omówienia.
 - Cios ma własny czas wykonania. Kolejne kliknięcia nie przyspieszają go i nie tworzą nieograniczonej kolejki ataków.
-- Samo znalezienie pojedynczego kliknięcia w oknie rytmu jest niewystarczające: spam zawsze mógłby przypadkiem w nie trafić. Proponuję, aby przedwczesne kliknięcie zużywało próbę przejścia do następnego ogniwa, pozostawiając możliwość zwykłego ataku po zakończeniu bieżącego. Ta reguła wymaga testu wygody i akceptacji autora.
+- Samo znalezienie pojedynczego kliknięcia w oknie rytmu jest niewystarczające: spam zawsze mógłby przypadkiem w nie trafić. Proponuję, aby przedwczesne kliknięcie zużywało próbę przejścia do następnego ogniwa, pozostawiając możliwość zwykłego ataku po zakończeniu bieżącego. Reguła wymaga testu wygody.
 - Dokończenie wiązanki konkuruje z obroną. Unik i parada przerywają rozpoczęty atak; sposób rozliczania kosztu i resetu łańcucha jest proponowany w pakiecie 01.
 - Trzeba rozstrzygnąć, czy pudło, parada przeciwnika, unik gracza lub zmiana celu resetują wiązankę. Nie przyjmujemy domyślnej reguły.
 
 ### Szczegóły objęte pakietem do walidacji
-
-Poniższe kwestie rozstrzygamy łącznie na podstawie propozycji 01, nie jako serię pojedynczych pytań.
 
 1. Do czego odnosi się „+5% obrażeń na poziom” na stopniu II: poziomu bohatera, stopnia umiejętności czy kolejnych zakupów szkolenia? Czy obejmuje każdy cios?
 2. Jaki dodatkowy efekt daje dobrze wyczuta parada? Jakie ataki zatrzymuje zwykła garda i jaki ma koszt?
@@ -85,8 +82,6 @@ Poniższe kwestie rozstrzygamy łącznie na podstawie propozycji 01, nie jako se
 - Cios poza zasięgiem, cios w unikającego wroga, cios sparowany i cios w pancerz: różne wyniki powinny dać się odróżnić bez czytania logu.
 - Strzał z różnych dystansów do nieruchomego i poruszającego się celu: umiejętność oraz warunki mają zrozumiały wpływ, pancerz nie powoduje magicznego znikania trafień.
 - Atak z dwóch stron: parada nie może przypadkowo chronić przed każdym zagrożeniem niezależnie od kierunku.
-
-To plan weryfikacji; żadnego z tych scenariuszy jeszcze nie wykonano.
 
 ## Część II — pakiet 01 do walidacji
 
@@ -126,13 +121,13 @@ Klawisze zmienialne. Logika akcji oddzielona od urządzenia wejścia, żeby pó�
 
 #### Wiązanki
 
-Propozycja: wiązanki dotyczą broni wręcz. Każda rodzina broni ma czytelny rytm wynikający z animacji, wspierany dźwiękiem i opcjonalnym wskaźnikiem. Broń dystansowa ma własny rytm przygotowania/przeładowania, bez przenoszenia czwartego ciosu na strzały.
+Wiązanki dotyczą broni wręcz. Każda rodzina broni ma czytelny rytm wynikający z animacji, wspierany dźwiękiem i opcjonalnym wskaźnikiem. Broń dystansowa ma własny rytm przygotowania/przeładowania, bez przenoszenia czwartego ciosu na strzały.
 
 Pierwszy klik rozpoczyna podstawowy cios. Kliknięcie w oknie następnego ogniwa przechodzi do dalszego ciosu. Przedwczesne kliknięcie zamyka możliwość przedłużenia tej wiązanki, ale nie zatrzymuje wykonywanego ataku. Kolejne kliknięcia nie przyspieszają animacji ani nie tworzą długiej kolejki. Wciąż można normalnie wykonać kolejny podstawowy atak po gotowości broni.
 
 Proponowane zakończenia wiązanki: własny unik lub garda, użycie PPM, chybienie, skuteczna obrona przeciwnika, otrzymanie trafienia przerywającego akcję albo przekroczenie okna rytmu. Sama zmiana celu nie resetuje łańcucha, jeśli kolejny cios jest poprawnie wykonany i trafia; ciosy w powietrze nie pozwalają przygotować finiszu poza walką.
 
-Stopnie umiejętności zachowują kierunek autora: I — do trzech ciosów; II — wzmocnienie obrażeń; III — czwarty cios z wyraźnie podwyższoną szansą krytyka. Dla II proponuję premię wynikającą z treningu danej broni, bez automatycznego skalowania z poziomem bohatera. Dla finiszu proponuję premię dodawaną do bazowej szansy krytyka, ograniczoną maksymalną dopuszczalną szansą. Wcześniejsze wartości autora pozostają robocze; żadnych nowych wartości balansu nie zatwierdzamy w tym pakiecie.
+Stopnie umiejętności zachowują kierunek autora: I — do trzech ciosów; II — wzmocnienie obrażeń; III — czwarty cios z wyraźnie podwyższoną szansą krytyka. Dla II proponuję premię wynikającą z treningu danej broni, bez automatycznego skalowania z poziomem bohatera. Dla finiszu proponuję premię dodawaną do bazowej szansy krytyka, ograniczoną maksymalną dopuszczalną szansą.
 
 ### B. Obrona, wytrzymałość i obrażenia
 
@@ -164,7 +159,7 @@ To zasób pojedynczego starcia. Nie zastępuje zapasów leczenia i amunicji zuż
 
 Kontakt → obrona → skutek trafienia. Krytyk jest losowym wzmocnieniem skutecznego trafienia; pancerz nadal działa. Czwarty cios zwiększa szansę krytyka, ale nie przebija automatycznie gardy ani nie trafia z dowolnej odległości.
 
-Propozycja: pancerz redukuje obrażenia według odporności na rodzaj ataku, a parametry przebicia broni zmniejszają tę redukcję. Nie wykonujemy osobnego rzutu na to, czy pancerz zadziała. Formuły, wartości i minimalne obrażenia powstaną w etapie balansu.
+Pancerz redukuje obrażenia według odporności na rodzaj ataku, a parametry przebicia broni zmniejszają tę redukcję. Nie wykonujemy osobnego rzutu na to, czy pancerz zadziała. Formuły, wartości i minimalne obrażenia powstaną w etapie balansu.
 
 ### C. Walka na dystans i zakres prototypu
 
@@ -174,7 +169,7 @@ Kliknięcie wroga wskazuje cel, ale strzał po wypuszczeniu nie śledzi go. Ctrl
 
 Przy broni dystansowej przycisk gardy odwołuje przygotowanie strzału, ale nie daje możliwości parowania łukiem lub kuszą. Po zmianie na broń wręcz można korzystać z gardy; zmiana broni ma własny czas i nie jest natychmiastowym blokiem. Unik jest główną obroną strzelca.
 
-Umiejętności skracają przygotowanie lub przeładowanie i odblokowują techniki. Nie decydują losowo, czy poprawnie wycelowany pocisk zniknie przed celem. Wskazanie celu, płaszczyzna celowania i kolizje wymagają próby w wybranej perspektywie kamery.
+Umiejętności skracają przygotowanie lub przeładowanie i odblokowują techniki. Nie decydują losowo, czy poprawnie wycelowany pocisk zniknie przed celem. Wskazanie celu, płaszczyzna celowania i kolizje wymagają próby w kamerze izometrycznej.
 
 Proponowany PPM do pierwszego prototypu wręcz: pchnięcie rozbijające zwykłą gardę przeciwnika. Jest czytelnie zapowiadane, kosztowniejsze od zwykłego ataku i daje słabszy rezultat przeciw niebroniącemu się celowi. Tworzy powód do użycia umiejętności inny niż jej ciągłe powtarzanie.
 
@@ -206,8 +201,6 @@ Pierwsza próba: broń jednoręczna, przeciwnik uzbrojony, zwierzę i przeszkody
 | PPM + zwykła garda celu | Rozbicie gardy; możliwość uniknięcia techniki. |
 
 ### Przegląd projektu według skilla
-
-To analiza, nie wyniki testów. Nie przyznajemy projektowi statusu zweryfikowanej gry.
 
 | Akcja | Przydatna sytuacja A / B | Gorszy wybór A / B |
 |---|---|---|

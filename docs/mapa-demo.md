@@ -1,6 +1,6 @@
 # Mapa demo — Niemir, las, początek gry i plac przy wozie (pakiet 04)
 
-Status: propozycja przestrzeni do walidacji, według level-designer i ux-onboarding. Nie zatwierdza automatycznie pakietów 01–03 ani nowych faktów o świecie. Pełna topologia doliny: [mapa świata v0.2](world/README.md).
+Status: propozycja (pakiet 04). Pełna topologia doliny: [mapa świata v0.2](world/README.md).
 Powiązania: [fabuła](fabula.md), [przeciwnicy](przeciwnicy.md), [mechaniki](mechaniki.md).
 
 ## Część I — Niemir, las i przebieg demo
@@ -52,7 +52,7 @@ Niemir jest punktem przygotowania, odpoczynku i rozliczenia. Drogę do finału o
 - **ZON-straznica-lesna:** zrujnowany obiekt przy dawnym trakcie; piec, Dźwigacz i komora przenośnej latarni. Ciężka, niska sylwetka przerwana zawalonym murem.
 - Arena Stróża znajduje się dalej przy tym samym kompleksie dawnych ruin, ale dochodzi się do niej odsłoniętą drogą między słupami. Nie ma dostępnej wcześniej szczeliny z komory do końca demo.
 
-To propozycja doprecyzowania topografii z pakietu 03. Nie ustanawiamy jeszcze wspólnego budowniczego ani daty powstania obiektów.
+Nie ustanawiamy jeszcze wspólnego budowniczego ani daty powstania obiektów.
 
 ### 4. Niemir — usługi, ludzie i orientacja
 
@@ -75,7 +75,7 @@ Pierwszy nocleg jest miejscem przy wspólnym ogniu na kredyt za odzyskanie pakun
 
 ### 5. Karty obszarów lasu
 
-Każdy obszar otrzymuje wymiary funkcjonalne, a nie niezweryfikowane metry. Zasady rozmiaru są w sekcji 8. Intensywność 1–5 jest roboczą oceną projektową, nie pomiarem trudności.
+Wymiary są funkcjonalne, nie w metrach. Zasady rozmiaru są w sekcji 8.
 
 | ID / miejsce | Cel, wejście i wyjścia | Narzędzia przestrzenne i slot spotkania | Prowadzenie / intensywność |
 |---|---|---|---|
@@ -131,7 +131,7 @@ Najpierw należy zmierzyć w prototypie: D — średnicę kolizji bohatera, B �
 - Walka musi mieścić czytelną zapowiedź w V. Kamera i odsłanianie koron drzew są częścią projektu, nie kosmetyką.
 - Głębokie urwiska są granicą terenu. Nie dodajemy skoku, wspinania ani obrażeń od upadku do wymagań pierwszej wyprawy.
 
-Warunki odbioru mają wykazać brak klinowania ruchu, dostępność obu obejść i widoczność zapowiedzi. Same założenia nie dowiodą tych warunków.
+Warunki odbioru mają wykazać brak klinowania ruchu, dostępność obu obejść i widoczność zapowiedzi.
 
 ### 9. Zakres pierwszego grywalnego fragmentu
 
@@ -155,7 +155,7 @@ Pierwsze zadanie jest zwyczajne — odzyskać rzeczy za nocleg — a nie wynikaj
 
 Sterowanie zaczyna się na krótkim odcinku drogi. Koń i porzucony wóz są widoczne z przodu, nie ukryte za lasem. Pierwszą satysfakcjonującą czynnością jest podejście i obejrzenie namacalnego śladu: butów ustawionych przy kole. Krótki opis pokazuje, że porządek nie pasuje do śladów szamotaniny. Nie jest to obowiązkowy tekst potrzebny do zadania.
 
-W tej wersji pierwszej wizyty na placu nie ma aktywnego starcia. Zagrożenie pozostaje poza światłem. Bohater nie zaczyna od walki, której nie ma jeszcze jak zrozumieć. Zmiana jest propozycją inscenizacji zgodną z fabułą: wóz zostaje odkryty przed Niemirem, wyprawa bojowa odbywa się dopiero następnego ranka.
+W tej wersji pierwszej wizyty na placu nie ma aktywnego starcia. Zagrożenie pozostaje poza światłem. Bohater nie zaczyna od walki, której nie ma jeszcze jak zrozumieć. Wóz zostaje odkryty przed Niemirem, wyprawa bojowa odbywa się dopiero następnego ranka.
 
 Gdy gracz odejdzie od wozu, między pniami widzi stały punkt światła i ślady prowadzące do bramy. Pozostałe krańce prologu są czytelną nieprzechodnią granicą terenu; nie rysujemy szerokiej, kuszącej drogi, której nie da się przejść bez uzasadnienia. Pełne badanie brzegu odbywa się rano.
 
@@ -173,7 +173,7 @@ Noc jest przejściem fabularnym, nie działającym zegarem świata. Nie projektu
 
 ### 3. Pierwsze dziesięć minut — roboczy szkic inscenizacji
 
-Podział poniżej to propozycja kolejności i budżetu uwagi, nie wynik pomiaru ani limit czasu. Gracz może rozmawiać i oglądać znacznie dłużej. Czasy trzeba sprawdzić na prototypie.
+Podział poniżej to kolejność i budżet uwagi, nie limit czasu. Gracz może rozmawiać i oglądać znacznie dłużej. Czasy trzeba sprawdzić na prototypie.
 
 | Odcinek orientacyjny | Działanie gracza | Jedna najważniejsza informacja |
 |---|---|---|
@@ -246,7 +246,7 @@ Po powrocie jest cisza i miejsce na krótką rozmowę, szkolenie, zakup albo zap
 - Dziennik: cel, ostatnia obserwacja i osoba do rozmowy. Powracający po przerwie gracz nie musi ponownie słuchać wszystkich dialogów.
 - Mapa lokalna, jeśli przyjęta: pokazuje odkryte miejsca i własne zapamiętane ślady; nie ujawnia układu całej Weleszy ani tajnej drogi przed latarnią.
 
-Dialogi w bezpiecznej osadzie mogą zatrzymywać rozgrywkę. Interakcja z pakunkiem w lesie nie zamraża wrogów; przy zagrożeniu odkłada pełny opis do dziennika. Menu pauzy w single player zatrzymuje grę. To propozycja pakietu, wymagająca walidacji wraz z resztą UX.
+Dialogi w bezpiecznej osadzie mogą zatrzymywać rozgrywkę. Interakcja z pakunkiem w lesie nie zamraża wrogów; przy zagrożeniu odkłada pełny opis do dziennika. Menu pauzy w single player zatrzymuje grę.
 
 ### 7. Pierwszy grywalny fragment — warunki odbioru
 
@@ -267,13 +267,13 @@ Warunki do sprawdzenia w silniku:
 - Pętla zachowuje stan wozu i przedmiotów oraz nie teleportuje aktywnej walki.
 - Odebranie nagrody nie zamyka pomocy treningowej ani podstawowych usług.
 
-Żadnego z tych testów nie wykonano jeszcze w silniku. Graf dostępności: [pierwsza wyprawa](graphs/layout-first-expedition.json).
+Graf dostępności: [pierwsza wyprawa](graphs/layout-first-expedition.json).
 
 ## Część III — plac przy wozie
 
-Propozycja układu i inscenizacji z 27 października 2026. Schemat pokazuje relacje i pozycje robocze, nie rzeczywiste rozmiary, kamerę ani kierunki geograficzne.
+Schemat pokazuje relacje, nie rzeczywiste rozmiary ani kierunki geograficzne.
 
-![Propozycja planu placu z góry](plac-przy-wozie.svg)
+![Plan placu z góry](plac-przy-wozie.svg)
 
 ### 1. Co jest ustalone, a co proponujemy
 
@@ -281,15 +281,15 @@ Propozycja układu i inscenizacji z 27 października 2026. Schemat pokazuje rela
 |---|---|---|
 | Trzy dni deszczu, błotnisty trakt, wóz, żywy koń, pakunki, ślady walki i buty ustawione równo | Fabuła zaakceptowana | [Fabuła demo](fabula.md) |
 | Dwa przejścia wokół wozu, rozstaj, brzeg i pętla | Propozycja projektowa | Mapa; do sprawdzenia w prototypie |
-| Pierwsza wizyta bez aktywnego starcia; rankiem Pies przy jedzeniu, Powrotnik dalej | Propozycja inscenizacji | Początek gry, do walidacji |
+| Pierwsza wizyta bez aktywnego starcia; rankiem Pies przy jedzeniu, Powrotnik dalej | Propozycja inscenizacji | Część II |
 | Brak widocznych ekranów ładowania podczas normalnego przemieszczania się | Cel autora | Nie ustala sposobu doczytywania ani zachowania przy uruchomieniu/wczytaniu zapisu |
 | Dokładne ustawienie konia, butów, pakunków i strefy Psa | Propozycja na rysunku | Dostosować do skali, odczytu i nawigacji; nie traktować jako kanonu |
 
 ### 2. Plan do makiety
 
 - Oś traktu łączy wejście prologu z placem i dalszą ścieżką do rozstaju oraz bramy. Schemat nie przedstawia dokładnej odległości od osady. W prologu gracza prowadzi punkt światła, nie obowiązkowa daleka panorama Niemiru.
-- Wóz zajmuje środek szerszego fragmentu traktu. Po obu bokach zaplanowano przejście od jednego końca wozu do drugiego. Zaznaczone linie są propozycją przebiegu, nie dowodem dostępności; dyszle, koń i rekwizyty muszą pozostawić obie trasy drożne.
-- Buty umieścić przy widocznym kole, pakunki i księgę w pobliżu wozu, ale osobno. Sprawdzić widoczność ze startowej pozycji; interakcja z butami jest opcjonalna. Ustalenie dokładnego miejsca pakunków jest robocze.
+- Wóz zajmuje środek szerszego fragmentu traktu. Po obu bokach zaplanowano przejście od jednego końca wozu do drugiego. Dyszle, koń i rekwizyty muszą pozostawić obie trasy drożne.
+- Buty umieścić przy widocznym kole, pakunki i księgę w pobliżu wozu, ale osobno. Sprawdzić widoczność ze startowej pozycji; interakcja z butami jest opcjonalna.
 - Koń jest żywy przy pierwszym spotkaniu. Jego stan przy powrocie, animacje i możliwość interakcji pozostają otwarte; nie zakładać ich. Zaprzęg i miejsce konia dopasować po sprawdzeniu konstrukcji.
 - Przy powrocie strefa Psa jest przy obrzeżu placu, przy jedzeniu; pozwala na czytelne podejście. Powrotnika umieścić dalej poza pierwszym wywołaniem; w schemacie go nie umieszczono. Walka z obydwoma nie jest obowiązkowym warunkiem odzyskania pakunków.
 - Odnogi do brzegu i na zapętlającą się ścieżkę są symboliczne. Ich ostateczne położenie, widoczność i granice w prologu wymagają projektu. Unikać szerokiej drogi, która wygląda na dostępną, a jest niewytłumaczalnie zablokowana.
@@ -315,14 +315,14 @@ W istniejącym projekcie pakunki i księga są przy wozie, nie w losowym łupie.
 | Buty | Oddzielny mały rekwizyt przy kole | Opcjonalny punkt interakcji, dostępny bez klikania koła | Nie ustalać zachowania poza opisem prologu |
 | Pakunki i księga | Oddzielne, widoczne elementy przy wozie | Wykrywalne i zapamiętywane po podniesieniu; test jednokrotnego rozliczenia | Zachowanie przed zadaniem do ustalenia |
 | Kamienie, korzenie, drzewa | Oddzielne elementy otoczenia; korony drzew nie mogą zasłaniać celu | Obrys tylko tam, gdzie wizualnie i projektowo uzasadniony; test przejść i zasłaniania | Placeholdery |
-| Pies i Powrotnik | Rozpoznawalne sylwetki, własne stany | Osobne pozycje i wywołania, telegraph widoczny; brak nieoczekiwanego wspólnego ataku | Inscenizacja do walidacji |
+| Pies i Powrotnik | Rozpoznawalne sylwetki, własne stany | Osobne pozycje i wywołania, telegraph widoczny; brak nieoczekiwanego wspólnego ataku | Inscenizacja |
 | Światło w kierunku bramy | Mały czytelny punkt, nie rozległa łuna | Prowadzi wzrok; nie wymaga ustawienia odległej bramy w tym samym kadrze | Sposób oświetlenia otwarty |
 
 Sortowanie postaci i obiektów oraz odsłanianie koron należy rozwiązać i sprawdzić w docelowej kamerze. Plan z góry nie przesądza rozwiązań technicznych.
 
 ### 5. Testy odbioru — do wykonania w prototypie
 
-Najpierw zmierzyć D — obrys kolizji bohatera, B — obrys właściwego przeciwnika, U — pełny dystans uniku i V — widoczny obszar kamery. Nie podstawiać zmyślonych wartości. Wyniki zapisywać wraz z wersją prototypu, ustawieniami, zrzutem lub nagraniem; każde kryterium ma obecnie status **niewykonane**.
+Najpierw zmierzyć D — obrys kolizji bohatera, B — obrys właściwego przeciwnika, U — pełny dystans uniku i V — widoczny obszar kamery. Nie podstawiać zmyślonych wartości. Wyniki zapisywać wraz z wersją prototypu, ustawieniami, zrzutem lub nagraniem.
 
 1. **Obejścia:** kliknąć na przemian po przeciwnych końcach obu tras, także w pobliżu konia i dyszli; sprawdzić brak klinowania bohatera, odpowiednią dostępność dla B i zgodność widocznej przestrzeni z kolizją.
 2. **Unik:** ze strefy walki wykonać unik w kilku kierunkach, obserwując cały tor U oraz obszar startu i końca; nie może zatrzymać go niewidzialny rekwizyt ani prowadzić w ślepą pułapkę bez czytelnej przyczyny.
@@ -341,11 +341,11 @@ Najpierw zmierzyć D — obrys kolizji bohatera, B — obrys właściwego przeci
 4. Zmierz D, B, U i V, zweryfikuj obejścia, unik, widoczność oraz przesłanianie. Wymiary i technikę dostosuj do faktycznego prototypu; wynik pokaż autorowi wraz z wadami.
 5. Przy zastępowaniu placeholderów finalnymi elementami: zastąpienie placeholderów nie może zmienić dostępności przejść ani skali bez ponownego sprawdzenia.
 
-Nie twórz gotowego zadania, systemu streamingowego ani finalnej geometrii pętli na podstawie tego planu bez dodatkowego projektu. Wszystkie opisane testy są obecnie niewykonane.
+Nie twórz gotowego zadania, systemu streamingowego ani finalnej geometrii pętli na podstawie tego planu bez dodatkowego projektu.
 
 ## Część IV — przegląd pakietu 04
 
-Przegląd według level-designer, ux-onboarding i playtest-simulator; nie wykonano grywalnego testu ani pomiaru czasu.
+Przegląd według level-designer, ux-onboarding i playtest-simulator.
 
 - Spójność z fabułą: wóz przed osadą i ranny powrót do tego samego obiektu; nocleg przy ogniu i prywatna izba to odrębne nagrody; strażnica osady (zapalenie latarni) i leśna (Dźwigacz, komora) są rozróżnione; finał wymaga zapalonej latarni; nie dodano pól, nowej krainy ani systemu głodu.
 - Gracz bez treningu lub bez czytania księgi nie jest zablokowany; pomoc i wpis w dzienniku pozostają dostępne.
