@@ -30,6 +30,12 @@ func _frames(seconds: float) -> void:
 	await _root.get_tree().create_timer(seconds).timeout
 
 
+## Długość animacji z assetu (klatki / fps), żeby czekać do jej końca niezależnie od grafiki.
+func _anim_seconds(enemy: Enemy, anim: StringName) -> float:
+	var spec: Dictionary = enemy.sprite.meta["animations"].get(anim, {})
+	return float(spec.get("frames", 3)) / float(spec.get("fps", 12))
+
+
 # --- decyzje AI bez fizyki ---------------------------------------------------------------------
 
 
@@ -157,7 +163,7 @@ func test_dog_leap_misses_target_off_the_track() -> void:
 	var dog: Dog = _spawn(DOG_SCENE, Vector2.ZERO)
 	dog.ai_enabled = false
 	dog.combat.request_attack(Vector2.RIGHT, hero, dog.leap)
-	await _frames(0.45)
+	await _frames(_anim_seconds(dog, dog.leap.animation) + 0.15)
 	var hero_combat: Combat = hero.get_node("Combat")
 	check_eq(hero_combat.health, hero_combat.max_health, "cel poza torem nie dostaje obrażeń")
 	check_eq(dog.combat.state, Combat.State.RECOVER, "chybiony skok: pies odzyskuje równowagę")
