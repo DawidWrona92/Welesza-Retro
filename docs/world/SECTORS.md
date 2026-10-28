@@ -45,7 +45,7 @@
 
 ### S01 — Niemir i skalne źródło
 
-**Funkcja:** Niemir: źródło, palisada, domy, gospoda, strażnica, kuźnia i dziedziniec.
+**Funkcja:** Niemir: źródło, palisada, domy, dom kupca ze składem, gospoda, strażnica, kuźnia i dziedziniec.
 
 **Geometria/inscenizacja:** Jedna nieregularna polana, kamienna skała na skraju, niewielki plac. Drzwi usług i jedyna brama czytelne z głównego traktu. Bez walki w osadzie.
 
@@ -59,7 +59,7 @@
 
 ### S02 — Północne ścieżki
 
-**Funkcja:** Leśne schronienie Czcibora i fragment górnego dojścia obozowego.
+**Funkcja:** Leśne schronienie Uniegosta i fragment górnego dojścia obozowego.
 
 **Geometria/inscenizacja:** Odcinki dróg `camp__shelter` i `camp__crossroads` przecinają S02; nie utożsamiać z całym skrótem.
 
@@ -103,7 +103,7 @@
 
 **Funkcja:** Rozstaj, miejsce cmentarne i **cały pierwszy słup** na skraju tej strefy.
 
-**Geometria/inscenizacja:** Punkt `pillar_whole` = (11.4, 11.3) leży w S11; droga `stones__pillar_whole` zaczyna się w S12 i wchodzi do S11. Pętla A to wyłącznie wariant, nie zatwierdzony cud.
+**Geometria/inscenizacja:** Punkt `pillar_whole` = (11.4, 11.3) leży w S11; droga `stones__pillar_whole` zaczyna się w S12 i wchodzi do S11. Anomalia w wariancie B; polilinia A to tylko makieta greyboxu.
 
 **Greybox/QA:** Sprawdzić orientację między bramą, rozstajem i wozem; anomalię A/B oddzielnie według VARIANTS.md.
 
@@ -171,7 +171,7 @@
 
 ### S22 — Sidła i jama Zbieracza
 
-**Funkcja:** Ślady sideł, jama Zbieracza i drugi / trzeci słup.
+**Funkcja:** Ślady sideł i jama Zbieracza. Słup powalony i rozbity należą do S12.
 
 **Geometria/inscenizacja:** Znaki pułapek widoczne przed zejściem do jamy. Opcjonalny miniboss bez wpływu na uzyskanie lampy ani pokonanie Stróża.
 

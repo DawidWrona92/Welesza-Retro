@@ -1,0 +1,245 @@
+# Mechaniki
+
+Status: decyzje autora w tabeli części I, reszta to propozycje.
+Powiązania: [fabuła](fabula.md), [walka](walka.md), [przeciwnicy](przeciwnicy.md), [mapa demo](mapa-demo.md).
+
+## Część I — podstawy
+
+### 1. Decyzje autora
+
+| Obszar | Ustalenie |
+|---|---|
+| Platforma | PC, mysz i klawiatura; możliwość późniejszego dodania obsługi pada. |
+| Sterowanie | Jak w Diablo 2: sterowanie myszą. Stała kamera izometryczna ([silnik](SILNIK.md)). LPM: ruch i atak; PPM: umiejętność; unik i parada pod osobnymi klawiszami. Konkretne klawisze obrony pozostają do wyboru. |
+| Tryb | Wyłącznie single player. |
+| Wygląd bohatera | Pancerz to jeden element zmieniający całą postać poza głową; widoczna jest też broń (concept art: od skórzanego kubraka przez kolczugę i łuskę po płytę). Rodzaje broni: miecz, miecz długi, miecz dwuręczny, topór jednoręczny, topór bojowy (dwuręczny), tarcza, kusza, łuk, włócznia. Walka z tarczą wymaga osobnych zestawów animacji. Grafika i animacje są malowane w 2D, bez modeli 3D w produkcji (28.10.2026). |
+| Sprint | Zostaje; zużywa wytrzymałość. Część przeciwników atakuje z zaskoczenia, więc gracz ryzykuje, że wejdzie do walki zmęczony (28.10.2026). |
+| Walka | Mniejsza liczba groźnych przeciwników, precyzyjne wyczucie momentu ataku. Przeciw potworom i zwierzętom: unik. Przeciw ludziom walczącym bronią i podobnym uzbrojonym przeciwnikom, np. szkieletom lub zombie: unik oraz parada. |
+| Unik | Osobny klawisz, krótki odskok w kierunku kursora zgodnie z zaakceptowaną rekomendacją. Koszt i ograniczenia pozostają otwarte. |
+| Atak i wiązanki | Atak na kliknięcie, bez ciągłego atakowania po przytrzymaniu. Bezładne klikanie daje podstawowy atak; trafianie kliknięciami w rytm uruchamia wiązankę, w której kolejne ciosy zadają większe obrażenia. Umiejętność określa długość łańcucha i jego premie: podstawowy stopień daje do trzech ciosów, III daje cztery, a czwarty cios znacząco zwiększa szansę losowego krytyka. Liczby i otwarte szczegóły opisano w dokumencie walki. |
+| Sprawczość gracza | Autor odrzuca rozstrzyganie trafień kostką. Trafienia wręcz wynikają z kontaktu i obrony, dystansowe z toru lotu i sytuacji w świecie. Pancerz osłabia trafienie. Losowe krytyki pozostają osobnym efektem trafienia; poprawny czwarty cios znacząco zwiększa ich szansę, ale nie gwarantuje krytyka. |
+| Broń dystansowa | Autor proponuje kalkulację z uwzględnieniem umiejętności, dystansu i pancerza. Rozdzielenie trafienia oraz działania pancerza zostało zaakceptowane; szczegóły celowania pozostają otwarte, a losowe testy trafienia są odrzucone. |
+| Zagrożenie | Inspiracja WFRP: walka przeciw trzem przeciwnikom naraz ma być bardzo niebezpieczna. Nie ustalono automatycznej porażki ani konkretnej szansy przeżycia. |
+| Rozwój | Inspiracja WFRP; doświadczenie prowadzi do awansów, awanse dają Punkty Nauki (PN), a PN wydajemy u nauczycieli, na wzór Gothic. |
+| Łupy | Rzadkie, bardzo cenne, dające wyraźne poczucie zwycięstwa i postępu. |
+| Wyprawa | Przygotowanie w osadzie → eksploracja → starcie → nagroda → powrót po nagrodę lub naganę. |
+| Zasoby | Wymagające gospodarowanie zapasami. Autor wycofał procentowy cel ich wyczerpania; tempo zużycia i presję należy dopracować na podstawie testów gry. Rodzaje zasobów pozostają otwarte. |
+| Inspiracja wypraw | Darkest Dungeon w aspekcie gospodarowania zapasami. Zużycie zasobów będzie dopracowane w testach, a dobre przygotowanie ma dawać rzeczywistą przewagę, bez automatycznego zwiększania trudności niwelującego tę przewagę. |
+
+WFRP stanowi inspirację dla zagrożenia i rozwoju. Nie zatwierdzono przeniesienia pełnego systemu rzutów WFRP, losowego pudłowania, profesji, trwałych ran ani śmierci permanentnej. Losowy krytyk jest odrębną, zatwierdzoną zasadą. Gothic stanowi inspirację dla roli nauczycieli, nie automatyczne przyjęcie wszystkich jego zasad.
+
+Darkest Dungeon stanowi inspirację dla presji zasobów podczas wyprawy. Nie zatwierdzono drużyny, walki turowej, stresu, głodu, systemu światła ani trwałych urazów. Fabularna latarnia pozostaje elementem zadań; nie wynika z tego automatycznie konieczność zużywania paliwa.
+
+### 2. Proponowane przełożenie na rozgrywkę — do omówienia
+
+#### Walka
+
+Podstawą starcia może być odczytanie zamiaru przeciwnika, ustawienie się poza jego atakiem, wykorzystanie krótkiej okazji i świadome wycofanie. Trafienia oraz porażki powinny mieć czytelną przyczynę.
+
+Proponuję, żeby przewaga liczebna była groźna przez oskrzydlanie i nakładanie się zagrożeń. Rozdzielenie grupy, wykorzystanie przejścia i rezygnacja ze starcia powinny być sposobami na poprawę sytuacji. Sama liczba przeciwników nie powinna uruchamiać sztucznego mnożnika obrażeń.
+
+Osobny unik w kierunku kursora jest zatwierdzony. Unik i parada mogą przerwać rozpoczęty atak — to zatwierdzona decyzja autora. Ograniczenia użycia i ewentualna nietykalność pozostają do walidacji w pakiecie. Parada pod osobnym klawiszem jest zatwierdzona przeciw uzbrojonym przeciwnikom: przytrzymanie utrzymuje gardę, a dobre wyczucie momentu daje dodatkowy efekt. Rodzaj efektu pozostaje otwarty. Szczegóły i propozycje trafień: [Walka i trafienia](walka.md).
+
+#### Zasoby i końcówka wyprawy
+
+Nie ustalamy z góry momentu wyczerpania zasobów ani docelowego procentu ich zużycia. Tempo i presję dopracujemy w testach działającej gry, z zachowaniem przewagi wynikającej z dobrego przygotowania. Świat nie powinien potajemnie odbierać zapasów ani dokładać przeciwników tylko dlatego, że gracz radzi sobie lepiej niż oczekiwano.
+
+W duchu Darkest Dungeon proponuję budować napięcie wokół oceny: „czy wystarczy mi zapasów na dalszy cel i powrót?”. Dodatkowa odnoga może oferować korzyść kosztem zapasów, a odwrót zachowywać część osiągnięć. Zakres zachowywanych nagród, możliwość uzupełniania zapasów i konsekwencje przerwania zadania wymagają decyzji autora.
+
+Przed balansowaniem należy określić, co się kończy: leczenie, amunicja, przedmioty pomocnicze czy inny zasób. Chwilowa zdolność do wykonania ataku lub uniku to inny problem niż zapasy na całą wyprawę.
+
+Kreatywność wymaga działających alternatyw. Przykłady do rozważenia: obejście przeciwnika, rozdzielenie grupy, wykorzystanie terenu lub rezygnacja z dodatkowego łupu. Nie należy najpierw wymagać zużywalnego zasobu do każdej walki, a potem odbierać go przed obowiązkowym finałem bez innej drogi.
+
+#### Rozwój i nauczyciele
+
+Potwierdzony przebieg rozwoju: zdobywanie doświadczenia → awans → otrzymanie PN → wydanie PN u nauczyciela. Otwarte pozostają źródła doświadczenia, tempo awansów, liczba PN, warunki dostępu do szkolenia, ewentualne dodatkowe opłaty i możliwość zmiany wcześniejszych wyborów.
+
+Nowe umiejętności powinny rozszerzać dostępne decyzje, a nie wyłącznie zwiększać liczby. Nie przydzielamy jeszcze nauczycieli do obsady; wymaga to zgodności z ich rolami fabularnymi.
+
+#### Łupy i nagrody
+
+Proponuję rozróżnić istotną zdobycz zmieniającą wyposażenie od drobnych zapasów. Rzadkość cennej broni nie musi oznaczać, że eksploracja długo nie daje żadnego rezultatu: nagrodą mogą być również informacja, przejście lub dostęp do szkolenia.
+
+Otwarte: czy rzadkie mają być wszystkie przedmioty, czy przede wszystkim ulepszenia wyposażenia. Nie wybrano systemu jakości, losowych właściwości ani tabel wypadania łupów.
+
+### 3. Propozycja pętli na różnych skalach
+
+Poniższe czasy są skalami opisu, nie zatwierdzonym czasem trwania walki lub demo.
+
+| Skala | Cel gracza | Przeszkoda | Informacja zwrotna | Nagroda |
+|---|---|---|---|---|
+| Pojedyncza wymiana, około 30 sekund | Zadać obrażenia i uniknąć odpowiedzi | Zasięg ataku, pozycja, kolejny wróg | Zapowiedź ruchu, trafienie, reakcja przeciwnika | Bezpieczniejsza pozycja i postęp w starciu |
+| Fragment wyprawy, około 5 minut | Przejść przez niebezpieczne miejsce | Grupa wrogów, teren, koszt użycia zapasów | Stan zasobów, odkryta droga, rozpoznane zagrożenie | Dostęp do celu, wskazówki lub zdobyczy |
+| Sesja | Zrealizować cel i powrócić | Długość trasy, trudne starcia, ograniczone zapasy | Postęp zadania i stan przygotowania do powrotu | Rozliczenie zadania i odczuwalny postęp |
+| Dłuższa gra | Rozwinąć bohatera i znaleźć drogę z Niemiru | Groźniejsze obszary i niepełna wiedza | Nowe możliwości, reakcje mieszkańców | Dostęp do dalszych zadań i rozwiązanie lokalnego problemu |
+
+Awans zapewnia PN, a nauczyciele pozwalają je wydać. Pętla nie przesądza jeszcze, które działania nagradzane są doświadczeniem.
+
+### 4. Ryzyka do sprawdzenia w prototypie
+
+- Klikanie przeciwnika i ruch korzystające z tego samego przycisku mogą powodować niezamierzony atak zamiast ucieczki. Sprawdzić rozróżnienie intencji i reakcję na polecenie ruchu.
+- Sprawdzić, czy sterowanie myszą pozwala wykonać precyzyjny unik w tłoku i przy przeszkodach.
+- Nieograniczone wycofywanie i pojedynczy atak mogą stać się najlepszą odpowiedzią na każde zagrożenie. Testować zachowania przeciwników i teren, zanim doda się kolejne ograniczenia gracza.
+- Ograniczenie leczenia połączone z trudną walką może zmienić końcówkę w powtarzanie beznadziejnej próby. Potrzebne są zrozumiałe warunki odwrotu, śmierci i ponownego podejścia.
+- Rzadkie łupy mogą opóźnić poczucie postępu. Sprawdzić, czy gracz rozpoznaje wartość nagrody i czy może z niej skorzystać.
+- Nauczyciel lub usługa nie mogą stać się przypadkowo niedostępne po naganie, jeśli bez nich nie da się kontynuować głównego zadania.
+
+### 5. Kolejne decyzje
+
+Źródło PN zostało doprecyzowane przez autora. Następnie omówić wspólnie:
+
+1. Walidacja [pakietu walki 01](walka.md): koszty przerwania ataku, reguły wiązanek, gardy i strzelania. Możliwość przerwania ataku unikiem lub paradą jest zatwierdzona.
+2. Dostępne zasoby, leczenie oraz konsekwencje śmierci i odwrotu.
+3. Pierwszy styl walki, zakres umiejętności i funkcję wyposażenia w demie.
+4. Minimalny zestaw sytuacji bojowych do sprawdzenia sterowania i zagrożenia liczebnego.
+
+Silnik: Godot 4 ([decyzja warunkowa](SILNIK.md)); przed oceną wykonalności ustalić doświadczenie i zasoby zespołu. Przed implementacją zadań opracować ich stany i wewnętrzną logikę tajemnicy. Nie jest konieczne wcześniejsze rozpisanie całej Weleszy.
+
+## Część II — wyprawa, leczenie i porażka (pakiet 02 do walidacji)
+
+Zależy warunkowo od pakietu 01 w [walce](walka.md).
+
+### Cel
+
+Wyprawa ma kosztować wysiłek i zapasy, a powrót przynosić ulgę. Gracz powinien móc rozsądnie zawrócić. Nie ustalamy procentowego punktu wyczerpania zasobów, czasu ukończenia ani cen przed testami działającej gry.
+
+Samotność i smutek wynikają z miejsc oraz losów ludzi, nie z obowiązkowego stałego karania statystykami. Pakiet nie dodaje głodu, stresu, chorób, trwałych urazów, psucia wyposażenia ani limitu dni.
+
+### A. Przygotowanie i zapasy
+
+Osada jest bezpiecznym miejscem na leczenie, rozmowy, handel, szkolenie i zapis. Dziennik wskazuje cel wyprawy, ostatni znany punkt orientacyjny oraz rozpoznane zagrożenia. Nie ujawnia nieodwiedzonych pomieszczeń ani bossów.
+
+Przed wyjściem gracz wybiera broń, aktywną umiejętność, leczenie i zapas amunicji. Sprzęt bojowy można zmienić poza bezpośrednim starciem; zmiana broni w walce podlega czasowi z pakietu 01. Nauczyciele działają w osadzie, nie podczas wyprawy.
+
+Proponowane zasoby:
+
+| Zasób | Skąd pochodzi | Na co jest zużywany | Ograniczenie |
+|---|---|---|---|
+| Wytrzymałość | Odnawia się w trakcie gry | Walka i sprint zgodnie z pakietem 01 | Ogranicza intensywność starcia, nie długość wyprawy sama w sobie |
+| Opatrunki | Zakup, pakiet ratunkowy, przygotowane znaleziska | Leczenie w bezpiecznej przerwie | Wymagają dokończenia czynności |
+| Nalewka lecznicza | Zakup, rzadkie znalezisko | Leczenie w trakcie zagrożenia | Ograniczony zapas, czas użycia, brak natychmiastowego pełnego zdrowia |
+| Strzały i bełty | Zakup, określone znaleziska | Rzeczywiście wykonane strzały | Osobne dla łuku i kuszy; bez losowego odzysku po trafieniu |
+| Pieniądze | Jednorazowe nagrody zadań i sprzedaż zwykłych przedmiotów | Zapasy i docelowo szkolenie | Nazwa waluty i ceny poza tym pakietem |
+
+Żaden zwykły przeciwnik nie musi zostawiać łupu. Broń i ważne nagrody pojawiają się w konkretnych, uzasadnionych miejscach. Zwierzę nie wyrzuca monet ani losowego miecza.
+
+Latarnia fabularna nie zużywa paliwa. Nie ograniczamy wykonania zadania dodatkowym zasobem, którego wcześniej nie uzgodniono.
+
+### B. Leczenie
+
+#### Opatrunek
+
+Używany po odsunięciu się od bezpośredniego zagrożenia; postać zatrzymuje się i wykonuje wyraźną czynność. Ruch, unik, garda lub trafienie ją przerywają. Zdrowie i zużycie przedmiotu rozliczają się razem dopiero po zakończeniu czynności. Wielokrotne anulowanie nie daje częściowego darmowego leczenia. Przerwanie ma osobny krótki sygnał wizualny i dźwiękowy, aby gracz rozumiał brak efektu.
+
+Przeciwnik nie traci zainteresowania tylko dlatego, że gracz rozpoczął bandażowanie. Reguła bezpieczeństwa nie wymaga magicznego stanu „poza walką”: potrzeba rzeczywistego dystansu i czasu.
+
+#### Nalewka
+
+Można jej użyć w walce, ale wypicie wymaga krótkiej, widocznej czynności. Unik i garda mogą ją przerwać. Dopiero zakończenie wypicia jednocześnie zużywa przedmiot i uruchamia stopniowe leczenie. Kolejne dawki nie nakładają kilku efektów naraz; podczas aktywnego efektu użycie jest blokowane bez utraty przedmiotu.
+
+Leczenie nie daje niewrażliwości i nie przerywa ataków wroga. Czasy oraz skuteczność będą dobrane po testach, żeby zawsze istniał koszt znalezienia okazji.
+
+#### Odpoczynek i pomoc awaryjna
+
+W domu gościnnym można bezpłatnie przywrócić zdrowie i wytrzymałość. Nie odradza to potworów, nie odnawia łupów ani nagród.
+
+Jeśli gracz nie ma pieniędzy i zapasów, Dobrawa oferuje podstawowy, niesprzedawalny pakiet ratunkowy do zabrania na następną próbę. Nie gromadzi się go w magazynie, nie rozkłada na materiały i nie wymienia na PN. Proponowana reguła: wydaje wyłącznie brakujące podstawowe środki, z uwzględnieniem całego posiadanego zapasu, a nie tylko paska podręcznego. Brak warunku ukończenia opcjonalnego zadania.
+
+To droga wyjścia z bankructwa, nie optymalny zamiennik przygotowania. Zawartość i liczba przedmiotów do ustalenia w testach.
+
+### C. Odwrót
+
+Odwrót jest fizycznym opuszczeniem zagrożenia i powrotem odkrytą trasą. Nie dodajemy portalu pozwalającego zniknąć w trakcie ciosu. Po przejściu lochu otwiera się krótsze przejście powrotne do początku wyprawy, czasem z drobną nagrodą ([zasada powrotu](world/README.md#droga-główna-i-powroty)).
+
+Zwycięstwa, znalezione przedmioty, zużyte zapasy i postęp zadania pozostają. Odebrane nagrody nie są przyznawane ponownie. Zwykli pokonani przeciwnicy nie odradzają się po odpoczynku w tym demie.
+
+Niedokończona walka z bossem resetuje jego zdrowie i fazę po wyjściu z obszaru walki. Koszty gracza pozostają. Następna próba nie pozwala powoli wykrwawiać bossa przez granicę pościgu.
+
+Na granicy resetu wróg przestaje zadawać i otrzymywać obrażenia, wyraźnie odchodzi do swojego miejsca. Nie może atakować z bezpiecznej dla siebie strony. Nie wolno kierować jego ciosów do osady.
+
+Nagroda lub nagana po powrocie zależy od konkretnego stanu zadania, a nie automatycznie od odwrotu. Nieudana próba nie zmniejsza bez końca reputacji. Krytyczni nauczyciele i podstawowe zapasy nie mogą zostać zablokowani przez fabularną naganę.
+
+### D. Śmierć i zapis
+
+Proponuję klasyczne przywrócenie zapisu, bez odradzania bohatera jako zdarzenia fabularnego. Śmierć nie wyjaśnia tajemnicy lasu i nie oznacza, że postać jest nieśmiertelna w świecie opowieści.
+
+Zapis przechowuje spójny stan: bohatera, zdrowie, przedmioty, amunicję, postęp PN, otwarte drogi, stan przeciwników, nagrody i flagi zadań. Po wczytaniu nie można zatrzymać łupu z próby, a jednocześnie odzyskać środków sprzed jej rozpoczęcia.
+
+#### Punkty zapisu
+
+- Automatyczny zapis przy bezpiecznym wyjściu z osady, ważnym ukończeniu zadania i wejściu na podejście do bossa.
+- Przed bossem zapis następuje poza zasięgiem wrogów, przed wywołaniem walki. Znajduje się tam informacja o możliwości odwrotu i widoczne ostrzeżenie o silnym przeciwniku.
+- Ręczny zapis poza aktywną walką, w stabilnym miejscu; bez zapisu w trakcie ciosu, spadania czy przejścia sceny.
+- Osobny zapis „powrót później” pozwala przerwać sesję także w walce. Wznowienie odtwarza ten sam stan bez leczenia, zmiany pozycji i resetu wroga; nie nadpisuje bezpiecznego zapisu do ponownej próby.
+- Bezpieczny zapis przed walką nie jest nadpisywany chwilą tuż przed śmiercią.
+
+Zwycięstwo nad bossem i przyznanie nagrody zapisujemy jako jedną transakcję. Po awarii nie może pojawić się martwy boss bez wymaganego przedmiotu albo ponownie żywy boss z już przyznaną nagrodą. Wymagany przedmiot fabularny ma trwały stan odbioru, a nie tylko ciało jako pojemnik.
+
+Zapisy mają wersję formatu. Przy zmianach wersji demo trzeba umieć odmówić wczytania niezgodnego pliku w czytelny sposób; nie obiecywać zgodności bez implementacji.
+
+### E. Przeciwdziałanie utknięciu
+
+- Przedmioty zadaniowe nie zajmują zwykłego limitu ekwipunku, nie można ich sprzedać, zniszczyć ani zużyć jako materiał.
+- Broń podstawowa pozostaje dostępna. Nie wprowadzamy pękania broni ani konieczności płatnej naprawy, by móc atakować.
+- Przed każdym obowiązkowym bossem jest powrót do osady. Wyczerpanie amunicji nie odcina walki wręcz.
+- Brak PN lub zakupionej umiejętności PPM nie może zablokować głównej drogi. Bossowie mają rozwiązanie podstawowym atakiem i obroną.
+- Wiedza i przedmioty zdobyte przed przyjęciem zadania są rozpoznawane przez odpowiedniego NPC.
+- Stan bossów jest trwały między odwrotami po zwycięstwie, a powtarzalny po wczytaniu stanu sprzed zwycięstwa. Nie mieszamy obu modeli.
+
+### Rytm emocjonalny
+
+Przed starciem pokazujemy codzienną czynność przerwaną przez tragedię: niedokończony posiłek, drwa ułożone dla kogoś, starannie naprawiony but. Walka jest krótka względem całej wyprawy, a po niej jest miejsce na ciszę.
+
+Powrót nie zawsze kończy się wdzięcznością. Można przynieść dowód śmierci zamiast uratowanej osoby. Gra nadal jasno rozlicza wykonaną pracę; żal postaci nie unieważnia osiągnięcia gracza. Bez triumfalnego deszczu przedmiotów po zabiciu dawnego człowieka.
+
+### Stany i zasady powtarzania
+
+| Zdarzenie | Bohater i przedmioty | Przeciwnicy | Zadania |
+|---|---|---|---|
+| Odwrót z lasu | Obecny stan i zużycie zachowane | Zabici pozostają martwi; żywy boss wraca do początku | Dotychczasowy postęp zostaje |
+| Odpoczynek w osadzie | Zdrowie i wytrzymałość odnowione, zwykłe zapasy nie | Bez odrodzenia | Bez ponownego przyznania nagród |
+| Śmierć i wczytanie | Cały stan z wybranego zapisu | Stan z tego samego zapisu | Stan z tego samego zapisu |
+| Wznowienie sesji | Ten sam stan, bez darmowego odnowienia | Ten sam stan i faza | Ten sam stan |
+| Zwycięstwo nad bossem | Jednorazowa nagroda | Trwały stan pokonania | Atomowy postęp wraz z nagrodą |
+
+### Ryzyka do późniejszych testów
+
+Czy powrót jest rozsądną decyzją, a nie nudnym obowiązkiem? Czy bandażowanie można bezkarnie powtarzać za jednym drzewem? Czy pomoc awaryjna wystarcza do kolejnej uczciwej próby? Czy ręczne zapisy i odwrót nie tworzą duplikacji? Czy zapis przed bossem pozwala wrócić po zaopatrzenie?
+
+## Część III — kolejność prac przed prototypem
+
+Status: proponowana kolejność pracy.
+
+Fundament rozgrywki zapisano w części I (decyzje autora); poniżej kroki do prototypu.
+
+### 1. Podstawowa pętla
+
+Opisać czynności i ich powody w skali pojedynczego starcia, krótkiej wyprawy i całej sesji. Dla każdego kroku wskazać cel, przeszkodę, informację zwrotną i nagrodę.
+
+Dopracować ruch, atak, wiązanki, umiejętności, interakcję i zbieranie łupów. Unik w kierunku kursora i parada są zatwierdzone jako osobne akcje obronne pod klawiszami. Unik i parada przerywają rozpoczęty atak. Koszty i szczegółowe skutki wymagają walidacji całego [pakietu walki 01](walka.md). Głód i crafting nie są zatwierdzone.
+
+### 2. Minimalny model walki i rozwoju
+
+Ustalić podstawowy atak, dostępne zdolności, zasoby, leczenie, śmierć i powrót do gry, sposób rozwoju postaci i rolę wyposażenia. Określić minimalny zestaw przeciwników pokazujący różne decyzje w walce.
+
+Szczegółowe liczby i balans dopracowywać na działającym prototypie, nie na podstawie samej fabuły.
+
+### 3. Kontrakt demo
+
+Uzgodnić czas przejścia, liczbę dostępnych stylów gry, zakres ekwipunku, strukturę mapy, zapisywanie postępu i znaczenie wyborów. Oddzielić zawartość pierwszego prototypu od całego demo z ośmioma zadaniami i szesnastoma postaciami.
+
+Poznać skład zespołu, doświadczenie, dostępny czas i źródło dźwięku przed oceną wykonalności.
+
+### 4. Wybór technologii i pierwszy test
+
+Silnik: Godot 4 ([decyzja warunkowa](SILNIK.md)); warunki decyzji sprawdza pierwszy test.
+
+Pierwszy prototyp: mała przestrzeń z prostych brył, grywalny bohater, reprezentatywne starcie, nagroda i możliwość ponownej próby. Konkretne umiejętności oraz liczba wrogów pozostają do ustalenia.
+
+Kryteria oceny: czy sterowanie jest czytelne, czy gracz rozumie przyczynę obrażeń i porażki, czy pojawiają się sensowne decyzje oraz czy chce powtórzyć starcie.
+
+### 5. Pierwszy kompletny fragment gry
+
+Po ocenie walki połączyć fragment osady, wyprawę do lasu, jedno zadanie, zdobycz, rozmowę i powrót. Sprawdzić interakcje systemów oraz zapis postępu przed rozbudową do pełnego demo.
+
+Nie ma potrzeby projektowania całego świata przed pierwszym prototypem. Trzeba natomiast ustalić wewnętrzną logikę tajemnicy przed pisaniem ostatecznych dialogów i warunków zadań.

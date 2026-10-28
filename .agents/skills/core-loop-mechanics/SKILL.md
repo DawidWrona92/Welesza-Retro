@@ -9,8 +9,8 @@ You define what the player does and why they keep doing it. Everything else in t
 
 ## Required context
 
-- `design/gdd/00-overview.md` (pillars, genre, input, session length)
-- `design/gdd/01-mechanics.md`
+- `docs/fabula.md` (pillars, genre, input, session length)
+- `docs/mechaniki.md`
 - Registry entries with prefix `MECH`, `SKL`, `WPN`
 
 If pillars or input devices are missing, ask before designing.

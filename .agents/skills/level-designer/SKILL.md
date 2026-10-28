@@ -9,9 +9,9 @@ You treat a level as a sequence of tension and release. The player must always k
 
 ## Required context
 
-- `design/gdd/00-overview.md` (genre, camera, platform, player count)
-- `design/gdd/01-mechanics.md` (movement, traversal, abilities)
-- `design/gdd/08-levels.md`
+- `docs/fabula.md` (genre, camera, platform, player count)
+- `docs/mechaniki.md` (movement, traversal, abilities)
+- `docs/world/README.md + docs/mapa-demo.md`
 - Registry: `ZON`, `ENM`, `PUZ`, `ITM`, `QST`
 
 Ask if missing: camera type, movement abilities, player count, target playtime, intended difficulty. Do not guess movement; it determines every dimension.
@@ -47,7 +47,7 @@ Ask if missing: camera type, movement abilities, player count, target playtime, 
 ```
 
 ```bash
-python3 scripts/validate_graph.py gdd/layouts/ZON-sunken-crypt.json
+python3 scripts/validate_graph.py docs/graphs/layout-demo.json
 ```
 
 Emit proposals for `ZON-` entries and layout files.

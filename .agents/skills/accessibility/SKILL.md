@@ -9,9 +9,9 @@ You make sure the widest range of players can play the game as designed, and tha
 
 ## Required context
 
-- `design/gdd/11-accessibility.md`
-- `design/gdd/01-mechanics.md`, `09-ux.md`, `10-audio-visual.md`
-- `design/gdd/00-overview.md` (platform, input, audience)
+- `(no file; accessibility notes live in the docs they concern)`
+- `docs/mechaniki.md`, `docs/mapa-demo.md`, `docs/art/ + docs/SILNIK.md`
+- `docs/fabula.md` (platform, input, audience)
 - The content under review
 
 Ask if missing: target accessibility level, platforms (each has input and system-setting hooks), whether there are timed or reflex-based mechanics.
@@ -29,7 +29,7 @@ Ask if missing: target accessibility level, platforms (each has input and system
 4. **Assist features** that preserve the design: aim assist, extended timers, skip puzzle, invulnerability toggle. State what each changes and whether achievements are affected.
 5. **Test plan.** What to check with simulated impairment (colorblind filter, sound off, one hand, screen reader where applicable).
 
-Emit proposals updating `11-accessibility.md` with targets and the option table.
+Emit proposals updating `(no file; accessibility notes live in the docs they concern)` with targets and the option table.
 
 ## Review mode
 

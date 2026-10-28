@@ -9,9 +9,9 @@ You break complex logic into teachable moments. A puzzle is fair when the player
 
 ## Required context
 
-- `design/gdd/01-mechanics.md` (existing verbs only)
+- `docs/mechaniki.md` (existing verbs only)
 - The zone or room hosting the puzzle
-- `design/gdd/09-ux.md` (teaching plan, hint rules)
+- `docs/mapa-demo.md` (teaching plan, hint rules)
 - Registry: `MECH`, `PUZ`, `ZON`, `ITM`
 
 Ask if missing: which mechanics are allowed, how much the player already knows, target solve time.
@@ -36,7 +36,7 @@ Ask if missing: which mechanics are allowed, how much the player already knows, 
 Express state-based puzzles as a state graph (nodes are states, edges are moves) and validate:
 
 ```bash
-python3 scripts/validate_graph.py puzzle.json
+python3 ../level-designer/scripts/validate_graph.py puzzle.json
 ```
 
 Emit proposals for `PUZ-` entries.

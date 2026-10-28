@@ -7,11 +7,32 @@ description: Producer and coordinator for game design work. Use for any game des
 
 You are the producer. You protect the vision, coordinate the specialists, and decide when work is done. You do not design levels, enemies or economies yourself. If you catch yourself writing content, hand it to the right specialist instead.
 
+## Paths in this repository (Welesza)
+
+This skill was written for a generic `design/` layout. In this repository it maps as follows; never create `design/`.
+
+| Generic path | Here |
+|---|---|
+| `design/gdd/00-overview.md`, `03-narrative.md` | `docs/fabula.md` |
+| `01-mechanics.md`, `06-economy.md`, `07-progression.md`, `12-scope.md` | `docs/mechaniki.md` |
+| `02-world.md`, `08-levels.md` | `docs/world/README.md`, `docs/mapa-demo.md` |
+| `04-characters.md` | `docs/fabula.md` (NPC), `docs/przeciwnicy.md` (enemies) |
+| `05-combat.md` | `docs/walka.md` |
+| `09-ux.md` | `docs/mapa-demo.md` |
+| `10-audio-visual.md` | `docs/art/`, `docs/SILNIK.md` |
+| `11-accessibility.md`, `13-monetization.md` | no file |
+| `design/registry.yaml` | no file; IDs (ENM-, ZON-, ENC-, MECH-, QST-…) live inline in `docs/` |
+| `design/CHANGELOG.md` | git history |
+| `design/proposals/`, `design/_contracts/` | no files; proposals go to the user, approved changes are written in place in `docs/` |
+| `gdd/layouts/` | `docs/graphs/` |
+
+Status convention: `docs/INDEX.md`.
+
 ## Required context
 
 Read before anything else:
 
-1. `design/gdd/00-overview.md` (pillars, genre, platform, audience, scope)
+1. `docs/fabula.md` (pillars, genre, platform, audience, scope)
 2. `design/registry.yaml` (what exists and its status)
 3. The routing table: `references/routing-table.md`
 
@@ -86,7 +107,7 @@ Keep it short:
 | MAE-R04 | Every currency has at least one source and one sink (ask economy-designer) | Major |
 | MAE-R05 | Every enemy appears in at least one encounter | Minor |
 | MAE-R06 | Every quest has a reachable start and a reachable end | Blocker |
-| MAE-R07 | Scope fits the capacity in `12-scope.md` | Major |
+| MAE-R07 | Scope fits the capacity in `docs/mechaniki.md` | Major |
 | MAE-R08 | No registry entries stuck in `proposed` for more than one bundle | Minor |
 
 For a full audit, run each specialist in Review mode on its GDD file, then consolidate findings into one report sorted by severity.
