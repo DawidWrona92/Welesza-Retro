@@ -36,7 +36,7 @@ Ask if missing: which mechanics are allowed, how much the player already knows, 
 Express state-based puzzles as a state graph (nodes are states, edges are moves) and validate:
 
 ```bash
-python3 scripts/validate_graph.py puzzle.json
+python3 ../level-designer/scripts/validate_graph.py puzzle.json
 ```
 
 Emit proposals for `PUZ-` entries.

@@ -1,5 +1,5 @@
 {
-  "description": "Structural design graph only. Conditions are annotations, not executable gameplay logic. Values and collisions untested.",
+  "description": "Shared two-phase boss structure for Zbieracz and Dzwigacz. Structural design graph only. Conditions are annotations, not executable gameplay logic. Values and collisions untested.",
   "nodes": [
     {
       "id": "checkpoint",

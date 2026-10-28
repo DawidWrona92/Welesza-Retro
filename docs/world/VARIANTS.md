@@ -1,6 +1,6 @@
 # Welesza — warianty przestrzeni nieoczywistej (v0.2)
 
-**Status: propozycje do porównania / decyzja autora OTWARTA.** Ten plik nie ustala mechanizmu tajemnicy Weleszy. Zatwierdzona fabuła jest w [`docs/demo-fabula.md`](../demo-fabula.md): bohater wraca dawną drogą, znajduje wóz tam, gdzie nie powinien; ślad na drzewie i powrót z innego kierunku wzmacniają niepokój. Latarnia zapalona w Niemirze pozwala zobaczyć nową ścieżkę między słupami.
+**Status: propozycje do porównania / decyzja autora OTWARTA.** Ten plik nie ustala mechanizmu tajemnicy Weleszy. Zatwierdzona fabuła jest w [`docs/fabula.md`](../fabula.md): bohater wraca dawną drogą, znajduje wóz tam, gdzie nie powinien; ślad na drzewie i powrót z innego kierunku wzmacniają niepokój. Latarnia zapalona w Niemirze pozwala zobaczyć nową ścieżkę między słupami.
 
 ## I. Droga, która wraca — dwie wersje do prób
 
