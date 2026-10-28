@@ -69,13 +69,17 @@ Nowe ofiary i istoty nie dopisują historii do zatwierdzonych NPC. Ślady człow
 
 #### ENM-drwal — Drwal z wygasłego obozu
 
-**Rola:** uzbrojony przeciwnik uczący gardy; człowiek lub jego poruszające się szczątki, bez rozstrzygnięcia w karcie. **Pytanie:** kiedy parować narzędzie, a kiedy zejść z drogi ciężkiemu zamachowi?
+**Rola:** uzbrojony przeciwnik uczący gardy. **Pytanie:** kiedy parować narzędzie, a kiedy zejść z drogi ciężkiemu zamachowi?
 
-**Sylwetka:** szerokie barki; długi topór; ciemny fartuch z jednym jasnym szwem. Dźwięk: przed atakiem przesuwa dłoń po trzonku; poza walką układa drwa.
+**Kim jest [DECYZJA AUTORA, 28.10.2026]:** ożywieniec związany z lasem — dawny drwal, którego ciało i duszę przejęły korzenie i gniew zapomnienia. Siła, brutalność, powolna nieustępliwość: porusza się ciężko, ale uderza z ogromną mocą.
 
-**Zachowanie:** pracowity, drażliwy, wyczerpany. Broni pustego paleniska, choć drewno leży w wodzie. Chce przepędzić obcego; nie prowadzi zrozumiałej rozmowy. Drwal pozostaje tragiczną, niepokojącą istotą Weleszy, a nie typowym demonem fantasy. Jego gniew i zapomnienie powinny być wyczuwalne, zanim zaatakuje.
+**Sylwetka:** ludzka, szeroka postać w kapturze; rozkładające się ciało zrośnięte z korzeniami, z głowy i barków wyrastają gałęzie; skórzane pasy na poszarpanych łachmanach; długi topór. Od Korzeńca odróżnia go ludzka postawa i topór. Dźwięk: przed atakiem przesuwa dłoń po trzonku; poza walką układa drwa.
 
-**Koncepty:** [portret i detale](art/bestiariusz/drwal/01_drwal_portret_i_detale.png), [sylwetki, warianty i pozy](art/bestiariusz/drwal/02_drwal_arkusz_koncepcyjny.png), [scena wspólna z Powrotnikiem i psem](art/bestiariusz/sceny/powrotnik_pies_drwal.png).
+**Warianty wyglądu** (wspólne tryby ataku): podstawowy, rozkład (widoczne kości), leśny (silniej zrośnięty z drewnem), zimowy (szron i lód), strażnik traktu (najstarszy, pień zamiast ramienia), okrwawiony (świeże ofiary, ludzkie trofea — do decyzji, bo zasady bestiariusza wykluczają makabrę jako główny środek). **Broń:** topór drwala, topór rozwidlony, ciopak, zreb związany z korzeniami, obosieczny.
+
+**Zachowanie:** pracowity, drażliwy, wyczerpany. Broni pustego paleniska, choć drewno leży w wodzie. Chce przepędzić obcego; nie prowadzi zrozumiałej rozmowy. Pozostaje tragiczną istotą Weleszy: gniew i zapomnienie są wyczuwalne, zanim zaatakuje.
+
+**Koncepty:** [portret i detale](art/bestiariusz/drwal/01_drwal_portret_i_detale.png), [sylwetki, warianty, broń i pozy](art/bestiariusz/drwal/02_drwal_arkusz_koncepcyjny.png), [scena wspólna z Powrotnikiem i psem](art/bestiariusz/sceny/powrotnik_pies_drwal.png). Koncept jest wzorcem wyglądu.
 
 **Priorytety AI:** nie atakuje z zaskoczenia → ostrzega ruchem topora → broni wejścia → zwykły zamach w zasięgu → przy uporczywej gardzie gracza wybiera wyraźnie zapowiedziany ciężki atak → po chybieniu wraca do gotowości. Reakcja nie jest odczytem przycisku gracza w tej samej klatce.
 
@@ -88,13 +92,15 @@ Nowe ofiary i istoty nie dopisują historii do zatwierdzonych NPC. Ślady człow
 
 #### ENM-lucznik — Łucznik pustego traktu
 
-**Rola:** napastnik dystansowy; porzucony strażnik. **Pytanie:** jak skrócić dystans, korzystając z osłon i przerw między strzałami?
+**Rola:** napastnik dystansowy. **Pytanie:** jak skrócić dystans, korzystając z osłon i przerw między strzałami?
 
-**Sylwetka:** wysoki łuk; asymetryczna peleryna; jasny kościany gwizdek na piersi. Dźwięk: tarcie cięciwy, czasem urwany sygnał, na który nikt nie odpowiada.
+**Kim jest [DECYZJA AUTORA, 28.10.2026]:** porzucony strażnik traktu, odmieniony przez las w szaleńca. Obdarty, pokryty ranami i bliznami, żyje już tylko siłą nienawiści lasu do intruzów.
 
-**Koncept:** [plansza łucznika, warianty i sceny](art/bestiariusz/lucznik-pustego-traktu/01_karta_koncepcyjna.png). Widoczne są wychudzona sylwetka, zniszczony strój, łuk, kołczan i nóż. Plansza jest referencją wizualną; podpisy na niej nie zastępują opisu zachowania ani nie rozstrzygają pochodzenia postaci.
+**Sylwetka:** wychudzony, obdarty, z dzikimi włosami i brodą; łuk, kołczan ze strzałami o czerwonych lotkach, nóż; mały wisior na piersi jako ślad dawnej służby. Twarz wykrzywiona w krzyku. Dźwięk: tarcie cięciwy, urywany krzyk albo sygnał, na który nikt nie odpowiada.
 
-**Zachowanie:** zdyscyplinowany, ostrożny, samotny. Pilnuje nieistniejącej już odprawy kupieckiej. Boi się zamknięcia drogi odwrotu; nie ucieka w nieskończoność.
+**Koncept:** [plansza łucznika, warianty i sceny](art/bestiariusz/lucznik-pustego-traktu/01_karta_koncepcyjna.png). Koncept jest wzorcem wyglądu; warianty dzielą tryby ataku.
+
+**Zachowanie:** szaleńczy w gestach i głosie, ale w strzale nadal strażnik: odruchy dawnej służby zostały. Krąży przy trakcie, jakby wciąż pilnował odprawy kupieckiej, której już nie ma. Nie ucieka w nieskończoność.
 
 **Priorytety AI:** obserwuje drogę → ustawia linię strzału → naciąga widocznie → strzela w zablokowany przed wypuszczeniem kierunek → zmienia pozycję do wcześniej dostępnego punktu. W zwarciu odsuwa się, a jeśli nie ma miejsca, używa noża. Nie strzela przez osłony ani ściany.
 
@@ -109,20 +115,22 @@ Nowe ofiary i istoty nie dopisują historii do zatwierdzonych NPC. Ślady człow
 
 **Rola:** wsparcie blokujące łatwą okazję; ślad żałoby. **Pytanie:** czy najpierw przerwiesz śpiew, czy odciągniesz chronionego przeciwnika?
 
-**Sylwetka:** wąska postać; zwisający pusty płaszcz przewieszony przez ramiona jak niesiony człowiek; jasne dłonie. Dźwięk: melodia bez słów, kończąca się za każdym razem przed ostatnią nutą.
+**Kim jest [DECYZJA AUTORA, 28.10.2026]:** demon lasu.
 
-**Koncept:** [plansza Żałobnicy](art/bestiariusz/zalobnica/01_karta_koncepcyjna.png) przedstawia wąską sylwetkę w warstwach ciemnych, poszarpanych tkanin, twarz ukrytą pod welonem i jasne dłonie. Widoki oraz warianty są referencją wizualną; skalę i czytelność pustego płaszcza należy sprawdzić w grze.
+**Sylwetka:** wysoka (około 220 cm), wąska postać w warstwach ciemnych, poszarpanych tkanin; welon i wianek z gałązek; pod welonem twarz bez twarzy; długie, jasne dłonie; talizmany żałoby (medalion, dzwonek). Dźwięk: melodia bez słów, kończąca się za każdym razem przed ostatnią nutą.
 
-**Zachowanie:** cierpliwa, troskliwa, zaborcza. Zachowuje się, jakby próbowała kogoś ochronić. Nie potwierdzamy, czy jest człowiekiem, duchem czy obrazem wywołanym przez las.
+**Koncept:** [plansza Żałobnicy](art/bestiariusz/zalobnica/01_karta_koncepcyjna.png). Koncept jest wzorcem wyglądu.
+
+**Zachowanie:** cierpliwa, troskliwa, zaborcza. Zachowuje się, jakby próbowała kogoś ochronić.
 
 **Priorytety AI:** pozostaje przy chronionym miejscu → rozpoczyna śpiew tylko przy widocznym sojuszniku → podtrzymuje osłonę jednego celu → przerywa po otrzymaniu trafienia lub utracie zasięgu/łączności wzrokowej → szuka nowej pozycji. Nie leczy HP i nie wskrzesza wrogów.
 
 | Zdolność | Zapowiedź | Efekt | Odpowiedź i okazja |
 |---|---|---|---|
-| Niedokończona pieśń | Podniesienie pustego płaszcza, początek melodii, widoczne połączenie z celem | Jednorazowa redukcja następnego trafienia w chronionego wroga; nigdy pełna odporność; nie kumuluje się | Trafić śpiewającą, przerwać widoczność albo wyczerpać osłonę zwykłym ciosem |
-| Odepchnięcie | Zbiera płaszcz przy piersi, gwałtowny wdech | Bliski, nieparowalny atak odpychający, bez dalszego przyciągania | Odskok, po ataku przerwa w śpiewie |
+| Niedokończona pieśń | Podnosi welon i odsłania twarz bez twarzy; początek melodii, widoczne połączenie z celem | Jednorazowa redukcja następnego trafienia w chronionego wroga; nigdy pełna odporność; nie kumuluje się | Trafić śpiewającą, przerwać widoczność albo wyczerpać osłonę zwykłym ciosem |
+| Odepchnięcie | Zbiera tkaniny przy piersi, gwałtowny wdech | Bliski, nieparowalny atak odpychający, bez dalszego przyciągania | Odskok, po ataku przerwa w śpiewie |
 
-**Słabość:** nieruchoma podczas pieśni, osłona nie obejmuje jej samej. **Łup:** brak automatycznej kosztowności; po walce zostaje płaszcz jako ślad. **Występowanie:** późny fragment lasu; nowy efekt osłony wymaga implementacji i jest kandydatem do odłożenia przy ograniczeniu zakresu.
+**Słabość:** nieruchoma podczas pieśni, osłona nie obejmuje jej samej. **Łup:** brak automatycznej kosztowności; po walce zostaje welon jako ślad. **Występowanie:** późny fragment lasu; nowy efekt osłony wymaga implementacji i jest kandydatem do odłożenia przy ograniczeniu zakresu.
 
 #### ENM-korzeniec — Korzeniec
 
