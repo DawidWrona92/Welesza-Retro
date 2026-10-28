@@ -54,6 +54,25 @@ def frame_issues(alpha: np.ndarray) -> list[dict]:
     return issues
 
 
+def check_runtime_contract(source: dict, runtime: dict, asset_id: str) -> None:
+    """Kontrakt źródłowy jest nadrzędny także dla proceduralnego chodu."""
+    expected = {a: dict(spec, events=spec.get("events", []))
+                for a, spec in source.get("animations", {}).items()}
+    for key, value in {"id": asset_id + "-pixel", "kind": source["kind"],
+                       "cell": [v // 2 for v in source["canvas"]],
+                       "anchor": [v / 2 for v in source["anchor"]],
+                       "layers": source.get("layers", []), "animations": expected}.items():
+        actual = runtime.get(key, {} if key == "animations" else None)
+        if actual != value:
+            raise ValueError(f"Kontrakt {key} zmieniony: {asset_id}")
+    if "collision" in source:
+        collision = source["collision"]
+        expected_collision = ({"circle": collision["circle"] / 2} if "circle" in collision else
+                              {"polygon": [[x / 2, y / 2] for x, y in collision["polygon"]]})
+        if runtime.get("collision") != expected_collision:
+            raise ValueError(f"Kolizja zmieniona: {asset_id}")
+
+
 def check() -> dict:
     manifest = json.loads((GAME_ASSETS / "pixelart/manifest.json").read_text())
     profile = manifest["profile"]
@@ -86,22 +105,14 @@ def check() -> dict:
         source = json.loads((ART_SRC / asset_id / "asset.json").read_text())
         dest = GAME_ASSETS / (asset_id + "-pixel")
         runtime = json.loads((dest / "meta.json").read_text())
-        if runtime["anchor"] != [v / 2 for v in source["anchor"]]:
-            raise ValueError(f"Kotwica zmieniona: {asset_id}")
-        if source.get("animations", {}) != runtime.get("animations", {}):
-            # Runtime dopisuje puste events; normalizujemy wyłącznie ten brak.
-            expected = {a: dict(s, events=s.get("events", [])) for a, s in source.get("animations", {}).items()}
-            rigs = json.loads((ART_SRC / profile["walk_rig"]).read_text())
-            if asset_id in rigs:
-                expected["walk"] = {"frames": rigs["frames"], "fps": rigs["fps"], "loop": True,
-                                    "events": [{"frame": f, "name": "step"} for f in sorted({
-                                        round((-leg["phase"] % 1)*rigs["frames"]) % rigs["frames"]
-                                        for leg in rigs[asset_id]["legs"]
-                                    })]}
-            if expected != runtime.get("animations", {}):
-                raise ValueError(f"Zdarzenia/czasy animacji zmienione: {asset_id}")
+        check_runtime_contract(source, runtime, asset_id)
         for path in sorted(dest.glob("*.png")):
             data = np.asarray(Image.open(path).convert("RGBA"))
+            if source["kind"] == "character":
+                spec = runtime["animations"].get(path.stem)
+                if spec is None or data.shape[:2] != (runtime["cell"][1] * 8,
+                                                      runtime["cell"][0] * spec["frames"]):
+                    raise ValueError(f"Wymiary atlasu niezgodne z kontraktem: {path}")
             small = data[::step, ::step]
             restored = small.repeat(step, 0).repeat(step, 1)
             if not np.array_equal(restored, data):
@@ -117,7 +128,17 @@ def check() -> dict:
             cw, ch = [v // step for v in runtime["cell"]]
             anim = path.stem
             n = runtime["animations"][anim]["frames"]
-            for row, direction in enumerate(("s", "sw", "w", "nw", "n", "ne", "e", "se")):
+            directions = ("s", "sw", "w", "nw", "n", "ne", "e", "se")
+            if anim == "walk":
+                for target, origin in source.get("mirror", {}).items():
+                    a, b = directions.index(target), directions.index(origin)
+                    for frame in range(n):
+                        actual = small[a*ch:(a+1)*ch, frame*cw:(frame+1)*cw]
+                        expected = small[b*ch:(b+1)*ch, frame*cw:(frame+1)*cw][:, ::-1]
+                        if not np.array_equal(actual, expected):
+                            raise ValueError(f"Niespójne odbicie {asset_id}/{target}/{frame}")
+            for row, direction in enumerate(directions):
+                centers = []
                 previous = None
                 for frame in range(n):
                     alpha = small[row*ch:(row+1)*ch, frame*cw:(frame+1)*cw, 3]
@@ -134,8 +155,13 @@ def check() -> dict:
                         report["warnings"].append({"asset": asset_id, "animation": anim,
                                                    "direction": direction, "frame": frame,
                                                    "upper_body_shift_px": round(center - previous, 1)})
+                    centers.append(center)
                     previous = center
                     report["frames"] += 1
+                if anim == "walk" and abs(centers[-1] - centers[0]) > 4:
+                    report["warnings"].append({"asset": asset_id, "animation": anim,
+                        "direction": direction, "frame": 0, "kind": "loop_body_shift",
+                        "upper_body_shift_px": round(centers[0] - centers[-1], 1)})
     (GAME_ASSETS / "pixelart/quality.json").write_text(json.dumps(report, indent=2) + "\n")
     # Każda podejrzana klatka raz; podgląd tworzony automatycznie obok raportu.
     flagged = {}
@@ -159,6 +185,9 @@ def check() -> dict:
         sheet = Image.new("RGB", (960, 172), "#233339")
         ImageDraw.Draw(sheet).text((24, 60), "Brak klatek wskazanych przez heurystyki. Sprawdz walk.gif i combat.gif.", fill="#cfad75")
         sheet.save(GAME_ASSETS / "pixelart/quality_review.png")
+    broken_walk = [w for w in report["warnings"] if w["animation"] == "walk"]
+    if broken_walk:
+        raise ValueError(f"Chód nie przeszedł bramki: {len(broken_walk)} problemów; zobacz quality_review.png")
     return report
 
 

@@ -154,7 +154,7 @@ def generate(profile: dict, source_root: Path = ART_SRC, out_root: Path = GAME_A
             report["inputs"][path.relative_to(source_root).as_posix()] = hashlib.sha256(path.read_bytes()).hexdigest()
     report["generator_sources"] = {
         name: hashlib.sha256(Path(__file__).with_name(name).read_bytes()).hexdigest()
-        for name in ("pixelart_motion.py", "pixelart_terrain.py")
+        for name in ("pixelart_motion.py", "pixelart_terrain.py", "sprite_pipeline.py", "welesza_assets.py", "requirements.txt")
     }
     walk_telemetry = {}
     previews = []
@@ -211,21 +211,22 @@ def generate(profile: dict, source_root: Path = ART_SRC, out_root: Path = GAME_A
                 with Image.open(dest / reference_name) as source:
                     reference = source.convert("RGBA").resize(tuple(v//profile["pixel_size"] for v in source.size),
                                                                Image.Resampling.NEAREST)
-                walk, telemetry = rig_walk(reference, rigs[asset_id], rigs["frames"], profile["pixel_size"])
+                walk, telemetry = rig_walk(reference, rigs[asset_id], runtime["animations"]["walk"]["frames"], profile["pixel_size"])
+                source_meta = json.loads((source_root / asset_id / "asset.json").read_text())
+                directions = ["s", "sw", "w", "nw", "n", "ne", "e", "se"]
+                for target, origin in source_meta.get("mirror", {}).items():
+                    origin_row, target_row = directions.index(origin), directions.index(target)
+                    for frame in range(runtime["animations"]["walk"]["frames"]):
+                        cell = walk.crop((frame*128, origin_row*128, (frame+1)*128, (origin_row+1)*128))
+                        walk.paste(cell.transpose(Image.Transpose.FLIP_LEFT_RIGHT), (frame*128, target_row*128))
+                    telemetry["directions"][target] = {"mirror_of": origin}
                 if overrides:
                     patch = overrides / asset_id / "walk.png"
                     walk = apply_override(walk, patch, profile["palette"])
                     for f in [patch, patch.with_suffix(".erase.png")]:
                         if f.exists():
                             report["overrides"][f.relative_to(overrides).as_posix()] = hashlib.sha256(f.read_bytes()).hexdigest()
-                walk.resize((rigs["frames"]*256, 8*256), Image.Resampling.NEAREST).save(dest / "walk.png")
-                runtime["animations"]["walk"] = {
-                    "frames": rigs["frames"], "fps": rigs["fps"], "loop": True,
-                    "events": [{"frame": f, "name": "step"} for f in sorted({
-                        round((-leg["phase"] % 1)*rigs["frames"]) % rigs["frames"]
-                        for leg in rigs[asset_id]["legs"]
-                    })]
-                }
+                walk.resize((runtime["animations"]["walk"]["frames"]*256, 8*256), Image.Resampling.NEAREST).save(dest / "walk.png")
                 runtime["walk_cycle_distance"] = rigs[asset_id]["cycle_distance"]
                 (dest / "meta.json").write_text(json.dumps(runtime, ensure_ascii=False, indent=2)+"\n")
                 items = [(anim, f"{anim}.png", spec["frames"]) for anim, spec in runtime["animations"].items()]

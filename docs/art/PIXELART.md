@@ -31,7 +31,7 @@ python -m unittest discover -s tools/tests
 ```
 
 W środowisku chmurowym używaj binarki
-`/workspace/.tools/godot-4.7.2/Godot_v4.7.2-stable_linux.x86_64`;
+`/workspace/welesza-env/bin/godot`;
 systemowe `godot` ma starszą wersję. Cache i dane Godota ustaw w zapisywalnych katalogach
 przez `XDG_CONFIG_HOME`, `XDG_CACHE_HOME`, `XDG_DATA_HOME`.
 
@@ -47,22 +47,28 @@ Następnie wykonuje testy Python, importuje projekt, wykonuje testy gry i rzeczy
 Dowolny błąd przerywa proces z niezerowym kodem wyjścia. W CI te same kroki są
 wpięte po budowie zwykłych assetów i przed importem do Godota.
 
-Chód jest stabilizowany poziomo względem górnej części sylwetki (bez deformacji
-kończyn, limit korekty 18 natywnych pikseli). Korekty są jawnie zapisane w manifeście;
-przekroczenie limitu albo obcięcie sylwetki zatrzymuje budowę. Ciosy i skoki nie
-są stabilizowane, bo zawierają celowe wychylenia. W runtime cykl kroku przyspiesza
-z ruchem i sprintem oraz zachowuje fazę podczas skrętu; dotyczy to tylko postaci
-z ustawioną długością cyklu (`walk_cycle_distance`), nie zmienia wcześniejszych scen.
-To redukcja mierzalnego dryfu, nie gwarancja doskonałej anatomii ani kontaktu każdej stopy.
+Chód korzysta z jednej pozy odniesienia na kierunek: idle bohatera albo pierwszej
+klatki walk psa. Maski w `art-src/_pixel_rigs/walk.json` wycinają teksturowane
+fragmenty nóg. Generator odkształca je na siatce nearest, mocując górny szew;
+dolna ćwiartka buta/łapy przesuwa się sztywno. Nie rysuje zastępczych nóg ani
+nie usuwa fragmentów sylwetki metodą „zostaw największy komponent”. Maska `protect`
+chroni miecz w widoku E. Rozdzielenie masek przednich nóg zapobiega poruszaniu
+obiema naraz, gdy łączy je piksel przy biodrach. Pozostała część sylwetki jest stała.
 
-`game/assets/pixelart/quality.json` zawiera listę odłączonych fragmentów sylwetki
-(np. obcego kawałka miecza), dotknięć krawędzi płótna oraz klatek chodu z nagłym skokiem
-górnej części sylwetki o więcej niż 4 natywne piksele. Są to ostrzeżenia do
-selektywnej oceny, nie diagnoza anatomii ani automatyczna naprawa. Twarde reguły
-techniczne blokują build; heurystyka ruchu go nie blokuje. Dzięki temu oglądamy
-głównie wskazane klatki, zamiast analizować całe paski od początku.
-`quality_review.png` składa je automatycznie w jeden arkusz.
-`walk.gif` i `combat.gif` pokazują jednocześnie osiem kierunków obu postaci.
+Amplituda jest ograniczona długością wycinka; zawinięcie siatki lub zbyt duże
+rozciąganie przerywa build. Rig jest przeznaczony dla siatki 128×128 (`pixel_size=2`);
+inna siatka wymaga opracowania osobnych masek. Nie skaluje się ich po cichu.
+Liczba klatek, FPS i zdarzenia pozostają dokładnie zgodne z `asset.json`:
+bohater 8 klatek chodu, pies 6, kroki odpowiednio na 1/5 i 1/4.
+Kierunki odbijane psa są kopiowane z gotowej animacji, klatka po klatce.
+
+`quality.json` wskazuje odłączone fragmenty, krawędzie płótna i skoki górnej
+części sylwetki, również na szwie ostatnia–pierwsza klatka. `quality_review.png`
+pokazuje wskazane klatki; `walk.gif` i `combat.gif` osiem kierunków obu postaci.
+Problemy wykryte w chodzie przerywają build po zapisaniu raportu i arkusza.
+Raport techniczny nie ocenia anatomii ani naturalności ruchu. GIF pokazuje bazowe
+12 FPS; runtime dopasowuje tempo do prędkości i zachowuje fazę podczas skrętu.
+Krótki krok tej wersji przy dużej prędkości daje wysoką kadencję — oceniaj także sprint.
 
 Pierwsza zapisana korekta usuwa dodatkowe ostrze za plecami bohatera w
 `attack_w`, klatka 2 i uzupełnia uciętą końcówkę miecza w klatce 3 (numeracja od zera).
@@ -101,12 +107,26 @@ biały usuwa, czarny pozostawia. Usuwanie ma pierwszeństwo przed malowaniem.
 Ponownie uruchom generator: poprawki przetrwają i zostaną wpisane do manifestu.
 Niewłaściwe kolory, półprzezroczystość i rozmiary są odrzucane.
 
-## Granice pierwszej wersji
+## Kierunek dalszych zmian i bramka odbioru
 
-To deterministyczny konwerter i generator terenu, nie generator dowolnej nowej
-postaci z tekstu. Nie naprawia anatomii ani niespójnych póz w źródłowych obrazach.
-Obecny walidator nadal zgłasza drganie głowy w chodzie bohatera i psa; wspólna
-siatka i paleta usuwają dryf koloru, nie gwarantują stabilnej anatomii. Następna
-iteracja powinna poprawiać klatki na małej siatce (lub używać jawnego szkieletu
-i części postaci), zamiast ponownie generować całe paski modelem obrazowym.
-Nie odtworzono zabudowy z referencji; celem tej próby jest czytelne starcie na trakcie.
+Utrzymujemy obecną paletę, proporcje i odrębne warianty `-pixel`. Zmiany anatomii
+wymagają jawnych masek lub korekt źródłowych, z porównaniem przed/po we wszystkich
+kierunkach. Nie zastępuj całych kończyn figurami geometrycznymi. Nie zwiększaj
+liczby klatek ani nie przesuwaj zdarzeń walki w ramach poprawki grafiki.
+
+Przed przyjęciem zmiany:
+
+1. Uruchom pełne `check_pixelart.py --build --godot godot`; sprawdź liczbę wykonanych
+   testów i `PIXEL_DEMO` z trafieniami bohatera oraz psa.
+2. Sprawdź manifest i powtarzalność hashy po ponownej budowie z przypiętymi bibliotekami.
+3. Obejrzyj wskazane klatki i pełne pętle: osiem kierunków, przejścia idle/walk/attack,
+   kontakt stóp, niezmienność twarzy i ekwipunku, ostatnia–pierwsza klatka, skręt i sprint.
+4. Zaakceptuj wygląd na podstawie ruchu w grze. Zielone testy nie są akceptacją artystyczną.
+
+To konwerter z ograniczoną animacją wycinkową, nie rekonstrukcja szkieletu 3D.
+Niewidoczne nogi nie są domyślane. Przy części widoków fragmenty nóg pozostają
+zasłonięte płaszczem lub korpusem; nie uznajemy tego za pełny anatomiczny rig.
+Korpus i ramiona nie mają jeszcze przeciwskrętu. Naturalny dłuższy krok oraz
+pełny chód czworonożny wymagają osobno opracowanych części i póz kontaktowych.
+Pozostałe animacje zachowują źródłowe pozy i istniejące korekty; konwersja nie
+stanowi dowodu naprawienia wszystkich błędów rysunków GPT.

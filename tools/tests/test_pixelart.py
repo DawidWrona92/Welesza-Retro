@@ -10,8 +10,8 @@ from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from pixelart_generator import PROFILE, apply_override, pixelate, stabilize_walk
-from check_pixelart import frame_issues
-from pixelart_motion import foot_path, knee_point, connected_body
+from check_pixelart import frame_issues, check_runtime_contract
+from pixelart_motion import foot_path, deform_cutout, rig_walk
 from pixelart_terrain import iso, make_ground, TERRAIN_COLORS
 
 
@@ -97,14 +97,6 @@ class PixelArtTest(unittest.TestCase):
         self.assertGreater(foot_path(.78, stride, .58, 5)[1], 4)
         self.assertNotEqual(foot_path(.2, stride, .58, 5)[1], foot_path(.7, stride, .58, 5)[1])
 
-    def test_knee_respects_bone_lengths_through_full_cycle(self):
-        for phase in np.linspace(0, 1, 120):
-            forward, lift, _ = foot_path(phase, 64, .58, 5)
-            hip, foot = (0, 33), (forward, lift)
-            knee = knee_point(hip, foot, 20, 20)
-            self.assertAlmostEqual(float(np.linalg.norm(np.array(knee)-hip)), 20)
-            self.assertAlmostEqual(float(np.linalg.norm(np.array(knee)-foot)), 20)
-
     def test_iso_square_has_two_to_one_diamond_and_no_perspective_scale(self):
         points = [iso(u, v) for u, v in [(-10, -10), (10, -10), (10, 10), (-10, 10)]]
         self.assertEqual(max(p[0] for p in points)-min(p[0] for p in points), 40)
@@ -112,14 +104,6 @@ class PixelArtTest(unittest.TestCase):
         near = np.array(iso(8, 8))-iso(0, 0)
         far = np.array(iso(1008, 1008))-iso(1000, 1000)
         np.testing.assert_array_equal(near, far)
-
-    def test_removed_boot_fragment_does_not_survive_in_torso(self):
-        image = Image.new("RGBA", (32, 32))
-        image.paste((80, 60, 40, 255), (10, 3, 20, 24))
-        image.paste((80, 60, 40, 255), (26, 28, 30, 32))
-        clean = connected_body(image)
-        self.assertEqual(clean.getpixel((12, 12))[3], 255)
-        self.assertEqual(clean.getpixel((28, 30))[3], 0)
 
     def test_terrain_is_dark_native_resolution_and_deterministic(self):
         image = make_ground(self.profile, (256, 160))
@@ -129,3 +113,61 @@ class PixelArtTest(unittest.TestCase):
         luma = data[:, :, 0]*.2126 + data[:, :, 1]*.7152 + data[:, :, 2]*.0722
         self.assertLess(float(np.median(luma)), 55)
         self.assertLess(float(np.percentile(luma, 99)), 80)
+
+    def test_deformation_preserves_pixels_and_fixed_seam(self):
+        image = Image.new("RGBA", (64, 64))
+        image.paste((96, 72, 51, 255), (24, 12, 34, 48))
+        image.paste((53, 42, 36, 255), (24, 38, 38, 48))
+        moved = deform_cutout(image, 7, -3)
+        np.testing.assert_array_equal(np.asarray(image)[12], np.asarray(moved)[12])
+        self.assertTrue({tuple(p) for p in np.asarray(moved).reshape(-1, 4)} <=
+                        {tuple(p) for p in np.asarray(image).reshape(-1, 4)})
+        self.assertEqual(moved.getpixel((42, 44))[3], 255)
+        with self.assertRaises(ValueError):
+            deform_cutout(image, 100, -35)
+        with self.assertRaises(ValueError):
+            deform_cutout(Image.new("RGBA", (64, 64)), 1, 1)
+
+    def test_rig_keeps_body_and_source_frame_count(self):
+        reference = Image.new("RGBA", (128, 128*8))
+        for row in range(8):
+            reference.paste((96, 72, 51, 255), (44, row*128+40, 84, row*128+80))
+            for x in (48, 72):
+                reference.paste((53, 42, 36, 255), (x, row*128+76, x+8, row*128+112))
+        directions = ("s", "sw", "w", "nw", "n", "ne", "e", "se")
+        rig = {"cycle_distance": 48, "support": .58, "lift": 1,
+               "erase_legs": {d: [[[40, 80], [90, 80], [90, 120], [40, 120]]] for d in directions}}
+        for count in (6, 8):
+            walk, telemetry = rig_walk(reference, rig, count)
+            self.assertEqual(walk.size, (128*count, 128*8))
+            self.assertEqual(telemetry["frames"], count)
+            for row in range(8):
+                for frame in range(count):
+                    self.assertEqual(walk.crop((frame*128, row*128, frame*128+128, row*128+80)).tobytes(),
+                                     reference.crop((0, row*128, 128, row*128+80)).tobytes())
+            self.assertNotEqual(walk.crop((0, 0, 128, 128)).tobytes(),
+                                walk.crop((128, 0, 256, 128)).tobytes())
+        with self.assertRaises(ValueError):
+            rig_walk(reference, rig, 8, step=4)
+
+    def test_walk_contract_cannot_be_replaced_by_rig_defaults(self):
+        import copy
+        source = json.loads((Path(__file__).parents[2] / "art-src/HERO-bohater/asset.json").read_text())
+        runtime = {"id": "HERO-bohater-pixel", "kind": source["kind"], "cell": [256, 256],
+                   "anchor": [128, 224], "layers": source["layers"], "collision": {"circle": 18},
+                   "animations": {a: dict(v, events=v.get("events", [])) for a,v in source["animations"].items()}}
+        check_runtime_contract(source, runtime, "HERO-bohater")
+        for key, value in [("frames", 12), ("fps", 24), ("events", [{"frame": 0, "name": "step"}])]:
+            broken = copy.deepcopy(runtime)
+            broken["animations"]["walk"][key] = value
+            with self.assertRaises(ValueError):
+                check_runtime_contract(source, broken, "HERO-bohater")
+        runtime["collision"] = {"circle": 20}
+        with self.assertRaises(ValueError):
+            check_runtime_contract(source, runtime, "HERO-bohater")
+
+    def test_cutout_cannot_leave_canvas(self):
+        image = Image.new("RGBA", (64, 64))
+        image.paste((96, 72, 51, 255), (54, 12, 63, 48))
+        with self.assertRaisesRegex(ValueError, "krawędzi"):
+            deform_cutout(image, 7, 0)
