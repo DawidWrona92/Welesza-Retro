@@ -11,6 +11,8 @@ Proponowana obsada: siedem typów zwykłych przeciwników (karta wilka do opraco
 
 Groza wynika z życia, które nadal próbuje się powtarzać. Przeciwnik może strzec pustego domu, nieść niepotrzebny już zapas albo wołać kogoś, kto nie odpowie. Nie każdy jest świadomy i nie każdy rozumie, co robi. To wskazówki wykonawcze, nie ujawniona prawda o kosmologii Weleszy.
 
+Przeciwnicy w borze to demony i duchy lasu albo zwierzęta, nie żywi ludzie [DECYZJA AUTORA, 28.10.2026]. Ludzką sylwetkę mają tylko istoty, które las przejął lub odmienił (Drwal, Łucznik, Powrotnik, Dźwigacz). Wyjątkiem jest Zdziczały pies, zwykłe zwierzę bliżej wioski.
+
 Przeciwników będzie wielu, dlatego każdy typ ma warianty wyglądu i uzbrojenia, żeby nie był to atak klonów [DECYZJA AUTORA, 28.10.2026]. Warianty jednego typu dzielą tryby ataku, np. hak i sierp na trzonku. Limit aktywnych wrogów w jednym starciu z projektu spotkań nadal obowiązuje.
 
 Nie używamy dzieci jako przeciwników, przypadkowej makabry jako głównego środka ani żartobliwych odzywek przy śmierci. Ciała i rekwizyty mogą być niepokojące bez eksponowania okaleczeń.
@@ -175,9 +177,9 @@ Wciąż nosi drewno do dawno zgasłego pieca. Nie wyjaśniamy, czy kieruje nim p
 
 #### ENM-stroz — Stróż, boss finałowy
 
-**Rola:** finałowy test kontroli zachłanności; strażnik o nieznanym celu. **Sylwetka:** wysoka postać w starym żelazie; długa broń drzewcowa; przywiązane do pasa fragmenty podróżnych pakunków; zwykła latarnia [DECYZJA AUTORA, 28.10.2026]. Nie jest to magiczna latarnia z komory. Część przedmiotów przypomina wcześniejsze znaleziska, ale nie potwierdza to ich pochodzenia.
+**Rola:** finałowy test kontroli zachłanności; strażnik o nieznanym celu. **Sylwetka:** bardzo wysoka postać (około 3,5 m, dwa razy wyższa od bohatera) w zardzewiałej zbroi i kolczudze pod postrzępionymi warstwami tkanin; kaptur, a pod nim zamiast twarzy czarna mgła; blade, ludzkie dłonie; długa pika z szerokim grotem; przywiązane do pasa i pleców bagaże podróżnych (zwinięte posłanie, sakwy, pusta klatka na ptaka); zwykła latarnia [DECYZJA AUTORA, 28.10.2026]. Nie jest to magiczna latarnia z komory. Część przedmiotów przypomina wcześniejsze znaleziska, ale nie potwierdza to ich pochodzenia.
 
-**Koncept:** [plansza Stróża](art/bestiariusz/stroz/01_karta_koncepcyjna.png) przedstawia zardzewiałą zbroję pod postrzępionymi warstwami tkanin, kaptur skrywający twarz, długą broń drzewcową, pakunki i zwykłą latarnię. Skala widoczna na planszy jest propozycją do sprawdzenia w grze; szczegóły obrazu nie rozstrzygają pochodzenia Stróża.
+**Koncept:** [plansza Stróża](art/bestiariusz/stroz/01_karta_koncepcyjna.png): widoki, detale, cztery warianty i widok w grze. Koncept jest wzorcem wyglądu; skalę sprawdzamy w kamerze gry. Obraz nie rozstrzyga pochodzenia Stróża.
 
 **Zachowanie:** cierpliwy, nieustępliwy, niemal ceremonialny. Staje między graczem a wyjściem; nie rabuje i nie świętuje zwycięstwa. Głosy są ciche, różne, czasem sprzeczne. Nie naśladuje bliskich bohatera ani nie dopisuje mu osobistej przeszłości.
 
