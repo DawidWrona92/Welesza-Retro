@@ -1,0 +1,1305 @@
+{
+  "schema": "welesza.world-layout-proposal.v2",
+  "version": "0.2.0",
+  "status": "ACCEPTED_FOR_GREYBOX",
+  "scope": "complete currently documented demo valley; future full-game beyond dry road unspecified",
+  "orientation": "x increases east, y increases south; abstract planning units",
+  "bounds": [
+    0,
+    0,
+    24,
+    18
+  ],
+  "cells": {
+    "cols": 24,
+    "rows": 18,
+    "notional_cell_size": "unconfirmed: use D, B, U, A, V playtest metrics before adopting metres"
+  },
+  "sectors": [
+    {
+      "id": "S00",
+      "rect": [
+        0,
+        0,
+        6,
+        6
+      ],
+      "name": "Zachodnia granica boru",
+      "level": "surface",
+      "scope": "boundary",
+      "streaming": "proposed"
+    },
+    {
+      "id": "S01",
+      "rect": [
+        6,
+        0,
+        6,
+        6
+      ],
+      "name": "Niemir i skalne źródło",
+      "level": "surface",
+      "scope": "playable",
+      "streaming": "proposed"
+    },
+    {
+      "id": "S02",
+      "rect": [
+        12,
+        0,
+        6,
+        6
+      ],
+      "name": "Północne ścieżki",
+      "level": "surface",
+      "scope": "playable",
+      "streaming": "proposed"
+    },
+    {
+      "id": "S03",
+      "rect": [
+        18,
+        0,
+        6,
+        6
+      ],
+      "name": "Wschodni las i podejście",
+      "level": "surface",
+      "scope": "boundary",
+      "streaming": "proposed"
+    },
+    {
+      "id": "S10",
+      "rect": [
+        0,
+        6,
+        6,
+        6
+      ],
+      "name": "Zerwany most i wóz",
+      "level": "surface",
+      "scope": "playable",
+      "streaming": "proposed"
+    },
+    {
+      "id": "S11",
+      "rect": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "name": "Rozstaj oraz cmentarne miejsce",
+      "level": "surface",
+      "scope": "playable",
+      "streaming": "proposed"
+    },
+    {
+      "id": "S12",
+      "rect": [
+        12,
+        6,
+        6,
+        6
+      ],
+      "name": "Kamienie i obóz",
+      "level": "surface",
+      "scope": "playable",
+      "streaming": "proposed"
+    },
+    {
+      "id": "S13",
+      "rect": [
+        18,
+        6,
+        6,
+        6
+      ],
+      "name": "Ruiny oraz finał",
+      "level": "surface",
+      "scope": "playable",
+      "streaming": "proposed"
+    },
+    {
+      "id": "S20",
+      "rect": [
+        0,
+        12,
+        6,
+        6
+      ],
+      "name": "Nieprzebyta skarpa i podmokłości",
+      "level": "surface",
+      "scope": "boundary",
+      "streaming": "proposed"
+    },
+    {
+      "id": "S21",
+      "rect": [
+        6,
+        12,
+        6,
+        6
+      ],
+      "name": "Polana z pieśnią",
+      "level": "surface",
+      "scope": "playable",
+      "streaming": "proposed"
+    },
+    {
+      "id": "S22",
+      "rect": [
+        12,
+        12,
+        6,
+        6
+      ],
+      "name": "Sidła i jama Zbieracza",
+      "level": "surface",
+      "scope": "playable",
+      "streaming": "proposed"
+    },
+    {
+      "id": "S23",
+      "rect": [
+        18,
+        12,
+        6,
+        6
+      ],
+      "name": "Południowo-wschodnia granica doliny (tło suchego szlaku)",
+      "level": "surface",
+      "scope": "boundary",
+      "streaming": "proposed"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "spring",
+      "name": "Źródło w skale",
+      "grid": [
+        9,
+        1
+      ],
+      "area": "settlement",
+      "type": "landmark",
+      "design_note": "natural source and rock backdrop, passable trough west side; no fixed scale until measured",
+      "owner_sector": "S01"
+    },
+    {
+      "id": "watch_village",
+      "name": "Strażnica Niemiru",
+      "grid": [
+        10.4,
+        1.3
+      ],
+      "area": "settlement",
+      "type": "quest",
+      "design_note": "common lamp, Wszebora, no secret tunnel",
+      "owner_sector": "S01"
+    },
+    {
+      "id": "houses",
+      "name": "Domy przy palisadzie",
+      "grid": [
+        7.4,
+        1.2
+      ],
+      "area": "settlement",
+      "type": "civilian",
+      "design_note": "small housing loop, mourners and practical storage",
+      "owner_sector": "S01"
+    },
+    {
+      "id": "inn",
+      "name": "Dom gościnny",
+      "grid": [
+        7.6,
+        2.8
+      ],
+      "area": "settlement",
+      "type": "service",
+      "design_note": "rest/save, Miłka; private room later",
+      "owner_sector": "S01"
+    },
+    {
+      "id": "square",
+      "name": "Plac Niemiru",
+      "grid": [
+        9,
+        2.4
+      ],
+      "area": "settlement",
+      "type": "hub",
+      "design_note": "small irregular square, goods scale and spring approach",
+      "owner_sector": "S01"
+    },
+    {
+      "id": "services",
+      "name": "Kuźnia i zielarka",
+      "grid": [
+        10.8,
+        3.3
+      ],
+      "area": "settlement",
+      "type": "service",
+      "design_note": "two separate buildings Radost and Dobrawa",
+      "owner_sector": "S01"
+    },
+    {
+      "id": "training",
+      "name": "Dziedziniec ćwiczeń",
+      "grid": [
+        9.8,
+        4.1
+      ],
+      "area": "settlement",
+      "type": "training",
+      "design_note": "safe dodge/parry learning with Żegota",
+      "owner_sector": "S01"
+    },
+    {
+      "id": "gate",
+      "name": "Brama Niemiru",
+      "grid": [
+        9,
+        4.7
+      ],
+      "area": "settlement",
+      "type": "gate",
+      "design_note": "only main gate; no second valley access",
+      "owner_sector": "S01"
+    },
+    {
+      "id": "crossroads",
+      "name": "Rozstaj pod pochylonym drzewem",
+      "grid": [
+        9,
+        6.7
+      ],
+      "area": "approach",
+      "type": "hub",
+      "design_note": "road forks; warm village light readable northward",
+      "owner_sector": "S11"
+    },
+    {
+      "id": "wagon",
+      "name": "Porzucony wóz",
+      "grid": [
+        5.6,
+        8.5
+      ],
+      "area": "approach",
+      "type": "encounter",
+      "design_note": "first dog and optional powrotnik; two traversable flanks",
+      "owner_sector": "S10"
+    },
+    {
+      "id": "bridge",
+      "name": "Brzeg i zerwany most",
+      "grid": [
+        2.5,
+        9.4
+      ],
+      "area": "approach",
+      "type": "boundary",
+      "design_note": "visible far bank; no jumping across",
+      "owner_sector": "S10"
+    },
+    {
+      "id": "loop_mark",
+      "name": "Oznaczone drzewo",
+      "grid": [
+        5.4,
+        10.5
+      ],
+      "area": "approach",
+      "type": "anomaly",
+      "design_note": "Identifiable tree marking; spatial anomaly implementation A/B OPEN for author decision; persistent object",
+      "owner_sector": "S10"
+    },
+    {
+      "id": "grave",
+      "name": "Cmentarne miejsce / buty",
+      "grid": [
+        7.9,
+        9.9
+      ],
+      "area": "optional",
+      "type": "quest",
+      "design_note": "side quest Nie pal jego butów",
+      "owner_sector": "S11"
+    },
+    {
+      "id": "stones",
+      "name": "Węzeł kamiennych dróg",
+      "grid": [
+        12.6,
+        9.4
+      ],
+      "area": "forest",
+      "type": "hub",
+      "design_note": "three paths to unique damaged markers",
+      "owner_sector": "S12"
+    },
+    {
+      "id": "pillar_whole",
+      "name": "Słup cały",
+      "grid": [
+        11.4,
+        11.3
+      ],
+      "area": "forest",
+      "type": "clue",
+      "design_note": "one of three optional order clue inspections",
+      "owner_sector": "S11"
+    },
+    {
+      "id": "pillar_fallen",
+      "name": "Słup powalony",
+      "grid": [
+        14.9,
+        11.5
+      ],
+      "area": "forest",
+      "type": "clue",
+      "design_note": "one of three clues; alternate access possible",
+      "owner_sector": "S12"
+    },
+    {
+      "id": "pillar_broken",
+      "name": "Słup rozbity",
+      "grid": [
+        15.1,
+        9.3
+      ],
+      "area": "forest",
+      "type": "clue",
+      "design_note": "broken by iron implement, no invisible quest lock",
+      "owner_sector": "S12"
+    },
+    {
+      "id": "song",
+      "name": "Polana z pieśnią",
+      "grid": [
+        9.2,
+        13
+      ],
+      "area": "optional",
+      "type": "encounter",
+      "design_note": "optional Żałobnica + Powrotnik encounter",
+      "owner_sector": "S21"
+    },
+    {
+      "id": "snares",
+      "name": "Ślady sideł",
+      "grid": [
+        15.4,
+        12.8
+      ],
+      "area": "optional",
+      "type": "quest",
+      "design_note": "Puste sidła, optional supplies",
+      "owner_sector": "S22"
+    },
+    {
+      "id": "collector",
+      "name": "Jama Zbieracza",
+      "grid": [
+        17,
+        15
+      ],
+      "area": "optional",
+      "type": "boss",
+      "design_note": "optional boss, retreat route via traps",
+      "owner_sector": "S22"
+    },
+    {
+      "id": "camp",
+      "name": "Obóz węglarzy",
+      "grid": [
+        16.4,
+        7.3
+      ],
+      "area": "ruins",
+      "type": "encounter",
+      "design_note": "Drwal, archer, blocked line-of-sight by woodpile",
+      "owner_sector": "S12"
+    },
+    {
+      "id": "tools",
+      "name": "Narzędzia pod korą",
+      "grid": [
+        17.2,
+        8.2
+      ],
+      "area": "optional",
+      "type": "quest",
+      "design_note": "Radost task, no mandatory gear improvement",
+      "owner_sector": "S12"
+    },
+    {
+      "id": "shelter",
+      "name": "Leśne schronienie",
+      "grid": [
+        17.4,
+        5.5
+      ],
+      "area": "optional",
+      "type": "quest",
+      "design_note": "Czcibor, no escort quest",
+      "owner_sector": "S02"
+    },
+    {
+      "id": "ruins",
+      "name": "Leśna strażnica / Dźwigacz",
+      "grid": [
+        19.3,
+        7.8
+      ],
+      "area": "ruins",
+      "type": "boss",
+      "design_note": "cold kiln, two clear routes around pillar",
+      "owner_sector": "S13"
+    },
+    {
+      "id": "chamber",
+      "name": "Komora korzeni i latarni",
+      "grid": [
+        20.3,
+        8.7
+      ],
+      "area": "ruins",
+      "type": "underground",
+      "design_note": "Komora poniżej terenu, dostęp ciągły bez widocznego ekranu ładowania; układ scen silnika otwarty",
+      "owner_sector": "S13"
+    },
+    {
+      "id": "old_road",
+      "name": "Odsłonięty dawny trakt",
+      "grid": [
+        17.8,
+        10.1
+      ],
+      "area": "final",
+      "type": "gated",
+      "design_note": "Dostęp po zapaleniu latarni w osadzie; sposób ukazania traktu i blokowania przejścia DO WYBORU",
+      "owner_sector": "S12"
+    },
+    {
+      "id": "guardian",
+      "name": "Arena Stróża",
+      "grid": [
+        21.3,
+        11.1
+      ],
+      "area": "final",
+      "type": "boss",
+      "design_note": "no reinforcement waves; exit to dry road after win",
+      "owner_sector": "S13"
+    },
+    {
+      "id": "dry_road",
+      "name": "Suchy szlak (granica demo)",
+      "grid": [
+        22.7,
+        10.4
+      ],
+      "area": "final",
+      "type": "final",
+      "design_note": "short confirmation of passage; future world beyond is not designed",
+      "owner_sector": "S13"
+    }
+  ],
+  "paths": [
+    {
+      "id": "square__spring",
+      "from_node": "square",
+      "to_node": "spring",
+      "kind": "village",
+      "polyline": [
+        [
+          9,
+          2.4
+        ],
+        [
+          9,
+          1
+        ]
+      ],
+      "bidirectional": true,
+      "owner_sector": "S01",
+      "sectors_crossed": [
+        "S01"
+      ]
+    },
+    {
+      "id": "square__watch_village",
+      "from_node": "square",
+      "to_node": "watch_village",
+      "kind": "village",
+      "polyline": [
+        [
+          9,
+          2.4
+        ],
+        [
+          10.4,
+          1.3
+        ]
+      ],
+      "bidirectional": true,
+      "owner_sector": "S01",
+      "sectors_crossed": [
+        "S01"
+      ]
+    },
+    {
+      "id": "square__houses",
+      "from_node": "square",
+      "to_node": "houses",
+      "kind": "village",
+      "polyline": [
+        [
+          9,
+          2.4
+        ],
+        [
+          7.4,
+          1.2
+        ]
+      ],
+      "bidirectional": true,
+      "owner_sector": "S01",
+      "sectors_crossed": [
+        "S01"
+      ]
+    },
+    {
+      "id": "square__inn",
+      "from_node": "square",
+      "to_node": "inn",
+      "kind": "village",
+      "polyline": [
+        [
+          9,
+          2.4
+        ],
+        [
+          7.6,
+          2.8
+        ]
+      ],
+      "bidirectional": true,
+      "owner_sector": "S01",
+      "sectors_crossed": [
+        "S01"
+      ]
+    },
+    {
+      "id": "square__services",
+      "from_node": "square",
+      "to_node": "services",
+      "kind": "village",
+      "polyline": [
+        [
+          9,
+          2.4
+        ],
+        [
+          10.8,
+          3.3
+        ]
+      ],
+      "bidirectional": true,
+      "owner_sector": "S01",
+      "sectors_crossed": [
+        "S01"
+      ]
+    },
+    {
+      "id": "services__training",
+      "from_node": "services",
+      "to_node": "training",
+      "kind": "village",
+      "polyline": [
+        [
+          10.8,
+          3.3
+        ],
+        [
+          9.8,
+          4.1
+        ]
+      ],
+      "bidirectional": true,
+      "owner_sector": "S01",
+      "sectors_crossed": [
+        "S01"
+      ]
+    },
+    {
+      "id": "square__gate",
+      "from_node": "square",
+      "to_node": "gate",
+      "kind": "village",
+      "polyline": [
+        [
+          9,
+          2.4
+        ],
+        [
+          9.1,
+          3.4
+        ],
+        [
+          9,
+          4.7
+        ]
+      ],
+      "bidirectional": true,
+      "owner_sector": "S01",
+      "sectors_crossed": [
+        "S01"
+      ]
+    },
+    {
+      "id": "gate__training",
+      "from_node": "gate",
+      "to_node": "training",
+      "kind": "village",
+      "polyline": [
+        [
+          9,
+          4.7
+        ],
+        [
+          9.8,
+          4.1
+        ]
+      ],
+      "bidirectional": true,
+      "owner_sector": "S01",
+      "sectors_crossed": [
+        "S01"
+      ]
+    },
+    {
+      "id": "gate__crossroads",
+      "from_node": "gate",
+      "to_node": "crossroads",
+      "kind": "road",
+      "polyline": [
+        [
+          9,
+          4.7
+        ],
+        [
+          9.1,
+          5.8
+        ],
+        [
+          9,
+          6.7
+        ]
+      ],
+      "bidirectional": true,
+      "owner_sector": "S01",
+      "sectors_crossed": [
+        "S01",
+        "S11"
+      ]
+    },
+    {
+      "id": "crossroads__wagon",
+      "from_node": "crossroads",
+      "to_node": "wagon",
+      "kind": "road",
+      "polyline": [
+        [
+          9,
+          6.7
+        ],
+        [
+          7.7,
+          7.4
+        ],
+        [
+          6.7,
+          8.2
+        ],
+        [
+          5.6,
+          8.5
+        ]
+      ],
+      "bidirectional": true,
+      "owner_sector": "S11",
+      "sectors_crossed": [
+        "S11",
+        "S10"
+      ]
+    },
+    {
+      "id": "wagon__bridge",
+      "from_node": "wagon",
+      "to_node": "bridge",
+      "kind": "road",
+      "polyline": [
+        [
+          5.6,
+          8.5
+        ],
+        [
+          4.1,
+          8.7
+        ],
+        [
+          2.5,
+          9.4
+        ]
+      ],
+      "bidirectional": true,
+      "owner_sector": "S10",
+      "sectors_crossed": [
+        "S10"
+      ]
+    },
+    {
+      "id": "wagon__loop_mark",
+      "from_node": "wagon",
+      "to_node": "loop_mark",
+      "kind": "anomaly",
+      "polyline": [
+        [
+          5.6,
+          8.5
+        ],
+        [
+          4.8,
+          9.1
+        ],
+        [
+          4.9,
+          10
+        ],
+        [
+          5.4,
+          10.5
+        ]
+      ],
+      "bidirectional": false,
+      "note": "Polyline illustrates candidate A (physical loop); candidate B may change connectivity without visible loading; author decides. Preserve object identity; prohibit combat discontinuity.",
+      "owner_sector": "S10",
+      "sectors_crossed": [
+        "S10"
+      ]
+    },
+    {
+      "id": "loop_mark__wagon",
+      "from_node": "loop_mark",
+      "to_node": "wagon",
+      "kind": "anomaly",
+      "polyline": [
+        [
+          5.4,
+          10.5
+        ],
+        [
+          6.6,
+          10.3
+        ],
+        [
+          6.9,
+          9.3
+        ],
+        [
+          5.6,
+          8.5
+        ]
+      ],
+      "bidirectional": false,
+      "note": "Polyline illustrates candidate A (physical loop); candidate B may change connectivity without visible loading; author decides. Preserve object identity; prohibit combat discontinuity.",
+      "owner_sector": "S10",
+      "sectors_crossed": [
+        "S10",
+        "S11"
+      ]
+    },
+    {
+      "id": "crossroads__grave",
+      "from_node": "crossroads",
+      "to_node": "grave",
+      "kind": "side",
+      "polyline": [
+        [
+          9,
+          6.7
+        ],
+        [
+          8,
+          8.2
+        ],
+        [
+          7.9,
+          9.9
+        ]
+      ],
+      "bidirectional": true,
+      "owner_sector": "S11",
+      "sectors_crossed": [
+        "S11"
+      ]
+    },
+    {
+      "id": "crossroads__stones",
+      "from_node": "crossroads",
+      "to_node": "stones",
+      "kind": "road",
+      "polyline": [
+        [
+          9,
+          6.7
+        ],
+        [
+          10.7,
+          8
+        ],
+        [
+          12.6,
+          9.4
+        ]
+      ],
+      "bidirectional": true,
+      "owner_sector": "S11",
+      "sectors_crossed": [
+        "S11",
+        "S12"
+      ]
+    },
+    {
+      "id": "stones__pillar_whole",
+      "from_node": "stones",
+      "to_node": "pillar_whole",
+      "kind": "clue",
+      "polyline": [
+        [
+          12.6,
+          9.4
+        ],
+        [
+          12,
+          10.4
+        ],
+        [
+          11.4,
+          11.3
+        ]
+      ],
+      "bidirectional": true,
+      "owner_sector": "S12",
+      "sectors_crossed": [
+        "S12",
+        "S11"
+      ]
+    },
+    {
+      "id": "stones__pillar_fallen",
+      "from_node": "stones",
+      "to_node": "pillar_fallen",
+      "kind": "clue",
+      "polyline": [
+        [
+          12.6,
+          9.4
+        ],
+        [
+          13.3,
+          10.7
+        ],
+        [
+          14.9,
+          11.5
+        ]
+      ],
+      "bidirectional": true,
+      "owner_sector": "S12",
+      "sectors_crossed": [
+        "S12"
+      ]
+    },
+    {
+      "id": "stones__pillar_broken",
+      "from_node": "stones",
+      "to_node": "pillar_broken",
+      "kind": "clue",
+      "polyline": [
+        [
+          12.6,
+          9.4
+        ],
+        [
+          14,
+          9.2
+        ],
+        [
+          15.1,
+          9.3
+        ]
+      ],
+      "bidirectional": true,
+      "owner_sector": "S12",
+      "sectors_crossed": [
+        "S12"
+      ]
+    },
+    {
+      "id": "stones__song",
+      "from_node": "stones",
+      "to_node": "song",
+      "kind": "side",
+      "polyline": [
+        [
+          12.6,
+          9.4
+        ],
+        [
+          10.8,
+          10.9
+        ],
+        [
+          9.2,
+          13
+        ]
+      ],
+      "bidirectional": true,
+      "owner_sector": "S12",
+      "sectors_crossed": [
+        "S12",
+        "S11",
+        "S21"
+      ]
+    },
+    {
+      "id": "stones__snares",
+      "from_node": "stones",
+      "to_node": "snares",
+      "kind": "side",
+      "polyline": [
+        [
+          12.6,
+          9.4
+        ],
+        [
+          14,
+          11.2
+        ],
+        [
+          15.4,
+          12.8
+        ]
+      ],
+      "bidirectional": true,
+      "owner_sector": "S12",
+      "sectors_crossed": [
+        "S12",
+        "S22"
+      ]
+    },
+    {
+      "id": "snares__collector",
+      "from_node": "snares",
+      "to_node": "collector",
+      "kind": "side",
+      "polyline": [
+        [
+          15.4,
+          12.8
+        ],
+        [
+          16,
+          14
+        ],
+        [
+          17,
+          15
+        ]
+      ],
+      "bidirectional": true,
+      "owner_sector": "S22",
+      "sectors_crossed": [
+        "S22"
+      ]
+    },
+    {
+      "id": "stones__camp",
+      "from_node": "stones",
+      "to_node": "camp",
+      "kind": "road",
+      "polyline": [
+        [
+          12.6,
+          9.4
+        ],
+        [
+          14.4,
+          8.3
+        ],
+        [
+          16.4,
+          7.3
+        ]
+      ],
+      "bidirectional": true,
+      "owner_sector": "S12",
+      "sectors_crossed": [
+        "S12"
+      ]
+    },
+    {
+      "id": "camp__tools",
+      "from_node": "camp",
+      "to_node": "tools",
+      "kind": "side",
+      "polyline": [
+        [
+          16.4,
+          7.3
+        ],
+        [
+          17.2,
+          8.2
+        ]
+      ],
+      "bidirectional": true,
+      "owner_sector": "S12",
+      "sectors_crossed": [
+        "S12"
+      ]
+    },
+    {
+      "id": "camp__shelter",
+      "from_node": "camp",
+      "to_node": "shelter",
+      "kind": "side",
+      "polyline": [
+        [
+          16.4,
+          7.3
+        ],
+        [
+          16.6,
+          6
+        ],
+        [
+          17.4,
+          5.5
+        ]
+      ],
+      "bidirectional": true,
+      "owner_sector": "S12",
+      "sectors_crossed": [
+        "S12",
+        "S02"
+      ]
+    },
+    {
+      "id": "camp__ruins",
+      "from_node": "camp",
+      "to_node": "ruins",
+      "kind": "road",
+      "polyline": [
+        [
+          16.4,
+          7.3
+        ],
+        [
+          17.7,
+          7
+        ],
+        [
+          19.3,
+          7.8
+        ]
+      ],
+      "bidirectional": true,
+      "owner_sector": "S12",
+      "sectors_crossed": [
+        "S12",
+        "S13"
+      ]
+    },
+    {
+      "id": "ruins__chamber",
+      "from_node": "ruins",
+      "to_node": "chamber",
+      "kind": "stairs",
+      "polyline": [
+        [
+          19.3,
+          7.8
+        ],
+        [
+          20.0,
+          8.1
+        ],
+        [
+          20.3,
+          8.7
+        ]
+      ],
+      "bidirectional": true,
+      "requires_flag": "dzwigacz_defeated",
+      "note": "Continuous player journey by stairs; may use multiple engine scenes or meshes, never visible travel loading.",
+      "owner_sector": "S13",
+      "sectors_crossed": [
+        "S13"
+      ]
+    },
+    {
+      "id": "camp__crossroads",
+      "from_node": "camp",
+      "to_node": "crossroads",
+      "kind": "shortcut",
+      "polyline": [
+        [
+          16.4,
+          7.3
+        ],
+        [
+          15.8,
+          5.5
+        ],
+        [
+          13,
+          5.7
+        ],
+        [
+          10.7,
+          5.8
+        ],
+        [
+          9,
+          6.7
+        ]
+      ],
+      "bidirectional": true,
+      "requires_flag": "camp_shortcut_open",
+      "note": "Open from camp side first; thereafter both ways",
+      "owner_sector": "S12",
+      "sectors_crossed": [
+        "S12",
+        "S02",
+        "S01",
+        "S11"
+      ]
+    },
+    {
+      "id": "stones__old_road",
+      "from_node": "stones",
+      "to_node": "old_road",
+      "kind": "gated",
+      "polyline": [
+        [
+          12.6,
+          9.4
+        ],
+        [
+          14.6,
+          10.2
+        ],
+        [
+          16,
+          10.4
+        ],
+        [
+          17.8,
+          10.1
+        ]
+      ],
+      "bidirectional": true,
+      "requires_flag": "village_lamp_lit",
+      "note": "Narrative gate village_lamp_lit only. Visibility/geometry/physics mechanism not determined; compare options in VARIANTS.md.",
+      "owner_sector": "S12",
+      "sectors_crossed": [
+        "S12"
+      ]
+    },
+    {
+      "id": "old_road__guardian",
+      "from_node": "old_road",
+      "to_node": "guardian",
+      "kind": "boss_approach",
+      "polyline": [
+        [
+          17.8,
+          10.1
+        ],
+        [
+          19.6,
+          10.3
+        ],
+        [
+          21.3,
+          11.1
+        ]
+      ],
+      "bidirectional": true,
+      "owner_sector": "S12",
+      "sectors_crossed": [
+        "S12",
+        "S13"
+      ]
+    },
+    {
+      "id": "guardian__dry_road",
+      "from_node": "guardian",
+      "to_node": "dry_road",
+      "kind": "gated",
+      "polyline": [
+        [
+          21.3,
+          11.1
+        ],
+        [
+          22.1,
+          10.9
+        ],
+        [
+          22.7,
+          10.4
+        ]
+      ],
+      "bidirectional": true,
+      "requires_flag": "guardian_defeated",
+      "owner_sector": "S13",
+      "sectors_crossed": [
+        "S13"
+      ]
+    }
+  ],
+  "persistent_flags": {
+    "dzwigacz_defeated": "Boss encounter complete; physical stairs to chamber unobstructed",
+    "camp_shortcut_open": "Player unlatches barrier on camp side; shortcut stays open",
+    "village_lamp_lit": "Lamp found in chamber, taken to Wszebora and lit in settlement",
+    "guardian_defeated": "Guardian defeated; physical barrier to dry route opens",
+    "road_found": "Player inspects dry road and returns to Niemir"
+  },
+  "starting_anchor": "wagon",
+  "return_hub": "square",
+  "ending_anchor": "dry_road",
+  "notes": [
+    "Geometry is provisional topology in planner grid, not final metric world size; do not calculate travel times from abstract cells.",
+    "Sectors indicate authoring responsibility, not engine scenes, hard barriers or loading events.",
+    "Polyline A of wagon loop is only candidate; physically paradoxical variant B is not drawable in one Euclidean sheet.",
+    "Mechanism for old road exposure remains OPEN to author.",
+    "First wagon encounter BEFORE DUSK; sleeping at Niemir later changes time to morning.",
+    "Both wagon flanks must be validated at level geometry scale; map point is not wagon collision footprint.",
+    "Below-ground chamber has separate vertical coordinate in eventual world but map stores projected X/Y only."
+  ],
+  "implementation_status": "candidate technical representation; alternative geometry, anomaly and loading architectures permitted after playtest",
+  "time_of_first_wagon_visit": "before_dusk; rainy, cold, low visibility, NOT night",
+  "sector_policy": "authoring grid only; actual scene organization undecided; half-open sector rectangles for node anchor mapping",
+  "road_anomaly_policy": "OPTIONS_PENDING_AUTHOR: A physical loop vs B continuous spatial anomaly; polylines currently show option A ONLY as a greybox candidate",
+  "lamp_road_policy": "OPTIONS_PENDING_AUTHOR: visible-only / physical supernatural threshold / perception-dependent route; gating via flag, mechanism undecided"
+}

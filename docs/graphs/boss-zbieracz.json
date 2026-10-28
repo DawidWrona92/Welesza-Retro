@@ -1,0 +1,150 @@
+{
+  "description": "Structural design graph only. Conditions are annotations, not executable gameplay logic. Values and collisions untested.",
+  "nodes": [
+    {
+      "id": "checkpoint",
+      "type": "start"
+    },
+    {
+      "id": "ready"
+    },
+    {
+      "id": "telegraph"
+    },
+    {
+      "id": "reset"
+    },
+    {
+      "id": "reload"
+    },
+    {
+      "id": "victory"
+    },
+    {
+      "id": "reward",
+      "type": "end"
+    },
+    {
+      "id": "phase_1"
+    },
+    {
+      "id": "phase_2"
+    },
+    {
+      "id": "transition_2"
+    }
+  ],
+  "edges": [
+    {
+      "from": "checkpoint",
+      "to": "ready",
+      "condition": "enter_approach"
+    },
+    {
+      "from": "ready",
+      "to": "telegraph",
+      "condition": "enter_arena"
+    },
+    {
+      "from": "telegraph",
+      "to": "phase_1",
+      "condition": "opening_complete"
+    },
+    {
+      "from": "reset",
+      "to": "ready",
+      "condition": "reset_complete"
+    },
+    {
+      "from": "reload",
+      "to": "checkpoint",
+      "condition": "restore_whole_pre_fight_save"
+    },
+    {
+      "from": "victory",
+      "to": "reward",
+      "condition": "atomic_reward_and_quest_commit"
+    },
+    {
+      "from": "phase_1",
+      "to": "victory",
+      "condition": "boss_hp_zero_and_player_alive_priority_over_transition"
+    },
+    {
+      "from": "phase_1",
+      "to": "transition_2",
+      "condition": "highest_reached_phase_is_2_after_attack_complete"
+    },
+    {
+      "from": "phase_2",
+      "to": "victory",
+      "condition": "boss_hp_zero_and_player_alive_priority_over_transition"
+    },
+    {
+      "from": "transition_2",
+      "to": "phase_2",
+      "condition": "bounded_transition_complete_or_watchdog"
+    },
+    {
+      "from": "telegraph",
+      "to": "reset",
+      "condition": "player_leaves_arena"
+    },
+    {
+      "from": "telegraph",
+      "to": "reload",
+      "condition": "player_dies_or_loads_pre_fight_save"
+    },
+    {
+      "from": "telegraph",
+      "to": "telegraph",
+      "condition": "suspend_and_restore_same_complete_state"
+    },
+    {
+      "from": "phase_1",
+      "to": "reset",
+      "condition": "player_leaves_arena"
+    },
+    {
+      "from": "phase_1",
+      "to": "reload",
+      "condition": "player_dies_or_loads_pre_fight_save"
+    },
+    {
+      "from": "phase_1",
+      "to": "phase_1",
+      "condition": "suspend_and_restore_same_complete_state"
+    },
+    {
+      "from": "phase_2",
+      "to": "reset",
+      "condition": "player_leaves_arena"
+    },
+    {
+      "from": "phase_2",
+      "to": "reload",
+      "condition": "player_dies_or_loads_pre_fight_save"
+    },
+    {
+      "from": "phase_2",
+      "to": "phase_2",
+      "condition": "suspend_and_restore_same_complete_state"
+    },
+    {
+      "from": "transition_2",
+      "to": "reset",
+      "condition": "player_leaves_arena"
+    },
+    {
+      "from": "transition_2",
+      "to": "reload",
+      "condition": "player_dies_or_loads_pre_fight_save"
+    },
+    {
+      "from": "transition_2",
+      "to": "transition_2",
+      "condition": "suspend_and_restore_same_complete_state"
+    }
+  ],
+  "directed": true
+}

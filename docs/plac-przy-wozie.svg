@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 850" role="img" aria-labelledby="title desc">
+<title id="title">Plac przy wozie — schemat roboczy z góry</title>
+<desc id="desc">Wóz na leśnym trakcie, dwa obejścia, koń, buty i pakunki, wejście prologu, przejście do rozstaju oraz strefa psa przy powrocie.</desc>
+<rect width="1200" height="850" fill="#f3efe5"/>
+<text x="38" y="48" font-family="sans-serif" font-weight="bold" font-size="27" fill="#1e302a">Plac przy wozie — plan z góry</text>
+<text x="38" y="75" font-family="sans-serif" font-size="16" fill="#3d4a43">Propozycja do blockoutu • bez skali i bez ustalonych kierunków geograficznych</text>
+<rect x="30" y="100" width="790" height="690" rx="22" fill="#34483d"/>
+<path d="M30 350 C140 300 195 215 312 226 L620 220 C728 226 774 300 820 320 L820 565 C727 558 697 670 561 663 L279 657 C155 663 118 559 30 565 Z" fill="#b6a47e"/>
+<path d="M0 420 H245 M610 420 H850" fill="none" stroke="#f7efce" stroke-width="8" stroke-dasharray="17 10"/>
+<path d="M155 397 C220 315 275 293 390 300 L575 300 C663 302 705 339 729 395" fill="none" stroke="#f4df96" stroke-width="9" stroke-dasharray="16 9"/>
+<path d="M155 485 C230 566 290 575 390 575 L575 575 C668 572 705 528 729 478" fill="none" stroke="#f4df96" stroke-width="9" stroke-dasharray="16 9"/>
+<rect x="310" y="365" width="285" height="145" rx="12" fill="#70513a" stroke="#30251f" stroke-width="5"/>
+<rect x="330" y="382" width="245" height="110" rx="3" fill="#947152" stroke="#33271e" stroke-width="3"/>
+<circle cx="350" cy="359" r="23" fill="#51483c" stroke="#211d19" stroke-width="5"/><circle cx="545" cy="359" r="23" fill="#51483c" stroke="#211d19" stroke-width="5"/>
+<circle cx="350" cy="516" r="23" fill="#51483c" stroke="#211d19" stroke-width="5"/><circle cx="545" cy="516" r="23" fill="#51483c" stroke="#211d19" stroke-width="5"/>
+<text x="408" y="443" font-family="sans-serif" font-size="23" font-weight="bold" fill="white">WÓZ</text>
+<ellipse cx="653" cy="438" rx="38" ry="25" fill="#8a5539" stroke="#30251f" stroke-width="3"/><text x="638" y="444" font-family="sans-serif" font-size="15" font-weight="bold" fill="white">KOŃ</text>
+<line x1="595" y1="417" x2="618" y2="417" stroke="#423225" stroke-width="5"/><line x1="595" y1="461" x2="618" y2="461" stroke="#423225" stroke-width="5"/>
+<circle cx="365" cy="544" r="14" fill="#e8d397" stroke="#4c3825" stroke-width="3"/><text x="352" y="550" font-family="sans-serif" font-size="17" font-weight="bold">B</text>
+<circle cx="480" cy="538" r="14" fill="#f3e5ad" stroke="#4c3825" stroke-width="3"/><text x="473" y="544" font-family="sans-serif" font-size="17" font-weight="bold">P</text>
+<ellipse cx="235" cy="607" rx="92" ry="41" fill="#a6574c" fill-opacity=".42" stroke="#f3c4af" stroke-width="3" stroke-dasharray="9 6"/><text x="174" y="613" font-family="sans-serif" font-size="16" fill="#fff">PIES: POWRÓT</text>
+<ellipse cx="735" cy="626" rx="52" ry="23" fill="#cfd6ab" fill-opacity=".65"/><text x="703" y="631" font-family="sans-serif" font-size="13">UNIK?</text>
+<text x="48" y="401" font-family="sans-serif" font-size="16" font-weight="bold" fill="#262a22">START</text><text x="685" y="401" font-family="sans-serif" font-size="15" font-weight="bold" fill="#262a22">ROZSTAJ</text>
+<text x="360" y="282" font-family="sans-serif" font-size="16" fill="#211d16">OBEJŚCIE A</text><text x="360" y="605" font-family="sans-serif" font-size="16" fill="#211d16">OBEJŚCIE B</text>
+<path d="M160 120 L160 220 M650 120 L650 220" stroke="#7b8a70" stroke-width="8" stroke-dasharray="8 7"/>
+<text x="77" y="154" font-family="sans-serif" font-size="14" fill="white">ODNOGA: BRZEG*</text><text x="581" y="154" font-family="sans-serif" font-size="14" fill="white">ŚCIEŻKA PĘTLI*</text>
+<g font-family="sans-serif" fill="#203129"><text x="850" y="135" font-size="22" font-weight="bold">Legenda</text><text x="850" y="180" font-size="17">B — buty przy kole</text><text x="850" y="211" font-size="17">P — pakunki / księga</text><text x="850" y="252" font-size="17">Żółte: dwie trasy</text><text x="850" y="280" font-size="17">obejścia do przetestowania</text><text x="850" y="325" font-size="17">Czerwone: orientacyjna</text><text x="850" y="353" font-size="17">strefa Psa rano</text><text x="850" y="400" font-size="17">Jasne: kandydat na</text><text x="850" y="428" font-size="17">przestrzeń do uniku</text><text x="850" y="482" font-size="16">* Odnogi i zachowanie</text><text x="850" y="510" font-size="16">granic wymagają walidacji.</text><text x="850" y="556" font-size="16">Symboliczne pozycje</text><text x="850" y="584" font-size="16">nie są kolizjami ani</text><text x="850" y="612" font-size="16">rzeczywistymi wymiarami.</text><text x="850" y="670" font-size="16">Światło znajduje się dalej</text><text x="850" y="698" font-size="16">w stronę rozstaju i bramy.</text></g>
+<text x="38" y="825" font-family="sans-serif" font-size="15" fill="#405049">Koniec zaprzęgu i dostępność obu obejść zweryfikować w blockoucie, kamerze gry i nawigacji.</text>
+</svg>

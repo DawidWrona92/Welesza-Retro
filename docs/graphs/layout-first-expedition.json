@@ -1,0 +1,129 @@
+{
+  "description": "Proposal: accessibility of first expedition. Encounter area nodes do not require kills; pickups are represented symbolically. No automatic win, damage, teleport safety or reward idempotency is executed.",
+  "nodes": [
+    {
+      "id": "brama",
+      "label": "Wyjście rano",
+      "type": "start"
+    },
+    {
+      "id": "trening",
+      "label": "Dobrowolne ćwiczenia",
+      "optional_observation": true
+    },
+    {
+      "id": "rozstaj",
+      "label": "Droga do wozu"
+    },
+    {
+      "id": "pies",
+      "label": "Obszar pierwszego starcia"
+    },
+    {
+      "id": "woz",
+      "label": "Pakunki i księga"
+    },
+    {
+      "id": "powrotnik",
+      "label": "Dalszy fragment placu",
+      "optional_observation": true
+    },
+    {
+      "id": "brzeg",
+      "label": "Widoczny zerwany most",
+      "optional_observation": true
+    },
+    {
+      "id": "petla",
+      "label": "Znak i zawrócenie do wozu",
+      "optional_observation": true
+    },
+    {
+      "id": "powrot",
+      "label": "Powrót do Żegoty"
+    },
+    {
+      "id": "rozliczenie",
+      "label": "Jednorazowe oddanie pakunków",
+      "type": "end"
+    }
+  ],
+  "edges": [
+    {
+      "from": "brama",
+      "to": "trening"
+    },
+    {
+      "from": "trening",
+      "to": "brama"
+    },
+    {
+      "from": "brama",
+      "to": "rozstaj"
+    },
+    {
+      "from": "rozstaj",
+      "to": "brama"
+    },
+    {
+      "from": "rozstaj",
+      "to": "pies"
+    },
+    {
+      "from": "pies",
+      "to": "rozstaj"
+    },
+    {
+      "from": "pies",
+      "to": "woz"
+    },
+    {
+      "from": "woz",
+      "to": "pies"
+    },
+    {
+      "from": "woz",
+      "to": "powrotnik"
+    },
+    {
+      "from": "powrotnik",
+      "to": "woz"
+    },
+    {
+      "from": "woz",
+      "to": "brzeg"
+    },
+    {
+      "from": "brzeg",
+      "to": "woz"
+    },
+    {
+      "from": "brama",
+      "to": "powrot"
+    },
+    {
+      "from": "powrot",
+      "to": "brama"
+    },
+    {
+      "from": "woz",
+      "to": "petla"
+    },
+    {
+      "from": "petla",
+      "to": "woz"
+    },
+    {
+      "from": "powrot",
+      "to": "rozliczenie",
+      "gated_by": "ITM-pakunki"
+    }
+  ],
+  "grants": {
+    "woz": [
+      "ITM-pakunki",
+      "FLAG-ksiega-znaleziona"
+    ]
+  },
+  "directed": true
+}

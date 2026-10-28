@@ -1,0 +1,421 @@
+{
+  "description": "Proposal: morning-onward layout, not intro geography or full quest state machine. Grants model persistent opportunities/events, not automatically awarded gameplay. condition is descriptive only. No geometry, timing, combat or save rollback simulated.",
+  "nodes": [
+    {
+      "id": "brama",
+      "label": "Brama Niemiru",
+      "type": "start"
+    },
+    {
+      "id": "dziedziniec",
+      "label": "Ćwiczenia"
+    },
+    {
+      "id": "plac",
+      "label": "Plac przy źródle"
+    },
+    {
+      "id": "gospoda",
+      "label": "Dom gościnny"
+    },
+    {
+      "id": "uslugi",
+      "label": "Kuźnia i zielarka"
+    },
+    {
+      "id": "domy",
+      "label": "Domy przy palisadzie"
+    },
+    {
+      "id": "straznica_osady",
+      "label": "Wspólna latarnia"
+    },
+    {
+      "id": "rozstaj",
+      "label": "Pochylone drzewo"
+    },
+    {
+      "id": "woz",
+      "label": "Porzucony wóz"
+    },
+    {
+      "id": "brzeg",
+      "label": "Zerwany most"
+    },
+    {
+      "id": "petla",
+      "label": "Oznaczone drzewo"
+    },
+    {
+      "id": "kamienie",
+      "label": "Węzeł kamiennych dróg"
+    },
+    {
+      "id": "slup_caly",
+      "label": "Cały słup"
+    },
+    {
+      "id": "slup_powalony",
+      "label": "Powalony słup"
+    },
+    {
+      "id": "slup_rozbity",
+      "label": "Rozbity słup"
+    },
+    {
+      "id": "oboz",
+      "label": "Obóz węglarzy"
+    },
+    {
+      "id": "dzwigacz",
+      "label": "Arena Dźwigacza"
+    },
+    {
+      "id": "pokonany_dzwigacz",
+      "label": "Zwycięstwo nad Dźwigaczem"
+    },
+    {
+      "id": "komora",
+      "label": "Latarnia w komorze"
+    },
+    {
+      "id": "zapalenie_latarni",
+      "label": "Zapalenie w strażnicy osady"
+    },
+    {
+      "id": "dawny_trakt",
+      "label": "Droga odsłonięta latarnią"
+    },
+    {
+      "id": "stroz",
+      "label": "Arena Stróża"
+    },
+    {
+      "id": "pokonany_stroz",
+      "label": "Zwycięstwo nad Stróżem"
+    },
+    {
+      "id": "suchy_szlak",
+      "label": "Potwierdzenie przejścia"
+    },
+    {
+      "id": "powrot_final",
+      "label": "Powrót z wiadomością",
+      "type": "end"
+    },
+    {
+      "id": "cmentarne_miejsce",
+      "label": "Buty i wiadomość",
+      "optional_branch": true
+    },
+    {
+      "id": "sidla",
+      "label": "Ślady pułapek",
+      "optional_branch": true
+    },
+    {
+      "id": "zbieracz",
+      "label": "Opcjonalna jama Zbieracza",
+      "optional_branch": true
+    },
+    {
+      "id": "narzedzia",
+      "label": "Narzędzia przy obozie",
+      "optional_branch": true
+    },
+    {
+      "id": "schronienie",
+      "label": "Zaginiony lokator",
+      "optional_branch": true
+    },
+    {
+      "id": "piesn",
+      "label": "Opcjonalna polanka z pieśnią",
+      "optional_branch": true
+    }
+  ],
+  "edges": [
+    {
+      "from": "brama",
+      "to": "dziedziniec"
+    },
+    {
+      "from": "dziedziniec",
+      "to": "brama"
+    },
+    {
+      "from": "dziedziniec",
+      "to": "uslugi"
+    },
+    {
+      "from": "uslugi",
+      "to": "dziedziniec"
+    },
+    {
+      "from": "brama",
+      "to": "plac"
+    },
+    {
+      "from": "plac",
+      "to": "brama"
+    },
+    {
+      "from": "plac",
+      "to": "gospoda"
+    },
+    {
+      "from": "gospoda",
+      "to": "plac"
+    },
+    {
+      "from": "plac",
+      "to": "uslugi"
+    },
+    {
+      "from": "uslugi",
+      "to": "plac"
+    },
+    {
+      "from": "plac",
+      "to": "domy"
+    },
+    {
+      "from": "domy",
+      "to": "plac"
+    },
+    {
+      "from": "plac",
+      "to": "straznica_osady"
+    },
+    {
+      "from": "straznica_osady",
+      "to": "plac"
+    },
+    {
+      "from": "brama",
+      "to": "rozstaj"
+    },
+    {
+      "from": "rozstaj",
+      "to": "brama"
+    },
+    {
+      "from": "rozstaj",
+      "to": "woz"
+    },
+    {
+      "from": "woz",
+      "to": "rozstaj"
+    },
+    {
+      "from": "woz",
+      "to": "brzeg"
+    },
+    {
+      "from": "brzeg",
+      "to": "woz"
+    },
+    {
+      "from": "rozstaj",
+      "to": "kamienie"
+    },
+    {
+      "from": "kamienie",
+      "to": "rozstaj"
+    },
+    {
+      "from": "kamienie",
+      "to": "slup_caly"
+    },
+    {
+      "from": "slup_caly",
+      "to": "kamienie"
+    },
+    {
+      "from": "kamienie",
+      "to": "slup_powalony"
+    },
+    {
+      "from": "slup_powalony",
+      "to": "kamienie"
+    },
+    {
+      "from": "kamienie",
+      "to": "slup_rozbity"
+    },
+    {
+      "from": "slup_rozbity",
+      "to": "kamienie"
+    },
+    {
+      "from": "kamienie",
+      "to": "oboz"
+    },
+    {
+      "from": "oboz",
+      "to": "kamienie"
+    },
+    {
+      "from": "oboz",
+      "to": "dzwigacz"
+    },
+    {
+      "from": "dzwigacz",
+      "to": "oboz"
+    },
+    {
+      "from": "rozstaj",
+      "to": "cmentarne_miejsce"
+    },
+    {
+      "from": "cmentarne_miejsce",
+      "to": "rozstaj"
+    },
+    {
+      "from": "kamienie",
+      "to": "sidla"
+    },
+    {
+      "from": "sidla",
+      "to": "kamienie"
+    },
+    {
+      "from": "sidla",
+      "to": "zbieracz"
+    },
+    {
+      "from": "zbieracz",
+      "to": "sidla"
+    },
+    {
+      "from": "oboz",
+      "to": "narzedzia"
+    },
+    {
+      "from": "narzedzia",
+      "to": "oboz"
+    },
+    {
+      "from": "oboz",
+      "to": "schronienie"
+    },
+    {
+      "from": "schronienie",
+      "to": "oboz"
+    },
+    {
+      "from": "kamienie",
+      "to": "piesn"
+    },
+    {
+      "from": "piesn",
+      "to": "kamienie"
+    },
+    {
+      "from": "woz",
+      "to": "petla"
+    },
+    {
+      "from": "petla",
+      "to": "woz"
+    },
+    {
+      "from": "dzwigacz",
+      "to": "pokonany_dzwigacz",
+      "condition": "boss_defeated_and_player_alive"
+    },
+    {
+      "from": "pokonany_dzwigacz",
+      "to": "dzwigacz"
+    },
+    {
+      "from": "dzwigacz",
+      "to": "komora",
+      "gated_by": "FLAG-dzwigacz-pokonany"
+    },
+    {
+      "from": "komora",
+      "to": "dzwigacz"
+    },
+    {
+      "from": "straznica_osady",
+      "to": "zapalenie_latarni",
+      "gated_by": "ITM-latarnia-zimna"
+    },
+    {
+      "from": "zapalenie_latarni",
+      "to": "straznica_osady"
+    },
+    {
+      "from": "oboz",
+      "to": "rozstaj",
+      "condition": "open_shortcut_from_camp_side"
+    },
+    {
+      "from": "rozstaj",
+      "to": "oboz",
+      "gated_by": "FLAG-skrot-otwarty"
+    },
+    {
+      "from": "kamienie",
+      "to": "dawny_trakt",
+      "gated_by": "ITM-latarnia-zapalona"
+    },
+    {
+      "from": "dawny_trakt",
+      "to": "kamienie"
+    },
+    {
+      "from": "dawny_trakt",
+      "to": "stroz"
+    },
+    {
+      "from": "stroz",
+      "to": "dawny_trakt"
+    },
+    {
+      "from": "stroz",
+      "to": "pokonany_stroz",
+      "condition": "boss_defeated_and_player_alive"
+    },
+    {
+      "from": "pokonany_stroz",
+      "to": "stroz"
+    },
+    {
+      "from": "stroz",
+      "to": "suchy_szlak",
+      "gated_by": "FLAG-stroz-pokonany"
+    },
+    {
+      "from": "suchy_szlak",
+      "to": "stroz"
+    },
+    {
+      "from": "plac",
+      "to": "powrot_final",
+      "gated_by": "FLAG-droga-odnaleziona"
+    }
+  ],
+  "grants": {
+    "pokonany_dzwigacz": [
+      "FLAG-dzwigacz-pokonany"
+    ],
+    "komora": [
+      "ITM-latarnia-zimna"
+    ],
+    "zapalenie_latarni": [
+      "ITM-latarnia-zapalona"
+    ],
+    "oboz": [
+      "FLAG-skrot-otwarty"
+    ],
+    "pokonany_stroz": [
+      "FLAG-stroz-pokonany"
+    ],
+    "suchy_szlak": [
+      "FLAG-droga-odnaleziona"
+    ]
+  },
+  "directed": true
+}
