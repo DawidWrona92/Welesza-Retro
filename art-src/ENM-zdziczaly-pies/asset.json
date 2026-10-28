@@ -38,11 +38,11 @@
       "loop": true,
       "events": [
         {
-          "frame": 1,
+          "frame": 0,
           "name": "step"
         },
         {
-          "frame": 4,
+          "frame": 3,
           "name": "step"
         }
       ]
