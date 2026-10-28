@@ -1,6 +1,14 @@
 # Biblia świata Weleszy — cz. 1: świat, magia, imperium, religie, frakcje, ton
 
-Status: propozycja do akceptacji autora. Kanon demo ([fabula](fabula.md), [mapa świata](world/README.md)) ma pierwszeństwo; religie i imiona bogów pozostają do decyzji autora zgodnie z kierunkiem artystycznym.
+Status: propozycja do akceptacji autora, poza punktami z tabeli ustaleń poniżej. Kanon demo ([fabula](fabula.md), [mapa świata](world/README.md)) ma pierwszeństwo; konkretne imiona bogów i miejsca kultu pozostają do decyzji autora zgodnie z kierunkiem artystycznym.
+
+## Ustalenia autora (decyzje)
+
+| Nr | Ustalenie | Skutek dla bibli |
+|---|---|---|
+| P1 | **Demo:** bohater nie rzuca zaklęć; używa magicznych przedmiotów o ograniczonej liczbie użyć (do naładowania), ewentualnie umiejętności obdarowanych przez bogów — „używa, nie rozumie”. **Pełna gra:** dostęp do magii dla gracza | Sekcja „Magia gracza” poniżej; zakres magii pełnej gry do ustalenia przy projektowaniu rozwoju |
+| P2 | Istnieją religie, chramy i kilku bogów — w różnych miejscach różni; „co jest na górze” pozostaje pytaniem otwartym dla wszystkich, także twórców | Sekcja „Religie i wiara” przepisana pod wielu bogów; brak jednego panteonu i potwierdzonej metafizyki |
+| P3 | Interwencje boskie w scenariuszach: jednorazowe i niewyjaśnialne (płonący miecz w krytycznym momencie, po walce znika; wskrzeszenia itd. — skąd, nikt się nie dowie) | Zapisane jako wzorzec scenariuszowy w „Magii gracza”; nigdy systemowe, nigdy potwierdzone |
 
 ## Zasada nadrzędna: top-up
 
