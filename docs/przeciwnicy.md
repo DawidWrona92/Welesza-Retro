@@ -177,6 +177,8 @@ Wciąż nosi drewno do dawno zgasłego pieca. Nie wyjaśniamy, czy kieruje nim p
 
 **Rola:** finałowy test kontroli zachłanności; strażnik o nieznanym celu. **Sylwetka:** wysoka postać w starym żelazie; długa broń drzewcowa; przywiązane do pasa fragmenty podróżnych pakunków; zwykła latarnia [DECYZJA AUTORA, 28.10.2026]. Nie jest to magiczna latarnia z komory. Część przedmiotów przypomina wcześniejsze znaleziska, ale nie potwierdza to ich pochodzenia.
 
+**Koncept:** [plansza Stróża](art/bestiariusz/stroz/01_karta_koncepcyjna.png) przedstawia zardzewiałą zbroję pod postrzępionymi warstwami tkanin, kaptur skrywający twarz, długą broń drzewcową, pakunki i zwykłą latarnię. Skala widoczna na planszy jest propozycją do sprawdzenia w grze; szczegóły obrazu nie rozstrzygają pochodzenia Stróża.
+
 **Zachowanie:** cierpliwy, nieustępliwy, niemal ceremonialny. Staje między graczem a wyjściem; nie rabuje i nie świętuje zwycięstwa. Głosy są ciche, różne, czasem sprzeczne. Nie naśladuje bliskich bohatera ani nie dopisuje mu osobistej przeszłości.
 
 **Chce:** zatrzymać przejście. **Boi się:** nieujawnione; nie ustanawiamy nowego kanonu. **Sprzeczność:** brutalnie atakuje, ale po utracie celu podnosi upuszczony pakunek, zanim wróci do posterunku.
