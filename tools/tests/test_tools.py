@@ -15,7 +15,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import make_test_asset  # noqa: E402
 from sprite_pipeline import build  # noqa: E402
-from validate_asset import validate  # noqa: E402
+from validate_asset import _check_jitter, validate  # noqa: E402
 from welesza_assets import ground_point, to_rgba  # noqa: E402
 
 
@@ -108,4 +108,23 @@ class MagentaKeyTest(unittest.TestCase):
         ring = out[17, 17]
         self.assertLess(min(ring[0], ring[2]) - ring[1], 10, "bez różowej poświaty")
         self.assertEqual(tuple(out[30, 30, :3]), (60.0, 120.0, 40.0), "środek nietknięty")
+
+
+class JitterTest(unittest.TestCase):
+    META = {"canvas": [512, 512], "animations": {"walk": {"loop": True}}}
+
+    def _warnings(self, heads: list[float]) -> list[str]:
+        from welesza_assets import Report
+        rep = Report()
+        _check_jitter(Path("walk/s.png"), heads, self.META, "walk", rep)
+        return rep.warnings
+
+    def test_smooth_walk_passes(self) -> None:
+        self.assertEqual(self._warnings([250, 252, 254, 255, 254, 252, 250, 249]), [])
+
+    def test_jumping_head_warns(self) -> None:
+        self.assertTrue(self._warnings([234, 276, 309, 244, 275, 301, 274, 241]))
+
+    def test_loop_wrap_is_checked(self) -> None:
+        self.assertTrue(self._warnings([250, 255, 260, 265, 270, 275, 280, 285]))
 
