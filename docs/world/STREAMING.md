@@ -45,7 +45,7 @@ Persistencja przedmiotu (pakunki/księga), trzech słupów, bossa Dźwigacza, zi
 - Rozliczenie bossa i przedmiotu powinno być transakcyjne; nie nadawaj nagrody wielokrotnie przy ponownym wczytaniu sektora.
 - Powtórne przejście obok wozu nie instancjonuje nowego konia, znaku, butów czy wrogów (poza świadomie zaprojektowaną inscenizacją), także w wariancie B anomalii.
 - Nie przestawiać AI/gracza w trakcie wyprowadzania ciosu w celu dopasowania do nowej sceny.
-- Ładowanie zapisu w stanie walki i zapis bezpieczny przed bossem to niezależne problemy projektowe (patrz `docs/propozycja-wyprawy-02.md`).
+- Ładowanie zapisu w stanie walki i zapis bezpieczny przed bossem to niezależne problemy projektowe (patrz `docs/mechaniki.md`).
 
 ## E. Zjawiska fabularne (mechanizm OTWARTY)
 

@@ -96,10 +96,10 @@ Trzy kamienne słupy w dowolnej kolejności. Nie wymagamy zabicia każdego napot
 
 ## 9. Podstawa i zgodność z repozytorium
 
-- [Koncepcja i zaakceptowana fabuła demo](../demo-fabula.md).
-- [Pakiet 04: topologia Niemiru i lasu](../pakiet-04-mapa.md).
-- [Początek, prolog i pierwsza wyprawa](../pakiet-04-poczatek.md).
-- [Spotkania i bossowie](../spotkania-i-bossowie.md).
+- [Koncepcja i zaakceptowana fabuła demo](../fabula.md).
+- [Pakiet 04: topologia Niemiru i lasu](../mapa-demo.md).
+- [Początek, prolog i pierwsza wyprawa](../mapa-demo.md).
+- [Spotkania i bossowie](../przeciwnicy.md).
 - [Dane grafu istniejącego demo](../graphs/layout-demo.json).
 - [Dane pierwszej wyprawy](../graphs/layout-first-expedition.json).
 
@@ -112,4 +112,4 @@ Nie zmieniamy nazw i treści uzgodnionych zadań ani NPC. Układ miejsc, tras i 
 - Skorygowana pora pierwszego spotkania wozu — przed zmierzchem.
 - Pętla A i anomalia B; latarnia L1/L2/L3 pozostają wariantami autorskimi, bez zmiany bramek głównych zadań.
 - W projektowym grafie dopuszczamy różne rozwiązania techniczne streamingu, bez widocznych ekranów ładowania podczas zwykłej podróży.
-- Rysunek pozostaje topologią — obie trasy obejścia wozu są problemem lokalnej geometrii wg [placu przy wozie](../plac-przy-wozie.md), a nie dwiema nowymi krawędziami między węzłami świata.
+- Rysunek pozostaje topologią — obie trasy obejścia wozu są problemem lokalnej geometrii wg [placu przy wozie](../mapa-demo.md), a nie dwiema nowymi krawędziami między węzłami świata.
