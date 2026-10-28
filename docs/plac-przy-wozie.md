@@ -38,16 +38,16 @@ W istniejącym projekcie pakunki i księga są przy wozie, nie w losowym łupie.
 
 | Element | Wizualnie | Potrzeba w prototypie | Status |
 |---|---|---|---|
-| Podłoże traktu i ściółka | Moduły; spójne przejścia, mokra paleta | Obszar przechodni, bez dekoracyjnych przeszkód w nawigacji | Assety Vibe'a oczekiwane, użyć placeholderów |
+| Podłoże traktu i ściółka | Moduły; spójne przejścia, mokra paleta | Obszar przechodni, bez dekoracyjnych przeszkód w nawigacji | Placeholdery |
 | Wóz | Skrzynia, rama, koła, zaprzęg; oddzielny cień, jeśli metoda pozwala | Bryła kolizji i test przesłaniania; sprawdzić zasłanianie pocisków według mapy | Istnieje prosty blockout, nie produkcyjny model |
 | Koń | Oddzielny obiekt, czytelny obok wozu | Tymczasowy obrys i pozycja; status zachowania otwarty | Placeholder bez fabularnego dopowiadania |
 | Buty | Oddzielny mały rekwizyt przy kole | Opcjonalny punkt interakcji, dostępny bez klikania koła | Nie ustalać zachowania poza opisem prologu |
 | Pakunki i księga | Oddzielne, widoczne elementy przy wozie | Wykrywalne i zapamiętywane po podniesieniu; test jednokrotnego rozliczenia | Zachowanie przed zadaniem do ustalenia |
-| Kamienie, korzenie, drzewa | Oddzielne dekoracje, korony na osobnej warstwie lub równoważny mechanizm | Obrys tylko tam, gdzie wizualnie i projektowo uzasadniony; test przejść i zasłaniania | Placeholdery do czasu oceny assetów Vibe'a |
+| Kamienie, korzenie, drzewa | Oddzielne dekoracje, korony na osobnej warstwie lub równoważny mechanizm | Obrys tylko tam, gdzie wizualnie i projektowo uzasadniony; test przejść i zasłaniania | Placeholdery |
 | Pies i Powrotnik | Rozpoznawalne sylwetki, własne stany | Osobne pozycje i wywołania, telegraph widoczny; brak nieoczekiwanego wspólnego ataku | Inscenizacja do walidacji |
 | Światło w kierunku bramy | Mały czytelny punkt, nie rozległa łuna | Prowadzi wzrok; nie wymaga ustawienia odległej bramy w tym samym kadrze | Sposób oświetlenia otwarty |
 
-Sortowanie postaci i obiektów oraz odsłanianie koron należy rozwiązać i sprawdzić w docelowej kamerze. Ilustracja ani plan z góry nie przesądzają techniki renderowania, atlasów, cieni czy silnika.
+Sortowanie postaci i obiektów oraz odsłanianie koron należy rozwiązać i sprawdzić w docelowej kamerze. Plan z góry nie przesądza techniki renderowania, cieni ani silnika.
 
 ## 5. Testy odbioru — do wykonania w prototypie
 
@@ -62,12 +62,12 @@ Najpierw zmierzyć D — obrys kolizji bohatera, B — obrys właściwego przeci
 7. **Płynne przejście:** przejść i wrócić na odcinku wóz → rozstaj → brama bez widocznego ekranu ładowania. Na dostępnej platformie zanotować przycięcia, wyskakiwanie obiektów oraz czasy klatek i pamięć — bez obietnicy wyniku przed pomiarem.
 8. **Pętla:** po jej implementacji sprawdzić rozpoznanie tego samego wozu i znaku, trwałość stanu, brak przeniesienia aktywnej walki i brak widocznego skoku. To osobne zadanie, nie blokuje pierwszego statycznego blockoutu.
 
-## 6. Przekazanie Codexowi
+## 6. Przekazanie do prototypu
 
-1. Przeczytaj [fabułę](demo-fabula.md), [początek](pakiet-04-poczatek.md), [mapę](pakiet-04-mapa.md) i [koncepcję wozu](https://github.com/DawidWrona92/RPG-OldSchool/blob/main/docs/koncepty/18-woz-i-trakt.md). Sprawdź bieżące zmiany aktywnych gałęzi przed użyciem.
-2. Zbuduj na własnej gałęzi geometryczny blockout placu i połączenia z rozstajem. Zastosuj placeholdery dla terenu, Psa, bohatera i konia; nie czekaj na Vibe'a. Nie modyfikuj aktywnych branchy innych wykonawców.
-3. Blockout wozu znajduje się na [`vibe/environment-wagon-blockout`](https://github.com/DawidWrona92/RPG-OldSchool/tree/vibe/environment-wagon-blockout/assets/environment/wagon_blockout). Jest bardzo uproszczony: nie ma materiałów, riggu ani poprawnego zaprzęgu i nie został zweryfikowany w Blenderze. Można go zastąpić lub przebudować.
+1. Przeczytaj [fabułę](demo-fabula.md), [początek](pakiet-04-poczatek.md), [mapę](pakiet-04-mapa.md).
+2. Zbuduj na własnej gałęzi geometryczny blockout placu i połączenia z rozstajem. Zastosuj placeholdery dla terenu, Psa, bohatera i konia.
+3. Wóz zbuduj od zera jako prosty blockout: cztery koła, dyszel, osobny koń, pakunki i księga jako oddzielne obiekty.
 4. Zmierz D, B, U i V, zweryfikuj obejścia, unik, widoczność oraz przesłanianie. Wymiary i technikę dostosuj do faktycznego prototypu; wynik pokaż autorowi wraz z wadami.
-5. Po dostarczeniu paczki Vibe'a oceniaj ją osobno i integruj wyłącznie pasujące elementy; zastąpienie placeholderów nie może zmienić dostępności przejść ani skali bez ponownego sprawdzenia.
+5. Przy zastępowaniu placeholderów finalnymi elementami: zastąpienie placeholderów nie może zmienić dostępności przejść ani skali bez ponownego sprawdzenia.
 
 Nie twórz gotowego zadania, systemu streamingowego ani finalnej geometrii pętli na podstawie tego planu bez dodatkowego projektu. Wszystkie opisane testy są obecnie niewykonane.

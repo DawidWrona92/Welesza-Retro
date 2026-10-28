@@ -2,7 +2,7 @@
 
 Status: propozycja przestrzeni do walidacji. Nie zatwierdza automatycznie pakietów 01–03 ani nowych faktów o świecie. Powstała według level-designer; obsada spotkań pochodzi z wcześniejszej pracy encounter-director.
 
-Powiązania: [fabuła](demo-fabula.md), [spotkania](spotkania-i-bossowie.md), [początek i pierwsza wyprawa](pakiet-04-poczatek.md), [brief do obrazów](https://github.com/DawidWrona92/RPG-OldSchool/blob/main/docs/pakiet-04-obrazy.md), [przegląd i walidacja](pakiet-04-przeglad.md).
+Powiązania: [fabuła](demo-fabula.md), [spotkania](spotkania-i-bossowie.md), [początek i pierwsza wyprawa](pakiet-04-poczatek.md), [przegląd i walidacja](pakiet-04-przeglad.md).
 
 ## 1. Kształt całości
 

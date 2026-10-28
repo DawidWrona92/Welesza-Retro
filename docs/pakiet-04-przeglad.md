@@ -2,7 +2,7 @@
 
 Status: przegląd projektu według level-designer, ux-onboarding i playtest-simulator. Nie wykonano grywalnego testu, pomiaru czasu ani oceny gotowych ilustracji.
 
-Zakres: [mapa](pakiet-04-mapa.md), [początek gry](pakiet-04-poczatek.md), [brief obrazów](https://github.com/DawidWrona92/RPG-OldSchool/blob/main/docs/pakiet-04-obrazy.md). Wskazane poniżej wyniki narzędzi dotyczą wyłącznie grafów symbolicznych.
+Zakres: [mapa](pakiet-04-mapa.md), [początek gry](pakiet-04-poczatek.md). Wskazane poniżej wyniki narzędzi dotyczą wyłącznie grafów symbolicznych.
 
 ## 1. Spójność z dotychczasową fabułą
 
@@ -78,8 +78,6 @@ Grafy reprezentują możliwość przejścia i pozyskania trwałych stanów. Nie 
 
 Nie modelują kosztów, kolizji, czasów, bitwy, cofnięcia zapisu ani aktywnego pościgu w pętli. Wynik jest kontrolą struktury projektu, nie dowodem gotowości mapy do gry.
 
-## 7. Przekazanie do obrazów
+## 7. Status
 
-[Brief obrazów](https://github.com/DawidWrona92/RPG-OldSchool/blob/main/docs/pakiet-04-obrazy.md) ma siedem kadrów z konkretnymi kryteriami. Pierwsza seria powinna skupić się na osadzie, bramie, wozie i czytelności pierwszej walki. Nie wybrano jeszcze silnika, finalnego stylu ani rozdzielczości assetów.
-
-Cały pakiet 04 pozostaje propozycją do oceny razem z wcześniejszymi pakietami. Ilustracje mogą pomóc w tej ocenie; nie zastępują późniejszej próby grywalnego fragmentu.
+Cały pakiet 04 pozostaje propozycją do oceny razem z wcześniejszymi pakietami; nie zastępuje późniejszej próby grywalnego fragmentu.

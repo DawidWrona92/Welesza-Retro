@@ -58,8 +58,8 @@ Nie ma potrzeby projektowania całego świata przed pierwszym prototypem. Trzeba
 
 Autor doprecyzował, że na tym etapie potwory oznaczają bestiariusz i kompletne projekty walk do późniejszego wdrożenia. Pakiety nie są jeszcze zatwierdzonym kodem ani zastępstwem wyboru silnika.
 
-## Pakiet przestrzeni i przygotowanie ilustracji
+## Pakiet przestrzeni
 
-Przygotowano [mapę Niemiru i lasu](pakiet-04-mapa.md), [początek gry i pierwszą wyprawę](pakiet-04-poczatek.md) oraz [brief do obrazów](https://github.com/DawidWrona92/RPG-OldSchool/blob/main/docs/pakiet-04-obrazy.md). Status: propozycje do walidacji. [Przegląd 04](pakiet-04-przeglad.md) odróżnia kontrolę grafów od przyszłych testów gry.
+Przygotowano [mapę Niemiru i lasu](pakiet-04-mapa.md) oraz [początek gry i pierwszą wyprawę](pakiet-04-poczatek.md). Status: propozycje do walidacji. [Przegląd 04](pakiet-04-przeglad.md) odróżnia kontrolę grafów od przyszłych testów gry.
 
-Uzgodniony [kierunek artystyczny Niemiru](https://github.com/DawidWrona92/RPG-OldSchool/blob/main/docs/art/niemir/NIEMIR_ART_DIRECTION.md) i [19 szkiców koncepcyjnych](https://github.com/DawidWrona92/RPG-OldSchool/blob/main/docs/koncepty/README.md) znajdują się na `main`. Metoda grafiki jest ustalona w [kontrakcie renderu](https://github.com/DawidWrona92/RPG-OldSchool/blob/main/docs/art/KONTRAKT-RENDERU.md) (prerender w Blenderze); docelowy silnik nadal pozostaje otwarty. Prace graficzne prowadzone są na oddzielnych gałęziach. Pierwszy grywalny fragment służy sprawdzeniu sterowania i wyprawy, nie produkcji całego demo naraz.
+Pierwszy grywalny fragment służy sprawdzeniu sterowania i wyprawy, nie produkcji całego demo naraz.
