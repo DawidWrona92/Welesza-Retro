@@ -9,6 +9,7 @@ extends CharacterBody2D
 const LAYER_WORLD := 1
 const LAYER_ENEMIES := 4
 const ENEMY_GROUP := &"enemies"
+const HERO_GROUP := &"hero"
 const COMBAT_NODE := "Combat"
 
 @export var walk_speed := 220.0
@@ -37,6 +38,7 @@ var _combat: Node
 
 
 func _ready() -> void:
+	add_to_group(HERO_GROUP)
 	_combat = get_node_or_null(COMBAT_NODE)
 	if _combat and _combat.has_signal(&"dash_requested"):
 		_combat.connect(&"dash_requested", _on_dash_requested)
@@ -108,15 +110,6 @@ func is_moving() -> bool:
 	return _has_goal
 
 
-## Wektor na ekranie -> wektor płaskiego świata (pion rozciągnięty z powrotem o ISO_Y).
-static func to_world(screen_vector: Vector2) -> Vector2:
-	return Vector2(screen_vector.x, screen_vector.y / AssetSprite.ISO_Y)
-
-
-static func to_screen(world_vector: Vector2) -> Vector2:
-	return Vector2(world_vector.x, world_vector.y * AssetSprite.ISO_Y)
-
-
 func _click(point: Vector2, in_place: bool) -> void:
 	var enemy := _enemy_at(point)
 	if in_place:
@@ -158,7 +151,7 @@ func _update_attack_order() -> void:
 		clear_orders()
 		return
 	var to_target := _attack_target.global_position - global_position
-	if to_world(to_target).length() <= float(_combat.attack_range):
+	if Steering.to_world(to_target).length() <= float(_combat.attack_range):
 		var target := _attack_target
 		clear_orders()
 		_combat.request_attack(to_target.normalized(), target)
@@ -168,7 +161,7 @@ func _update_attack_order() -> void:
 
 func _step_toward_goal(delta: float, wants_sprint: bool) -> bool:
 	var next := _next_point()
-	var to_next := to_world(next - global_position)
+	var to_next := Steering.to_world(next - global_position)
 	var distance := to_next.length()
 	if _arrived(distance):
 		clear_orders()
@@ -184,18 +177,11 @@ func _step_toward_goal(delta: float, wants_sprint: bool) -> bool:
 		stamina.drain(sprint_cost_per_second, delta)
 	# Nie przeskakuj punktu docelowego: ostatni krok kończy się dokładnie w nim.
 	speed = minf(speed, distance / delta)
-	velocity = to_screen(to_next.normalized() * speed)
+	velocity = Steering.to_screen(to_next.normalized() * speed)
 	var before := global_position
-	_move(velocity * delta)
-	_track_progress(delta, to_world(global_position - before).length(), speed)
+	Steering.move(self, velocity * delta)
+	_track_progress(delta, Steering.to_world(global_position - before).length(), speed)
 	return true
-
-
-## Ruch z jawnym krokiem czasu: zderzenie ślizga się wzdłuż przeszkody zamiast zatrzymywać.
-func _move(motion: Vector2) -> void:
-	var hit := move_and_collide(motion)
-	if hit:
-		move_and_collide(hit.get_remainder().slide(hit.get_normal()))
 
 
 func _track_progress(delta: float, travelled: float, intended: float) -> void:
@@ -207,14 +193,8 @@ func _track_progress(delta: float, travelled: float, intended: float) -> void:
 		_stuck_time = 0.0
 
 
-## Następny punkt trasy; bez siatki nawigacji (pusta lub niezsynchronizowana) prosto do celu.
 func _next_point() -> Vector2:
-	var map := _agent.get_navigation_map()
-	if NavigationServer2D.map_get_iteration_id(map) == 0:
-		return _goal
-	if NavigationServer2D.map_get_regions(map).is_empty():
-		return _goal
-	return _agent.get_next_path_position()
+	return Steering.next_point(_agent, _goal)
 
 
 func _arrived(distance_to_next: float) -> bool:

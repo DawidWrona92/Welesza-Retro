@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=8 format=3]
 
 [ext_resource type="Script" path="res://world/sandbox/sandbox.gd" id="1"]
 [ext_resource type="Script" path="res://world/sandbox/ground.gd" id="2"]
 [ext_resource type="Script" path="res://world/sandbox/block.gd" id="3"]
 [ext_resource type="PackedScene" path="res://actors/hero/hero.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://actors/enemies/zdziczaly-pies/pies.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://actors/enemies/drwal/drwal.tscn" id="6"]
 
 [sub_resource type="NavigationPolygon" id="1"]
 outlines = Array[PackedVector2Array]([PackedVector2Array(0, -700, 1400, 0, 0, 700, -1400, 0)])
@@ -58,13 +60,11 @@ rectangular = true
 height = 90.0
 color = Color(0.45, 0.35, 0.25, 1)
 
-[node name="Dummy" type="StaticBody2D" parent="." groups=["enemies"]]
-position = Vector2(-120, -300)
-collision_layer = 4
-script = ExtResource("3")
-footprint = Vector2(60, 30)
-height = 120.0
-color = Color(0.6, 0.25, 0.25, 1)
+[node name="Pies" parent="." instance=ExtResource("5")]
+position = Vector2(420, 260)
+
+[node name="Drwal" parent="." instance=ExtResource("6")]
+position = Vector2(-520, 80)
 
 [node name="Hero" parent="." instance=ExtResource("4")]
 

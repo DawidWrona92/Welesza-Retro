@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="PackedScene" path="res://actors/enemies/enemy.tscn" id="1"]
+[ext_resource type="Script" path="res://actors/enemies/drwal/drwal.gd" id="2"]
+[ext_resource type="Script" path="res://core/combat/attack_profile.gd" id="3"]
+
+[sub_resource type="Resource" id="1"]
+script = ExtResource("3")
+damage = 16.0
+parryable = true
+guard_cost = 18.0
+cost = 8.0
+recovery = 0.5
+miss_recovery = 0.4
+
+[sub_resource type="Resource" id="2"]
+script = ExtResource("3")
+damage = 34.0
+parryable = false
+guard_cost = 30.0
+cost = 15.0
+recovery = 0.8
+miss_recovery = 1.2
+
+[node name="Drwal" instance=ExtResource("1")]
+script = ExtResource("2")
+walk_speed = 110.0
+aggro_radius = 380.0
+leash_radius = 700.0
+alert_time = 1.0
+slash = SubResource("1")
+cleave = SubResource("2")
+
+[node name="Combat" parent="." index="4"]
+max_health = 90.0
+hit_reach = 80.0
