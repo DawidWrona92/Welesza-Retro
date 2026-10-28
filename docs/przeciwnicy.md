@@ -69,7 +69,9 @@ Nowe ofiary i istoty nie dopisują historii do zatwierdzonych NPC. Ślady człow
 
 **Sylwetka:** szerokie barki; długi topór; ciemny fartuch z jednym jasnym szwem. Dźwięk: przed atakiem przesuwa dłoń po trzonku; poza walką układa drwa.
 
-**Zachowanie:** pracowity, drażliwy, wyczerpany. Broni pustego paleniska, choć drewno leży w wodzie. Chce przepędzić obcego; nie prowadzi zrozumiałej rozmowy.
+**Zachowanie:** pracowity, drażliwy, wyczerpany. Broni pustego paleniska, choć drewno leży w wodzie. Chce przepędzić obcego; nie prowadzi zrozumiałej rozmowy. Drwal pozostaje tragiczną, niepokojącą istotą Weleszy, a nie typowym demonem fantasy. Jego gniew i zapomnienie powinny być wyczuwalne, zanim zaatakuje.
+
+**Koncepty:** [portret i detale](art/bestiariusz/drwal/01_drwal_portret_i_detale.png), [sylwetki, warianty i pozy](art/bestiariusz/drwal/02_drwal_arkusz_koncepcyjny.png).
 
 **Priorytety AI:** nie atakuje z zaskoczenia → ostrzega ruchem topora → broni wejścia → zwykły zamach w zasięgu → przy uporczywej gardzie gracza wybiera wyraźnie zapowiedziany ciężki atak → po chybieniu wraca do gotowości. Reakcja nie jest odczytem przycisku gracza w tej samej klatce.
 
