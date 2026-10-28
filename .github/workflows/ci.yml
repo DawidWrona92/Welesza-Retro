@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+env:
+  GODOT_VERSION: 4.7.2-stable
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Narzędzia Python
+        run: pip install pillow numpy jsonschema gdtoolkit==4.5.0
+
+      - name: Testy narzędzi assetów
+        run: python -m unittest discover -s tools/tests
+
+      - name: Walidacja assetów (art-src)
+        run: python tools/validate_asset.py
+
+      - name: Walidacja grafów projektowych
+        run: |
+          for f in docs/graphs/*.json; do
+            python .agents/skills/level-designer/scripts/validate_graph.py "$f"
+          done
+
+      - name: Lint i formatowanie GDScript
+        run: |
+          gdlint game/
+          gdformat --check game/
+
+      - name: Budowa assetów (pipeline sprite'ów)
+        run: python tools/sprite_pipeline.py
+
+      - name: Cache Godota
+        id: godot-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/godot
+          key: godot-${{ env.GODOT_VERSION }}
+
+      - name: Pobranie Godota
+        if: steps.godot-cache.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p ~/godot
+          curl -sSL -o /tmp/godot.zip "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}/Godot_v${GODOT_VERSION}_linux.x86_64.zip"
+          unzip -q /tmp/godot.zip -d ~/godot
+          mv ~/godot/Godot_v${GODOT_VERSION}_linux.x86_64 ~/godot/godot
+
+      - name: Import projektu
+        run: ~/godot/godot --headless --path game --import
+
+      - name: Testy gry
+        run: ~/godot/godot --headless --path game --script res://tests/run_tests.gd
