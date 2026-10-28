@@ -16,13 +16,13 @@ Praktyczna reguła projektowa: każda osada, którą projektujemy, musi umieć o
 | **Osady leśne** (w Serca borów) | 10–30 domów, jedna rzecz, którą robią lepiej niż inni (barcie, smoła, węgiel, żelazo z bagna, ziele) | Wymieniają z grodami; żyją w rytmie boru; **typ Niemiru** — tylko Niemir jest „odcięty" bardziej niż zwykle (kanon demo) |
 | **Sioła plemienne** (Pogranicze wschodnie, Piaski) | Sezonowe, przenośne, „gdzie duchy lasu pozwolą" | Prawie nieznane z zewnątrz; najlepsze źródło „innej pamięci" o świecie |
 
-Reguła: **każda osada ma jedną specjalizację i jedną zależność.** Niemir: specjalizacja barcie/węgiel, zależność — sól i żelazo z zewnątrz (dlatego utknęci kupcy w kanonie demo mają znaczenie: to jest „ich" droga życia).
+Reguła: **każda osada ma jedną specjalizację i jedną zależność.** Niemir: specjalizacja barcie/węgiel, zależność — sól i żelazo z zewnątrz (dlatego utęknięci kupcy w kanonie demo mają znaczenie: to jest „ich" droga życia).
 
 ## 3. Władza — mozaika walczących rodów
 
 - **Książęta** istnieją i walczą — ze sobą, nie z „ciemnością". Model: kilkanaście rodów plemiennego wzorca (wzór: Polanie, Rusowie), w ciągłej, lokalnej dominacji (wzorzec: plemiona Polan, Rusinów — mocarstwo nie istnieje, istnieje przetarg o brody, daniny i ochronę Traktu). Wojna ksiąt to dla ludu pogoda: czasem grad, czasem susza — niemal nigdy nie „sprawa".
 - **Koczownicy ze wschodu**: nękają Pogranicze i Piaski; przychodzą, biorą i wracają, nikogo nie „zapatrując" — ich celem nie jest zdobycz Traktu, tylko żywność i niewolnicy z osad zbyt głęboko ukrytych, by były chronione.
-- **Watażkowie** — realna władza w borach: ktoś, kto ma dziesięć ludzi z toporami i rozumie, że haracz od osady musi zostawić jej moc na przetrwanie. Częściej niż uciska — **chroni za opłatę**: ważniejsze dla klimatu „kaganków oświaty" niż czarny charakter. Więksi watażkowie to w praktyce książęta bez tytułu.
+- **Watażkowie** — realna władza w borach: ktoś, kto ma dziesięć ludzi z toporami i rozumie, że haracz od osady musi zostawić jej moc na przetrwanie. Częściej niż uciska — **chroni za opłatą**: ważniejsze dla klimatu „kaganka oświaty" niż czarny charakter. Więksi watażkowie to w praktyce książęta bez tytułu.
 - **Starsi osad** (typ Domarada z kanonu demo) — władza cywilna: memoriał obyczajów, sąd sąsiedzki, rozdział zapasów. Ich siłą jest pamięć, nie siła.
 - **Kapłani zachodu i znachorzy wschodu** — władza duchowa, nierozdzielna od cywilnej: straż obyczaju to także straż porządku ([04-religie-i-wiara.md](04-religie-i-wiara.md)).
 - Reguła kontrastu: władza w Weleszy nigdy nie jest „zła z zawodowo". Jest **przeciążona**: każdy, kto rządzi, próbuje jednocześnie przetrwać, nakarmić i nie dopuścić do paniki (dokładnie to widać w Domaradzie — kanon demo).
@@ -50,7 +50,7 @@ Reguła: **każda osada ma jedną specjalizację i jedną zależność.** Niemir
 
 - **Dom:** drewno, glina, dach z dranic lub słomy; fundamenty tam, gdzie „był kamień" (czyli imperium — ludzie budują na cudzym, nie wiedząc o tym).
 - **Ogień:** centralny „system" życia. Rozbłysły ogień to skandal/strata; doglądanie ognia to rola społeczna (Niemir i latarnia — wzorzec; kanon demo).
-- **Jedzenie:** kasza, chleb (na zachodzie), mięso świąteczne, grzyby, ryby, miód. Głód jest realną pamięcią, niegroźną mechanicznie dopóki autor nie zdecyduje inaczej ([mechaniki-podstawy.md](../mechaniki-podstawy.md) — głód niezatwierdzony).
+- **Jedzenie:** kasza, chleb (na zachodzie), mięso świąteczne, grzyby, ryby, miód. Głód jest realną pamięcią, niegroźną mechanicznie dopóki autor nie zdecyduje inaczej ([mechaniki.md](../mechaniki.md) — głód niezatwierdzony).
 - **Praca dzienna:** każdy ma zawód „od urodzenia osady": bartnik, węglarz, łowca, kowal (bez kowala nie ma osady — dlatego Radost jest jednocześnie kupcem; kanon demo).
 - **Wieczór:** światło domowe, opowieści, cisza po zmierzchu (obrzędy zmierzchu — [04-religie-i-wiara.md](04-religie-i-wiara.md), [07-kalendarz.md](07-kalendarz.md)). Noc jest wspólna wrogiem wszystkich frakcji — to najbardziej jednoczący element świata.
 
