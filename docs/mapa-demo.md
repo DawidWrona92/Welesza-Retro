@@ -122,6 +122,9 @@ Pakunki i księga są przy wozie, a nie w losowym łupie przeciwnika. Szybki gra
 
 #### Odkrycie: most i pętla
 
+**Koncept:** [brzeg z zerwanym mostem](art/lokacje/brzeg/zerwany_most.png) pokazuje błotnisty trakt, zniszczoną drewnianą przeprawę, wodę i widoczny drugi przyczółek. Koncept jest referencją wyglądu lokacji.
+
+
 Brzeg pokazuje realny powód zamknięcia jednej drogi. Dawny kierunek powrotu prowadzi obok charakterystycznego drzewa; po przejściu gracz rozpoznaje ten sam wóz. Może naciąć znak w wyznaczonym miejscu i sprawdzić to ponownie.
 
 Nacięcie jest interakcją z jednym rekwizytem, nie systemem dowolnego rysowania po drzewach. Przejście pętli nie może przenieść aktywnego przeciwnika ani wywołać starcia znikąd. Powrót tą drogą nie odnawia pakunków, stanu konia ani zabitych wrogów.
