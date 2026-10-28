@@ -1,6 +1,6 @@
 # Mechaniki
 
-Status: decyzje autora w tabeli części I, reszta to propozycje.
+Status: decyzje autora w tabeli części I, reszta to propozycje. Kolejność prac: [plan](PLAN.md).
 Powiązania: [fabuła](fabula.md), [walka](walka.md), [przeciwnicy](przeciwnicy.md), [mapa demo](mapa-demo.md).
 
 ## Część I — podstawy
@@ -205,41 +205,3 @@ Powrót nie zawsze kończy się wdzięcznością. Można przynieść dowód śmi
 ### Ryzyka do późniejszych testów
 
 Czy powrót jest rozsądną decyzją, a nie nudnym obowiązkiem? Czy bandażowanie można bezkarnie powtarzać za jednym drzewem? Czy pomoc awaryjna wystarcza do kolejnej uczciwej próby? Czy ręczne zapisy i odwrót nie tworzą duplikacji? Czy zapis przed bossem pozwala wrócić po zaopatrzenie?
-
-## Część III — kolejność prac przed prototypem
-
-Status: proponowana kolejność pracy.
-
-Fundament rozgrywki zapisano w części I (decyzje autora); poniżej kroki do prototypu.
-
-### 1. Podstawowa pętla
-
-Opisać czynności i ich powody w skali pojedynczego starcia, krótkiej wyprawy i całej sesji. Dla każdego kroku wskazać cel, przeszkodę, informację zwrotną i nagrodę.
-
-Dopracować ruch, atak, wiązanki, umiejętności, interakcję i zbieranie łupów. Unik w kierunku kursora i parada są zatwierdzone jako osobne akcje obronne pod klawiszami. Unik i parada przerywają rozpoczęty atak. Koszty i szczegółowe skutki wymagają walidacji całego [pakietu walki 01](walka.md). Głód i crafting nie są zatwierdzone.
-
-### 2. Minimalny model walki i rozwoju
-
-Ustalić podstawowy atak, dostępne zdolności, zasoby, leczenie, śmierć i powrót do gry, sposób rozwoju postaci i rolę wyposażenia. Określić minimalny zestaw przeciwników pokazujący różne decyzje w walce.
-
-Szczegółowe liczby i balans dopracowywać na działającym prototypie, nie na podstawie samej fabuły.
-
-### 3. Kontrakt demo
-
-Uzgodnić czas przejścia, liczbę dostępnych stylów gry, zakres ekwipunku, strukturę mapy, zapisywanie postępu i znaczenie wyborów. Oddzielić zawartość pierwszego prototypu od całego demo z ośmioma zadaniami i szesnastoma postaciami.
-
-Poznać skład zespołu, doświadczenie, dostępny czas i źródło dźwięku przed oceną wykonalności.
-
-### 4. Wybór technologii i pierwszy test
-
-Silnik: Godot 4 ([decyzja warunkowa](SILNIK.md)); warunki decyzji sprawdza pierwszy test.
-
-Pierwszy prototyp: mała przestrzeń z prostych brył, grywalny bohater, reprezentatywne starcie, nagroda i możliwość ponownej próby. Konkretne umiejętności oraz liczba wrogów pozostają do ustalenia.
-
-Kryteria oceny: czy sterowanie jest czytelne, czy gracz rozumie przyczynę obrażeń i porażki, czy pojawiają się sensowne decyzje oraz czy chce powtórzyć starcie.
-
-### 5. Pierwszy kompletny fragment gry
-
-Po ocenie walki połączyć fragment osady, wyprawę do lasu, jedno zadanie, zdobycz, rozmowę i powrót. Sprawdzić interakcje systemów oraz zapis postępu przed rozbudową do pełnego demo.
-
-Nie ma potrzeby projektowania całego świata przed pierwszym prototypem. Trzeba natomiast ustalić wewnętrzną logikę tajemnicy przed pisaniem ostatecznych dialogów i warunków zadań.

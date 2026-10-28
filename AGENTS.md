@@ -2,13 +2,7 @@
 
 ## Zespół
 
-| Rola | Kto | Zakres |
-|---|---|---|
-| Autor projektu | Dawid Wrona | Wizja, decyzje kanoniczne, akceptacja PR |
-| PM | Claude (Claude Code) | Zarządza pozostałymi agentami, dzieli i przydziela pracę, pilnuje spójności dokumentacji i kodu, przegląda wyniki innych agentów, bierze najtrudniejsze zadania |
-| Grafik | GPT‑6 | Grafika malowana 2D według [kierunku artystycznego](docs/art/WELESZA_DARK_PAINTERLY_2D_KIERUNEK_ARTYSTYCZNY_v1.pdf) i kontraktu assetów z [SILNIK.md](docs/SILNIK.md) |
-
-Pozostali agenci pracują na zadaniach przydzielonych przez PM. Spór o kierunek rozstrzyga autor; PM przedstawia mu go z rekomendacją.
+Role, zadania i kamienie milowe: [docs/PLAN.md](docs/PLAN.md). PM (Claude) zarządza pozostałymi agentami, przydziela zadania z planu, przegląda każdy PR przed autorem i bierze najtrudniejsze prace. Spór o kierunek rozstrzyga autor; PM przedstawia mu go z rekomendacją.
 
 ## Zasady pracy
 
