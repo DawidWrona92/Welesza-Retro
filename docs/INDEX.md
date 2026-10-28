@@ -19,6 +19,7 @@ Dokumenty odróżniają decyzje autora, propozycje i rzeczy do przetestowania. N
 - [Plac przy wozie](plac-przy-wozie.md)
 - [Cała dolina — mapa v0.2](world/README.md): [sektory](world/SECTORS.md), [streaming](world/STREAMING.md), [warianty](world/VARIANTS.md), [greybox](world/GREYBOX.md)
 - [Grafy poziomów i bossów](graphs/) — dane projektowe, nie implementacja
+- [Biblia świata](world-bible/README.md) — [PROPOZYCJA] kosmos, magia, imperium, geografia, religie, frakcje, ton, kalendarz
 
 ## Skille projektowe
 [`.agents/skills/`](../.agents/skills/) — gdd-owner, level-designer, combat-balancer, economy-designer, progression-difficulty, encounter-director, core-loop-mechanics, dialogue-voice, puzzle-crafter, accessibility, scope-feasibility, design-maestro.
