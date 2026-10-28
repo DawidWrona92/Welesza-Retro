@@ -40,6 +40,9 @@ const TINT_RETURNING := Color(1.0, 1.0, 1.0, 0.5)
 @export var warn_aim_lock := 0.25
 @export var attack_cooldown := 0.6
 @export var arrive_distance := 6.0
+## Stały identyfikator w świecie: pokonany przeciwnik zostaje pokonany po wczytaniu zapisu
+## (GameState.collected) i nie odradza się po śmierci bohatera. Pusty = bez trwałego stanu.
+@export var world_id: StringName = &""
 ## Zniknięcie po śmierci (placeholder do czasu T13/T19).
 @export var fade_time := 1.2
 
@@ -68,6 +71,10 @@ var _stuck_time := 0.0
 
 
 func _ready() -> void:
+	if world_id != &"" and GameState.is_collected(world_id):
+		set_physics_process(false)
+		queue_free()  # pokonany w zapisanym stanie świata
+		return
 	add_to_group(GROUP)
 	home = global_position
 	combat.connect(&"dash_requested", _on_dash_requested)
@@ -359,6 +366,8 @@ func _on_hit_landed(_target_hit: Combat, result: Hit.Result, _damage: float, _cr
 
 
 func _on_died() -> void:
+	if world_id != &"":
+		GameState.mark_collected(world_id)
 	_set_mode(Mode.DEAD)
 	velocity = Vector2.ZERO
 	$CollisionShape2D.set_deferred(&"disabled", true)

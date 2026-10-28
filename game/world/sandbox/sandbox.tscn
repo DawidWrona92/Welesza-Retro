@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=9 format=3]
 
 [ext_resource type="Script" path="res://world/sandbox/sandbox.gd" id="1"]
 [ext_resource type="Script" path="res://world/sandbox/ground.gd" id="2"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" path="res://actors/hero/hero.tscn" id="4"]
 [ext_resource type="PackedScene" path="res://actors/enemies/zdziczaly-pies/pies.tscn" id="5"]
 [ext_resource type="PackedScene" path="res://actors/enemies/drwal/drwal.tscn" id="6"]
+
+[sub_resource type="CircleShape2D" id="2"]
+radius = 70.0
 
 [sub_resource type="NavigationPolygon" id="1"]
 outlines = Array[PackedVector2Array]([PackedVector2Array(0, -700, 1400, 0, 0, 700, -1400, 0)])
@@ -25,6 +28,20 @@ script = ExtResource("2")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("1")
+
+[node name="Checkpoint" type="Area2D" parent="."]
+z_index = -9
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="Mark" type="Polygon2D" parent="Checkpoint"]
+color = Color(0.3, 0.45, 0.35, 1)
+polygon = PackedVector2Array(0, -35, 70, 0, 0, 35, -70, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoint"]
+scale = Vector2(1, 0.5)
+shape = SubResource("2")
 
 [node name="Rock1" type="StaticBody2D" parent="."]
 position = Vector2(300, 60)
@@ -62,17 +79,42 @@ color = Color(0.45, 0.35, 0.25, 1)
 
 [node name="Pies" parent="." instance=ExtResource("5")]
 position = Vector2(420, 260)
+world_id = &"SBX-pies"
 
 [node name="Drwal" parent="." instance=ExtResource("6")]
 position = Vector2(-520, 80)
+world_id = &"SBX-drwal"
 
 [node name="Hero" parent="." instance=ExtResource("4")]
 
 [node name="Hud" type="CanvasLayer" parent="."]
 
-[node name="StaminaBar" type="ProgressBar" parent="Hud"]
+[node name="HealthBar" type="ProgressBar" parent="Hud"]
 offset_left = 24.0
 offset_top = 24.0
 offset_right = 324.0
 offset_bottom = 40.0
 show_percentage = false
+
+[node name="StaminaBar" type="ProgressBar" parent="Hud"]
+offset_left = 24.0
+offset_top = 46.0
+offset_right = 324.0
+offset_bottom = 58.0
+show_percentage = false
+
+[node name="Supplies" type="Label" parent="Hud"]
+offset_left = 24.0
+offset_top = 66.0
+offset_right = 424.0
+offset_bottom = 92.0
+
+[node name="Message" type="Label" parent="Hud"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 80.0
+offset_right = 300.0
+offset_bottom = 120.0
+horizontal_alignment = 1
