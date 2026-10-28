@@ -52,7 +52,7 @@ Ekonomia niedoboru i rytmu, nie wzrostu. Każda projektowana osada musi umieć o
 | Osady leśne (Serce borów) | 10–30 domów, jedna rzecz robiona lepiej niż gdzie indziej (barcie, smoła, węgiel, żelazo z bagna, ziele) | Wymiana z grodami, życie w rytmie boru; typ Niemiru |
 | Sioła plemienne (Pogranicze, Piaski) | Sezonowe, przenośne | Prawie nieznane z zewnątrz; najlepsze źródło „innej pamięci” |
 
-Każda osada ma jedną specjalizację i jedną zależność (Niemir: barcie i węgiel; zależność — sól i żelazo z zewnątrz, dlatego utknięci kupcy z fabuły mają znaczenie).
+Każda osada ma jedną specjalizację i jedną zależność (Niemir: barcie i węgiel; zależność — sól i żelazo z zewnątrz, dlatego utknięci kupcy z fabuły mają znaczenie). Niemir leży we wschodniej strefie czystego barteru: moneta nie istnieje, kupiec-przyjezdny przyjąłby ją najwyżej jako towar.
 
 ### Władza
 
@@ -100,7 +100,7 @@ Kraina trzyma się kurczowo starych Dróg — a bohater, przypadkowy człowiek z
 | II. Trakt (Wołograd, Rudawie, Torhyszcze) | Kto utrzymuje drogi, którymi jeżdżę? | Krąży wzdłuż Traktu; widzi, że wszystkie frakcje i kulty spotykają się na Drogach; znajduje ogniowe znamiona | Frakcje go rozpoznają („ten z doliny”); przestaje pytać „co to jest”, zaczyna pytać „dlaczego to działa” |
 | III. Przedkroń (Szczebel, Chałupice, próg wschodu) | Czy lepiej mieć drogę otwartą, czy powód, by zostać? | Wybiera: osiąść / wracać z wiedzą / iść dalej, dokąd nikt nie wie | Finał bez wielkiego zwycięstwa; świat pozostaje w balansie albo delikatnie się przechyla; ostatnia scena zostawia niepewność — czymś, co puka |
 
-Haczyki mechaniczne: rękopis z wozu („Niemir — nie zatrzymywać się”) okazuje się jednym z wielu wpisów — ktoś prowadzi spis miejsc, w których nie zatrzymywać się; dlaczego, nie ustalamy. Ogniowe znamiona da się „prześledzić” jak mapę — nagroda: dostęp do zapomnianych Dróg (krótszych, starszych, groźniejszych), bez odpowiedzi fabularnej. Latarnia z Niemiru, jeśli można ją zgasić/przenieść, daje skutki obserwowalne dopiero w akcie III, bez objawienia „dlaczego” — mechanika do decyzji autora (to tajemnica kanonu demo).
+Haczyki mechaniczne: rękopis z wozu („Niemir — nie zatrzymywać się”) okazuje się jednym z wielu wpisów — ktoś prowadzi spis miejsc, w których nie zatrzymywać się; dlaczego, nie ustalamy. Ogniowe znamiona da się „prześledzić” jak mapę — nagroda: dostęp do zapomnianych Dróg (krótszych, starszych, groźniejszych), bez odpowiedzi fabularnej. Latarnia z Niemiru, jeśli można ją zgasić/przenieść, daje skutki obserwowalne dopiero w akcie III, bez objawienia „dlaczego” — mechanika do decyzji autora (to tajemnica kanonu demo). Interwencje boskie w osi traktujemy według ustaleń P3 w [bibli cz. 1](swiat.md): jednorazowe, scenariuszowe, niewyjaśnialne.
 
 Oś nie jest misją zbawienia świata; nie ma antagonisty (przeciwnikiem aktów jest strach, głód, entropia, interesy frakcji); nie wyjaśnia doliny Niemiru — pokazuje tylko, że takich dolin jest więcej; nie kończy się objawieniem — trzecia opcja finału kończy się tak, jak demo: czymś, co puka.
 

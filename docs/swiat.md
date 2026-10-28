@@ -74,7 +74,7 @@ Religia jest realnym zjawiskiem społecznym. W świecie istnieją religie, chram
 
 **Kult latarni w Niemirze** ([fabula](fabula.md)): klasyczny kult resztkowy wokół działającej pozostałości imperium. Nie potwierdzamy, że latarnia „realnie” utrzymuje las na dystans — ani że nie utrzymuje. Rola Wszebory to prototyp wschodniego „kapłana”: autorytet przez obrzęd i pamięć, nie dogmat.
 
-Bank motywów: świętość jako plotka (nadają ją ludzie, nie niebiosa); cud zawsze z drugim, naturalnym wyjaśnieniem dostępnym dla niewierzącego gracza; herezja jako „prawie-dogmat” z innej wioski (konflikt o pamięć i autorytet, nie o metafizykę); dla wiernych magia czarodziejów jest podejrzana, bo nie opiera się na wierze — dla czarodziei religia to „niedokładny opis tego samego”.
+Bank motywów: świętość jako plotka (nadają ją ludzie, nie niebiosa); cud zawsze z dostępnym „niewierzącym” odczytem (inna postać może twierdzić, że to był przypadek, czarnoksiężnik albo oszustwo — i nie potwierdzamy ani jednej wersji; interwencje boskie z ustaleń P3 są wyjątkiem jaskrawym, ale nie prowadyzowanym, po fakcie wszystko znika i nie ma dowodu); herezja jako „prawie-dogmat” z innej wioski (konflikt o pamięć i autorytet, nie o metafizykę); dla wiernych magia czarodziejów jest podejrzana, bo nie opiera się na wierze — dla czarodziei religia to „niedokładny opis tego samego”.
 
 ## Frakcje
 
