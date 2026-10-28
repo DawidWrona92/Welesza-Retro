@@ -73,6 +73,21 @@
           "name": "combo_close"
         }
       ]
+    },
+    "dodge": {
+      "frames": 6,
+      "fps": 12,
+      "loop": false
+    },
+    "guard": {
+      "frames": 3,
+      "fps": 12,
+      "loop": false
+    },
+    "hit": {
+      "frames": 3,
+      "fps": 12,
+      "loop": false
     }
   },
   "collision": {
