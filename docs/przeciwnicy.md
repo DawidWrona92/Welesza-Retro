@@ -27,6 +27,8 @@ Nowe ofiary i istoty nie dopisują historii do zatwierdzonych NPC. Ślady człow
 
 **Sylwetka:** niski, wychudzony korpus; zerwany rzemień obroży; jasna łatka widoczna w ciemnym futrze. Dźwięk: warkot przechodzi w ciche skomlenie, kiedy traci cel. Nie jest to magiczny wilk.
 
+**Koncept sceny:** [pies, Powrotnik i Drwal na mokrym trakcie](art/bestiariusz/sceny/powrotnik_pies_drwal.png). Pies ma niską, napiętą sylwetkę i zmoczone, ciemne futro; scena służy porównaniu skali przeciwników.
+
 **Zachowanie:** czujny, głodny, nerwowy. Chce bronić znalezionego pożywienia, boi się osaczenia. Przeczucie dawnego przywiązania: po walce siada czasem przy porzuconym wozie zamiast szukać kolejnej ofiary.
 
 **Priorytety AI:** pilnuje miejsca → ostrzega → obiega cel po dostępnej stronie → atakuje po odsłonięciu → po chybieniu odzyskuje równowagę → ściga do czytelnej granicy. Samotny pies nie ma obowiązku rzucać się pod ostrze bez przerwy.
@@ -52,6 +54,8 @@ Nowe ofiary i istoty nie dopisują historii do zatwierdzonych NPC. Ślady człow
 
 **Sylwetka:** pochylony człowiek z workiem na plecach; ręka stale trzymająca węzeł; wyblakły pas tkaniny przy nadgarstku. Dźwięk: oddech i tarcie mokrej tkaniny. Nie wypowiada wyjaśniających zdań.
 
+**Koncepty:** [widoki postaci](art/bestiariusz/powrotnik/01_widoki_postaci.png), [spotkanie na trakcie](art/bestiariusz/powrotnik/02_spotkanie_na_trakcie.png), [scena wspólna z psem i Drwalem](art/bestiariusz/sceny/powrotnik_pies_drwal.png). Na planszach Powrotnik jest pochylony pod ciężarem bagażu, w warstwowym, znoszonym ubraniu. To referencje wyglądu i nastroju; szczegóły ekwipunku wymagają uzgodnienia z opisem worka.
+
 **Zachowanie:** uparty, zagubiony, przywiązany do drogi. Próbuje ruszyć dalej, lecz wraca do tego samego kamienia. Nie ma nowej frakcji ani potwierdzonego związku z duszą pierwotnej osoby.
 
 **Priorytety AI:** powtarza krótki obchód → reaguje na wejście blisko → podchodzi bez sprintu → chwyta tylko z odpowiedniego zasięgu → wraca do worka po utracie celu.
@@ -71,7 +75,7 @@ Nowe ofiary i istoty nie dopisują historii do zatwierdzonych NPC. Ślady człow
 
 **Zachowanie:** pracowity, drażliwy, wyczerpany. Broni pustego paleniska, choć drewno leży w wodzie. Chce przepędzić obcego; nie prowadzi zrozumiałej rozmowy. Drwal pozostaje tragiczną, niepokojącą istotą Weleszy, a nie typowym demonem fantasy. Jego gniew i zapomnienie powinny być wyczuwalne, zanim zaatakuje.
 
-**Koncepty:** [portret i detale](art/bestiariusz/drwal/01_drwal_portret_i_detale.png), [sylwetki, warianty i pozy](art/bestiariusz/drwal/02_drwal_arkusz_koncepcyjny.png).
+**Koncepty:** [portret i detale](art/bestiariusz/drwal/01_drwal_portret_i_detale.png), [sylwetki, warianty i pozy](art/bestiariusz/drwal/02_drwal_arkusz_koncepcyjny.png), [scena wspólna z Powrotnikiem i psem](art/bestiariusz/sceny/powrotnik_pies_drwal.png).
 
 **Priorytety AI:** nie atakuje z zaskoczenia → ostrzega ruchem topora → broni wejścia → zwykły zamach w zasięgu → przy uporczywej gardzie gracza wybiera wyraźnie zapowiedziany ciężki atak → po chybieniu wraca do gotowości. Reakcja nie jest odczytem przycisku gracza w tej samej klatce.
 
@@ -87,6 +91,8 @@ Nowe ofiary i istoty nie dopisują historii do zatwierdzonych NPC. Ślady człow
 **Rola:** napastnik dystansowy; porzucony strażnik. **Pytanie:** jak skrócić dystans, korzystając z osłon i przerw między strzałami?
 
 **Sylwetka:** wysoki łuk; asymetryczna peleryna; jasny kościany gwizdek na piersi. Dźwięk: tarcie cięciwy, czasem urwany sygnał, na który nikt nie odpowiada.
+
+**Koncept:** [plansza łucznika, warianty i sceny](art/bestiariusz/lucznik-pustego-traktu/01_karta_koncepcyjna.png). Widoczne są wychudzona sylwetka, zniszczony strój, łuk, kołczan i nóż. Plansza jest referencją wizualną; podpisy na niej nie zastępują opisu zachowania ani nie rozstrzygają pochodzenia postaci.
 
 **Zachowanie:** zdyscyplinowany, ostrożny, samotny. Pilnuje nieistniejącej już odprawy kupieckiej. Boi się zamknięcia drogi odwrotu; nie ucieka w nieskończoność.
 
