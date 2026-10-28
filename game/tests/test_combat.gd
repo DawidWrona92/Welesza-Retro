@@ -297,3 +297,57 @@ func test_hitbox_reach_is_equal_in_every_direction() -> void:
 		hitbox.global_position.is_equal_approx(Vector2(0, 25)), "w dół: %s" % hitbox.global_position
 	)
 	check_eq(hitbox.scale, Vector2(1, 0.5), "kształt spłaszczony do rzutu 2:1")
+
+
+func _profile(parryable: bool, lunge: float = 0.0, miss_recovery: float = 0.0) -> AttackProfile:
+	var p := AttackProfile.new()
+	p.damage = 20.0
+	p.parryable = parryable
+	p.lunge_distance = lunge
+	p.miss_recovery = miss_recovery
+	return p
+
+
+func test_profile_attack_uses_its_damage_and_no_chain() -> void:
+	var links: Array[int] = []
+	_enemy.attack_started.connect(func(link: int) -> void: links.append(link))
+	_enemy.request_attack(Vector2.LEFT, null, _profile(true))
+	_enemy.on_anim_event(&"hit_start")
+	_enemy.register_contact(_hero)
+	check_eq(_hero.health, 80.0, "obrażenia z profilu")
+	_enemy.on_anim_event(&"combo_open")
+	_enemy.request_attack(Vector2.LEFT, null, _profile(true))
+	_enemy.on_anim_finished()
+	check_eq(links, [0], "atak z profilu nie tworzy wiązanki")
+	check_eq(_enemy.state, Combat.State.IDLE, "bez powrotu: od razu gotowy")
+
+
+func test_unparryable_profile_ignores_guard() -> void:
+	_hero.set_guard(true, Vector2.RIGHT)
+	_hero.tick(1.0)
+	_enemy.request_attack(Vector2.LEFT, null, _profile(false))
+	_enemy.on_anim_event(&"hit_start")
+	_enemy.register_contact(_hero)
+	check_eq(_hero.health, 80.0, "skok zwierzęcia przechodzi przez gardę")
+
+
+func test_lunge_follows_fixed_path_at_hit_start() -> void:
+	var dashes: Array[Vector2] = []
+	_enemy.dash_requested.connect(func(o: Vector2, _d: float) -> void: dashes.append(o))
+	_enemy.request_attack(Vector2.LEFT, null, _profile(false, 120.0))
+	check_eq(dashes, [], "przysiad (zapowiedź) bez ruchu")
+	_enemy.on_anim_event(&"hit_start")
+	check_eq(dashes, [Vector2(-120, 0)], "skok po prostym torze w chwili hit_start")
+
+
+func test_missed_attack_leaves_opening() -> void:
+	_enemy.request_attack(Vector2.LEFT, null, _profile(false, 0.0, 0.8))
+	_enemy.on_anim_event(&"hit_start")
+	_enemy.on_anim_event(&"hit_end")
+	_enemy.on_anim_finished()
+	check_eq(_enemy.state, Combat.State.RECOVER, "chybienie daje okazję")
+	check(_enemy.is_movement_locked(), "w powrocie bez ruchu")
+	_enemy.request_attack(Vector2.LEFT, null, _profile(true))
+	check_eq(_enemy.state, Combat.State.RECOVER, "w powrocie bez nowego ataku")
+	_enemy.tick(1.0)
+	check_eq(_enemy.state, Combat.State.IDLE, "po powrocie gotowy")
