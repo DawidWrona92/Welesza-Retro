@@ -1,0 +1,75 @@
+{
+  "schema": "welesza.asset.v1",
+  "id": "TEST-manekin",
+  "kind": "character",
+  "canvas": [
+    512,
+    512
+  ],
+  "anchor": [
+    256,
+    448
+  ],
+  "status": "test",
+  "source": "tools/tests/make_test_asset.py",
+  "background": "magenta",
+  "directions": [
+    "s",
+    "sw",
+    "w",
+    "nw",
+    "n"
+  ],
+  "mirror": {
+    "se": "sw",
+    "e": "w",
+    "ne": "nw"
+  },
+  "layers": [
+    "full"
+  ],
+  "animations": {
+    "idle": {
+      "frames": 2,
+      "fps": 6,
+      "loop": true
+    },
+    "walk": {
+      "frames": 4,
+      "fps": 12,
+      "loop": true,
+      "events": [
+        {
+          "frame": 1,
+          "name": "step"
+        },
+        {
+          "frame": 3,
+          "name": "step"
+        }
+      ]
+    },
+    "attack": {
+      "frames": 3,
+      "fps": 12,
+      "loop": false,
+      "events": [
+        {
+          "frame": 1,
+          "name": "hit_start"
+        },
+        {
+          "frame": 2,
+          "name": "hit_end"
+        },
+        {
+          "frame": 2,
+          "name": "combo_open"
+        }
+      ]
+    }
+  },
+  "collision": {
+    "circle": 36
+  }
+}

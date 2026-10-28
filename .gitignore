@@ -1,0 +1,5 @@
+# Godot
+game/.godot/
+# Wynik pipeline'u sprite'ów (tools/sprite_pipeline.py) — budowany lokalnie i w CI
+game/assets/
+__pycache__/

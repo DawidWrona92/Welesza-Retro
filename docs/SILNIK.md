@@ -42,7 +42,32 @@ Całość jest malowana w 2D; w produkcji nie ma modeli ani renderów 3D.
 
 Pierwszy test: Pies w 8 kierunkach (chód, skok, trafienie) i bohater w jednym pancerzu z mieczem.
 
-## Struktura projektu i dane (propozycja)
+**Kontrakt assetu v1** ([`tools/asset_schema.json`](../tools/asset_schema.json)):
+
+| Element | Ustalenie |
+|---|---|
+| Płótno postaci | 512×512 px na klatkę (2× gry); w grze 256×256 |
+| Kotwica | (256, 448): punkt styku z ziemią między stopami |
+| Wzrost | bohater ~320 px w płótnie (160 px w grze); pies ~110 px w kłębie |
+| Kierunki | `s, sw, w, nw, n, ne, e, se`; `s` to przodem do kamery, dalej zgodnie z ruchem wskazówek zegara |
+| Dostawa | `art-src/<ID>/asset.json` + jeden poziomy pasek PNG na animację i kierunek: `<anim>/<kierunek>.png` (warstwy: `<anim>/<warstwa>/<kierunek>.png`) |
+| Tło | przezroczyste albo jednolite magenta `#FF00FF`, które pipeline usuwa |
+| Animacja | 12 kl./s; zdarzenia na klatkach: `telegraph_start`, `hit_start`, `hit_end`, `combo_open`, `combo_close`, `step` |
+| Kafel | romb 512×256 (`TILE-…`), warianty `01.png`, `02.png`… |
+| Rekwizyt | `PROP-…`, warstwy `full.png` albo `trunk.png` + `crown.png` na wspólnym płótnie; obrys kolizji i linia przesłaniania |
+
+Szablony dla grafika: `art-src/_templates/` (`python3 tools/make_templates.py`).
+
+**Polecenia:**
+
+```bash
+python3 tools/validate_asset.py              # sprawdza art-src/
+python3 tools/sprite_pipeline.py             # buduje game/assets/ (nie jest w repo)
+godot --headless --path game --import
+godot --headless --path game --script res://tests/run_tests.gd
+```
+
+## Struktura projektu i dane
 
 ```text
 game/                  projekt Godota
@@ -55,8 +80,8 @@ game/                  projekt Godota
   ui/                  HUD, dziennik, mapa bohatera, dialogi
   data/                treść jako JSON: przeciwnicy, zadania, dialogi, przedmioty
   assets/              wynik pipeline'u: atlasy, SpriteFrames, kontrakty JSON
-  tests/               testy GUT
-art-src/<kategoria>/<id>/  surowe obrazy od grafika (wejście pipeline'u)
+  tests/               testy headless (run_tests.gd)
+art-src/<ID>/          surowe obrazy od grafika z asset.json (wejście pipeline'u)
 tools/                 pipeline sprite'ów, walidatory assetów, grafów i danych
 ```
 
@@ -65,6 +90,7 @@ tools/                 pipeline sprite'ów, walidatory assetów, grafów i danyc
 - **Zapis**: jeden plik JSON z wersją formatu; stan świata według `world_id`; zwycięstwo nad bossem i nagroda w jednej transakcji.
 - **Sceny**: sektor nie wie o sąsiadach; połączenia i doczytywanie prowadzi `WorldStreamer`. Systemy komunikują się przez sygnały w `Events`, bez bezpośrednich ścieżek do węzłów innych systemów.
 - **Koncepty** (`docs/art/`) nie trafiają do gry; do gry trafia tylko wynik pipeline'u z `art-src/`.
+- **Zdarzenia animacji** czyta `core/asset_sprite.gd` z `meta.json` i wysyła je jako sygnały; walka nie używa stałych czasów w kodzie.
 
 ## Znane ryzyka
 

@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "welesza.asset.v1",
+  "title": "Welesza — kontrakt assetu v1",
+  "type": "object",
+  "required": ["schema", "id", "kind", "canvas", "anchor", "status"],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {"const": "welesza.asset.v1"},
+    "id": {"type": "string", "pattern": "^(HERO|ENM|CHR|PROP|TILE|TEST)-[a-z0-9-]+$"},
+    "kind": {"enum": ["character", "tile", "prop"]},
+    "canvas": {"$ref": "#/$defs/size"},
+    "anchor": {"$ref": "#/$defs/point", "description": "Punkt styku z ziemią w pikselach płótna (2× rozdzielczości gry)."},
+    "status": {"enum": ["test", "approved"]},
+    "source": {"type": "string"},
+    "background": {"enum": ["transparent", "magenta"], "default": "transparent"},
+    "directions": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/direction"},
+      "uniqueItems": true,
+      "description": "Kierunki malowane. Kolejność kanoniczna: s, sw, w, nw, n, ne, e, se."
+    },
+    "mirror": {
+      "type": "object",
+      "propertyNames": {"$ref": "#/$defs/direction"},
+      "additionalProperties": {"$ref": "#/$defs/direction"},
+      "description": "Kierunek brakujący -> kierunek malowany, odbity w poziomie."
+    },
+    "layers": {
+      "type": "array",
+      "items": {"enum": ["full", "body", "head", "weapon", "shield", "trunk", "crown"]},
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "animations": {
+      "type": "object",
+      "propertyNames": {"pattern": "^[a-z][a-z0-9_]*$"},
+      "additionalProperties": {"$ref": "#/$defs/animation"}
+    },
+    "collision": {
+      "oneOf": [
+        {"type": "object", "required": ["circle"], "additionalProperties": false,
+         "properties": {"circle": {"type": "number", "exclusiveMinimum": 0}}},
+        {"type": "object", "required": ["polygon"], "additionalProperties": false,
+         "properties": {"polygon": {"type": "array", "minItems": 3, "items": {"$ref": "#/$defs/point"}}}}
+      ]
+    },
+    "occlusion_y": {"type": "number", "description": "Linia przesłaniania (y w płótnie); postać nad nią jest za obiektem."},
+    "variants": {"type": "integer", "minimum": 1, "description": "Liczba wariantów kafla lub rekwizytu (pliki 01.png, 02.png ...)."}
+  },
+  "allOf": [
+    {"if": {"properties": {"kind": {"const": "character"}}},
+     "then": {"required": ["directions", "animations", "layers", "collision"]}},
+    {"if": {"properties": {"kind": {"const": "prop"}}},
+     "then": {"required": ["layers", "collision", "occlusion_y"]}},
+    {"if": {"properties": {"kind": {"const": "tile"}}},
+     "then": {"required": ["variants"]}}
+  ],
+  "$defs": {
+    "size": {"type": "array", "items": {"type": "integer", "minimum": 1}, "minItems": 2, "maxItems": 2},
+    "point": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2},
+    "direction": {"enum": ["s", "sw", "w", "nw", "n", "ne", "e", "se"]},
+    "animation": {
+      "type": "object",
+      "required": ["frames", "fps", "loop"],
+      "additionalProperties": false,
+      "properties": {
+        "frames": {"type": "integer", "minimum": 1},
+        "fps": {"type": "number", "exclusiveMinimum": 0},
+        "loop": {"type": "boolean"},
+        "events": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["frame", "name"],
+            "additionalProperties": false,
+            "properties": {
+              "frame": {"type": "integer", "minimum": 0},
+              "name": {"enum": ["telegraph_start", "hit_start", "hit_end", "combo_open", "combo_close", "step"]}
+            }
+          }
+        }
+      }
+    }
+  }
+}
