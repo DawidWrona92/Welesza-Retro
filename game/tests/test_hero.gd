@@ -6,14 +6,14 @@ const DT := 1.0 / 60.0
 
 ## Atrapa walki o API z docs/PLAN.md (T10): wystarcza do sprawdzenia strony bohatera.
 class FakeCombat:
-	extends Node
-	signal dash_requested(offset: Vector2, duration: float)
-	var state := Combat.State.IDLE
-	var attack_range := 90.0
+	extends Combat
 	var guard_calls: Array[bool] = []
 	var locked := false
 	var speed_factor := 1.0
 	var attacks: Array = []
+
+	func _init() -> void:
+		attack_range = 90.0
 
 	func is_movement_locked() -> bool:
 		return locked
@@ -21,7 +21,9 @@ class FakeCombat:
 	func move_speed_factor() -> float:
 		return speed_factor
 
-	func request_attack(direction: Vector2, target: Node2D) -> void:
+	func request_attack(
+		direction: Vector2, target: Node2D = null, _profile: AttackProfile = null
+	) -> void:
 		attacks.append([direction, target])
 
 	func request_dodge(_direction: Vector2) -> void:
@@ -50,11 +52,12 @@ func teardown() -> void:
 
 func _spawn_hero(with_combat: bool) -> Hero:
 	var hero: Hero = HERO_SCENE.instantiate()
-	hero.get_node("Combat").free()
 	if with_combat:
+		hero.get_node("Combat").free()
 		_combat = FakeCombat.new()
 		_combat.name = "Combat"
 		hero.add_child(_combat)
+		hero.get_node("Healing").combat = _combat
 	_root.add_child(hero)
 	hero.global_position = Vector2.ZERO
 	return hero

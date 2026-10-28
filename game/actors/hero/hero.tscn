@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3]
+[gd_scene load_steps=10 format=3]
 
 [ext_resource type="Script" path="res://actors/hero/hero.gd" id="1"]
 [ext_resource type="Script" path="res://core/asset_sprite.gd" id="2"]
 [ext_resource type="Script" path="res://core/stamina.gd" id="3"]
 
 [ext_resource type="Script" path="res://core/combat/combat.gd" id="4"]
+[ext_resource type="Script" path="res://actors/hero/healing.gd" id="5"]
 
 [sub_resource type="CircleShape2D" id="1"]
 radius = 18.0
@@ -61,3 +62,7 @@ monitoring = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 scale = Vector2(1, 0.5)
 shape = SubResource("3")
+
+[node name="Healing" type="Node" parent="." node_paths=PackedStringArray("combat")]
+script = ExtResource("5")
+combat = NodePath("../Combat")
