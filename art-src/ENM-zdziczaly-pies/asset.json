@@ -1,6 +1,9 @@
 {
   "schema": "welesza.asset.v1",
   "id": "ENM-zdziczaly-pies",
+  "status": "test",
+  "source": "GPT-6",
+  "background": "transparent",
   "kind": "character",
   "canvas": [
     512,
@@ -10,9 +13,6 @@
     256,
     448
   ],
-  "status": "test",
-  "source": "GPT-6",
-  "background": "transparent",
   "directions": [
     "s",
     "sw",
@@ -28,14 +28,48 @@
   "layers": [
     "full"
   ],
+  "collision": {
+    "circle": 40
+  },
   "animations": {
     "walk": {
-      "frames": 1,
+      "frames": 6,
+      "fps": 12,
+      "loop": true,
+      "events": [
+        {
+          "frame": 1,
+          "name": "step"
+        },
+        {
+          "frame": 4,
+          "name": "step"
+        }
+      ]
+    },
+    "leap": {
+      "frames": 7,
+      "fps": 12,
+      "loop": false,
+      "events": [
+        {
+          "frame": 0,
+          "name": "telegraph_start"
+        },
+        {
+          "frame": 3,
+          "name": "hit_start"
+        },
+        {
+          "frame": 4,
+          "name": "hit_end"
+        }
+      ]
+    },
+    "hit": {
+      "frames": 3,
       "fps": 12,
       "loop": false
     }
-  },
-  "collision": {
-    "circle": 40
   }
 }

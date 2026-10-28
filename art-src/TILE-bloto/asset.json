@@ -1,0 +1,17 @@
+{
+  "schema": "welesza.asset.v1",
+  "id": "TILE-bloto",
+  "status": "test",
+  "source": "GPT-6",
+  "background": "transparent",
+  "kind": "tile",
+  "canvas": [
+    512,
+    256
+  ],
+  "anchor": [
+    256,
+    128
+  ],
+  "variants": 3
+}

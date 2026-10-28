@@ -1,0 +1,23 @@
+{
+  "schema": "welesza.asset.v1",
+  "id": "PROP-woz",
+  "status": "test",
+  "source": "GPT-6",
+  "background": "transparent",
+  "kind": "prop",
+  "canvas": [
+    1024,
+    768
+  ],
+  "anchor": [
+    512,
+    600
+  ],
+  "layers": [
+    "full"
+  ],
+  "collision": {
+    "circle": 180
+  },
+  "occlusion_y": 600
+}
