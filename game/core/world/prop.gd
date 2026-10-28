@@ -3,6 +3,10 @@ extends StaticBody2D
 ## Rekwizyt z kontraktu assetu (PROP-…): warstwy z pipeline'u ustawione kotwicą w początku węzła,
 ## więc sortowanie po Y działa jak dla postaci. Kolizja z meta.json, spłaszczona do rzutu 2:1,
 ## i dziura w siatce nawigacji (grupa Block.NAV_GROUP). Zanikanie korony robi T16.
+## Warstwa „ground” (np. korzenie) leży na ziemi: rysowana pod postaciami, nad kaflami podłoża.
+
+## Pod postaciami (z 0) i nad podłożem (IsoGround z -10).
+const GROUND_LAYER_Z := -5
 
 @export var asset_id: String
 
@@ -31,6 +35,8 @@ func load_asset(id: String) -> Error:
 		sprite.texture = load("res://assets/%s/%s.png" % [id, layer])
 		sprite.centered = false
 		sprite.offset = -anchor
+		if layer == "ground":
+			sprite.z_index = GROUND_LAYER_Z
 		add_child(sprite)
 		_layers[StringName(layer)] = sprite
 	var radius := float(meta.get("collision", {}).get("circle", 0.0))
