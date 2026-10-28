@@ -14,6 +14,7 @@
     1440
   ],
   "layers": [
+    "ground",
     "trunk",
     "crown"
   ],
