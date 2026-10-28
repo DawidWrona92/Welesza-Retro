@@ -12,6 +12,7 @@ Pozostali agenci pracują na zadaniach przydzielonych przez PM. Spór o kierunek
 
 ## Zasady pracy
 
+- **Hierarchia dokumentów:** biblia świata opisuje, co jest w świecie (kosmos, wiara, frakcje, architektura, kraina). Kierunek artystyczny wyznacza, jak to wygląda, i wzoruje się na biblii; nie ustanawia faktów o świecie. Kanon demo (fabuła, przeciwnicy, mapa) ma pierwszeństwo przed biblią. Sprzeczność treści między tymi dokumentami (np. „wielkie katedry” wobec „małych chramów”) to błąd do zgłoszenia autorowi; różny poziom szczegółu nim nie jest.
 - Zacznij od [docs/INDEX.md](docs/INDEX.md). Obowiązuje opisana tam konwencja statusu: wszystko jest propozycją, chyba że oznaczono decyzję autora.
 - Nie zmieniaj statusu decyzji bez potwierdzenia autora. Nie dopisuj faktów fabularnych bez jego zgody.
 - Zmiany i doprecyzowania zapisuj w dokumencie, którego dotyczą. Nie twórz nowych plików, rejestrów ani dokumentów pomocniczych bez potrzeby.
