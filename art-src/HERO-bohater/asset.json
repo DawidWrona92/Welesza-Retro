@@ -1,0 +1,39 @@
+{
+  "schema": "welesza.asset.v1",
+  "id": "HERO-bohater",
+  "kind": "character",
+  "canvas": [
+    512,
+    512
+  ],
+  "anchor": [
+    256,
+    448
+  ],
+  "status": "test",
+  "source": "GPT-6",
+  "background": "transparent",
+  "directions": [
+    "s",
+    "sw",
+    "w",
+    "nw",
+    "n",
+    "ne",
+    "e",
+    "se"
+  ],
+  "layers": [
+    "full"
+  ],
+  "animations": {
+    "idle": {
+      "frames": 1,
+      "fps": 12,
+      "loop": false
+    }
+  },
+  "collision": {
+    "circle": 36
+  }
+}
