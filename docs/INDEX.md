@@ -7,6 +7,7 @@ Dokumenty odróżniają decyzje autora, propozycje i rzeczy do przetestowania. N
 - [Podstawy mechanik](mechaniki-podstawy.md)
 - [Przed prototypem](przed-prototypem.md)
 - [Silnik: Godot 4](SILNIK.md)
+- [Kierunek artystyczny: Dark Painterly 2D (PDF)](art/WELESZA_DARK_PAINTERLY_2D_KIERUNEK_ARTYSTYCZNY_v1.pdf) — zatwierdzony. Doprecyzowania autora z 28.10.2026: Dźwigacz ma hak lub sierp, Stróż zwykłą latarnię (w bestiariuszu); RPG-OldSchool jest bazą tego repozytorium, więc zdanie z s. 12 o nieprzenoszeniu plików jest nieaktualne.
 
 ## Walka i rozwój
 - [Walka, trafienia i wiązanki](walka-i-trafienia.md)

@@ -5,7 +5,7 @@ Nazwy i ID są propozycjami; wartości HP, obrażeń, prędkości i odporności 
 
 ## Zasady projektowe
 
-Proponowana obsada: sześć typów zwykłych przeciwników, dwóch minibossów i finałowy Stróż. Minibossowie korzystają z rodzin zachowań zwykłych przeciwników; nie wymagają trzech odrębnych systemów walki z bossami.
+Proponowana obsada: siedem typów zwykłych przeciwników (karta wilka do opracowania), dwóch minibossów i finałowy Stróż. Minibossowie korzystają z rodzin zachowań zwykłych przeciwników; nie wymagają trzech odrębnych systemów walki z bossami.
 
 Groza wynika z życia, które nadal próbuje się powtarzać. Przeciwnik może strzec pustego domu, nieść niepotrzebny już zapas albo wołać kogoś, kto nie odpowie. Nie każdy jest świadomy i nie każdy rozumie, co robi. To wskazówki wykonawcze, nie ujawniona prawda o kosmologii Weleszy.
 
@@ -33,6 +33,10 @@ Nowe ofiary i istoty nie dopisują historii do zatwierdzonych NPC. Ślady człow
 | Kłapnięcie | Odsunięcie łba i odsłonięcie kłów | Krótki atak blisko celu | Odstąpienie zamiast długiego łańcucha |
 
 **Obrona:** ataków zwierzęcia nie parujemy. **Słabość:** długi skok oddaje inicjatywę, jeśli spudłuje. **Łup:** nie generuje monet; obroża może być rekwizytem bez wartości handlowej. **Występowanie:** wóz, obrzeże obozu, leśny przesmyk.
+
+### ENM-wilk — Wilk
+
+**[DECYZJA AUTORA, 28.10.2026]** Osobny potwór, odrębny od Zdziczałego psa. Duży i szary, wyraźnie większy od burego psa ([kierunek artystyczny](art/WELESZA_DARK_PAINTERLY_2D_KIERUNEK_ARTYSTYCZNY_v1.pdf), s. 9). Rola, zachowanie, ataki i występowanie do opracowania.
 
 ### ENM-powrotnik — Powrotnik
 
@@ -135,17 +139,17 @@ W jamie wiszą porozrywane sidła, a pod nimi leżą starannie ułożone zęby. 
 
 ### ENM-dzwigacz — Dźwigacz, miniboss przy strażnicy
 
-**Rodzina:** Drwal; szeroka, ludzka sylwetka z nosidłem pełnym mokrego drewna; pojedynczy metalowy uchwyt błyska pod płaszczem. **Rola:** test rozróżnienia parady i uniku; pracownik powtarzający obowiązek.
+**Rodzina:** zachowania Drwala; szeroka, ludzka sylwetka z nosidłem pełnym mokrego drewna. **Broń [DECYZJA AUTORA, 28.10.2026]:** hak lub sierp na trzonku, nie topór. **Rola:** test rozróżnienia parady i uniku; pracownik powtarzający obowiązek.
 
 Wciąż nosi drewno do dawno zgasłego pieca. Nie wyjaśniamy, czy kieruje nim pamięć, rozkaz czy sama powtarzalność. Jest wyczerpany, uporczywy i pilnujący narzędzi; boi się pozostawić piec pusty. Przed walką stawia nosidło delikatniej, niż traktuje własne ciało.
 
-**Zdolności:** parowalne cięcie toporem, nieparowalne rozłupanie oraz nieparowalne pchnięcie nosidłem z widocznym wyprostowaniem pleców. Po utracie części zdrowia porzuca nosidło: znika pchnięcie, pojawia się drugi, wyraźnie zapowiedziany zamach topora.
+**Zdolności:** parowalne cięcie hakiem lub sierpem, nieparowalne rozłupanie oraz nieparowalne pchnięcie nosidłem z widocznym wyprostowaniem pleców. Po utracie części zdrowia porzuca nosidło: znika pchnięcie, pojawia się drugi, wyraźnie zapowiedziany zamach hakiem lub sierpem.
 
 **Słabość:** po ciężkim zamachu zostaje długa okazja; precyzyjna parada zwykłego cięcia daje krótszą. **Głos:** wydechy i krótkie pomruki, nie monolog wyjaśniający świat. **Nagroda:** bezpieczny dostęp do komory z latarnią; brak obowiązkowej amunicji, ognia lub specjalnej broni do zwycięstwa.
 
 ### ENM-stroz — Stróż, boss finałowy
 
-**Rola:** finałowy test kontroli zachłanności; strażnik o nieznanym celu. **Sylwetka:** wysoka postać w starym żelazie; długa broń drzewcowa; przywiązane do pasa fragmenty podróżnych pakunków. Część przedmiotów przypomina wcześniejsze znaleziska, ale nie potwierdza to ich pochodzenia.
+**Rola:** finałowy test kontroli zachłanności; strażnik o nieznanym celu. **Sylwetka:** wysoka postać w starym żelazie; długa broń drzewcowa; przywiązane do pasa fragmenty podróżnych pakunków; zwykła latarnia [DECYZJA AUTORA, 28.10.2026]. Nie jest to magiczna latarnia z komory. Część przedmiotów przypomina wcześniejsze znaleziska, ale nie potwierdza to ich pochodzenia.
 
 **Zachowanie:** cierpliwy, nieustępliwy, niemal ceremonialny. Staje między graczem a wyjściem; nie rabuje i nie świętuje zwycięstwa. Głosy są ciche, różne, czasem sprzeczne. Nie naśladuje bliskich bohatera ani nie dopisuje mu osobistej przeszłości.
 
@@ -161,4 +165,4 @@ Najpierw Pies i Drwal: sprawdzają unik, paradę oraz przerwanie wiązanki. Pote
 
 Przy ograniczaniu zakresu najpierw odkładamy Żałobnicę i opcjonalnego Zbieracza, zachowując ich projekty. Nie usuwamy automatycznie zaakceptowanych zadań; ewentualne cięcie treści wymaga walidacji autora.
 
-Każda broń i sylwetka potrzebują osobnego sprawdzenia czytelności w docelowej kamerze. Nie podajemy wyceny produkcji bez ustalenia silnika, i zespołu.
+Każda broń i sylwetka potrzebują osobnego sprawdzenia czytelności w docelowej kamerze. Nie podajemy wyceny produkcji bez ustalenia zespołu i testu produkcji grafiki 2D w Godocie.

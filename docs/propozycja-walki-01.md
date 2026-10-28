@@ -140,7 +140,7 @@ Główne ryzyka i próby:
 - MEC-R10: sprawdzić nakładanie funkcji LPM, kierunek kursora podczas gardy i uniku oraz przypadkowe polecenia dojścia.
 - MEC-R12: osobne sygnały pudła, parady, pancerza, krytyka i utraty rytmu. Gracz musi rozumieć powód wyniku.
 
-Przed implementacją konieczny jest wybór technologii. Brak danych o zespole i silniku uniemożliwia rzetelną wycenę czasu; pakiet nie zawiera takiej wyceny. Leczenie, śmierć, zapis gry i gospodarka wypraw będą kolejnym pakietem, żeby nie mieszać ich z rozstrzygnięciem podstaw walki.
+Silnik: Godot 4 ([decyzja warunkowa](SILNIK.md)). Brak danych o zespole uniemożliwia rzetelną wycenę czasu; pakiet nie zawiera takiej wyceny. Leczenie, śmierć, zapis gry i gospodarka wypraw będą kolejnym pakietem, żeby nie mieszać ich z rozstrzygnięciem podstaw walki.
 
 ## Sposób walidacji
 
