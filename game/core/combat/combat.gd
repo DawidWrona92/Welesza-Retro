@@ -19,7 +19,7 @@ signal hit_received(result: Hit.Result, damage: float)
 signal health_changed(health: float, max_health: float)
 signal died
 
-enum State { IDLE, ATTACK, DODGE, GUARD, STAGGER }
+enum State { IDLE, ATTACK, DODGE, GUARD, STAGGER, RECOVER }
 
 @export_group("Atak")
 @export var attack_animation: StringName = &"attack"
@@ -83,6 +83,7 @@ var _chain_locked := false
 var _next_queued := false
 var _landed := false
 var _chain_active := false
+var _profile: AttackProfile
 var _blocked_by_target := false
 var _hit_this_link: Array[Combat] = []
 var _guard_dir := Vector2.DOWN
@@ -134,21 +135,26 @@ func tick(delta: float) -> void:
 	_since_guard_lowered += delta
 	if state == State.GUARD:
 		_guard_time += delta
-	if state in [State.DODGE, State.STAGGER] and _state_time >= _state_length:
+	if state in [State.DODGE, State.STAGGER, State.RECOVER] and _state_time >= _state_length:
 		_set_state(State.IDLE)
 
 
 # --- polecenia od właściciela ---------------------------------------------------------------
 
 
-func request_attack(dir: Vector2, _target: Node2D = null) -> void:
+## Bez profilu: cios bohatera z wiązanką. Z profilem: pojedynczy atak przeciwnika (bez wiązanki).
+func request_attack(dir: Vector2, _target: Node2D = null, profile: AttackProfile = null) -> void:
 	if is_dead():
 		return
 	match state:
 		State.IDLE:
-			_start_link(0, dir)
+			if profile:
+				_start_profile(profile, dir)
+			else:
+				_start_link(0, dir)
 		State.ATTACK:
-			_on_attack_click()
+			if _profile == null:
+				_on_attack_click()
 		_:
 			pass  # garda, unik, ogłuszenie: bez kolejkowania (po uniku stary atak nie wraca)
 
@@ -191,7 +197,7 @@ func set_guard(active: bool, dir: Vector2 = Vector2.ZERO) -> void:
 
 
 func is_movement_locked() -> bool:
-	return state in [State.ATTACK, State.DODGE, State.STAGGER]
+	return state in [State.ATTACK, State.DODGE, State.STAGGER, State.RECOVER]
 
 
 func move_speed_factor() -> float:
@@ -211,6 +217,9 @@ func on_anim_event(event_name: StringName) -> void:
 	match event_name:
 		&"hit_start":
 			_contact_open = true
+			if _profile and _profile.lunge_distance > 0.0:
+				var lunge := _to_world(_attack_dir).normalized() * _profile.lunge_distance
+				dash_requested.emit(_to_screen(lunge), _profile.lunge_duration)
 		&"hit_end":
 			_contact_open = false
 			if not _landed or _blocked_by_target:
@@ -223,6 +232,13 @@ func on_anim_event(event_name: StringName) -> void:
 
 func on_anim_finished() -> void:
 	if state != State.ATTACK:
+		return
+	if _profile:
+		var rest := _profile.recovery + (0.0 if _landed else _profile.miss_recovery)
+		if rest > 0.0:
+			_set_state(State.RECOVER, rest)
+		else:
+			_set_state(State.IDLE)
 		return
 	if _next_queued:
 		_start_link(chain_link + 1, _attack_dir)
@@ -245,6 +261,11 @@ func register_contact(target: Combat) -> void:
 	hit.damage = base_damage * _multiplier(chain_link)
 	hit.parryable = attack_parryable
 	hit.crit_chance = base_crit_chance + (finisher_crit_bonus if chain_link >= 3 else 0.0)
+	if _profile:
+		hit.damage = _profile.damage
+		hit.parryable = _profile.parryable
+		hit.guard_cost = _profile.guard_cost
+		hit.crit_chance = base_crit_chance
 	hit.crit_chance = minf(hit.crit_chance, max_crit_chance)
 	var outcome := target.receive_hit(hit)
 	_landed = true
@@ -298,6 +319,20 @@ func _start_link(link: int, dir: Vector2) -> void:
 	_set_state(State.ATTACK)
 	_play(attack_animation, exhausted_attack_speed if exhausted else 1.0)
 	attack_started.emit(link)
+
+
+func _start_profile(profile: AttackProfile, dir: Vector2) -> void:
+	if dir.length_squared() > 0.0:
+		_attack_dir = dir.normalized()
+		facing = _attack_dir
+	_landed = false
+	_blocked_by_target = false
+	_hit_this_link.clear()
+	_spend(profile.cost)
+	_set_state(State.ATTACK)
+	_profile = profile
+	_play(profile.animation)
+	attack_started.emit(0)
 
 
 func _on_attack_click() -> void:
@@ -373,6 +408,9 @@ func _scan_hitbox() -> void:
 
 
 func _set_state(new_state: State, length: float = 0.0) -> void:
+	if new_state != State.ATTACK:
+		_profile = null
+		_contact_open = false
 	state = new_state
 	_state_time = 0.0
 	_state_length = length
