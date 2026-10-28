@@ -12,6 +12,8 @@ const ISO_Y := 0.5
 ## Kierunki, w których broń i tarcza są za ciałem.
 const BACK_FACING: Array[StringName] = [&"nw", &"n", &"ne"]
 const BEHIND_LAYERS: Array[StringName] = [&"weapon", &"shield"]
+## Zastępstwo brakującej animacji nieruchomą klatką 0 innej (pies nie ma jeszcze bezczynności).
+const STILL_FALLBACK := {&"idle": &"walk"}
 
 @export var asset_id: String
 
@@ -60,11 +62,19 @@ func load_asset(id: String) -> Error:
 func play_anim(anim: StringName, dir: StringName = direction) -> void:
 	animation = anim
 	direction = dir
-	var name := StringName("%s_%s" % [anim, dir])
+	var source := anim
+	var still := false
+	if not has_anim(anim, dir) and has_anim(STILL_FALLBACK.get(anim, &""), dir):
+		source = STILL_FALLBACK[anim]
+		still = true
+	var name := StringName("%s_%s" % [source, dir])
 	for layer: StringName in _layers:
 		var sprite := _layers[layer]
 		sprite.z_index = -1 if layer in BEHIND_LAYERS and dir in BACK_FACING else 0
 		sprite.play(name)
+		if still:
+			sprite.pause()
+			sprite.frame = 0
 	_last_frame = -1
 	_on_frame_changed()
 
@@ -72,6 +82,13 @@ func play_anim(anim: StringName, dir: StringName = direction) -> void:
 func face(screen_vector: Vector2) -> void:
 	if screen_vector.length_squared() > 0.0:
 		play_anim(animation, direction_from_vector(screen_vector))
+
+
+func has_anim(anim: StringName, dir: StringName = direction) -> bool:
+	var lead := lead_layer()
+	if lead == null or lead.sprite_frames == null:
+		return false
+	return lead.sprite_frames.has_animation("%s_%s" % [anim, dir])
 
 
 func lead_layer() -> AnimatedSprite2D:

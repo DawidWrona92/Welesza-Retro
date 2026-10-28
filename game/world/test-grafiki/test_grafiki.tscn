@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://world/test-grafiki/test_grafiki.gd" id="1"]
+[ext_resource type="Script" path="res://core/world/iso_ground.gd" id="2"]
+[ext_resource type="Script" path="res://core/world/prop.gd" id="3"]
+[ext_resource type="PackedScene" path="res://actors/hero/hero.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://actors/enemies/zdziczaly-pies/pies.tscn" id="5"]
+
+[sub_resource type="NavigationPolygon" id="1"]
+outlines = Array[PackedVector2Array]([PackedVector2Array(0, -1700, 3400, 0, 0, 1700, -3400, 0)])
+parsed_geometry_type = 1
+parsed_collision_mask = 1
+source_geometry_mode = 1
+source_geometry_group_name = &"nav_obstacles"
+agent_radius = 22.0
+
+[node name="TestGrafiki" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1")
+
+[node name="Ground" type="TileMapLayer" parent="."]
+z_index = -10
+script = ExtResource("2")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("1")
+
+[node name="Drzewo" type="StaticBody2D" parent="."]
+position = Vector2(-300, 40)
+script = ExtResource("3")
+asset_id = "PROP-drzewo-lisciaste"
+
+[node name="Drzewo2" type="StaticBody2D" parent="."]
+position = Vector2(200, -400)
+script = ExtResource("3")
+asset_id = "PROP-drzewo-lisciaste"
+
+[node name="Woz" type="StaticBody2D" parent="."]
+position = Vector2(430, -60)
+script = ExtResource("3")
+asset_id = "PROP-woz"
+
+[node name="Kamien" type="StaticBody2D" parent="."]
+position = Vector2(-200, -260)
+script = ExtResource("3")
+asset_id = "PROP-kamien"
+
+[node name="Kamien2" type="StaticBody2D" parent="."]
+position = Vector2(-640, 330)
+script = ExtResource("3")
+asset_id = "PROP-kamien"
+
+[node name="Pies" parent="." instance=ExtResource("5")]
+position = Vector2(-560, 160)
+
+[node name="Hero" parent="." instance=ExtResource("4")]
+
+[node name="Sprite" parent="Hero" index="0"]
+asset_id = "HERO-bohater"
