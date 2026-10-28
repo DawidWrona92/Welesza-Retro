@@ -93,4 +93,4 @@ To analiza projektu, nie wyniki testów gry. Nie uruchomiono prototypu ani symul
 3. Pierwszy styl walki, zakres umiejętności i funkcję wyposażenia w demie.
 4. Minimalny zestaw sytuacji bojowych do sprawdzenia sterowania i zagrożenia liczebnego.
 
-Przed wyborem silnika ustalić doświadczenie i zasoby zespołu. Przed implementacją zadań opracować ich stany i wewnętrzną logikę tajemnicy. Nie jest konieczne wcześniejsze rozpisanie całej Weleszy.
+Silnik: Godot 4 ([decyzja warunkowa](SILNIK.md)); przed oceną wykonalności ustalić doświadczenie i zasoby zespołu. Przed implementacją zadań opracować ich stany i wewnętrzną logikę tajemnicy. Nie jest konieczne wcześniejsze rozpisanie całej Weleszy.

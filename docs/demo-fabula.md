@@ -69,7 +69,7 @@ Wspólnie z miejscową tropicielką sprawdzasz trzy dawne wyjścia z doliny. Odk
 
 ### 3. Światło ze strażnicy
 
-Węglarz pamięta, że strażnicy dawnego traktu nosili latarnie podobne do tej w osadzie. Szukasz jednej w opuszczonej leśnej strażnicy, przez obozowisko węglarzy i podziemną komorę pełną korzeni. Odnajdujesz lampę oraz ciała zwrócone twarzami do zamurowanego przejścia. Lampa zapala się od ognia z Niemiru. W jej świetle między słupami widać ścieżkę, której wcześniej nie było.
+Węglarz pamięta, że strażnicy dawnego traktu nosili latarnie podobne do tej w osadzie. Szukasz jednej w opuszczonej leśnej strażnicy, przez obozowisko węglarzy i podziemną komorę pełną korzeni. Odnajdujesz lampę oraz ciała zwrócone twarzami do zamurowanego przejścia. Lampa zapala się od ognia z Niemiru i daje magiczne światło; to inny przedmiot niż zwykła latarnia noszona przez Stróża. W jej świetle między słupami widać ścieżkę, której wcześniej nie było.
 
 ### 4. Ten, który chodzi przed tobą
 

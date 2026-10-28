@@ -171,7 +171,7 @@
 
 ### S22 — Sidła i jama Zbieracza
 
-**Funkcja:** Ślady sideł, jama Zbieracza i drugi / trzeci słup.
+**Funkcja:** Ślady sideł i jama Zbieracza. Słup powalony i rozbity należą do S12.
 
 **Geometria/inscenizacja:** Znaki pułapek widoczne przed zejściem do jamy. Opcjonalny miniboss bez wpływu na uzyskanie lampy ani pokonanie Stróża.
 

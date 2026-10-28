@@ -8,7 +8,7 @@
 |---|---|
 | Wersja | **Godot 4.7.2-stable** (przypięta; zmiana wersji tylko po teście i decyzji autora) |
 | Język | GDScript, bez C#/.NET |
-| Gra | 2D |
+| Gra | 2D, Dark Painterly ([kierunek artystyczny](art/WELESZA_DARK_PAINTERLY_2D_KIERUNEK_ARTYSTYCZNY_v1.pdf)); wersja 3D porzucona — decyzja autora, 28.10.2026 |
 
 ## Warunki decyzji
 

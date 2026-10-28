@@ -38,7 +38,7 @@ Poznać skład zespołu, doświadczenie, dostępny czas i źródło dźwięku pr
 
 ## 5. Wybór technologii i pierwszy test
 
-Wybrać silnik w oparciu o powyższe decyzje oraz możliwości zespołu.
+Silnik: Godot 4 ([decyzja warunkowa](SILNIK.md)); warunki decyzji sprawdza pierwszy test.
 
 Propozycja pierwszego prototypu: mała przestrzeń z prostych brył, grywalny bohater, reprezentatywne starcie, nagroda i możliwość ponownej próby. Konkretne umiejętności oraz liczba wrogów pozostają do ustalenia.
 
