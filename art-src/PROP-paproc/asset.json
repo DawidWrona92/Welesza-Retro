@@ -1,0 +1,23 @@
+{
+  "schema": "welesza.asset.v1",
+  "id": "PROP-paproc",
+  "kind": "prop",
+  "canvas": [
+    512,
+    512
+  ],
+  "anchor": [
+    256,
+    448
+  ],
+  "status": "test",
+  "source": "GPT-6",
+  "background": "transparent",
+  "layers": [
+    "full"
+  ],
+  "collision": {
+    "circle": 30
+  },
+  "occlusion_y": 448
+}
