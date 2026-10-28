@@ -20,3 +20,8 @@ extends Resource
 ## Pocisk wypuszczany na hit_start (strzał, rzut) zamiast ciosu w zwarciu. Tor jest prosty
 ## i ustalony w chwili wypuszczenia; obrażenia i koszt gardy bierze z tego profilu.
 @export var projectile: PackedScene
+## Obszar trafienia wokół atakującego, nie przed nim (atak obrotowy). Garda i parada liczą kąt
+## nadal od środka atakującego.
+@export var around_self := false
+## Mnożnik wielkości Hitboxa dla tego ataku, np. żeby obrót sięgał dalej niż cios przed sobą.
+@export var area_scale := 1.0

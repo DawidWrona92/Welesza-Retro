@@ -79,7 +79,7 @@ Nowe ofiary i istoty nie dopisują historii do zatwierdzonych NPC. Ślady człow
 
 **Sylwetka:** ludzka, szeroka postać w kapturze; rozkładające się ciało zrośnięte z korzeniami, z głowy i barków wyrastają gałęzie; skórzane pasy na poszarpanych łachmanach; długi topór. Od Korzeńca odróżnia go ludzka postawa i topór. Dźwięk: przed atakiem przesuwa dłoń po trzonku; poza walką układa drwa.
 
-**Warianty wyglądu** (wspólne tryby ataku): podstawowy, rozkład (widoczne kości), leśny (silniej zrośnięty z drewnem), zimowy (szron i lód), strażnik traktu (najstarszy, pień zamiast ramienia), okrwawiony (świeże ofiary, ludzkie trofea; rzadki wariant, może nie trafić do gry [DECYZJA AUTORA, 28.10.2026]). **Broń:** topór drwala, topór rozwidlony, ciopak, zreb związany z korzeniami, obosieczny.
+**Warianty wyglądu** (wspólne tryby ataku): podstawowy, rozkład (widoczne kości), leśny (silniej zrośnięty z drewnem), zimowy (szron i lód), najstarszy (pień zamiast ramienia), okrwawiony (świeże ofiary, ludzkie trofea; rzadki wariant, może nie trafić do gry [DECYZJA AUTORA, 28.10.2026]). **Broń:** topór drwala, topór rozwidlony, ciopak, zreb związany z korzeniami, obosieczny.
 
 **Zachowanie:** pracowity, drażliwy, wyczerpany. Broni pustego paleniska, choć drewno leży w wodzie. Chce przepędzić obcego; nie prowadzi zrozumiałej rozmowy. Pozostaje tragiczną istotą Weleszy: gniew i zapomnienie są wyczuwalne, zanim zaatakuje.
 
@@ -99,7 +99,7 @@ Nowe ofiary i istoty nie dopisują historii do zatwierdzonych NPC. Ślady człow
 
 **Rola:** napastnik dystansowy. **Pytanie:** jak skrócić dystans, korzystając z osłon i przerw między strzałami?
 
-**Kim jest [DECYZJA AUTORA, 28.10.2026]:** porzucony strażnik traktu, odmieniony przez las w szaleńca. Obdarty, pokryty ranami i bliznami, żyje już tylko siłą nienawiści lasu do intruzów.
+**Kim jest [DECYZJA AUTORA, 28.10.2026]:** porzucony strażnik kupieckiej odprawy, odmieniony przez las w szaleńca. Obdarty, pokryty ranami i bliznami, żyje już tylko siłą nienawiści lasu do intruzów.
 
 **Sylwetka:** wychudzony, obdarty, z dzikimi włosami i brodą; łuk, kołczan ze strzałami o czerwonych lotkach, nóż; mały wisior na piersi jako ślad dawnej służby. Twarz wykrzywiona w krzyku. Dźwięk: tarcie cięciwy, urywany krzyk albo sygnał, na który nikt nie odpowiada.
 

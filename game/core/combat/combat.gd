@@ -18,8 +18,13 @@ signal hit_landed(target: Combat, result: Hit.Result, damage: float, crit: bool)
 signal hit_received(result: Hit.Result, damage: float)
 signal health_changed(health: float, max_health: float)
 signal died
+## Użycie przedmiotu (opatrunek, nalewka): czynność w stanie USE. Efekt rozlicza właściciel
+## dopiero po use_finished; przerwanie (ruch, unik, garda, trafienie) kończy się use_interrupted.
+signal use_started(kind: StringName)
+signal use_finished(kind: StringName)
+signal use_interrupted(kind: StringName)
 
-enum State { IDLE, ATTACK, DODGE, GUARD, STAGGER, RECOVER }
+enum State { IDLE, ATTACK, DODGE, GUARD, STAGGER, RECOVER, USE }
 
 @export_group("Atak")
 @export var attack_animation: StringName = &"attack"
@@ -72,6 +77,8 @@ var state: State = State.IDLE
 var health: float
 var facing := Vector2.DOWN
 var chain_link := 0
+## Rodzaj przedmiotu używanego w stanie USE; pusty poza nim.
+var using: StringName = &""
 
 var _rng := RandomNumberGenerator.new()
 var _state_time := 0.0
@@ -123,10 +130,14 @@ func place_hitbox() -> void:
 	var hitbox := get_node_or_null(^"Hitbox") as Area2D
 	if hitbox == null:
 		return
-	var reach := _to_world(_attack_dir).normalized() * hit_reach
-	hitbox.global_position = _position() + _to_screen(reach)
+	var area := _profile.area_scale if _profile else 1.0
+	if _profile and _profile.around_self:
+		hitbox.global_position = _position()
+	else:
+		var reach := _to_world(_attack_dir).normalized() * hit_reach
+		hitbox.global_position = _position() + _to_screen(reach)
 	hitbox.rotation = 0.0
-	hitbox.scale = Vector2(1.0, AssetSprite.ISO_Y)
+	hitbox.scale = Vector2(area, area * AssetSprite.ISO_Y)
 
 
 ## Postęp czasu stanów niezależnych od animacji (unik, ogłuszenie, garda).
@@ -137,6 +148,11 @@ func tick(delta: float) -> void:
 		_guard_time += delta
 	if state in [State.DODGE, State.STAGGER, State.RECOVER] and _state_time >= _state_length:
 		_set_state(State.IDLE)
+	elif state == State.USE and _state_time >= _state_length:
+		var kind := using
+		using = &""  # ukończone, więc przejście do IDLE nie jest przerwaniem
+		_set_state(State.IDLE)
+		use_finished.emit(kind)
 
 
 # --- polecenia od właściciela ---------------------------------------------------------------
@@ -182,7 +198,7 @@ func set_guard(active: bool, dir: Vector2 = Vector2.ZERO) -> void:
 		return
 	if dir.length_squared() > 0.0:
 		_guard_dir = dir.normalized()
-	if active and state in [State.IDLE, State.ATTACK]:
+	if active and state in [State.IDLE, State.ATTACK, State.USE]:
 		_end_chain(&"guard")
 		_guard_time = 0.0
 		if _since_guard_lowered >= parry_rearm:
@@ -197,7 +213,7 @@ func set_guard(active: bool, dir: Vector2 = Vector2.ZERO) -> void:
 
 
 func is_movement_locked() -> bool:
-	return state in [State.ATTACK, State.DODGE, State.STAGGER, State.RECOVER]
+	return state in [State.ATTACK, State.DODGE, State.STAGGER, State.RECOVER, State.USE]
 
 
 func move_speed_factor() -> float:
@@ -224,6 +240,9 @@ func on_anim_event(event_name: StringName) -> void:
 				var lunge := _to_world(_attack_dir).normalized() * _profile.lunge_distance
 				dash_requested.emit(_to_screen(lunge), _profile.lunge_duration)
 		&"hit_end":
+			# Okno może trwać krócej niż krok fizyki: sprawdź kontakt choć raz przed zamknięciem.
+			if _contact_open:
+				_scan_hitbox()
 			_contact_open = false
 			if not _landed or _blocked_by_target:
 				_end_chain(&"blocked" if _blocked_by_target else &"miss")
@@ -284,10 +303,34 @@ func receive_hit(hit: Hit) -> Dictionary:
 	var reduction := clampf(armor - hit.armor_pierce, 0.0, max_armor_reduction)
 	var amount := maxf(min_damage, hit.damage * (2.0 if crit else 1.0) * (1.0 - reduction))
 	_take_damage(amount)
+	interrupt_use()
 	if hit.interrupts and not is_dead():
 		stagger(hit_stun)
 	hit_received.emit(Hit.Result.HIT, amount)
 	return {"result": Hit.Result.HIT, "damage": amount, "crit": crit}
+
+
+## Zaczyna użycie przedmiotu na `duration` sekund; tylko ze spokoju (IDLE). Zwraca, czy się zaczęło.
+func use_item(kind: StringName, duration: float) -> bool:
+	if is_dead() or state != State.IDLE:
+		return false
+	_set_state(State.USE, duration)
+	using = kind
+	use_started.emit(kind)
+	return true
+
+
+## Przerywa używanie przedmiotu (ruch właściciela); bez efektu poza stanem USE.
+func interrupt_use() -> void:
+	if state == State.USE:
+		_set_state(State.IDLE)
+
+
+func heal(amount: float) -> void:
+	if is_dead():
+		return
+	health = minf(max_health, health + amount)
+	health_changed.emit(health, max_health)
 
 
 func stagger(duration: float) -> void:
@@ -342,9 +385,10 @@ func _start_profile(profile: AttackProfile, dir: Vector2) -> void:
 ## ataku, bez okna trafienia w zwarciu. Strzał liczy się jak trafiony (bez miss_recovery).
 func _launch_projectile() -> void:
 	_landed = true
-	var world := get_parent().get_parent()
+	var actor := get_parent()
+	var world := actor.get_parent() if actor else null
 	if world == null:
-		return
+		return  # aktor bez rodzica nie ma gdzie wypuścić pocisku
 	var shot := Projectile.launch(_profile.projectile, world, self, _position(), _attack_dir)
 	shot.damage = _profile.damage
 	shot.guard_cost = _profile.guard_cost
@@ -423,6 +467,10 @@ func _scan_hitbox() -> void:
 
 
 func _set_state(new_state: State, length: float = 0.0) -> void:
+	if state == State.USE and using != &"":
+		var interrupted := using
+		using = &""
+		use_interrupted.emit(interrupted)
 	if new_state != State.ATTACK:
 		_profile = null
 		_contact_open = false

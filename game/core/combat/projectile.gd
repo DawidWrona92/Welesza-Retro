@@ -79,10 +79,11 @@ func _on_area_entered(area: Area2D) -> void:
 	if _spent or not area.is_in_group(HURTBOX_GROUP):
 		return
 	var target := area.get_parent().get_node_or_null(^"Combat") as Combat
-	if target == null or target == shooter:
+	if target == null or (is_instance_valid(shooter) and target == shooter):
 		return
 	var hit := Hit.new()
-	hit.attacker = shooter
+	# Strzelec mógł zniknąć po śmierci, zanim pocisk doleciał.
+	hit.attacker = shooter if is_instance_valid(shooter) else null
 	hit.origin = global_position
 	hit.damage = damage
 	hit.parryable = false

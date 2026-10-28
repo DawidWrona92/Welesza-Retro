@@ -6,11 +6,17 @@ extends CharacterBody2D
 ## Walka (core/combat/combat.gd) to opcjonalne dziecko "Combat": bez niego bohater tylko chodzi.
 ## Kierunki przekazywane walce to wektory na ekranie od bohatera ku celowi lub kursorowi.
 
+signal died
+
 const LAYER_WORLD := 1
 const LAYER_ENEMIES := 4
 const ENEMY_GROUP := &"enemies"
 const HERO_GROUP := &"hero"
 const COMBAT_NODE := "Combat"
+const TINT_BANDAGE := Color(0.6, 1.0, 0.65)
+const TINT_POTION := Color(0.6, 0.8, 1.0)
+const TINT_INTERRUPTED := Color(1.0, 0.45, 0.4)
+const TINT_DEAD := Color(0.35, 0.35, 0.4)
 
 @export var walk_speed := 220.0
 @export var sprint_multiplier := 1.7
@@ -21,6 +27,7 @@ const COMBAT_NODE := "Combat"
 @export var stuck_timeout := 0.4
 
 var sprinting := false
+var dead := false
 
 var _goal := Vector2.ZERO
 var _has_goal := false
@@ -34,6 +41,7 @@ var _combat: Node
 
 @onready var sprite: AssetSprite = $Sprite
 @onready var stamina: Stamina = $Stamina
+@onready var healing: Healing = $Healing
 @onready var _agent: NavigationAgent2D = $NavigationAgent2D
 
 
@@ -42,12 +50,25 @@ func _ready() -> void:
 	_combat = get_node_or_null(COMBAT_NODE)
 	if _combat and _combat.has_signal(&"dash_requested"):
 		_combat.connect(&"dash_requested", _on_dash_requested)
+	if _combat:
+		_combat.connect(&"died", _on_died)
+	healing.started.connect(_on_heal_started)
+	healing.completed.connect(_on_heal_ended.bind(false))
+	healing.interrupted.connect(_on_heal_ended.bind(true))
 	if sprite.meta.is_empty():
 		return
 	sprite.play_anim(&"idle", &"s")
 
 
 func _unhandled_input(event: InputEvent) -> void:
+	if dead:
+		return
+	if event.is_action_pressed(&"heal_bandage"):
+		healing.start(Healing.BANDAGE)
+		return
+	if event.is_action_pressed(&"heal_potion"):
+		healing.start(Healing.POTION)
+		return
 	if event.is_action_pressed(&"move_attack"):
 		_click(get_global_mouse_position(), Input.is_action_pressed(&"attack_in_place"))
 	elif event.is_action_released(&"move_attack"):
@@ -57,6 +78,8 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _physics_process(delta: float) -> void:
+	if dead:
+		return
 	if _holding_move:
 		if Input.is_action_pressed(&"move_attack"):
 			move_to(get_global_mouse_position())
@@ -86,12 +109,14 @@ func step(delta: float, wants_sprint: bool) -> void:
 
 
 func move_to(point: Vector2) -> void:
+	_combat.interrupt_use()
 	_attack_target = null
 	_set_goal(point)
 
 
 ## Podejdź na zasięg walki i zleć jeden atak. Bez walki: zwykły ruch do celu.
 func attack_target(target: Node2D) -> void:
+	_combat.interrupt_use()
 	if _combat == null:
 		move_to(target.global_position)
 		return
@@ -250,3 +275,41 @@ func _step_dash(delta: float) -> void:
 	var hit := move_and_collide(_dash_velocity * slice)
 	_dash_left = 0.0 if hit else _dash_left - slice
 	velocity = Vector2.ZERO if _dash_left <= 0.0 else _dash_velocity
+
+
+## Stan do zapisu (docs/mechaniki.md, część II D): zdrowie, zapasy, miejsce.
+func to_data() -> Dictionary:
+	var data := healing.to_data()
+	data["health"] = _combat.health if _combat else 0.0
+	data["position"] = [global_position.x, global_position.y]
+	return data
+
+
+func from_data(data: Dictionary) -> void:
+	clear_orders()
+	healing.from_data(data)
+	var at: Array = data.get("position", [global_position.x, global_position.y])
+	global_position = Vector2(at[0], at[1])
+	if _combat and data.has("health"):
+		_combat.health = minf(float(data["health"]), _combat.max_health)
+		_combat.health_changed.emit(_combat.health, _combat.max_health)
+
+
+func _on_heal_started(kind: StringName) -> void:
+	clear_orders()
+	sprite.modulate = TINT_BANDAGE if kind == Healing.BANDAGE else TINT_POTION
+
+
+func _on_heal_ended(_kind: StringName, was_interrupted: bool) -> void:
+	sprite.modulate = TINT_INTERRUPTED if was_interrupted else Color.WHITE
+	if was_interrupted:
+		create_tween().tween_property(sprite, "modulate", Color.WHITE, 0.3)
+
+
+func _on_died() -> void:
+	dead = true
+	clear_orders()
+	velocity = Vector2.ZERO
+	sprite.modulate = TINT_DEAD
+	$Hurtbox.set_deferred(&"monitorable", false)
+	died.emit()

@@ -119,7 +119,10 @@ Proponowane zasoby:
 | Opatrunki | Zakup, pakiet ratunkowy, przygotowane znaleziska | Leczenie w bezpiecznej przerwie | Wymagają dokończenia czynności |
 | Nalewka lecznicza | Zakup, rzadkie znalezisko | Leczenie w trakcie zagrożenia | Ograniczony zapas, czas użycia, brak natychmiastowego pełnego zdrowia |
 | Strzały i bełty | Zakup, określone znaleziska | Rzeczywiście wykonane strzały | Osobne dla łuku i kuszy; bez losowego odzysku po trafieniu |
-| Pieniądze | Jednorazowe nagrody zadań i sprzedaż zwykłych przedmiotów | Zapasy i docelowo szkolenie | Nazwa waluty i ceny poza tym pakietem |
+| Monety | Jednorazowe nagrody zadań i sprzedaż zwykłych przedmiotów kupcowi | Towar ze składu kupca i docelowo szkolenie | Nazwa waluty i ceny poza tym pakietem |
+| Towar na wymianę | Znaleziska, skóry, zioła, nagrody zadań | Wymiana u pozostałych mieszkańców | Wartość ustala rozmówca; szczegóły w projekcie handlu |
+
+W Niemirze obowiązuje handel mieszany [DECYZJA AUTORA, 28.10.2026]: monet używa tylko kupiec ze składem, reszta osady handluje wymiennie.
 
 Żaden zwykły przeciwnik nie musi zostawiać łupu. Broń i ważne nagrody pojawiają się w konkretnych, uzasadnionych miejscach. Zwierzę nie wyrzuca monet ani losowego miecza.
 
@@ -143,7 +146,7 @@ Leczenie nie daje niewrażliwości i nie przerywa ataków wroga. Czasy oraz skut
 
 W domu gościnnym można bezpłatnie przywrócić zdrowie i wytrzymałość. Nie odradza to potworów, nie odnawia łupów ani nagród.
 
-Jeśli gracz nie ma pieniędzy i zapasów, Dobrawa oferuje podstawowy, niesprzedawalny pakiet ratunkowy do zabrania na następną próbę. Nie gromadzi się go w magazynie, nie rozkłada na materiały i nie wymienia na PN. Proponowana reguła: wydaje wyłącznie brakujące podstawowe środki, z uwzględnieniem całego posiadanego zapasu, a nie tylko paska podręcznego. Brak warunku ukończenia opcjonalnego zadania.
+Jeśli gracz nie ma czym zapłacić ani zapasów, Dobrawa oferuje podstawowy, niesprzedawalny pakiet ratunkowy do zabrania na następną próbę. Nie gromadzi się go w magazynie, nie rozkłada na materiały i nie wymienia na PN. Proponowana reguła: wydaje wyłącznie brakujące podstawowe środki, z uwzględnieniem całego posiadanego zapasu, a nie tylko paska podręcznego. Brak warunku ukończenia opcjonalnego zadania.
 
 To droga wyjścia z bankructwa, nie optymalny zamiennik przygotowania. Zawartość i liczba przedmiotów do ustalenia w testach.
 

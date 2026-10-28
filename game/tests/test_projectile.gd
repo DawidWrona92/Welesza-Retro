@@ -247,3 +247,29 @@ func _projectiles() -> int:
 		if child is Projectile and not child.is_queued_for_deletion():
 			count += 1
 	return count
+
+
+func test_projectile_still_hits_after_the_shooter_is_gone() -> void:
+	var shooter := Recorder.new()
+	_root.add_child(shooter)
+	var target := FakeTarget.new()
+	_root.add_child(target)
+	_spawned.append(target)
+	target.global_position = Vector2(300, 0)
+	Projectile.launch(PROJECTILE, _root, shooter, Vector2.ZERO, Vector2.RIGHT)
+	shooter.free()
+	await _wait(1.0)
+	check_eq(target.combat.hits.size(), 1, "pocisk leci i trafia mimo braku strzelca")
+	check_eq(
+		target.combat.hits[0].attacker, null, "attacker pusty, bez odwołania do zwolnionego węzła"
+	)
+
+
+func test_combat_without_a_parent_does_not_crash_when_launching() -> void:
+	var combat := Combat.new()
+	var profile := AttackProfile.new()
+	profile.projectile = PROJECTILE
+	combat.request_attack(Vector2.RIGHT, null, profile)
+	combat.on_anim_event(&"hit_start")
+	check_eq(_projectiles(), 0, "brak rodzica: nic nie wypuszczone")
+	combat.free()
