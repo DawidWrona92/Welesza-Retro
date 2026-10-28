@@ -32,7 +32,7 @@ Szczegółowe liczby i balans dopracowywać na działającym prototypie, nie na 
 
 ## 4. Kontrakt demo
 
-Uzgodnić czas przejścia, liczbę dostępnych stylów gry, zakres ekwipunku, strukturę mapy, zapisywanie postępu i znaczenie wyborów. Oddzielić zawartość pierwszego prototypu od całego demo z ośmioma zadaniami i piętnastoma postaciami.
+Uzgodnić czas przejścia, liczbę dostępnych stylów gry, zakres ekwipunku, strukturę mapy, zapisywanie postępu i znaczenie wyborów. Oddzielić zawartość pierwszego prototypu od całego demo z ośmioma zadaniami i szesnastoma postaciami.
 
 Poznać skład zespołu, doświadczenie, dostępny czas i źródło dźwięku przed oceną wykonalności.
 

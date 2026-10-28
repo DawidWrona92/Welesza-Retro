@@ -11,7 +11,7 @@ Nazwy i tytuł pozostają robocze. Dokument opisuje fabułę i zakres treści, n
 - Klimat: groźny las, izolacja, nieufni ludzie i magia budząca strach.
 - Bohater jest przypadkowym podróżnikiem bez wcześniejszego osobistego związku z osadą. Początkowo chce przeżyć i znaleźć drogę dalej.
 - Demo obejmuje niewielką osadę i otaczające ją lasy. Nie ma pól uprawnych.
-- Zakres fabularny: cztery zadania główne, cztery poboczne, piętnaście postaci dialogowych i kilku kupców.
+- Zakres fabularny: cztery zadania główne, cztery poboczne, szesnaście postaci dialogowych i kilku kupców.
 - Tajemnice poznajemy przez otoczenie, obyczaje i sprzeczne świadectwa. Demo nie wymaga wyjaśnienia całej kosmologii ani historii świata.
 - Platforma: PC, mysz i klawiatura; możliwość późniejszego rozszerzenia o pada. Wyłącznie single player. Sterowanie w stylu Diablo 2; perspektywa kamery do ustalenia w prototypie.
 - Walka z mniejszą liczbą groźnych przeciwników, oparta na unikach i wyczuciu momentu ataku; rzadkie, wartościowe łupy oraz rozwój z udziałem nauczycieli. Szczegóły: [Podstawy mechanik](mechaniki-podstawy.md).
@@ -114,6 +114,7 @@ Gospodyni każdej nocy zostawia posiłek w zamkniętej izbie. Na jej prośbę od
 | Wojsława | Łowczyni zastawiająca sidła; zleca „Puste sidła”. Szczupła kobieta po czterdziestce, ogorzała twarz, siwiejące włosy związane rzemieniem. Kaptur z wełny barwionej korą, skórzane nogawice i onuce. Przez ramię zwój pętli i rzemieni na sidła, przy pasie nóż w drewnianej pochwie i torba z przynętą, w ręku krótki oszczep. Oszczędna w słowach i praktyczna. |
 | Dzierżka | Wdowa z zadania o butach; jej mąż przygotowywał się do potajemnego wyjazdu. |
 | Sulir | Ranny strażnik kupieckiego wozu; zataja, co przewożono. |
+| Uniegost | Wędrowny cieśla, dawny lokator izby Miłki z „Trzeciego przy stole”; odnaleziony w leśnym szałasie zaprzecza, że nocował w Niemirze. Wychudły mężczyzna po pięćdziesiątce z zaniedbaną brodą; niegdyś porządna kapota, toporek ciesielski i sznur z węzłami do mierzenia przy pasie. Na szyi nosi klucz do izby, której nie pamięta. |
 | Mściwuj | Grabarz; prowadzi zapiski dokładniejsze niż zwierzchnik osady. |
 | Milorad | Młody pomocnik przy barciach; widział człowieka niszczącego leśny słup, ale boi się go wskazać. |
 
@@ -130,7 +131,7 @@ Poniższe kwestie pozostają otwarte; zapis koncepcji nie rozstrzyga ich automat
 - Autor i cel uszkodzenia słupa oraz zakres wiedzy poszczególnych mieszkańców.
 - Związek między uszkodzeniem słupa, zamknięciem boru, latarnią i Stróżem: wewnętrzne reguły dla twórców, niezależne od informacji dostępnych graczowi.
 - Rozmieszczenie strażnicy w osadzie i leśnych ruin: czy opuszczona i zniszczona strażnica to ten sam obiekt.
-- Przypisanie zleceniodawców, sprawców i lokatora do obsady; koncepcja nie przydziela jeszcze wszystkich ról.
+- Przypisanie zleceniodawców i sprawców do obsady; koncepcja nie przydziela jeszcze wszystkich ról.
 - Warunki rozpoczęcia i ukończenia zadań, obsługa innej kolejności eksploracji, konsekwencje wyborów oraz konkretne nagrody.
 - Sposób pokazania odkrytego wyjścia i uzasadnienie powrotu bohatera do osady w finale.
 

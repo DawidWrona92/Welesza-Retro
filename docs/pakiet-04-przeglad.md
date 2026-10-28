@@ -10,13 +10,13 @@ Zakres: [mapa](pakiet-04-mapa.md), [początek gry](pakiet-04-poczatek.md). Wskaz
 - Nocleg przy wspólnym ogniu i prywatna izba za zadanie są odrębnymi korzyściami. Nie przyznajemy ponownie tej samej nagrody.
 - Strażnica w osadzie jest bezpiecznym miejscem zapalenia latarni, a leśna mieści Dźwigacza i komorę. Obie są rozróżnione wizualnie oraz w grafie.
 - Finał wymaga zapalonej latarni, nie tylko podniesionego przedmiotu. Obóz daje skrót, aby powrót z latarnią nie oznaczał obowiązkowego powtarzania całej trasy walk.
-- Obsada osady liczy piętnaście postaci dialogowych, w tym łowczynię Wojsławę. Czcibor jest łowcą i informatorem [DECYZJA AUTORA, 28.10.2026]; obsada zaginionego lokatora pozostaje otwarta.
+- Obsada liczy szesnaście postaci dialogowych, w tym łowczynię Wojsławę i lokatora Uniegosta. Czcibor jest łowcą i informatorem [DECYZJA AUTORA, 28.10.2026].
 - Nie dodano pól, nowej odległej krainy, systemu głodu ani obowiązkowej magii bojowej.
 
 ## 2. Przejście jako początkujący
 
 1. Startuje na trakcie i widzi wóz. Może pominąć tekst przy butach i nadal dostrzec światło prowadzące do bramy.
-2. Rozmawia z Żegotą i Miłką. Nie musi poznać wszystkich piętnastu osób przed ruszeniem dalej.
+2. Rozmawia z Żegotą i Miłką. Nie musi poznać wszystkich szesnastu osób przed ruszeniem dalej.
 3. Rano próbuje ciosu i odskoku na dziedzińcu. Pies nie zostaje pierwszym miejscem, w którym pojawia się informacja o klawiszu uniku.
 4. Przy wozie przegrywa lub się wycofuje. Brama nadal jest dostępna; porażka nie kasuje usług w osadzie.
 5. Wraca z pakunkami, omijając brzeg. Zadanie zostaje rozliczone, a Nawoja może wskazać temat dalszego badania drogi.

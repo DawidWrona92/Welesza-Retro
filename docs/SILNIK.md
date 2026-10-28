@@ -25,5 +25,6 @@
 1. **Pamięć** — pełny zestaw zasobów gry może przekroczyć budżet; wymaga pomiaru.
 2. **Świat bez ekranów ładowania** — Godot nie ma gotowego strumieniowania świata 2D; doczytywanie fragmentów w tle trzeba napisać.
 3. **Duże obiekty** — odsłanianie postaci za koronami drzew i dachami wymaga osobnego rozwiązania.
+4. **Animacje malowane w 2D** — klatki bohatera mnożą się przez kierunki, animacje i warianty pancerza; trzeba utrzymać tę samą twarz, skalę i punkt kotwicy. Propozycja: bohater składany z warstw (głowa, korpus z pancerzem, broń). Sprawdzić na jednej postaci przed produkcją.
 
 Powiązane: [bezszwowy świat](world/STREAMING.md) · [przed prototypem](przed-prototypem.md).
