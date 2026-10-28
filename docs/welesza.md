@@ -90,6 +90,26 @@ Bank pomysłów, nie plan. Warunki: lokacja wynika z geografii/gospodarki, bada 
 | **Szczebel** (Kamień) | Jedyna zimowa przełęcz; przytułek i ogień za haracz | Czy lepiej mieć drogę otwartą, czy powód, by zostać? Droga jest „otwarta”, bo ktoś ją obsługuje; gdy obsługa znika, zamyka się droga. Zerwany most z fabuły był zapowiedzią tematu |
 | **Chałupice** (Pogranicze) | Ostatnie skupisko szałasów przed niczym; zbiegowisko zimowe | Bezpieczeństwo bez cudzej winy: „obrada czekania” — kto usiądzie przy ogniu i nie powie, skąd jest, jest przyjęty; nikt nic o nikim nie wie. Poszukiwane osoby, ziele, ucieczka |
 
+## Wschód za Niemirem
+
+**Krucjaty.** Welesza jest w ogniu krucjat: Kościół zachodu nawraca, książęta Weleszy ciągną krainę w swoją stronę, a wschód pozostaje poza zasięgiem obu. Wschód to ucieczka — ale czy dobra? Nikt, kto tam poszedł, nie odpowiada na to pytanie.
+
+**Magnes wschodu.** Ludzie idą tam nie dlatego, że tam coś jest — ale dlatego, że **tu już nic dla nich nie ma**. Wschód to miejsce, gdzie świat jeszcze nie powiedział „nie":
+
+| Siła ciągnąca | Skutek |
+|---|---|
+| Ziemia bez pana (na zachodzie wszystko czyjeś: książę, Kościół, dług) | Jedyna droga w górę dla chłopa bez ziemi |
+| Ucieczka przed papierem (długi, procesy, tabliczki Kościoła) | Wschód nie pyta, skąd jesteś (obrada czekania w Chałupicach) |
+| Zasoby: sól, żelazo, futro, miód | Karawany płacą za przewóz; jeden szczęśliwy wraca z plecakiem futer i cały region wie o nim przez pokolenie |
+| Wolność religijna | Nikt nie powie ci, jak się modlić — dla niektórych decydujące |
+| „Drogi prowadzą dokądś” | Najsłabszy i najbardziej niepokojący: coś jest na końcu Dróg imperium |
+
+**Bohater demo** idzie Wielkim Traktem na wschód; cel nieznany graczowi (przypadkowy podróżnik — nikt nie jedzie na wschód dla przygody, na wschód się jedzie, bo trzeba).
+
+**Geografia dalekiego wschodu (kanon wewnętrzny twórców, nigdy w grze):** daleko za Niemirem stoi **ostatnie miasto** — ostoja cywilizacji na krawędzi znanej krainy; a za nim **Stare Serce Imperium**, pełne wiedzy i artefaktów. Drogi imperium prowadzą tam. Nikt w grze się tego nie dowie; świedectwa mogą tylko przeciekać (pieśni, szaleńcy, jedna strona z księgi).
+
+**Konsekwencja dla doliny Niemiru:** dolina to pierwsza pułapka na drodze każdego, kto tak myśli — wóz z księgą przewozową („Niemir — nie zatrzymywać się”) to dosłowne ostrzeżenie dla takich ludzi.
+
 ## Oś fabularna
 
 Kraina trzyma się kurczowo starych Dróg — a bohater, przypadkowy człowiek z doliny Niemiru, dowiaduje się, że Drogi prowadzą dokądś, i zaczyna się bać, że nie umie przestać o tym myśleć. To nie „wyprawa na wschód”: to historia człowieka, który wiedział już za dużo, by zostać, i za mało, by iść — emocja finału demo.
