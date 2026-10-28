@@ -239,6 +239,7 @@ func _update_animation(move: Vector2) -> void:
 		dir = AssetSprite.direction_from_vector(move)
 	if anim != sprite.animation or dir != sprite.direction:
 		sprite.play_anim(anim, dir)
+	sprite.match_walk_speed(move)
 
 
 func _direction_to(point: Vector2) -> Vector2:

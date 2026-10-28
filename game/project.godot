@@ -5,7 +5,7 @@ config_version=5
 [application]
 
 config/name="Welesza"
-run/main_scene="res://world/sandbox/sandbox.tscn"
+run/main_scene="res://world/pixelart/pixelart.tscn"
 config/features=PackedStringArray("4.7")
 
 [autoload]
@@ -18,9 +18,10 @@ WorldStreamer="*res://autoload/world_streamer.gd"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-window/stretch/mode="canvas_items"
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
 window/stretch/aspect="keep"
 
 [importer_defaults]
@@ -41,4 +42,5 @@ texture={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-textures/canvas_textures/default_texture_filter=3
+textures/canvas_textures/default_texture_filter=0
+2d/snap/snap_2d_transforms_to_pixel=true

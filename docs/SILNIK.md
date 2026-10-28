@@ -60,6 +60,9 @@ Szablony dla grafika: `art-src/_templates/` (`python3 tools/make_templates.py`).
 
 **Polecenia:**
 
+Eksperyment pixel artu na osobnym branchu: [proces, automatyczna kontrola i scena walki](art/PIXELART.md).
+Budowa wariantu i kontrole: `python tools/check_pixelart.py --build --godot godot`.
+
 ```bash
 python3 tools/validate_asset.py              # sprawdza art-src/
 python3 tools/sprite_pipeline.py             # buduje game/assets/ (nie jest w repo)

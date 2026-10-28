@@ -16,6 +16,8 @@ const BEHIND_LAYERS: Array[StringName] = [&"weapon", &"shield"]
 const STILL_FALLBACK := {&"idle": &"walk"}
 
 @export var asset_id: String
+## Opcjonalna długość pełnego cyklu chodu w świecie; 0 zachowuje dotychczasowe tempo.
+@export var walk_cycle_distance := 0.0
 
 var meta: Dictionary = {}
 var animation: StringName = &"idle"
@@ -24,6 +26,7 @@ var _layers: Dictionary[StringName, AnimatedSprite2D] = {}
 var _events: Dictionary = {}
 ## Ostatnia klatka, której zdarzenia już wysłano; przy przeskoku klatek wysyłamy też pominięte.
 var _last_frame := -1
+var _changing_walk_direction := false
 
 
 func _ready() -> void:
@@ -60,6 +63,15 @@ func load_asset(id: String) -> Error:
 
 
 func play_anim(anim: StringName, dir: StringName = direction) -> void:
+	var lead_before := lead_layer()
+	var preserve_walk := (
+		walk_cycle_distance > 0.0
+		and animation == &"walk"
+		and anim == &"walk"
+		and lead_before != null
+	)
+	var previous_frame := lead_before.frame if preserve_walk else 0
+	var previous_progress := lead_before.frame_progress if preserve_walk else 0.0
 	animation = anim
 	direction = dir
 	var source := anim
@@ -68,15 +80,34 @@ func play_anim(anim: StringName, dir: StringName = direction) -> void:
 		source = STILL_FALLBACK[anim]
 		still = true
 	var name := StringName("%s_%s" % [source, dir])
+	_changing_walk_direction = preserve_walk
 	for layer: StringName in _layers:
 		var sprite := _layers[layer]
 		sprite.z_index = -1 if layer in BEHIND_LAYERS and dir in BACK_FACING else 0
 		sprite.play(name)
+		sprite.speed_scale = 1.0
+		if preserve_walk:
+			sprite.set_frame_and_progress(previous_frame, previous_progress)
 		if still:
 			sprite.pause()
 			sprite.frame = 0
+	_changing_walk_direction = false
+	if preserve_walk:
+		_last_frame = previous_frame
+		return
 	_last_frame = -1
 	_on_frame_changed()
+
+
+## Tempo zależy od drogi, nie od samego stanu „idzie”; sprint nie ślizga stóp przy 12 fps.
+func match_walk_speed(screen_velocity: Vector2) -> void:
+	if walk_cycle_distance <= 0.0 or animation != &"walk":
+		return
+	var spec: Dictionary = meta["animations"]["walk"]
+	var nominal_speed := walk_cycle_distance * float(spec["fps"]) / float(spec["frames"])
+	var world_speed := Vector2(screen_velocity.x, screen_velocity.y / ISO_Y).length()
+	for layer: AnimatedSprite2D in _layers.values():
+		layer.speed_scale = world_speed / nominal_speed
 
 
 func face(screen_vector: Vector2) -> void:
@@ -99,6 +130,8 @@ func lead_layer() -> AnimatedSprite2D:
 
 
 func _on_frame_changed() -> void:
+	if _changing_walk_direction:
+		return
 	var lead := lead_layer()
 	if lead == null:
 		return

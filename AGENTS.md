@@ -22,3 +22,4 @@ Role, zadania i kamienie milowe: [docs/PLAN.md](docs/PLAN.md). PM (Claude) zarz�
 
 - Godot 4.7.2-stable, GDScript w składni Godota 4, z typowaniem; bez C#/.NET.
 - Przed commitem: `gdlint` i sprawdzenie skryptów w trybie headless.
+- Pixel art: po zmianie źródeł, profilu lub korekt uruchom `python tools/check_pixelart.py --build --godot <binarka-4.7.2>`. Proces buduje wariant, nakłada trwałe poprawki, sprawdza kontrakt i wykonuje testy oraz starcie bohater–pies. Oglądaj wskazane klatki w `game/assets/pixelart/quality_review.png` oraz pętle `walk.gif` i `combat.gif`; nie analizuj ręcznie wszystkich atlasów od początku. Instrukcje i ograniczenia: [docs/art/PIXELART.md](docs/art/PIXELART.md).

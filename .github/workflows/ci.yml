@@ -19,7 +19,7 @@ jobs:
           python-version: "3.12"
 
       - name: Narzędzia Python
-        run: pip install pillow numpy jsonschema gdtoolkit==4.5.0
+        run: pip install -r tools/requirements.txt
 
       - name: Testy narzędzi assetów
         run: python -m unittest discover -s tools/tests
@@ -41,6 +41,9 @@ jobs:
       - name: Budowa assetów (pipeline sprite'ów)
         run: python tools/sprite_pipeline.py
 
+      - name: Pixel art — budowa, poprawki i automatyczna kontrola jakości
+        run: python tools/check_pixelart.py --build
+
       - name: Cache Godota
         id: godot-cache
         uses: actions/cache@v4
@@ -61,3 +64,6 @@ jobs:
 
       - name: Testy gry
         run: ~/godot/godot --headless --path game --script res://tests/run_tests.gd
+
+      - name: Pixel art — starcie bohatera z psem
+        run: ~/godot/godot --headless --path game res://world/pixelart/pixelart.tscn -- --demo
