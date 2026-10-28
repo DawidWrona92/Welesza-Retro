@@ -18,6 +18,7 @@ DIRECTIONS = ("s", "sw", "w", "nw", "n", "ne", "e", "se")
 SOURCE_SCALE = 2  # grafika malowana w 2x rozdzielczości gry
 MAGENTA = np.array([255, 0, 255], dtype=np.float32)
 ALPHA_MIN = 16  # piksel o alfie poniżej progu uznajemy za tło
+SPILL_BAND = 6  # szerokość pasa (px w 2x) czyszczonego z różowej poświaty przy tle magenta
 
 
 @dataclass
@@ -63,19 +64,38 @@ def to_rgba(path: Path, background: str) -> np.ndarray:
     with Image.open(path) as im:
         img = np.asarray(im.convert("RGBA"), dtype=np.float32)
     if background == "magenta":
-        rgb = img[..., :3]
-        dist = np.linalg.norm(rgb - MAGENTA, axis=-1)
+        dist = np.linalg.norm(img[..., :3] - MAGENTA, axis=-1)
         # pełne tło przy odległości < 60, miękkie przejście do 140 (malarskie krawędzie)
         alpha = np.clip((dist - 60.0) / 80.0, 0.0, 1.0)
         img[..., 3] = np.minimum(img[..., 3], alpha * 255.0)
-        # usunięcie różowej poświaty na krawędziach
-        spill = np.clip(np.minimum(rgb[..., 0], rgb[..., 2]) - rgb[..., 1], 0, None)
-        edge = (alpha < 1.0)[..., None]
-        rgb_fixed = rgb.copy()
-        rgb_fixed[..., 0] -= spill * 0.5
-        rgb_fixed[..., 2] -= spill * 0.5
-        img[..., :3] = np.where(edge, np.clip(rgb_fixed, 0, 255), rgb)
+    _remove_pink_spill(img)
     return img
+
+
+def _remove_pink_spill(img: np.ndarray) -> None:
+    """Usuwa różową poświatę z pasa SPILL_BAND px przy tle.
+
+    Malowana krawędź miesza magentę z kolorem także w pikselach w pełni kryjących (np. 150, 40,
+    140 na skraju liści), a obraz z „przezroczystym” tłem bywa wycięty z magenty ręcznie i ma te
+    same resztki. Dotyczy tylko pikseli, w których czerwony i niebieski przewyższają zielony;
+    ciepłe barwy (skóra, drewno, ziemia) i fiolet głębiej w obrazie zostają.
+    """
+    rgb = img[..., :3]
+    spill = np.clip(np.minimum(rgb[..., 0], rgb[..., 2]) - rgb[..., 1], 0, None)
+    edge = _dilate(img[..., 3] < 255.0, SPILL_BAND)
+    for channel in (0, 2):
+        rgb[..., channel] = np.where(edge, np.clip(rgb[..., channel] - spill, 0, 255), rgb[..., channel])
+
+
+def _dilate(mask: np.ndarray, radius: int) -> np.ndarray:
+    """Poszerza maskę o `radius` px (kwadrat), bez zawijania przy krawędziach obrazu."""
+    out = mask.copy()
+    h, w = mask.shape
+    for dy in range(-radius, radius + 1):
+        for dx in range(-radius, radius + 1):
+            src = mask[max(0, -dy):h - max(0, dy), max(0, -dx):w - max(0, dx)]
+            out[max(0, dy):h - max(0, -dy), max(0, dx):w - max(0, -dx)] |= src
+    return out
 
 
 def image_size(path: Path) -> tuple[int, int]:

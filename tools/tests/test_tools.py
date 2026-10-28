@@ -16,7 +16,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import make_test_asset  # noqa: E402
 from sprite_pipeline import build  # noqa: E402
 from validate_asset import validate  # noqa: E402
-from welesza_assets import ground_point  # noqa: E402
+from welesza_assets import ground_point, to_rgba  # noqa: E402
 
 
 class PipelineTest(unittest.TestCase):
@@ -78,3 +78,34 @@ class PipelineTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class MagentaKeyTest(unittest.TestCase):
+    def test_opaque_pink_fringe_is_cleaned_but_inner_purple_stays(self) -> None:
+        img = np.zeros((64, 64, 3), dtype=np.uint8)
+        img[...] = (255, 0, 255)  # tło
+        img[16:48, 16:48] = (150, 40, 140)  # kryjąca obwódka zmieszana z magentą
+        img[20:44, 20:44] = (60, 120, 40)  # liście
+        img[30:34, 30:34] = (150, 40, 140)  # fiolet w środku obrazu
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "fringe.png"
+            Image.fromarray(img).save(path)
+            out = to_rgba(path, "magenta")
+        ring = out[17, 17]
+        self.assertEqual(ring[3], 255, "obwódka zostaje kryjąca")
+        self.assertLess(min(ring[0], ring[2]) - ring[1], 10, "bez różowej poświaty na obwódce")
+        self.assertEqual(tuple(out[31, 31, :3]), (150.0, 40.0, 140.0), "fiolet w środku nietknięty")
+        self.assertEqual(out[2, 2, 3], 0, "tło przezroczyste")
+
+    def test_transparent_source_with_leftover_fringe_is_cleaned(self) -> None:
+        img = np.zeros((64, 64, 4), dtype=np.uint8)
+        img[16:48, 16:48] = (150, 40, 140, 255)  # resztka po ręcznym wycięciu magenty
+        img[20:44, 20:44] = (60, 120, 40, 255)
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "cut.png"
+            Image.fromarray(img).save(path)
+            out = to_rgba(path, "transparent")
+        ring = out[17, 17]
+        self.assertLess(min(ring[0], ring[2]) - ring[1], 10, "bez różowej poświaty")
+        self.assertEqual(tuple(out[30, 30, :3]), (60.0, 120.0, 40.0), "środek nietknięty")
+
