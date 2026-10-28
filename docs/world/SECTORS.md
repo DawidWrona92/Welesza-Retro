@@ -45,7 +45,7 @@
 
 ### S01 — Niemir i skalne źródło
 
-**Funkcja:** Niemir: źródło, palisada, domy, gospoda, strażnica, kuźnia i dziedziniec.
+**Funkcja:** Niemir: źródło, palisada, domy, dom kupca ze składem, gospoda, strażnica, kuźnia i dziedziniec.
 
 **Geometria/inscenizacja:** Jedna nieregularna polana, kamienna skała na skraju, niewielki plac. Drzwi usług i jedyna brama czytelne z głównego traktu. Bez walki w osadzie.
 
@@ -59,7 +59,7 @@
 
 ### S02 — Północne ścieżki
 
-**Funkcja:** Leśne schronienie Czcibora i fragment górnego dojścia obozowego.
+**Funkcja:** Leśne schronienie zaginionego lokatora i fragment górnego dojścia obozowego.
 
 **Geometria/inscenizacja:** Odcinki dróg `camp__shelter` i `camp__crossroads` przecinają S02; nie utożsamiać z całym skrótem.
 

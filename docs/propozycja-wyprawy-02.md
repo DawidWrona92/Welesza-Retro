@@ -19,7 +19,7 @@ Proponowane zasoby:
 
 | Zasób | Skąd pochodzi | Na co jest zużywany | Ograniczenie |
 |---|---|---|---|
-| Wytrzymałość | Odnawia się w trakcie gry | Walka zgodnie z pakietem 01 | Ogranicza intensywność starcia, nie długość wyprawy sama w sobie |
+| Wytrzymałość | Odnawia się w trakcie gry | Walka i sprint zgodnie z pakietem 01 | Ogranicza intensywność starcia, nie długość wyprawy sama w sobie |
 | Opatrunki | Zakup, pakiet ratunkowy, przygotowane znaleziska | Leczenie w bezpiecznej przerwie | Wymagają dokończenia czynności |
 | Nalewka lecznicza | Zakup, rzadkie znalezisko | Leczenie w trakcie zagrożenia | Ograniczony zapas, czas użycia, brak natychmiastowego pełnego zdrowia |
 | Strzały i bełty | Zakup, określone znaleziska | Rzeczywiście wykonane strzały | Osobne dla łuku i kuszy; bez losowego odzysku po trafieniu |

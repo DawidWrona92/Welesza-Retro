@@ -16,6 +16,7 @@ Proponowane identyfikatory: MECH-cancel-defense, MECH-rhythm-chain, MECH-guard, 
 | Czynność | Wejście — propozycja przypisania | Efekt | Koszt lub ograniczenie | Cel projektowy |
 |---|---|---|---|---|
 | Ruch | LPM na terenie | Przejście do punktu | Przeszkody, czas przejścia | Pozycjonowanie |
+| Sprint [DECYZJA AUTORA, 28.10.2026] | Osobny klawisz, do przypisania | Szybszy ruch | Zużywa wytrzymałość | Szybsze przejście kosztem gotowości do walki |
 | Atak wręcz | LPM na przeciwniku | Jeden cios; poza zasięgiem dojście i jeden cios | Czas i wytrzymałość | Świadomy atak |
 | Atak w miejscu | Shift + LPM | Cios albo strzał w kierunku kursora bez dojścia | Te same koszty co zwykły atak | Jednoznaczna intencja |
 | Unik | Spacja | Krótki odskok ku kursorowi | Wytrzymałość, przestrzeń do ruchu, koniec wiązanki | Reakcja na zagrożenie |
@@ -64,7 +65,7 @@ Parowanie dotyczy ataków bronią wskazanych w zatwierdzonym kierunku. Potężny
 
 ### Wytrzymałość
 
-Proponuję jeden odnawialny zasób walki. Ataki, uniki i część umiejętności zużywają go, a garda płaci za przyjęte ciosy. Zwykły ruch nie kosztuje. Wytrzymałość odnawia się podczas oddechu między akcjami; wolniej przy podniesionej gardzie i nie podczas wykonywania kosztownej akcji.
+Proponuję jeden odnawialny zasób walki. Ataki, uniki i część umiejętności zużywają go, a garda płaci za przyjęte ciosy. Zwykły ruch nie kosztuje; sprint zużywa wytrzymałość [DECYZJA AUTORA, 28.10.2026], więc gracz ryzykuje wejście zmęczony w zasadzkę. Wytrzymałość odnawia się podczas oddechu między akcjami; wolniej przy podniesionej gardzie i nie podczas wykonywania kosztownej akcji.
 
 Wyczerpanie osłabia działania zamiast odbierać możliwość przerwania ataku: unik jest krótszy i ma dłuższy powrót do gotowości, garda może zostać przełamana, a atak jest wolniejszy. Nadal można odwołać atak i spróbować się obronić. Dokładny model regeneracji i osłabienia trzeba zweryfikować w prototypie.
 
