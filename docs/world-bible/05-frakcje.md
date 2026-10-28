@@ -53,5 +53,5 @@ Ludzkość vs mrok i entropia ([03-geografia-i-polityka.md](03-geografia-i-polit
 |---|---|
 | Frakcje są biedne i lokalne | Brak „global quest hubów"; zleceniodawcy zawsze mają osobisty interes |
 | Wiara działa nie wiadomo czemu | Obrzędy w grze nigdy nie mają potwierdzonego efektu liczbowego |
-| Wiedza jest droga i niepełna | Nauczyciele rozwoju ([mechaniki-podstawy.md](../mechaniki-podstawy.md)) nie tłumaczą „systemu", tylko przekazują rzemiosło |
+| Wiedza jest droga i niepełna | Nauczyciele rozwoju ([mechaniki.md](../mechaniki.md)) nie tłumaczą „systemu", tylko przekazują rzemiosło |
 | Handel trzyma świat | Kupcy jako jedyne źródło sprzętu z zewnątrz; szlaki jako stawka zadań |
