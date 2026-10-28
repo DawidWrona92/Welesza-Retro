@@ -278,3 +278,22 @@ func _hit(crit: float = 0.0) -> Hit:
 	hit.origin = Vector2.ZERO
 	hit.crit_chance = crit
 	return hit
+
+
+func test_hitbox_reach_is_equal_in_every_direction() -> void:
+	var hitbox := Area2D.new()
+	hitbox.name = "Hitbox"
+	_hero.add_child(hitbox)
+	_hero.request_attack(Vector2.RIGHT)
+	_hero.place_hitbox()
+	check(
+		hitbox.global_position.is_equal_approx(Vector2(50, 0)),
+		"w prawo: %s" % hitbox.global_position
+	)
+	_hero.on_anim_finished()
+	_hero.request_attack(Vector2.DOWN)
+	_hero.place_hitbox()
+	check(
+		hitbox.global_position.is_equal_approx(Vector2(0, 25)), "w dół: %s" % hitbox.global_position
+	)
+	check_eq(hitbox.scale, Vector2(1, 0.5), "kształt spłaszczony do rzutu 2:1")

@@ -23,7 +23,10 @@ enum State { IDLE, ATTACK, DODGE, GUARD, STAGGER }
 
 @export_group("Atak")
 @export var attack_animation: StringName = &"attack"
+## Odległość, z której bohater zaczyna cios (jednostki świata, nie ekranu).
 @export var attack_range := 70.0
+## Odległość środka obszaru trafienia od postaci (jednostki świata).
+@export var hit_reach := 50.0
 @export var attack_cost := 12.0
 @export var base_damage := 10.0
 ## Mnożnik obrażeń kolejnych ogniw wiązanki; długość łańcucha ogranicza max_chain.
@@ -108,8 +111,21 @@ func _process(delta: float) -> void:
 
 
 func _physics_process(_delta: float) -> void:
+	place_hitbox()
 	if state == State.ATTACK and _contact_open:
 		_scan_hitbox()
+
+
+## Ustawia „Hitbox” przed postacią w kierunku ciosu. Kształt jest liczony w jednostkach świata
+## i spłaszczony do rzutu 2:1, więc zasięg w każdym kierunku jest taki sam.
+func place_hitbox() -> void:
+	var hitbox := get_node_or_null(^"Hitbox") as Area2D
+	if hitbox == null:
+		return
+	var reach := _to_world(_attack_dir).normalized() * hit_reach
+	hitbox.global_position = _position() + _to_screen(reach)
+	hitbox.rotation = 0.0
+	hitbox.scale = Vector2(1.0, AssetSprite.ISO_Y)
 
 
 ## Postęp czasu stanów niezależnych od animacji (unik, ogłuszenie, garda).
@@ -349,7 +365,6 @@ func _scan_hitbox() -> void:
 	var hitbox := get_node_or_null(^"Hitbox") as Area2D
 	if hitbox == null:
 		return
-	hitbox.rotation = _attack_dir.angle()
 	for area in hitbox.get_overlapping_areas():
 		if area.is_in_group(&"hurtbox"):
 			var target := area.get_parent().get_node_or_null(^"Combat") as Combat

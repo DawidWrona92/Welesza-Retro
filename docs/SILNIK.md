@@ -24,7 +24,7 @@
 
 Całość jest malowana w 2D; w produkcji nie ma modeli ani renderów 3D.
 
-**Kamera.** Stała izometria 2:1 (jak Diablo 2), bez obrotu. `Camera2D` z wygładzaniem ruchu, niewielki zakres przybliżenia. Rozdzielczość odniesienia 1920×1080, tryb skalowania `canvas_items`; grafika malowana w 2× i skalowana w dół, filtr liniowy z mipmapami (to nie pixel art). Bohater ma około 160 px wysokości przy 1080p.
+**Kamera.** Stała izometria 2:1 (jak Diablo 2), bez obrotu. Postacie i obiekty malujemy z góry pod kątem około 30°: widać górę ramion i głowy, stopy są lekko skrócone; widok bliski poziomu oczu jest odrzucony (decyzja autora, 28.10.2026, po teście bohatera). `Camera2D` z wygładzaniem ruchu, niewielki zakres przybliżenia. Rozdzielczość odniesienia 1920×1080, tryb skalowania `canvas_items`; grafika malowana w 2× i skalowana w dół, filtr liniowy z mipmapami (to nie pixel art). Bohater ma około 160 px wysokości przy 1080p.
 
 **Świat.** Logika działa w płaskich współrzędnych ekranu, jak w izometrycznej `TileMapLayer`; ruch w pionie jest skracany o połowę, żeby odpowiadał perspektywie. Teren to malowane kafle podłoża (wielokrotnego użytku, oszczędne dla pamięci) z malowanymi naklejkami: błoto, kałuże, ścieżki. Rekwizyty i budynki to osobne malowane PNG z przezroczystością.
 
