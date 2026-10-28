@@ -11,7 +11,7 @@ Nazwy i tytuł pozostają robocze. Dokument opisuje fabułę i zakres treści, n
 - Klimat: groźny las, izolacja, nieufni ludzie i magia budząca strach.
 - Bohater jest przypadkowym podróżnikiem bez wcześniejszego osobistego związku z osadą. Początkowo chce przeżyć i znaleźć drogę dalej.
 - Demo obejmuje niewielką osadę i otaczające ją lasy. Nie ma pól uprawnych.
-- Zakres fabularny: cztery zadania główne, cztery poboczne, czternaście postaci dialogowych i kilku kupców.
+- Zakres fabularny: cztery zadania główne, cztery poboczne, piętnaście postaci dialogowych i kilku kupców.
 - Tajemnice poznajemy przez otoczenie, obyczaje i sprzeczne świadectwa. Demo nie wymaga wyjaśnienia całej kosmologii ani historii świata.
 - Platforma: PC, mysz i klawiatura; możliwość późniejszego rozszerzenia o pada. Wyłącznie single player. Sterowanie w stylu Diablo 2; perspektywa kamery do ustalenia w prototypie.
 - Walka z mniejszą liczbą groźnych przeciwników, oparta na unikach i wyczuciu momentu ataku; rzadkie, wartościowe łupy oraz rozwój z udziałem nauczycieli. Szczegóły: [Podstawy mechanik](mechaniki-podstawy.md).
@@ -83,7 +83,7 @@ Tej nocy ktoś puka od wewnętrznej strony pustej strażnicy.
 
 ### Puste sidła
 
-Sprawdzasz pułapki łowczyni. Ktoś uwalnia zwierzęta, zostawiając w zamian ludzkie zęby. Odnalezienie sprawcy prowadzi do krótkiej walki w jamie pod korzeniami; odzyskane zapasy poprawiają zaopatrzenie osady. Pochodzenie zębów pozostaje zagadką.
+Sprawdzasz pułapki łowczyni Wojsławy. Ktoś uwalnia zwierzęta, zostawiając w zamian ludzkie zęby. Odnalezienie sprawcy prowadzi do krótkiej walki w jamie pod korzeniami; odzyskane zapasy poprawiają zaopatrzenie osady. Pochodzenie zębów pozostaje zagadką.
 
 ### Nie pal jego butów
 
@@ -110,7 +110,8 @@ Gospodyni każdej nocy zostawia posiłek w zamkniętej izbie. Na jej prośbę od
 | Sambor | Uwięziony handlarz; sprzedaje wyposażenie podróżne i desperacko szuka wyjścia. |
 | Dobrawa | Zielarka, handluje lekarstwami; odróżnia część przesądów od rzeczywistych zagrożeń. |
 | Borzęta | Węglarz; zna drogę do starej strażnicy. |
-| Czcibor | Łowca; twierdzi, że las zaczął się zmieniać jeszcze przed zniszczeniem mostu. |
+| Czcibor | Łowca i jeden z pierwszych informatorów gracza; twierdzi, że las zaczął się zmieniać jeszcze przed zniszczeniem mostu. |
+| Wojsława | Łowczyni zastawiająca sidła; zleca „Puste sidła”. Szczupła kobieta po czterdziestce, ogorzała twarz, siwiejące włosy związane rzemieniem. Kaptur z wełny barwionej korą, skórzane nogawice i onuce. Przez ramię zwój pętli i rzemieni na sidła, przy pasie nóż w drewnianej pochwie i torba z przynętą, w ręku krótki oszczep. Oszczędna w słowach i praktyczna. |
 | Dzierżka | Wdowa z zadania o butach; jej mąż przygotowywał się do potajemnego wyjazdu. |
 | Sulir | Ranny strażnik kupieckiego wozu; zataja, co przewożono. |
 | Mściwuj | Grabarz; prowadzi zapiski dokładniejsze niż zwierzchnik osady. |

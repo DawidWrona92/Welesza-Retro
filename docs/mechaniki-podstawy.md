@@ -12,6 +12,7 @@ Powiązania: [fabuła demo](demo-fabula.md), [kolejność prac](przed-prototypem
 | Platforma | PC, mysz i klawiatura; możliwość późniejszego dodania obsługi pada. |
 | Sterowanie | Jak w Diablo 2: sterowanie myszą. Perspektywa kamery do ustalenia w prototypie. LPM: ruch i atak; PPM: umiejętność; unik i parada pod osobnymi klawiszami. Konkretne klawisze obrony pozostają do wyboru. |
 | Tryb | Wyłącznie single player. |
+| Sprint | Zostaje; zużywa wytrzymałość. Część przeciwników atakuje z zaskoczenia, więc gracz ryzykuje, że wejdzie do walki zmęczony (28.10.2026). |
 | Walka | Mniejsza liczba groźnych przeciwników, precyzyjne wyczucie momentu ataku. Przeciw potworom i zwierzętom: unik. Przeciw ludziom walczącym bronią i podobnym uzbrojonym przeciwnikom, np. szkieletom lub zombie: unik oraz parada. |
 | Unik | Osobny klawisz, krótki odskok w kierunku kursora zgodnie z zaakceptowaną rekomendacją. Koszt i ograniczenia pozostają otwarte. |
 | Atak i wiązanki | Atak na kliknięcie, bez ciągłego atakowania po przytrzymaniu. Bezładne klikanie daje podstawowy atak; trafianie kliknięciami w rytm uruchamia wiązankę, w której kolejne ciosy zadają większe obrażenia. Umiejętność określa długość łańcucha i jego premie: podstawowy stopień daje do trzech ciosów, III daje cztery, a czwarty cios znacząco zwiększa szansę losowego krytyka. Liczby i otwarte szczegóły opisano w dokumencie walki. |

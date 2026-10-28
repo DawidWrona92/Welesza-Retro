@@ -9,7 +9,7 @@ Proponujemy ręcznie rozmieszczone spotkania dla demo. Zwykłe starcia mają naj
 
 Limit aktywnych wrogów obejmuje sąsiednie grupy w tym samym obszarze walki. Nie wystarczy ograniczyć osobno dwóch paczek, które mogą jednocześnie ścigać gracza. Granice patrolu, odległość i punkty odwrotu należy zweryfikować w mapie.
 
-Nie ma pojawiania się za plecami, odnawiania wrogów podczas odpoczynku ani ataków spoza widocznego obszaru. Po wykryciu gracza wrogowie muszą pokazać wejście w stan walki. Ostrzał wymaga linii widzenia i czytelnej zapowiedzi. Odwrót wroga po utracie ścieżki nie upoważnia go do przenikania przez geometrię.
+Część przeciwników atakuje z zaskoczenia [DECYZJA AUTORA, 28.10.2026], np. wilk z zarośli; gracz zmęczony sprintem wchodzi wtedy do walki z niższą wytrzymałością. Zasadzka ma krótką, czytelną zapowiedź w kadrze. Nie ma pojawiania się znikąd za plecami, odnawiania wrogów podczas odpoczynku ani ataków spoza widocznego obszaru. Po wykryciu gracza wrogowie muszą pokazać wejście w stan walki. Ostrzał wymaga linii widzenia i czytelnej zapowiedzi. Odwrót wroga po utracie ścieżki nie upoważnia go do przenikania przez geometrię.
 
 Zapowiedź może podążać za graczem tylko do określonego momentu; właściwy zamach lub skok ma ustalony tor. Obrót w ostatniej chwili nie może unieważniać poprawnego uniku. Okna czasowe to parametry do testów, nie liczby zadeklarowane na papierze.
 
@@ -154,6 +154,7 @@ Stróż powoli zajmuje środek, nie ściga sprintem. Wybiera pojedyncze cięcie 
 |---|---|---|---|
 | Cięcie drzewcem | Broń odprowadzona na bok, przesunięcie stopy, dźwięk żelaza | Parowalne od frontu | Garda/parada lub unik; krótka kontra |
 | Przybicie | Podnosi broń pionowo, zatrzymuje ją, głosy cichną | Nieparowalne, wąski tor przed sobą | Unik poprzeczny; broń pozostaje nisko po trafieniu w ziemię |
+| Oślepienie latarnią [DECYZJA AUTORA, 28.10.2026] | Odpina latarnię od pasa i unosi ją na wysokość twarzy; płomień przygasa przed rozbłyskiem | Wąski stożek światła; trafiony bohater zasłania oczy: przerwana akcja i krótko spowolniony ruch. Bez białego błysku na cały ekran (dostępność) | Unik poza stożek; po użyciu Stróż odwiesza latarnię i jest odsłonięty |
 
 Pierwszy ciężki atak jest okazją do zrozumienia, że po bossie nie trzeba odbijać się bez końca: da się wejść na bok i trafić.
 

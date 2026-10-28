@@ -26,7 +26,7 @@ To atmosferyczna scena, nie ukryta pułapka wymagająca wyboru właściwej odpow
 
 ### Ogień i noc
 
-Światło domu gościnnego prowadzi od bramy przez plac. Miłka oferuje miejsce przy wspólnym ogniu w zamian za poranną pomoc przy pakunkach. Żegota zapisuje lokalizację w dzienniku. Wymagamy tylko tych dwóch kontaktów; reszta osady może poczekać.
+Światło domu gościnnego prowadzi od bramy przez plac. Miłka oferuje miejsce przy wspólnym ogniu w zamian za poranną pomoc przy pakunkach. Żegota zapisuje lokalizację w dzienniku. Wymagamy tylko tych dwóch kontaktów; reszta osady może poczekać. Przy wspólnym ogniu siedzi łowca Czcibor, jeden z pierwszych informatorów gracza: ostrzega przed psami przy wozie i twierdzi, że las zmieniał się jeszcze przed zniszczeniem mostu. Rozmowa jest opcjonalna.
 
 Noc jest przejściem fabularnym, nie działającym zegarem świata. Nie projektujemy na tej podstawie pełnego cyklu dobowego ani harmonogramów wszystkich mieszkańców. Rano informacja o zerwanym moście zmienia cel: sprawdzić drogę i odzyskać pakunki podczas jednej wyprawy.
 

@@ -29,7 +29,7 @@ Podróż gracza jest wizualnie ciągła, **nie przesądzamy jednak liczby scen c
 
 | Rejon | Stan i charakter | Cel gracza / rola | Ważne wejścia |
 |---|---|---|---|
-| **Niemir** | Palisada, skała ze źródłem, mały plac, dom gościnny, kuźnia, zielarka, strażnica, domy | Schronienie, przygotowania, sklep, rozmowy i zapalenie lampy | Jedyna brama → rozstaj |
+| **Niemir** | Palisada, skała ze źródłem, mały plac, dom kupca ze składem, dom gościnny, kuźnia, zielarka, strażnica, domy | Schronienie, przygotowania, sklep, rozmowy i zapalenie lampy | Jedyna brama → rozstaj |
 | **Skraj i wóz** | Błotnisty trakt, koń i pakunki, dalszy zerwany most; dwa obejścia wozu | Prolog, pierwsza wyprawa, Pies, Powrotnik, księga przewozowa | Rozstaj → wóz → brzeg |
 | **Rozstaj i anomalia** | Charakterystyczne pochylone drzewo, anomalia — wariant A (pętla fizyczna) / B (zmiana połączeń) DO WYBORU | Utrata orientacji, powrót do punktu startowego; boczne cmentarne miejsce | Wóz ↔ rozstaj ↔ kamienie |
 | **Kamienne wyjścia** | Trzy różnie zniszczone słupy, Korzeniec, ślady zawracającej drogi | Zadanie „Droga, która wraca”, dowolna kolejność inspekcji | Rozstaj ↔ kamienie ↔ obóz |

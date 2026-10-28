@@ -9,6 +9,8 @@ Proponowana obsada: siedem typów zwykłych przeciwników (karta wilka do opraco
 
 Groza wynika z życia, które nadal próbuje się powtarzać. Przeciwnik może strzec pustego domu, nieść niepotrzebny już zapas albo wołać kogoś, kto nie odpowie. Nie każdy jest świadomy i nie każdy rozumie, co robi. To wskazówki wykonawcze, nie ujawniona prawda o kosmologii Weleszy.
 
+Przeciwników będzie wielu, dlatego każdy typ ma warianty wyglądu i uzbrojenia, żeby nie był to atak klonów [DECYZJA AUTORA, 28.10.2026]. Warianty jednego typu dzielą tryby ataku, np. hak i sierp na trzonku. Limit aktywnych wrogów w jednym starciu z projektu spotkań nadal obowiązuje.
+
 Nie używamy dzieci jako przeciwników, przypadkowej makabry jako głównego środka ani żartobliwych odzywek przy śmierci. Ciała i rekwizyty mogą być niepokojące bez eksponowania okaleczeń.
 
 Każdy groźny ruch ma sygnał wizualny i dźwiękowy; odróżnienie ataku nieparowalnego nie zależy wyłącznie od koloru. Przeciwnicy nie wykonują nieczytelnych ataków spoza ekranu. Roślinność musi odsłaniać sylwetkę podczas zapowiedzi ataku.
@@ -32,11 +34,15 @@ Nowe ofiary i istoty nie dopisują historii do zatwierdzonych NPC. Ślady człow
 | Skok do gardła | Przysiad, uszy do tyłu, krótki warkot | Skok po ustalonym torze; bez śledzenia gracza w locie | Unik w bok lub wyjście z toru; po chybieniu możliwość ciosu |
 | Kłapnięcie | Odsunięcie łba i odsłonięcie kłów | Krótki atak blisko celu | Odstąpienie zamiast długiego łańcucha |
 
-**Obrona:** ataków zwierzęcia nie parujemy. **Słabość:** długi skok oddaje inicjatywę, jeśli spudłuje. **Łup:** nie generuje monet; obroża może być rekwizytem bez wartości handlowej. **Występowanie:** wóz, obrzeże obozu, leśny przesmyk.
+**Obrona:** ataków zwierzęcia nie parujemy. **Słabość:** długi skok oddaje inicjatywę, jeśli spudłuje. **Łup:** nie generuje monet; obroża może być rekwizytem bez wartości handlowej. **Występowanie:** bliżej wioski [DECYZJA AUTORA, 28.10.2026]: wóz, rozstaj, skraj traktu.
 
 ### ENM-wilk — Wilk
 
-**[DECYZJA AUTORA, 28.10.2026]** Osobny potwór, odrębny od Zdziczałego psa. Duży i szary, wyraźnie większy od burego psa ([kierunek artystyczny](art/WELESZA_DARK_PAINTERLY_2D_KIERUNEK_ARTYSTYCZNY_v1.pdf), s. 9). Rola, zachowanie, ataki i występowanie do opracowania.
+**[DECYZJA AUTORA, 28.10.2026]** Osobny potwór, odrębny od Zdziczałego psa. Duży i szary, wyraźnie większy od burego psa ([kierunek artystyczny](art/WELESZA_DARK_PAINTERLY_2D_KIERUNEK_ARTYSTYCZNY_v1.pdf), s. 9).
+
+**Rola:** samotny myśliwy głębszego lasu; rodzina zachowań psa (skok do gardła, kłapnięcie, obieganie celu), ale trudniejszy. **Różnice:** więcej zdrowia i mocniejsze ugryzienie, krótsza okazja po chybionym skoku, chętniej atakuje z zaskoczenia; zapowiedź pozostaje równie czytelna. Wartości w etapie balansu.
+
+**Występowanie:** las: kamienie, obóz, dalsze odnogi. Pojedynczo, najwyżej w parze, zgodnie z limitem aktywnych wrogów.
 
 ### ENM-powrotnik — Powrotnik
 
@@ -139,7 +145,7 @@ W jamie wiszą porozrywane sidła, a pod nimi leżą starannie ułożone zęby. 
 
 ### ENM-dzwigacz — Dźwigacz, miniboss przy strażnicy
 
-**Rodzina:** zachowania Drwala; szeroka, ludzka sylwetka z nosidłem pełnym mokrego drewna. **Broń [DECYZJA AUTORA, 28.10.2026]:** hak lub sierp na trzonku, nie topór. **Rola:** test rozróżnienia parady i uniku; pracownik powtarzający obowiązek.
+**Rodzina:** zachowania Drwala; szeroka, ludzka sylwetka z nosidłem pełnym mokrego drewna. **Broń [DECYZJA AUTORA, 28.10.2026]:** hak lub sierp na trzonku, nie topór; oba warianty mają te same tryby ataku. **Rola:** test rozróżnienia parady i uniku; pracownik powtarzający obowiązek.
 
 Wciąż nosi drewno do dawno zgasłego pieca. Nie wyjaśniamy, czy kieruje nim pamięć, rozkaz czy sama powtarzalność. Jest wyczerpany, uporczywy i pilnujący narzędzi; boi się pozostawić piec pusty. Przed walką stawia nosidło delikatniej, niż traktuje własne ciało.
 
@@ -155,7 +161,7 @@ Wciąż nosi drewno do dawno zgasłego pieca. Nie wyjaśniamy, czy kieruje nim p
 
 **Chce:** zatrzymać przejście. **Boi się:** nieujawnione; nie ustanawiamy nowego kanonu. **Sprzeczność:** brutalnie atakuje, ale po utracie celu podnosi upuszczony pakunek, zanim wróci do posterunku.
 
-**Zdolności:** parowalne cięcie drzewcem, nieparowalne pionowe uderzenie i oznaczony szarżujący pochód. Kolejne fazy zmieniają sposób zakończenia kombinacji, nie dodają tłumu przywołań. Szczegółowy przebieg w projekcie walki.
+**Zdolności:** parowalne cięcie drzewcem, nieparowalne pionowe uderzenie, oznaczony szarżujący pochód oraz oślepienie latarnią [DECYZJA AUTORA, 28.10.2026]: świeci zwykłą latarnią w oczy bohatera. Latarnia jest też rekwizytem i źródłem światła areny. Kolejne fazy zmieniają sposób zakończenia kombinacji, nie dodają tłumu przywołań. Szczegółowy przebieg w projekcie walki.
 
 **Smutny akcent:** przy śmierci pakunki spadają na ziemię, a urwany głos kończy zwyczajne „już idę”. Nie wyjaśniamy, kto mówił. Muzyka milknie; słychać tylko las. **Nagroda:** otwarte przejście i spełniony cel demo, bez fontanny złota.
 
