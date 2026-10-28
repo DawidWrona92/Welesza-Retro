@@ -18,13 +18,14 @@ Praktyczna reguła projektowa: każda osada, którą projektujemy, musi umieć o
 
 Reguła: **każda osada ma jedną specjalizację i jedną zależność.** Niemir: specjalizacja barcie/węgiel, zależność — sól i żelazo z zewnątrz (dlatego utknęci kupcy w kanonie demo mają znaczenie: to jest „ich" droga życia).
 
-## 3. Władza — mozaika, nie piramida
+## 3. Władza — mozaika walczących rodów
 
-- **Książęta** istnieją — na papierze i na chorągwiach. Realny zasięg ich władzy kończy się na dziesiątym brodzie od grodu. Danina idzie, gdy jest z czego; „prawo" istnieje tam, gdzie jest drużyna.
-- **Watażkowie** — prawdziwa władza w borach: ktoś, kto ma dziesięć ludzi z toporami i rozumie, że haracz od osady musi zostawić jej moc na przetrwanie (inaczej w przyszłym roku nie ma z czego wziąć). Częściej niż uciska — **chroni za opłatą**: to ważniejsze dla klimatu „kaganków oświaty" niż czarny charakter.
+- **Książęta** istnieją i walczą — ze sobą, nie z „ciemnością". Model: kilkanaście rodów plemiennego wzorca (wzór: Polanie, Rusowie), w ciągłej, lokalnej dominacji (wzorzec: plemiona Polan, Rusinów — mocarstwo nie istnieje, istnieje przetarg o brody, daniny i ochronę Traktu). Wojna ksiąt to dla ludu pogoda: czasem grad, czasem susza — niemal nigdy nie „sprawa".
+- **Koczownicy ze wschodu**: nękają Pogranicze i Piaski; przychodzą, biorą i wracają, nikogo nie „zapatrując" — ich celem nie jest zdobycz Traktu, tylko żywność i niewolnicy z osad zbyt głęboko ukrytych, by były chronione.
+- **Watażkowie** — realna władza w borach: ktoś, kto ma dziesięć ludzi z toporami i rozumie, że haracz od osady musi zostawić jej moc na przetrwanie. Częściej niż uciska — **chroni za opłatę**: ważniejsze dla klimatu „kaganków oświaty" niż czarny charakter. Więksi watażkowie to w praktyce książęta bez tytułu.
 - **Starsi osad** (typ Domarada z kanonu demo) — władza cywilna: memoriał obyczajów, sąd sąsiedzki, rozdział zapasów. Ich siłą jest pamięć, nie siła.
-- **Kapłani zachodu i znachorzy wschodu** — władza duchowa, nierozdzielna od tej cywilnej: straż obyczaju to także stracha porządku ([04-religie-i-wiara.md](04-religie-i-wiara.md)).
-- Reguła kontrastu: władza w Weleszy nigdy nie jest „zła z zawodowo". Jest **przeciążona**: każdy, kto rządzi, próbuje jednocześnie przetrwać, nakarmić i nie dopuścić do paniki — dokładnie to widać w Domaradzie („bardziej obawia się paniki niż potworów" — kanon demo).
+- **Kapłani zachodu i znachorzy wschodu** — władza duchowa, nierozdzielna od cywilnej: straż obyczaju to także straż porządku ([04-religie-i-wiara.md](04-religie-i-wiara.md)).
+- Reguła kontrastu: władza w Weleszy nigdy nie jest „zła z zawodowo". Jest **przeciążona**: każdy, kto rządzi, próbuje jednocześnie przetrwać, nakarmić i nie dopuścić do paniki (dokładnie to widać w Domaradzie — kanon demo).
 
 ## 4. Gospodarka — czego potrzeba, by świat żył
 
@@ -36,7 +37,9 @@ Reguła: **każda osada ma jedną specjalizację i jedną zależność.** Niemir
 - **Z borów (Serce):** węgiel, smoła, potaż, skóry, miód barcienny, wosk, ziele.
 
 ### Pieniądz
-- Brak jednolitej monety. Obieg: **kuskodawka** — kawałki sukna, sztangi żelaza, garście soli; monety obce liczy się na wagę. Kupcy są jedynymi, którzy „czytają" systemy monet — i dlatego są jedynym „globalnym" elementem świata ([05-frakcje.md](05-frakcje.md)).
+- Dominuje **handel wymienny** — ale im dalej na zachód, tym częściej pojawiają się **cenne monety z Cesarstwa** (wzorzec: Gothic i Gothic 2). Są miejsca (faktorie, brody, wielkie grody Pobrzeża), gdzie handluje się **tylko monetą**; są miejsca mieszane, gdzie **moneta jest towarem o dużej wartości** — płaci się nią jak sztabką srebra, ważoną i zdawkową; a na wschodzie krainy moneta jest bezużyteczna: nikt nie jest w stanie jej „sprzedać" i noszenie jej to proszenie się o nieszczęście.
+- Reguła dla projektantów ekonomii: systemy lokacji mają **trzy strefy monetarne** (zachód: moneta / środek: kuskodawka z monetą-towarem / wschód: wyłącznie barter). Przejście między strefami ma być odczuwalne: to realny mur, nie sztuczka.
+- Kupcy są jedynymi, którzy „czytają" wszystkie trzy systemy — dlatego są jedynym „globalnym" elementem świata ([05-frakcje.md](05-frakcje.md)).
 - Projektowo: brak „sklepu" jako instytucji. Jest kupiec, który ma dziś to, co przywiózł; jutro może mieć co innego (kanon demo: Sambor, Radost sprzedający broń „przy okazji" — dokładnie ten wzorzec).
 
 ### Sezonowość

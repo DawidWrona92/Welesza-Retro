@@ -27,6 +27,7 @@ My — twórcy — pilnujemy, by żaden dokument gry nie przedstawił kosmologii
 | [08-welesza-geografia.md](08-welesza-geografia.md) | Geografia krainy: regiony, wody, drogi, granice bez mapy |
 | [09-welesza-ludzie-i-gospodarka.md](09-welesza-ludzie-i-gospodarka.md) | Osadnictwo, władza, przepływy, pieniądz, codzienność |
 | [10-welesza-lokacje-kandydaty.md](10-welesza-lokacje-kandydaty.md) | Bank kandydackich lokacji pełnej gry (7 lokacji z tematami) |
+| [11-os-fabularna.md](11-os-fabularna.md) | [PROPOZYCJA] Oś fabularna pełnej gry wokół starych Dróg imperium |
 
 ## Jak korzystać
 
