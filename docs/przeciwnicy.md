@@ -1,6 +1,6 @@
 # Przeciwnicy — bestiariusz, spotkania i bossowie (pakiet 03)
 
-Status: propozycja do walidacji, nie działające AI ani dowód zbalansowania. Nazwy i ID są propozycjami; HP, obrażenia, prędkości i odporności powstaną w etapie balansu. Decyzje autora oznaczono w tekście.
+Status: propozycja (pakiet 03). HP, obrażenia, prędkości i odporności powstaną w etapie balansu.
 Powiązania: [walka](walka.md), [mechaniki](mechaniki.md), [mapa demo](mapa-demo.md).
 
 ## Część I — bestiariusz
@@ -199,7 +199,7 @@ Zapowiedź może podążać za graczem tylko do określonego momentu; właściwy
 | Dźwigacz | Rozpoznanie zwykłego i ciężkiego zamachu; unik | Udana precyzyjna parada, konkretna broń dystansowa |
 | Stróż | Rozpoznanie typów ataku, przerwanie własnej wiązanki | III stopień kombinacji, krytyk, PPM, magia |
 
-Poziomy, HP, obrażenia, TTK i docelowe czasy pojedynków pozostają do pomiarów oraz balansu. Projekt zakłada możliwość wygrania samym podstawowym wyposażeniem; to wymaganie do zweryfikowania, nie wykonany test.
+Poziomy, HP, obrażenia, TTK i docelowe czasy pojedynków pozostają do pomiarów oraz balansu. Projekt zakłada możliwość wygrania samym podstawowym wyposażeniem.
 
 ### 2. Spotkania zwykłe i nauczanie
 
@@ -298,7 +298,7 @@ Odwroty są możliwe przez tę samą drogę wejścia. Nie zamykamy gracza magicz
 
 **Powiązanie:** proponowane starcie w „Świetle ze strażnicy”. **Wróg:** ENM-dzwigacz. **Pytanie:** kiedy przerwać własną wiązankę, żeby wybrać właściwą obronę?
 
-**Arena:** szeroka część ruin leśnej strażnicy z wygasłym piecem, zniszczonym filarem i dwoma dostępnymi przejściami wokół niego. Oba przejścia mieszczą bossa. Nie jest to strażnica w osadzie. W tej propozycji leśne ruiny z komorą latarni i finałowe przejście leżą w tej samej większej lokacji, ale w odrębnych, nieaktywujących się wzajemnie arenach. To propozycja rozstrzygnięcia wcześniejszej niejasności topografii.
+**Arena:** szeroka część ruin leśnej strażnicy z wygasłym piecem, zniszczonym filarem i dwoma dostępnymi przejściami wokół niego. Oba przejścia mieszczą bossa. Nie jest to strażnica w osadzie. Leśne ruiny z komorą latarni i finałowe przejście leżą w tej samej większej lokacji, ale w odrębnych, nieaktywujących się wzajemnie arenach.
 
 **Przed walką:** Dźwigacz kończy odkładanie drewna. Gracz widzi zamknięty dostęp do komory za jego posterunkiem; boss nie aktywuje się przez samą rozmowę czy otwarcie dziennika. Zapis na podejściu, możliwość odwrotu.
 
@@ -368,9 +368,9 @@ Po walce opadają pakunki. Brak rozstrzygnięcia, czy Stróż więził osadę, c
 
 ### 7. Parametry wdrożeniowe i warunki odbioru
 
-Przy implementacji potrzebne będą: zasięgi wykrycia i pościgu, sektory gardy, tor ataku, moment blokady kierunku, zapowiedź, czas aktywny i powrót do gotowości, koszt obrony, progi faz, długość przejścia, HP i obrażenia. Ich wartości muszą wynikać z prototypu. Nie oznaczamy ich jako przetestowanych.
+Przy implementacji potrzebne będą: zasięgi wykrycia i pościgu, sektory gardy, tor ataku, moment blokady kierunku, zapowiedź, czas aktywny i powrót do gotowości, koszt obrony, progi faz, długość przejścia, HP i obrażenia. Ich wartości muszą wynikać z prototypu.
 
-Za komplet implementacji spotkania uznajemy dopiero: wygraną podstawowym zestawem, czytelną porażkę, odwrót i reset, wznowienie w każdej fazie, bezpieczny zapis przed walką, poprawne rozliczenie jednorazowej nagrody, brak ataków zza kamery i sprawdzone kolizje. Wszystkie pozycje pozostają obecnie niewykonane w silniku.
+Za komplet implementacji spotkania uznajemy dopiero: wygraną podstawowym zestawem, czytelną porażkę, odwrót i reset, wznowienie w każdej fazie, bezpieczny zapis przed walką, poprawne rozliczenie jednorazowej nagrody, brak ataków zza kamery i sprawdzone kolizje.
 
 Grafy strukturalne: [Zbieracz i Dźwigacz — wspólny graf dwufazowy](graphs/boss-dwufazowy.json), [Stróż](graphs/boss-stroz.json). Opis warunków w JSON nie jest wykonywalną implementacją. Wyniki i ograniczenia walidacji opisuje część III.
 

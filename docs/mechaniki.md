@@ -1,6 +1,6 @@
 # Mechaniki
 
-Data: 26–28 października 2026 r. Status: decyzje autora i osobno oznaczone propozycje; nie jest to specyfikacja implementacji ani zatwierdzony balans.
+Status: decyzje autora w tabeli części I, reszta to propozycje.
 Powiązania: [fabuła](fabula.md), [walka](walka.md), [przeciwnicy](przeciwnicy.md), [mapa demo](mapa-demo.md).
 
 ## Część I — podstawy
@@ -10,7 +10,7 @@ Powiązania: [fabuła](fabula.md), [walka](walka.md), [przeciwnicy](przeciwnicy.
 | Obszar | Ustalenie |
 |---|---|
 | Platforma | PC, mysz i klawiatura; możliwość późniejszego dodania obsługi pada. |
-| Sterowanie | Jak w Diablo 2: sterowanie myszą. Perspektywa kamery do ustalenia w prototypie. LPM: ruch i atak; PPM: umiejętność; unik i parada pod osobnymi klawiszami. Konkretne klawisze obrony pozostają do wyboru. |
+| Sterowanie | Jak w Diablo 2: sterowanie myszą. Stała kamera izometryczna ([silnik](SILNIK.md)). LPM: ruch i atak; PPM: umiejętność; unik i parada pod osobnymi klawiszami. Konkretne klawisze obrony pozostają do wyboru. |
 | Tryb | Wyłącznie single player. |
 | Wygląd bohatera | Pancerz to jeden element zmieniający całą postać poza głową; widoczna jest też broń (concept art: od skórzanego kubraka przez kolczugę i łuskę po płytę). Rodzaje broni: miecz, miecz długi, miecz dwuręczny, topór jednoręczny, topór bojowy (dwuręczny), tarcza, kusza, łuk, włócznia. Walka z tarczą wymaga osobnych zestawów animacji. Grafika i animacje są malowane w 2D, bez modeli 3D w produkcji (28.10.2026). |
 | Sprint | Zostaje; zużywa wytrzymałość. Część przeciwników atakuje z zaskoczenia, więc gracz ryzykuje, że wejdzie do walki zmęczony (28.10.2026). |
@@ -54,13 +54,13 @@ Kreatywność wymaga działających alternatyw. Przykłady do rozważenia: obej�
 
 Potwierdzony przebieg rozwoju: zdobywanie doświadczenia → awans → otrzymanie PN → wydanie PN u nauczyciela. Otwarte pozostają źródła doświadczenia, tempo awansów, liczba PN, warunki dostępu do szkolenia, ewentualne dodatkowe opłaty i możliwość zmiany wcześniejszych wyborów.
 
-Propozycja: nowe umiejętności powinny rozszerzać dostępne decyzje, a nie wyłącznie zwiększać liczby. Nie przydzielamy jeszcze nauczycieli do obsady; wymaga to zgodności z ich rolami fabularnymi.
+Nowe umiejętności powinny rozszerzać dostępne decyzje, a nie wyłącznie zwiększać liczby. Nie przydzielamy jeszcze nauczycieli do obsady; wymaga to zgodności z ich rolami fabularnymi.
 
 #### Łupy i nagrody
 
 Proponuję rozróżnić istotną zdobycz zmieniającą wyposażenie od drobnych zapasów. Rzadkość cennej broni nie musi oznaczać, że eksploracja długo nie daje żadnego rezultatu: nagrodą mogą być również informacja, przejście lub dostęp do szkolenia.
 
-To propozycja do omówienia, zwłaszcza w zakresie tego, czy rzadkie mają być wszystkie przedmioty, czy przede wszystkim ulepszenia wyposażenia. Nie wybrano systemu jakości, losowych właściwości ani tabel wypadania łupów.
+Otwarte: czy rzadkie mają być wszystkie przedmioty, czy przede wszystkim ulepszenia wyposażenia. Nie wybrano systemu jakości, losowych właściwości ani tabel wypadania łupów.
 
 ### 3. Propozycja pętli na różnych skalach
 
@@ -84,8 +84,6 @@ Awans zapewnia PN, a nauczyciele pozwalają je wydać. Pętla nie przesądza jes
 - Rzadkie łupy mogą opóźnić poczucie postępu. Sprawdzić, czy gracz rozpoznaje wartość nagrody i czy może z niej skorzystać.
 - Nauczyciel lub usługa nie mogą stać się przypadkowo niedostępne po naganie, jeśli bez nich nie da się kontynuować głównego zadania.
 
-To analiza projektu, nie wyniki testów gry. Nie uruchomiono prototypu ani symulacji balansu.
-
 ### 5. Kolejne decyzje
 
 Źródło PN zostało doprecyzowane przez autora. Następnie omówić wspólnie:
@@ -105,7 +103,7 @@ Zależy warunkowo od pakietu 01 w [walce](walka.md).
 
 Wyprawa ma kosztować wysiłek i zapasy, a powrót przynosić ulgę. Gracz powinien móc rozsądnie zawrócić. Nie ustalamy procentowego punktu wyczerpania zasobów, czasu ukończenia ani cen przed testami działającej gry.
 
-Samotność i smutek wynikają z miejsc oraz losów ludzi, nie z obowiązkowego stałego karania statystykami. Propozycja nie dodaje głodu, stresu, chorób, trwałych urazów, psucia wyposażenia ani limitu dni.
+Samotność i smutek wynikają z miejsc oraz losów ludzi, nie z obowiązkowego stałego karania statystykami. Pakiet nie dodaje głodu, stresu, chorób, trwałych urazów, psucia wyposażenia ani limitu dni.
 
 ### A. Przygotowanie i zapasy
 
@@ -147,7 +145,7 @@ W domu gościnnym można bezpłatnie przywrócić zdrowie i wytrzymałość. Nie
 
 Jeśli gracz nie ma pieniędzy i zapasów, Dobrawa oferuje podstawowy, niesprzedawalny pakiet ratunkowy do zabrania na następną próbę. Nie gromadzi się go w magazynie, nie rozkłada na materiały i nie wymienia na PN. Proponowana reguła: wydaje wyłącznie brakujące podstawowe środki, z uwzględnieniem całego posiadanego zapasu, a nie tylko paska podręcznego. Brak warunku ukończenia opcjonalnego zadania.
 
-To droga wyjścia z bankructwa, nie optymalny zamiennik przygotowania. Jej zawartość wymaga testu; nie deklarujemy jeszcze liczby przedmiotów.
+To droga wyjścia z bankructwa, nie optymalny zamiennik przygotowania. Zawartość i liczba przedmiotów do ustalenia w testach.
 
 ### C. Odwrót
 
@@ -208,7 +206,7 @@ Powrót nie zawsze kończy się wdzięcznością. Można przynieść dowód śmi
 
 Czy powrót jest rozsądną decyzją, a nie nudnym obowiązkiem? Czy bandażowanie można bezkarnie powtarzać za jednym drzewem? Czy pomoc awaryjna wystarcza do kolejnej uczciwej próby? Czy ręczne zapisy i odwrót nie tworzą duplikacji? Czy zapis przed bossem pozwala wrócić po zaopatrzenie?
 
-To projekt jakościowy. Nie uruchomiono gry ani symulacji cen i zużycia; nie podajemy niezweryfikowanych wyników balansu. Propozycja wymaga testu wraz z wybraną technologią zapisu.
+To projekt jakościowy.
 
 ## Część III — kolejność prac przed prototypem
 
@@ -220,7 +218,7 @@ Fundament rozgrywki zapisano w części I (decyzje autora); poniżej kroki do pr
 
 Opisać czynności i ich powody w skali pojedynczego starcia, krótkiej wyprawy i całej sesji. Dla każdego kroku wskazać cel, przeszkodę, informację zwrotną i nagrodę.
 
-Dopracować ruch, atak, wiązanki, umiejętności, interakcję i zbieranie łupów. Unik w kierunku kursora i parada są zatwierdzone jako osobne akcje obronne pod klawiszami. Unik i parada przerywają rozpoczęty atak. Koszty i szczegółowe skutki wymagają walidacji całego [pakietu walki 01](walka.md). Wytrzymałość, głód i crafting nie są jeszcze zatwierdzone. Propozycje trafień: [Walka i trafienia](walka.md).
+Dopracować ruch, atak, wiązanki, umiejętności, interakcję i zbieranie łupów. Unik w kierunku kursora i parada są zatwierdzone jako osobne akcje obronne pod klawiszami. Unik i parada przerywają rozpoczęty atak. Koszty i szczegółowe skutki wymagają walidacji całego [pakietu walki 01](walka.md). Głód i crafting nie są zatwierdzone.
 
 ### 2. Minimalny model walki i rozwoju
 
@@ -238,7 +236,7 @@ Poznać skład zespołu, doświadczenie, dostępny czas i źródło dźwięku pr
 
 Silnik: Godot 4 ([decyzja warunkowa](SILNIK.md)); warunki decyzji sprawdza pierwszy test.
 
-Propozycja pierwszego prototypu: mała przestrzeń z prostych brył, grywalny bohater, reprezentatywne starcie, nagroda i możliwość ponownej próby. Konkretne umiejętności oraz liczba wrogów pozostają do ustalenia.
+Pierwszy prototyp: mała przestrzeń z prostych brył, grywalny bohater, reprezentatywne starcie, nagroda i możliwość ponownej próby. Konkretne umiejętności oraz liczba wrogów pozostają do ustalenia.
 
 Kryteria oceny: czy sterowanie jest czytelne, czy gracz rozumie przyczynę obrażeń i porażki, czy pojawiają się sensowne decyzje oraz czy chce powtórzyć starcie.
 

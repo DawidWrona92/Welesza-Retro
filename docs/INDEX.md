@@ -1,6 +1,6 @@
 # Welesza — indeks dokumentacji
 
-Dokumenty odróżniają decyzje autora, propozycje i rzeczy do przetestowania. Nie zmieniaj statusu decyzji bez potwierdzenia autora.
+**Konwencja statusu.** Wszystko w dokumentach jest propozycją do walidacji, chyba że oznaczono to jako decyzję autora (tabele „Decyzje autora”, „Ustalenia autora” albo znacznik **[DECYZJA AUTORA]**). Żaden projekt nie był jeszcze testowany w silniku, a liczby są robocze do etapu balansu. Dokumenty nie powtarzają tych zastrzeżeń. Nie zmieniaj statusu decyzji bez potwierdzenia autora.
 
 | Dokument | Zawartość |
 |---|---|
