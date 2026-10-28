@@ -14,7 +14,6 @@
 - [Dane geograficzne świata, 28 punktów i 30 tras](world-layout.v0.2.json) (kotwice i sektory przecięte).
 - [Karty 12 sektorów produkcyjnych](SECTORS.md).
 - [Kontrakt techniczny bezszwowego świata i savegame](STREAMING.md).
-- [Automatyczna kontrola spójności](WORLD_QA.md) i [odtwarzalny walidator](../../tools/world/README.md) (na `main`).
 - [Porównanie pętli A/B i odsłonięcia traktu](VARIANTS.md).
 - [Plan pierwszego greyboxu](GREYBOX.md).
 
@@ -89,7 +88,7 @@ Trzy kamienne słupy w dowolnej kolejności. Nie wymagamy zabicia każdego napot
 ## 8. Otwarte kwestie przed detalowaniem geometrii
 
 1. Czy docelowa kamera pozostaje stała w jednym kierunku (rzut Diablo 2), czy dopuszczamy obrót? Od tego zależy geometria dachu i czytelność bram.
-2. Silnik: Godot 4, gra 2D z prerenderowanych sprite'ów ([decyzja warunkowa](../SILNIK.md)). Reprezentacja podłoża i fizyki — otwarte.
+2. Silnik: Godot 4, gra 2D ([decyzja warunkowa](../SILNIK.md)). Reprezentacja podłoża i fizyki — otwarte.
 3. Wymiary świata — dopiero po ustaleniu D, B, U, A, V w walce.
 4. Wymagana „niemożliwość” pętli: rysunek zachowuje **wariant A jako makietę**; **wariant B** może zmieniać relacje przestrzenne bez widocznego ekranu ładowania. Ostateczna decyzja autora jest otwarta: [porównanie](VARIANTS.md).
 5. Jak szczegółowe i grywalne mają być wnętrza gospody i strażnicy? Na razie pełne bezładowaniowe wnętrza są obowiązkiem tylko wtedy, gdy gracz faktycznie do nich wchodzi.
@@ -103,7 +102,6 @@ Trzy kamienne słupy w dowolnej kolejności. Nie wymagamy zabicia każdego napot
 - [Spotkania i bossowie](../spotkania-i-bossowie.md).
 - [Dane grafu istniejącego demo](../graphs/layout-demo.json).
 - [Dane pierwszej wyprawy](../graphs/layout-first-expedition.json).
-- [Przewodnik artystyczny osady Niemir](https://github.com/DawidWrona92/RPG-OldSchool/blob/main/docs/art/niemir/NIEMIR_ART_DIRECTION.md).
 
 Nie zmieniamy nazw i treści uzgodnionych zadań ani NPC. Układ miejsc, tras i sektorów jest **zaakceptowaną podstawą do greyboxu**; współrzędne i długości tras mogą się zmienić po pomiarach w prototypie i nie ustanawiają nowych faktów fabularnych.
 

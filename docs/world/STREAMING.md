@@ -1,6 +1,6 @@
 # Welesza — płynne przechodzenie przez świat (v0.2)
 
-**Status:** wymóg gracza zatwierdzony; architektura i limity wydajności są **hipotezami technicznymi**. Silnik: Godot 4 ([decyzja warunkowa](../SILNIK.md)); reprezentacja scen nie jest wybrana. Dokument nie narzuca SDF, Blendera ani innego renderera.
+**Status:** wymóg gracza zatwierdzony; architektura i limity wydajności są **hipotezami technicznymi**. Silnik: Godot 4 ([decyzja warunkowa](../SILNIK.md)); reprezentacja scen nie jest wybrana.
 
 ## A. Twardy kontrakt doświadczenia gracza
 
@@ -68,4 +68,4 @@ Pomiary: wykres czasów klatek (nie tylko średni FPS), CPU/GPU, zużycie i piki
 5. Anomalia A/B i ujawnienie latarni: osobne eksperymenty, nie testy zaliczające istniejący renderer.
 6. Profilowanie słabszego docelowego PC, długiej sesji i zmiany kierunku.
 
-**Żaden test silnikowy ani cel wydajnościowy nie jest dziś potwierdzony.** Raport statycznego walidatora nie może zmienić tego statusu.
+**Żaden test silnikowy ani cel wydajnościowy nie jest dziś potwierdzony.**

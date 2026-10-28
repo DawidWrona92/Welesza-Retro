@@ -206,8 +206,8 @@
 | `pillar_broken` | (15.1, 9.3) | **S12** | `stones__pillar_broken` w S12 | Usunięto błędny opis S22. |
 | `dry_road` | (22.7, 10.4) | **S13** | `guardian__dry_road` w S13 | Przedefiniowano S23 jako tło, nie „miejsce suchego szlaku”. |
 
-Ponadto walidator znalazł **11 tras przecinających sektory**; np. skrót `camp__crossroads` przecina S12, S02, **S01** i S11. Dla tego fragmentu w S01 trzeba sprawdzić, czy nie widać przypadkowego dodatkowego wyjścia z Niemiru. To zadanie greyboxu, nie powód do samowolnego przesunięcia skrótu.
+Ponadto analiza grafu wykazała **11 tras przecinających sektory**; np. skrót `camp__crossroads` przecina S12, S02, **S01** i S11. Dla tego fragmentu w S01 trzeba sprawdzić, czy nie widać przypadkowego dodatkowego wyjścia z Niemiru. To zadanie greyboxu, nie powód do samowolnego przesunięcia skrótu.
 
 ## Kontrola przypisań
 
-Wyniki automatyczne oraz ograniczenia: [WORLD_QA.md](WORLD_QA.md). Skrypt: [`tools/world/validate_world.py`](../../tools/world/README.md) na `main`. Dane: [`world-layout.v0.2.json`](world-layout.v0.2.json).
+Dane: [`world-layout.v0.2.json`](world-layout.v0.2.json).

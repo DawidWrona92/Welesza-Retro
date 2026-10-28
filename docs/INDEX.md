@@ -1,6 +1,6 @@
 # Welesza — indeks dokumentacji
 
-Statusy (decyzja autora / propozycja / do walidacji) są takie jak w oryginałach; nie zmieniaj ich bez potwierdzenia autora. Dokumenty graficzne są w [RPG-OldSchool](https://github.com/DawidWrona92/RPG-OldSchool/blob/main/docs/INDEX.md).
+Dokumenty odróżniają decyzje autora, propozycje i rzeczy do przetestowania. Nie zmieniaj statusu decyzji bez potwierdzenia autora.
 
 ## Fabuła i fundament
 - [Koncepcja demo i historia](demo-fabula.md) — Niemir, zadania, postacie
@@ -17,9 +17,8 @@ Statusy (decyzja autora / propozycja / do walidacji) są takie jak w oryginałac
 ## Świat i pierwsza wyprawa
 - [Mapa Niemiru i lasu](pakiet-04-mapa.md) · [Początek gry](pakiet-04-poczatek.md) · [Przegląd pakietu 04](pakiet-04-przeglad.md)
 - [Plac przy wozie](plac-przy-wozie.md)
-- [Cała dolina — mapa v0.2](world/README.md): [sektory](world/SECTORS.md), [streaming](world/STREAMING.md), [warianty](world/VARIANTS.md), [QA](world/WORLD_QA.md), [greybox](world/GREYBOX.md)
+- [Cała dolina — mapa v0.2](world/README.md): [sektory](world/SECTORS.md), [streaming](world/STREAMING.md), [warianty](world/VARIANTS.md), [greybox](world/GREYBOX.md)
 - [Grafy poziomów i bossów](graphs/) — dane projektowe, nie implementacja
-- [Walidator mapy](../tools/world/README.md)
 
 ## Skille projektowe
 [`.agents/skills/`](../.agents/skills/) — gdd-owner, level-designer, combat-balancer, economy-designer, progression-difficulty, encounter-director, core-loop-mechanics, dialogue-voice, puzzle-crafter, accessibility, scope-feasibility, design-maestro.
