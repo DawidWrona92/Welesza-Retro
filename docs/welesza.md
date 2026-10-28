@@ -110,6 +110,30 @@ Bank pomysłów, nie plan. Warunki: lokacja wynika z geografii/gospodarki, bada 
 
 **Konsekwencja dla doliny Niemiru:** dolina to pierwsza pułapka na drodze każdego, kto tak myśli — wóz z księgą przewozową („Niemir — nie zatrzymywać się”) to dosłowne ostrzeżenie dla takich ludzi.
 
+## Nazewnictwo (schemat, ustalenie P10)
+
+**Kanon nazw regionów:**
+
+| Region | Nazwa | Uwagi |
+|---|---|---|
+| Północ (wybrzeże) | **Nadmorze** | utrwalona |
+| Zachód (brody Wielkiej Wody) | **Zakraj** | utrwalona; „za krajem" — u kresu krainy |
+| Środek (wielki bór) | **Okole** | utrwalona; staropolskie, dziś martwe słowo |
+| Góry północno-wschodnie | **Rudogórje** | utrwalona; z jerem (-ь) dla dźwięku prasłowiańskiego |
+| Południe (stepy) | **Suchodrzewie** | utrwalona |
+| Pogranicze wschodnie | *(bez utrwalonej nazwy)* | mieszkańcy mówią „za lessem", „w kniei"; nazwa nie jest potrzebna |
+| Rzeka zachodnia | **Wielka Woda** | zostaje, bez prasłowiańskiej wersji |
+| Główna arteria | **Wielki Trakt** | zostaje; kontrapunkt: na wschodzie „Droga Ognia" (od znamion), nikt nie widzi związku |
+| Ostatnie miasto | *(bez nazwy)* | opisowo, legenda; nazwa — dopiero przy projektowaniu lokacji, jeśli w ogóle |
+
+**Reguły schematu:**
+
+1. Zakaz: istniejące, popularne nazwy miejsc w Polsce (Pomorze, Brest itp. — te odpadają).
+2. Nie przesadzać z nazwami: miejscowości w grze mówią po swojemu („w borze", „za rozstajem", „u nas"), a nazwy regionów pojawiają się rzadko — i tylko gdy nosi je rozmowa postaci.
+3. Rdzenie starosłowiańskie, dziś martwe lub rzadkie (okole, zakraj), lub rzeczowniki pospolite w funkcji własnej (Wielka Woda, Suchodrzewie).
+4. Nowe nazwy powstają wg schematu lub zostają robocze do akceptacji autora; nie wymyślamy od zera rzeczy brzmiących „fantasy" (żadnych -ia, -ea, apostrofów).
+5. Imiona postaci: starosłowiańskie (kanon demo: Domarad, Wszebora, Nawoja, Żegota...) — ta konwencja już obowiązuje i się nie zmienia.
+
 ## Oś fabularna
 
 Kraina trzyma się kurczowo starych Dróg — a bohater, przypadkowy człowiek z doliny Niemiru, dowiaduje się, że Drogi prowadzą dokądś, i zaczyna się bać, że nie umie przestać o tym myśleć. To nie „wyprawa na wschód”: to historia człowieka, który wiedział już za dużo, by zostać, i za mało, by iść — emocja finału demo.
