@@ -1,6 +1,6 @@
 # Welesza — biblia świata
 
-**Status: [PROPOZYCJA] — do akceptacji autora.** Nic w tym folderze nie zmienia zatwierdzonego kanonu demo ([demo-fabula.md](../demo-fabula.md), [world/](../world/)). Biblia jest wewnętrznym kanonem dla twórców; gracz pozna z niej wyłącznieFragmenty, i to niepewne.
+**Status: [PROPOZYCJA] — do akceptacji autora.** Nic w tym folderze nie zmienia zatwierdzonego kanonu demo ([fabula.md](../fabula.md), [world/](../world/)). Biblia jest wewnętrznym kanonem dla twórców; gracz pozna z niej wyłącznieFragmenty, i to niepewne.
 
 ## Zasada nadrzędna: top-up, nie top-down
 
