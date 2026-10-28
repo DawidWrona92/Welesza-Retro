@@ -52,6 +52,9 @@ Pierwsze zadanie jest zwyczajne — odzyskać rzeczy za nocleg — a nie wynikaj
 
 #### Trakt i wóz
 
+**Koncepty rekwizytów:** [wóz z koniem](art/rekwizyty/woz/01_woz_i_kon.png), [buty przy kole](art/rekwizyty/woz/02_buty_przy_kole.png), [pakunki](art/rekwizyty/woz/03_pakunki.png), [księga przewozowa](art/rekwizyty/woz/04_ksiega_przewozowa.png). Ilustracje na białym tle są referencjami wyglądu.
+
+
 Sterowanie zaczyna się na krótkim odcinku drogi. Koń i porzucony wóz są widoczne z przodu, nie ukryte za lasem. Pierwszą satysfakcjonującą czynnością jest podejście i obejrzenie namacalnego śladu: butów ustawionych przy kole. Krótki opis pokazuje, że porządek nie pasuje do śladów szamotaniny. Nie jest to obowiązkowy tekst potrzebny do zadania.
 
 W tej wersji pierwszej wizyty na placu nie ma aktywnego starcia. Zagrożenie pozostaje poza światłem. Bohater nie zaczyna od walki, której nie ma jeszcze jak zrozumieć. Wóz zostaje odkryty przed Niemirem, wyprawa bojowa odbywa się dopiero następnego ranka.
