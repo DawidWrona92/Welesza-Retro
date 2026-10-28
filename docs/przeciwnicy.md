@@ -264,7 +264,7 @@ stateDiagram-v2
     Rozliczony --> [*]
 ```
 
-Śmierć gracza jest obsługiwana przez przywrócenie spójnego zapisu, a nie reset jednego elementu walki. Wznowienie sesji odtwarza aktualny stan. Zwycięstwo ma pierwszeństwo nad zmianą fazy, gdy zdrowie bossa spadnie do zera i gracz przeżyje bieżący krok walki. Przy jednoczesnej śmierci gracza i bossa przywracamy zapis sprzed próby, bez zachowania nagrody. To proponowana reguła pakietu, wymagająca walidacji.
+Śmierć gracza jest obsługiwana przez przywrócenie spójnego zapisu, a nie reset jednego elementu walki. Wznowienie sesji odtwarza aktualny stan. Zwycięstwo ma pierwszeństwo nad zmianą fazy, gdy zdrowie bossa spadnie do zera i gracz przeżyje bieżący krok walki. Przy jednoczesnej śmierci gracza i bossa przywracamy zapis sprzed próby, bez zachowania nagrody.
 
 Zmiany faz są monotoniczne do końca próby. Parametry progów zdrowia ustalimy podczas balansu. Po przekroczeniu progu boss kończy bieżący atak, usuwa oczekujące ataki i dopiero wtedy wykonuje widoczną zmianę zachowania. Jeśli pojedynczy cios przekroczy więcej progów, wybieramy najwyższą należną fazę po jednej przerwie, bez nakładania animacji i ataków.
 
@@ -376,7 +376,7 @@ Grafy strukturalne: [Zbieracz i Dźwigacz — wspólny graf dwufazowy](graphs/bo
 
 ## Część III — przegląd scenariuszowy pakietów 02–03
 
-Analiza dokumentów według playtest-simulator i encounter-director dla pięciu typów graczy, nie testy działającej gry. Punkt startu: podstawowa broń, unik i garda, bez kupionej umiejętności i szczęśliwych krytyków.
+Analiza dokumentów według playtest-simulator i encounter-director dla pięciu typów graczy. Punkt startu: podstawowa broń, unik i garda, bez kupionej umiejętności i szczęśliwych krytyków.
 
 | Persona | Wynik analizy dokumentu | Najważniejsza rzecz do sprawdzenia w grze |
 |---|---|---|

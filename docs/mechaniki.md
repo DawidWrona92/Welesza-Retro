@@ -206,8 +206,6 @@ Powrót nie zawsze kończy się wdzięcznością. Można przynieść dowód śmi
 
 Czy powrót jest rozsądną decyzją, a nie nudnym obowiązkiem? Czy bandażowanie można bezkarnie powtarzać za jednym drzewem? Czy pomoc awaryjna wystarcza do kolejnej uczciwej próby? Czy ręczne zapisy i odwrót nie tworzą duplikacji? Czy zapis przed bossem pozwala wrócić po zaopatrzenie?
 
-To projekt jakościowy.
-
 ## Część III — kolejność prac przed prototypem
 
 Status: proponowana kolejność pracy.
