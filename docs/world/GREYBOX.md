@@ -10,7 +10,7 @@ Zmierzyć w prototypie: `D` średnica/obrys kolizji bohatera (wraz z typowymi od
 
 1. Brama z jednym rzeczywistym wejściem, dziedziniec i droga na rozstaj.
 2. Pochylone drzewo jako landmark i dwa czytelne kierunki: do wozu / dalej ku kamieniom (dalszy odcinek może być poprawnie zakończony naturalną granicą w wersji G1).
-3. Plac wozu oparty na [`docs/plac-przy-wozie.md`](../plac-przy-wozie.md): cztery koła, prawidłowo skierowany dyszel, oddzielny koń, buty przy kole, pakunki i księga jako osobne obiekty.
+3. Plac wozu oparty na [`docs/mapa-demo.md`](../mapa-demo.md): cztery koła, prawidłowo skierowany dyszel, oddzielny koń, buty przy kole, pakunki i księga jako osobne obiekty.
 4. **Obejścia po obu bokach wozu** są pełnymi trasami między obiema stronami placu. Nie pozwolić, aby dyszel, koń, skrzynie lub dekoracje domknęły jeden bok. Nie zakładać przechodniości na podstawie samego rysunku.
 5. Boczna trasa do zerwanego mostu: brzeg widoczny, faktyczna wyrwa i drugi przyczółek; bez konieczności skoku. Most nie musi znajdować się w kadrze wozu.
 6. Oddzielny testowy wjazd na „drogę, która wraca” bez finalnego efektu; tryby A/B po osobnej decyzji.
@@ -35,7 +35,7 @@ Zmierzyć w prototypie: `D` średnica/obrys kolizji bohatera (wraz z typowymi od
 
 ## Faza G3 — anomalia, latarnia i sektory
 
-Po wyborze autora przetestować A kontra B z [`VARIANTS.md`](VARIANTS.md). Wariant A należy przygotować jedynie jako baseline z aktualnej polilinii; B może wymagać specjalnego modelu połączeń. Próba ślepa obserwatorów ma rozstrzygnąć, czy gracz interpretuje sytuację jako coś nadprzyrodzonego. Osobne testy podczas pościgu, przerwania uniku, podnoszenia przedmiotu i odwrotu. Żaden ze stanów pętli nie powinien podmieniać instancji wozu, butów, psa i księgi.
+Autor wybrał wariant B z [`VARIANTS.md`](VARIANTS.md); A służy tylko jako punkt odniesienia. Wariant A należy przygotować jedynie jako baseline z aktualnej polilinii; B może wymagać specjalnego modelu połączeń. Próba ślepa obserwatorów ma rozstrzygnąć, czy gracz interpretuje sytuację jako coś nadprzyrodzonego. Osobne testy podczas pościgu, przerwania uniku, podnoszenia przedmiotu i odwrotu. Żaden ze stanów pętli nie powinien podmieniać instancji wozu, butów, psa i księgi.
 
 Kamienie, słupy, strażnica, latarnia i Stróż czekają do kolejnych iteracji. Wejścia do sektorów pozostają niewidocznymi umownymi podziałami pracy; **to nie gotowy podział scen silnika**.
 

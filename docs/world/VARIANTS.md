@@ -1,6 +1,6 @@
 # Welesza — warianty przestrzeni nieoczywistej (v0.2)
 
-**Status: propozycje do porównania / decyzja autora OTWARTA.** Ten plik nie ustala mechanizmu tajemnicy Weleszy. Zatwierdzona fabuła jest w [`docs/demo-fabula.md`](../demo-fabula.md): bohater wraca dawną drogą, znajduje wóz tam, gdzie nie powinien; ślad na drzewie i powrót z innego kierunku wzmacniają niepokój. Latarnia zapalona w Niemirze pozwala zobaczyć nową ścieżkę między słupami.
+**Status:** część I rozstrzygnięta (wariant B), część II (latarnia) otwarta. Ten plik nie ustala przyczyny tajemnicy Weleszy. Zatwierdzona fabuła jest w [`docs/fabula.md`](../fabula.md): bohater wraca dawną drogą, znajduje wóz tam, gdzie nie powinien; ślad na drzewie i powrót z innego kierunku wzmacniają niepokój. Latarnia zapalona w Niemirze pozwala zobaczyć nową ścieżkę między słupami.
 
 ## I. Droga, która wraca — dwie wersje do prób
 
@@ -16,9 +16,9 @@
 | Ryzyka | Efekt banalnego labiryntu; oszustwo odczuwane jako prowadzenie za rękę; koszt niskiego zaskoczenia. | Szwy nawigacji, kamery i fizyki; nieciągłość linii widzenia i audio; gracz uzna przejście za teleport/bug; większy koszt testów. |
 | Wizualizacja w `WORLD_MAP` | Narysowana jest wyłącznie fizyczna polilinia A, żeby zachować istniejącą topologię. | Na płaskiej mapie **nie da się wiernie narysować** nieeuklidesowego połączenia; należy wprowadzić warunkową relację / diagram dwóch stanów, nie udawać zwykłej dodatkowej ścieżki. |
 
-**Rekomendacja projektowa (nie decyzja):** testować A jako tani baseline i B jako docelową próbę osiągnięcia zaskoczenia. Najpierw prosta demonstracja z placeholderami i jednym wozem, nie gotowy shader/portal. Przy obu wariantach osobno testować powrót bez walki, w trakcie pościgu, ze zgubionym/zebranym przedmiotem oraz odwrót do bramy.
+Testujemy A jako tani punkt odniesienia i B jako docelowe rozwiązanie. Najpierw prosta demonstracja z placeholderami i jednym wozem, nie gotowy shader/portal. Przy obu wariantach osobno testować powrót bez walki, w trakcie pościgu, ze zgubionym/zebranym przedmiotem oraz odwrót do bramy.
 
-**Decyzja autora:** A, B, hybryda, lub nowe rozwiązanie. Potrzebne również zatwierdzenie, *kiedy* anomalia jest aktywna (prolog/rano/później); mapa tego nie rozstrzyga.
+**Zamknięcie boru [DECYZJA AUTORA, 28.10.2026]:** to fabularny zwrot, który gracz odczuwa jako „zepsucie” mapy. Obowiązuje wariant B. Bohater ma własną mapę (tę, na której Niemiru nie ma); mapa sama zapisuje przebytą drogę. Po przejściu anomalii linia trasy zawraca albo się urywa, a wóz zostaje naniesiony dwa razy w różnych miejscach. Mapa jest przedmiotem w świecie, więc rozjazd czyta się jako tajemnica, nie jako błąd gry. Wariant A zostaje wyłącznie tanią makietą w greyboxie. Miejsce: dawne wyjścia z doliny przy słupach; pierwszy raz przy wozie.
 
 ## II. Odsłonięta droga latarnią — warianty
 

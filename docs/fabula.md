@@ -11,10 +11,10 @@ Nazwy i tytuł pozostają robocze. Dokument opisuje fabułę i zakres treści, n
 - Klimat: groźny las, izolacja, nieufni ludzie i magia budząca strach.
 - Bohater jest przypadkowym podróżnikiem bez wcześniejszego osobistego związku z osadą. Początkowo chce przeżyć i znaleźć drogę dalej.
 - Demo obejmuje niewielką osadę i otaczające ją lasy. Nie ma pól uprawnych.
-- Zakres fabularny: cztery zadania główne, cztery poboczne, czternaście postaci dialogowych i kilku kupców.
+- Zakres fabularny: cztery zadania główne, cztery poboczne, szesnaście postaci dialogowych i kilku kupców.
 - Tajemnice poznajemy przez otoczenie, obyczaje i sprzeczne świadectwa. Demo nie wymaga wyjaśnienia całej kosmologii ani historii świata.
-- Platforma: PC, mysz i klawiatura; możliwość późniejszego rozszerzenia o pada. Wyłącznie single player. Sterowanie w stylu Diablo 2; perspektywa kamery do ustalenia w prototypie.
-- Walka z mniejszą liczbą groźnych przeciwników, oparta na unikach i wyczuciu momentu ataku; rzadkie, wartościowe łupy oraz rozwój z udziałem nauczycieli. Szczegóły: [Podstawy mechanik](mechaniki-podstawy.md).
+- Platforma: PC, mysz i klawiatura; możliwość późniejszego rozszerzenia o pada. Wyłącznie single player. Sterowanie w stylu Diablo 2; stała kamera izometryczna, grafika malowana 2D ([silnik](SILNIK.md)).
+- Walka z mniejszą liczbą groźnych przeciwników, oparta na unikach i wyczuciu momentu ataku; rzadkie, wartościowe łupy oraz rozwój z udziałem nauczycieli. Szczegóły: [Podstawy mechanik](mechaniki.md).
 - Czas przejścia oraz szczegółowe reguły walki, rozwoju i gospodarowania zasobami pozostają do ustalenia.
 - Wątpliwości dotyczące kierunku projektu należy konsultować z autorem; nie zastępować brakujących decyzji domysłami.
 
@@ -51,7 +51,7 @@ Nie wszyscy wierzą w te obyczaje. Wszyscy ich przestrzegają. Ich obecność w 
 
 Nocą gwałtownie wezbrany potok niszczy most na trakcie. Rano próbujesz wrócić ścieżką, którą przyszedłeś — i znajdujesz porzucony wóz, choć powinien leżeć po przeciwnej stronie osady.
 
-Można to sprawdzić podczas gry: zostawiasz znak na drzewie, idziesz dalej i wychodzisz przy nim z innego kierunku.
+Można to sprawdzić podczas gry: zostawiasz znak na drzewie, idziesz dalej i wychodzisz przy nim z innego kierunku. Twoja mapa przestaje się zgadzać: droga zawraca na papierze, a wóz jest na niej dwa razy.
 
 Mieszkańcy znają to zjawisko. Nazywają je zamknięciem boru. Nie zgadzają się co do jego przyczyny. Najstarsza mieszkanka utrzymuje, że poprzednim razem droga wróciła sama. Na pytanie, jak długo to trwało, odmawia odpowiedzi.
 
@@ -69,7 +69,7 @@ Wspólnie z miejscową tropicielką sprawdzasz trzy dawne wyjścia z doliny. Odk
 
 ### 3. Światło ze strażnicy
 
-Węglarz pamięta, że strażnicy dawnego traktu nosili latarnie podobne do tej w osadzie. Szukasz jednej w opuszczonej leśnej strażnicy, przez obozowisko węglarzy i podziemną komorę pełną korzeni. Odnajdujesz lampę oraz ciała zwrócone twarzami do zamurowanego przejścia. Lampa zapala się od ognia z Niemiru. W jej świetle między słupami widać ścieżkę, której wcześniej nie było.
+Węglarz pamięta, że strażnicy dawnego traktu nosili latarnie podobne do tej w osadzie. Szukasz jednej w opuszczonej leśnej strażnicy, przez obozowisko węglarzy i podziemną komorę pełną korzeni. Odnajdujesz lampę oraz ciała zwrócone twarzami do zamurowanego przejścia. Lampa zapala się od ognia z Niemiru i daje magiczne światło; to inny przedmiot niż zwykła latarnia noszona przez Stróża. W jej świetle między słupami widać ścieżkę, której wcześniej nie było.
 
 ### 4. Ten, który chodzi przed tobą
 
@@ -83,7 +83,7 @@ Tej nocy ktoś puka od wewnętrznej strony pustej strażnicy.
 
 ### Puste sidła
 
-Sprawdzasz pułapki łowczyni. Ktoś uwalnia zwierzęta, zostawiając w zamian ludzkie zęby. Odnalezienie sprawcy prowadzi do krótkiej walki w jamie pod korzeniami; odzyskane zapasy poprawiają zaopatrzenie osady. Pochodzenie zębów pozostaje zagadką.
+Sprawdzasz pułapki łowczyni Wojsławy. Ktoś uwalnia zwierzęta, zostawiając w zamian ludzkie zęby. Odnalezienie sprawcy prowadzi do krótkiej walki w jamie pod korzeniami; odzyskane zapasy poprawiają zaopatrzenie osady. Pochodzenie zębów pozostaje zagadką.
 
 ### Nie pal jego butów
 
@@ -110,9 +110,11 @@ Gospodyni każdej nocy zostawia posiłek w zamkniętej izbie. Na jej prośbę od
 | Sambor | Uwięziony handlarz; sprzedaje wyposażenie podróżne i desperacko szuka wyjścia. |
 | Dobrawa | Zielarka, handluje lekarstwami; odróżnia część przesądów od rzeczywistych zagrożeń. |
 | Borzęta | Węglarz; zna drogę do starej strażnicy. |
-| Czcibor | Łowca; twierdzi, że las zaczął się zmieniać jeszcze przed zniszczeniem mostu. |
+| Czcibor | Łowca i jeden z pierwszych informatorów gracza; twierdzi, że las zaczął się zmieniać jeszcze przed zniszczeniem mostu. |
+| Wojsława | Łowczyni zastawiająca sidła; zleca „Puste sidła”. Szczupła kobieta po czterdziestce, ogorzała twarz, siwiejące włosy związane rzemieniem. Kaptur z wełny barwionej korą, skórzane nogawice i onuce. Przez ramię zwój pętli i rzemieni na sidła, przy pasie nóż w drewnianej pochwie i torba z przynętą, w ręku krótki oszczep. Oszczędna w słowach i praktyczna. |
 | Dzierżka | Wdowa z zadania o butach; jej mąż przygotowywał się do potajemnego wyjazdu. |
 | Sulir | Ranny strażnik kupieckiego wozu; zataja, co przewożono. |
+| Uniegost | Wędrowny cieśla, dawny lokator izby Miłki z „Trzeciego przy stole”; odnaleziony w leśnym szałasie zaprzecza, że nocował w Niemirze. Wychudły mężczyzna po pięćdziesiątce z zaniedbaną brodą; niegdyś porządna kapota, toporek ciesielski i sznur z węzłami do mierzenia przy pasie. Na szyi nosi klucz do izby, której nie pamięta. |
 | Mściwuj | Grabarz; prowadzi zapiski dokładniejsze niż zwierzchnik osady. |
 | Milorad | Młody pomocnik przy barciach; widział człowieka niszczącego leśny słup, ale boi się go wskazać. |
 
@@ -129,8 +131,8 @@ Poniższe kwestie pozostają otwarte; zapis koncepcji nie rozstrzyga ich automat
 - Autor i cel uszkodzenia słupa oraz zakres wiedzy poszczególnych mieszkańców.
 - Związek między uszkodzeniem słupa, zamknięciem boru, latarnią i Stróżem: wewnętrzne reguły dla twórców, niezależne od informacji dostępnych graczowi.
 - Rozmieszczenie strażnicy w osadzie i leśnych ruin: czy opuszczona i zniszczona strażnica to ten sam obiekt.
-- Przypisanie zleceniodawców, sprawców i lokatora do obsady; koncepcja nie przydziela jeszcze wszystkich ról.
+- Przypisanie zleceniodawców i sprawców do obsady; koncepcja nie przydziela jeszcze wszystkich ról.
 - Warunki rozpoczęcia i ukończenia zadań, obsługa innej kolejności eksploracji, konsekwencje wyborów oraz konkretne nagrody.
 - Sposób pokazania odkrytego wyjścia i uzasadnienie powrotu bohatera do osady w finale.
 
-Dalsza kolejność pracy: [Decyzje przed prototypem](przed-prototypem.md).
+Dalsza kolejność pracy: [Decyzje przed prototypem](mechaniki.md).

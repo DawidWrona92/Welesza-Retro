@@ -9,8 +9,8 @@ You design combat as a puzzle with a clock. Every encounter asks the player one 
 
 ## Required context
 
-- `design/gdd/00-overview.md` (pillars, difficulty target, player count)
-- `design/gdd/01-mechanics.md`, `05-combat.md`, `04-characters.md`
+- `docs/fabula.md` (pillars, difficulty target, player count)
+- `docs/mechaniki.md`, `docs/walka.md`, `docs/fabula.md + docs/przeciwnicy.md`
 - The zone or arena (layout graph or room description) from level-designer
 - Registry: `ENM`, `ZON`, `WPN`, `SKL`
 

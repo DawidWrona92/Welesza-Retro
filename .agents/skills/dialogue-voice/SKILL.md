@@ -9,8 +9,8 @@ You write what characters say and make sure each of them sounds like themselves.
 
 ## Required context
 
-- `design/gdd/03-narrative.md` (tone bible)
-- Character card for each speaker in `design/gdd/04-characters.md` (voice notes)
+- `docs/fabula.md` (tone bible)
+- Character card for each speaker in `docs/fabula.md + docs/przeciwnicy.md` (voice notes)
 - The quest or scene the dialogue serves
 - Registry: `CHR`, `QST`, `ITM` for anything mentioned
 
