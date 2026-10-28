@@ -42,6 +42,30 @@ Całość jest malowana w 2D; w produkcji nie ma modeli ani renderów 3D.
 
 Pierwszy test: Pies w 8 kierunkach (chód, skok, trafienie) i bohater w jednym pancerzu z mieczem.
 
+## Struktura projektu i dane (propozycja)
+
+```text
+game/                  projekt Godota
+  autoload/            GameState, SaveSystem, WorldStreamer, Events
+  core/                wejście, kamera, ruch, walka, statystyki
+  actors/hero/         bohater: sceny, skrypty
+  actors/enemies/<id>/ przeciwnik na katalog, np. zdziczaly-pies
+  world/sectors/<Sxx>/ sceny sektorów z world/SECTORS.md
+  world/props/         rekwizyty
+  ui/                  HUD, dziennik, mapa bohatera, dialogi
+  data/                treść jako JSON: przeciwnicy, zadania, dialogi, przedmioty
+  assets/              wynik pipeline'u: atlasy, SpriteFrames, kontrakty JSON
+  tests/               testy GUT
+art-src/<kategoria>/<id>/  surowe obrazy od grafika (wejście pipeline'u)
+tools/                 pipeline sprite'ów, walidatory assetów, grafów i danych
+```
+
+- **Identyfikatory** w kodzie, danych i nazwach plików są te same co w `docs/`: `ENM-`, `ZON-`, `ENC-`, `QST-`, `CHR-`, `ITM-`, `MECH-`, sektory `Sxx`. Treść żyje w `game/data/`, nie w skryptach.
+- **Dialogi i zadania**: JSON z węzłami, warunkami i flagami świata (`persistent_flags` jak w `world-layout.v0.2.json`). Format i walidator powstają w T19.
+- **Zapis**: jeden plik JSON z wersją formatu; stan świata według `world_id`; zwycięstwo nad bossem i nagroda w jednej transakcji.
+- **Sceny**: sektor nie wie o sąsiadach; połączenia i doczytywanie prowadzi `WorldStreamer`. Systemy komunikują się przez sygnały w `Events`, bez bezpośrednich ścieżek do węzłów innych systemów.
+- **Koncepty** (`docs/art/`) nie trafiają do gry; do gry trafia tylko wynik pipeline'u z `art-src/`.
+
 ## Znane ryzyka
 
 1. **Pamięć** — pełny zestaw zasobów gry może przekroczyć budżet; wymaga pomiaru.
