@@ -5,7 +5,6 @@ Pass each specialist only what it needs. Always include `design/gdd/00-overview.
 | Skill | GDD files | Registry prefixes |
 |---|---|---|
 | core-loop-mechanics | 01 | MECH, SKL, WPN |
-| character-concept | 02, 03, 04 | CHR, ENM, FAC, SKL |
 | narrative-director | 02, 03 | FAC, ZON, CHR, QST |
 | dialogue-voice | 03, 04 (speakers only) | CHR, QST, ITM |
 | quest-designer | 02, 03 | QST, CHR, ZON, ITM, CUR, ENM |
@@ -16,7 +15,6 @@ Pass each specialist only what it needs. Always include `design/gdd/00-overview.
 | economy-designer | 06, 07 | CUR, ITM, SHOP, ENM, QST |
 | progression-difficulty | 05, 06, 07 | SKL, ITM, ZON |
 | ux-onboarding | 01, 09 | MECH, ZON, PUZ |
-| audio-visual-direction | 04, 09, 10 | CHR, ENM, ZON, MECH |
 | accessibility | 01, 09, 10, 11, plus the content under review | any referenced |
 | playtest-simulator | the design under test, 01, 09 | any referenced |
 | scope-feasibility | 12, plus the proposals under review | any referenced |

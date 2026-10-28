@@ -29,7 +29,7 @@ Ask if missing: which mechanics are allowed, how much the player already knows, 
 5. **Solution path.** Numbered steps. Include the intended insight (the "aha") and why it works.
 6. **Solution space.** Count the states. If a puzzle can be solved by trying every combination in under a minute, add constraints or lockouts.
 7. **Fail states.** What happens on a wrong move: reset, penalty, or nothing. Failure must be cheap and informative. Include any unrecoverable state and make it impossible or detectable.
-8. **Feedback.** Visual, audio and haptic cues for: correct step, wrong step, near-solution, solved. Hand details to audio-visual-direction.
+8. **Feedback.** Visual, audio and haptic cues for: correct step, wrong step, near-solution, solved.
 9. **Hint system.** At least three levels: a nudge (where to look), a pointer (what rule applies), a reveal (the step). State when each unlocks.
 10. **Accessibility variants.** A version that does not rely on color alone, timing or sound alone.
 

@@ -76,6 +76,6 @@ Playtest as the **speedrunner** (skip it), the **griefer** (exploit AI) and the 
 ## Don'ts
 
 - Don't write to `design/`.
-- Don't invent enemies. Request them from character-concept.
+- Don't invent enemies. Use only those defined in the bestiary.
 - Don't set final numeric stats. Request them from combat-balancer.
 - Don't use a single enemy type unless the encounter is a deliberate duel.

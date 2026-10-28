@@ -10,14 +10,14 @@
 
 ## 1. Dostarczone materiały
 
-- [Wizualna mapa topologiczno-przestrzenna SVG](WORLD_MAP.svg) oraz [podgląd PNG](WORLD_MAP.png) — czytelny plan obszarów, nie gotowa grafika gry.
+- [Wizualna mapa topologiczno-przestrzenna SVG](WORLD_MAP.svg) oraz [podgląd PNG](WORLD_MAP.png) — czytelny plan obszarów.
 - [Dane geograficzne świata, 28 punktów i 30 tras](world-layout.v0.2.json) (kotwice i sektory przecięte).
 - [Karty 12 sektorów produkcyjnych](SECTORS.md).
 - [Kontrakt techniczny bezszwowego świata i savegame](STREAMING.md).
 - [Porównanie pętli A/B i odsłonięcia traktu](VARIANTS.md).
 - [Plan pierwszego greyboxu](GREYBOX.md).
 
-**Ważne:** wszystkie pozycje należą do **abstrakcyjnej siatki projektowej**; to nie zatwierdzone metry, rozmiary colliderów, czas dojścia ani skala sprite'ów. Ostateczne proporcje powstaną po próbach kamery, animacji i walki.
+**Ważne:** wszystkie pozycje należą do **abstrakcyjnej siatki projektowej**; to nie zatwierdzone metry, rozmiary colliderów, czas dojścia ani skala postaci. Ostateczne proporcje powstaną po próbach kamery i walki.
 
 ## 2. Filozofia przestrzeni
 
@@ -87,7 +87,7 @@ Trzy kamienne słupy w dowolnej kolejności. Nie wymagamy zabicia każdego napot
 
 ## 8. Otwarte kwestie przed detalowaniem geometrii
 
-1. Czy docelowa kamera pozostaje stała w jednym kierunku (rzut Diablo 2), czy dopuszczamy obrót? Od tego zależy geometria dachu i czytelność bram.
+1. Czy docelowa kamera pozostaje stała w jednym kierunku, czy dopuszczamy obrót? Od tego zależy czytelność bram i budynków.
 2. Silnik: Godot 4, gra 2D ([decyzja warunkowa](../SILNIK.md)). Reprezentacja podłoża i fizyki — otwarte.
 3. Wymiary świata — dopiero po ustaleniu D, B, U, A, V w walce.
 4. Wymagana „niemożliwość” pętli: rysunek zachowuje **wariant A jako makietę**; **wariant B** może zmieniać relacje przestrzenne bez widocznego ekranu ładowania. Ostateczna decyzja autora jest otwarta: [porównanie](VARIANTS.md).

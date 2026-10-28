@@ -40,7 +40,7 @@ Możliwy cykl: stan trwały → zasoby przygotowane w tle → aktywna logika i r
 
 ## D. Stały stan świata
 
-Persistencja przedmiotu (pakunki/księga), trzech słupów, bossa Dźwigacza, zimnej latarni, zapalenia latarni w Niemirze, skrótu obozowego, Stróża i znalezienia suchej drogi jest niezależna od tego, czy grafika danego miejsca jest aktywna.
+Persistencja przedmiotu (pakunki/księga), trzech słupów, bossa Dźwigacza, zimnej latarni, zapalenia latarni w Niemirze, skrótu obozowego, Stróża i znalezienia suchej drogi jest niezależna od tego, czy dane miejsce jest aktualnie wczytane.
 
 - Rozliczenie bossa i przedmiotu powinno być transakcyjne; nie nadawaj nagrody wielokrotnie przy ponownym wczytaniu sektora.
 - Powtórne przejście obok wozu nie instancjonuje nowego konia, znaku, butów czy wrogów (poza świadomie zaprojektowaną inscenizacją), także w wariancie B anomalii.

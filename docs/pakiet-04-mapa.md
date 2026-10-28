@@ -127,7 +127,7 @@ Najpierw należy zmierzyć w prototypie: D — średnicę kolizji bohatera, B �
 - Walka musi mieścić czytelną zapowiedź w V. Kamera i odsłanianie koron drzew są częścią projektu, nie kosmetyką.
 - Głębokie urwiska są granicą terenu. Nie dodajemy skoku, wspinania ani obrażeń od upadku do wymagań pierwszej wyprawy.
 
-Warunki odbioru mają wykazać brak klinowania ruchu, dostępność obu obejść i widoczność zapowiedzi. Sama ilustracja nie dowiedzie tych warunków.
+Warunki odbioru mają wykazać brak klinowania ruchu, dostępność obu obejść i widoczność zapowiedzi. Same założenia nie dowiodą tych warunków.
 
 ## 9. Zakres pierwszego grywalnego fragmentu
 

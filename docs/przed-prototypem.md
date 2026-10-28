@@ -9,7 +9,7 @@ Aktualne ustalenia i propozycje: [Podstawy mechanik](mechaniki-podstawy.md).
 Uzgodniono z autorem:
 
 - PC, mysz i klawiatura; możliwość późniejszego rozszerzenia o pada.
-- Kamerę i sterowanie w stylu Diablo 2.
+- Sterowanie w stylu Diablo 2; perspektywa kamery do ustalenia w prototypie.
 - Wyłącznie single player.
 - Niewielu groźnych przeciwników, unik pod klawiszem oraz paradę przeciw uzbrojonym wrogom. LPM: ruch i atak na kliknięcie; PPM: umiejętność. Klikanie w rytm pozwala wykonywać wiązanki ciosów.
 - Rozwój inspirowany WFRP: doświadczenie prowadzi do awansów, awanse dają PN wydawane u nauczycieli w stylu Gothic; rzadkie, bardzo wartościowe łupy.
@@ -34,11 +34,11 @@ Szczegółowe liczby i balans dopracowywać na działającym prototypie, nie na 
 
 Uzgodnić czas przejścia, liczbę dostępnych stylów gry, zakres ekwipunku, strukturę mapy, zapisywanie postępu i znaczenie wyborów. Oddzielić zawartość pierwszego prototypu od całego demo z ośmioma zadaniami i czternastoma postaciami.
 
-Poznać skład zespołu, doświadczenie, dostępny czas i źródło grafiki oraz dźwięku przed oceną wykonalności.
+Poznać skład zespołu, doświadczenie, dostępny czas i źródło dźwięku przed oceną wykonalności.
 
 ## 5. Wybór technologii i pierwszy test
 
-Wybrać silnik i sposób prezentacji 2D/3D w oparciu o powyższe decyzje oraz możliwości zespołu.
+Wybrać silnik w oparciu o powyższe decyzje oraz możliwości zespołu.
 
 Propozycja pierwszego prototypu: mała przestrzeń z prostych brył, grywalny bohater, reprezentatywne starcie, nagroda i możliwość ponownej próby. Konkretne umiejętności oraz liczba wrogów pozostają do ustalenia.
 

@@ -69,7 +69,7 @@ Emit proposals containing dialogue files or node lists tied to `QST-` and `CHR-`
 ## Handoff
 
 - Emits: dialogue proposals, bark sets; findings `DLG-R*`.
-- Consumed by: quest-designer, audio-visual-direction (VO cues), narrative-director (tone check).
+- Consumed by: quest-designer, narrative-director (tone check).
 
 ## Don'ts
 

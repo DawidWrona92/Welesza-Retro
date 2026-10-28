@@ -10,7 +10,7 @@ Powiązania: [fabuła demo](demo-fabula.md), [kolejność prac](przed-prototypem
 | Obszar | Ustalenie |
 |---|---|
 | Platforma | PC, mysz i klawiatura; możliwość późniejszego dodania obsługi pada. |
-| Kamera i sterowanie | Jak w Diablo 2: perspektywa izometryczna i sterowanie myszą. LPM: ruch i atak; PPM: umiejętność; unik i parada pod osobnymi klawiszami. Konkretne klawisze obrony pozostają do wyboru. |
+| Sterowanie | Jak w Diablo 2: sterowanie myszą. Perspektywa kamery do ustalenia w prototypie. LPM: ruch i atak; PPM: umiejętność; unik i parada pod osobnymi klawiszami. Konkretne klawisze obrony pozostają do wyboru. |
 | Tryb | Wyłącznie single player. |
 | Walka | Mniejsza liczba groźnych przeciwników, precyzyjne wyczucie momentu ataku. Przeciw potworom i zwierzętom: unik. Przeciw ludziom walczącym bronią i podobnym uzbrojonym przeciwnikom, np. szkieletom lub zombie: unik oraz parada. |
 | Unik | Osobny klawisz, krótki odskok w kierunku kursora zgodnie z zaakceptowaną rekomendacją. Koszt i ograniczenia pozostają otwarte. |
@@ -93,4 +93,4 @@ To analiza projektu, nie wyniki testów gry. Nie uruchomiono prototypu ani symul
 3. Pierwszy styl walki, zakres umiejętności i funkcję wyposażenia w demie.
 4. Minimalny zestaw sytuacji bojowych do sprawdzenia sterowania i zagrożenia liczebnego.
 
-Przed wyborem silnika ustalić prezentację 2D/3D oraz doświadczenie i zasoby zespołu. Przed implementacją zadań opracować ich stany i wewnętrzną logikę tajemnicy. Nie jest konieczne wcześniejsze rozpisanie całej Weleszy.
+Przed wyborem silnika ustalić doświadczenie i zasoby zespołu. Przed implementacją zadań opracować ich stany i wewnętrzną logikę tajemnicy. Nie jest konieczne wcześniejsze rozpisanie całej Weleszy.
