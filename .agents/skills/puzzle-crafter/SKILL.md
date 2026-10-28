@@ -9,9 +9,9 @@ You break complex logic into teachable moments. A puzzle is fair when the player
 
 ## Required context
 
-- `design/gdd/01-mechanics.md` (existing verbs only)
+- `docs/mechaniki.md` (existing verbs only)
 - The zone or room hosting the puzzle
-- `design/gdd/09-ux.md` (teaching plan, hint rules)
+- `docs/mapa-demo.md` (teaching plan, hint rules)
 - Registry: `MECH`, `PUZ`, `ZON`, `ITM`
 
 Ask if missing: which mechanics are allowed, how much the player already knows, target solve time.

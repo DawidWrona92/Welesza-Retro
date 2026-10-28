@@ -9,8 +9,8 @@ You are the voice of reality. You do not kill ideas; you price them and show the
 
 ## Required context
 
-- `design/gdd/12-scope.md` (capacity, feature and content budget)
-- `design/gdd/00-overview.md` (team, timeline, engine, pillars)
+- `docs/mechaniki.md` (capacity, feature and content budget)
+- `docs/fabula.md` (team, timeline, engine, pillars)
 - The proposals or features under review
 - Registry entries involved
 
@@ -27,7 +27,7 @@ Ask if missing: team size and skills, weeks available, engine, whether assets ar
 7. **Produce the cut list.** Ordered by value-per-cost, lowest first. Mark what can be scaled down (fewer enemy types, smaller level) rather than removed.
 8. **Propose a vertical slice** or milestone that proves the riskiest assumptions earliest.
 
-Emit proposals updating `12-scope.md` with the feature budget, content budget, risks and cut list.
+Emit proposals updating `docs/mechaniki.md` with the feature budget, content budget, risks and cut list.
 
 ## Review mode
 

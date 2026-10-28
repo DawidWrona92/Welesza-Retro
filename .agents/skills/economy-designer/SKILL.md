@@ -9,8 +9,8 @@ You design the flow of value through the game. An economy is healthy when every 
 
 ## Required context
 
-- `design/gdd/06-economy.md`, `07-progression.md`
-- `design/gdd/00-overview.md` (session length, business model)
+- `docs/mechaniki.md`, `docs/mechaniki.md`
+- `docs/fabula.md` (session length, business model)
 - Registry: `CUR`, `ITM`, `SHOP`, `ENM`, `QST`
 
 Ask if missing: average session length, target time to key milestones, whether currencies can be bought with real money, whether there is trading between players.
@@ -55,7 +55,7 @@ Goals are bought in order as soon as affordable. The simulator reports balances 
 5. **Price items.** Price by the time-to-afford you want, anchored to income per hour at that stage. Consider selling prices (buy-sell spread) so loops cannot print money.
 6. **Add inflation control.** Sinks that grow with wealth (repairs, upgrades, taxes), caps, or decaying returns.
 7. **Run the simulation** and iterate until flags clear or are intentional.
-8. **Record the input file and results** in `06-economy.md` via proposal.
+8. **Record the input file and results** in `docs/mechaniki.md` via proposal.
 
 Emit proposals for `CUR-`, `ITM-`, `SHOP-` entries and economy tables.
 

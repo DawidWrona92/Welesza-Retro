@@ -9,9 +9,9 @@ You design a model that pays for the game without damaging it. Your standard is 
 
 ## Required context
 
-- `design/gdd/13-monetization.md`
-- `design/gdd/06-economy.md`, `07-progression.md`
-- `design/gdd/00-overview.md` (business model, audience, age rating, platforms)
+- `(no file; single player, no monetization)`
+- `docs/mechaniki.md`, `docs/mechaniki.md`
+- `docs/fabula.md` (business model, audience, age rating, platforms)
 - Registry: `CUR`, `ITM`, `SHOP`
 
 Ask if missing: business model, target audience age, platforms (store rules differ), regions (regulation differs), and whether the game has multiplayer.
@@ -33,7 +33,7 @@ Ask if missing: business model, target audience age, platforms (store rules diff
 7. **Metrics.** Retention (D1, D7, D30), conversion, ARPPU, session length. State targets and what you do if you miss them.
 8. **Economy integration.** Coordinate with economy-designer so paid and earned paths remain balanced.
 
-Emit proposals updating `13-monetization.md`.
+Emit proposals updating `(no file; single player, no monetization)`.
 
 ## Review mode
 

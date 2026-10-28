@@ -1300,6 +1300,6 @@
   "implementation_status": "candidate technical representation; alternative geometry, anomaly and loading architectures permitted after playtest",
   "time_of_first_wagon_visit": "before_dusk; rainy, cold, low visibility, NOT night",
   "sector_policy": "authoring grid only; actual scene organization undecided; half-open sector rectangles for node anchor mapping",
-  "road_anomaly_policy": "OPTIONS_PENDING_AUTHOR: A physical loop vs B continuous spatial anomaly; polylines currently show option A ONLY as a greybox candidate",
+  "road_anomaly_policy": "AUTHOR_DECISION: B continuous spatial anomaly, felt through the hero's self-drawing map going wrong; polylines show option A ONLY as a greybox mock-up",
   "lamp_road_policy": "OPTIONS_PENDING_AUTHOR: visible-only / physical supernatural threshold / perception-dependent route; gating via flag, mechanism undecided"
 }

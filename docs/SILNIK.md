@@ -20,7 +20,7 @@
 | 4 | Przejście między dwoma fragmentami świata bez przerwy i ekranu ładowania ([STREAMING.md](world/STREAMING.md)) | do sprawdzenia |
 | 5 | Okna trafień i zapowiedzi zapisane jako zdarzenia animacji (`events`) odtwarzają się w grze powtarzalnie ([walka](walka.md)) | do sprawdzenia |
 
-## Grafika 2D — rozwiązanie techniczne (propozycja)
+## Grafika 2D — rozwiązanie techniczne [DECYZJA AUTORA, 28.10.2026]
 
 Całość jest malowana w 2D; w produkcji nie ma modeli ani renderów 3D.
 

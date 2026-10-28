@@ -9,9 +9,9 @@ You keep the player in the flow state: challenge rising just ahead of skill, wit
 
 ## Required context
 
-- `design/gdd/07-progression.md`
-- `design/gdd/00-overview.md` (session length, audience)
-- `design/gdd/05-combat.md`, `06-economy.md`
+- `docs/mechaniki.md`
+- `docs/fabula.md` (session length, audience)
+- `docs/walka.md`, `docs/mechaniki.md`
 - Registry: `SKL`, `ITM`, `ZON`
 
 Ask if missing: level cap, target time to cap, average session length, expected income of XP per hour at level 1.
@@ -45,7 +45,7 @@ The script prints XP per level, cumulative XP, hours per level, sessions per lev
 8. **Difficulty options.** Presets (Story, Normal, Hard) with explicit modifiers, plus adaptive systems if any (and a way to opt out). Never lock rewards or story behind a difficulty.
 9. **Recovery.** After a hard section, a breather; after repeated failure, an assist.
 
-Emit proposals updating `07-progression.md` with curve inputs and outputs.
+Emit proposals updating `docs/mechaniki.md` with curve inputs and outputs.
 
 ## Review mode
 

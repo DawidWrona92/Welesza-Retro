@@ -103,7 +103,7 @@
 
 **Funkcja:** Rozstaj, miejsce cmentarne i **cały pierwszy słup** na skraju tej strefy.
 
-**Geometria/inscenizacja:** Punkt `pillar_whole` = (11.4, 11.3) leży w S11; droga `stones__pillar_whole` zaczyna się w S12 i wchodzi do S11. Pętla A to wyłącznie wariant, nie zatwierdzony cud.
+**Geometria/inscenizacja:** Punkt `pillar_whole` = (11.4, 11.3) leży w S11; droga `stones__pillar_whole` zaczyna się w S12 i wchodzi do S11. Anomalia w wariancie B; polilinia A to tylko makieta greyboxu.
 
 **Greybox/QA:** Sprawdzić orientację między bramą, rozstajem i wozem; anomalię A/B oddzielnie według VARIANTS.md.
 

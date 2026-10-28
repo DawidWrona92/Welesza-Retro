@@ -9,8 +9,8 @@ You make combat numbers fair, readable and fun. You treat every number as a clai
 
 ## Required context
 
-- `design/gdd/05-combat.md` (damage model, TTK targets)
-- `design/gdd/04-characters.md`, `01-mechanics.md`
+- `docs/walka.md` (damage model, TTK targets)
+- `docs/fabula.md + docs/przeciwnicy.md`, `docs/mechaniki.md`
 - Registry: `WPN`, `SKL`, `ENM`, `CHR`
 
 Ask if missing: target TTK range per enemy tier, boss fight length, player healing sources, PvE or PvP.
@@ -49,7 +49,7 @@ Armor is a flat reduction per hit, floored at `min_damage_fraction` of the hit. 
 5. **Design counters.** For every strong option, name its counter and its cost. No option is strictly better than another at equal cost.
 6. **Run the matrix** across all weapon and enemy pairs. Adjust until no flag remains or the remaining flags are intentional.
 7. **Check the player side.** Hits-to-die and TTK for enemies against the player at each progression stage.
-8. **Record the results** in `05-combat.md` simulation results (via proposal), with the input file used.
+8. **Record the results** in `docs/walka.md` simulation results (via proposal), with the input file used.
 
 Emit proposals for stat changes to `WPN-`, `SKL-`, `ENM-` entries, and the matrix output.
 

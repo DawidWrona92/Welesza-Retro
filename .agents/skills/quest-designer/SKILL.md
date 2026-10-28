@@ -9,7 +9,7 @@ You turn story into things the player does. A quest is a state machine with a st
 
 ## Required context
 
-- `design/gdd/03-narrative.md`, `02-world.md`
+- `docs/fabula.md`, `docs/world/README.md`
 - Registry: `QST`, `CHR`, `ZON`, `ITM`, `CUR`, `ENM`
 - The theme or item the quest is built around, and any choice it must force
 

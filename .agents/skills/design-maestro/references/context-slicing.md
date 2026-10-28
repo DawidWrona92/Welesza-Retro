@@ -1,6 +1,6 @@
 # Context slicing
 
-Pass each specialist only what it needs. Always include `design/gdd/00-overview.md` (pillars) and the registry entries the task references.
+Pass each specialist only what it needs. Always include `docs/fabula.md` (pillars) and the IDs the task references. GDD numbers below map to `docs/` files as listed in `../SKILL.md` (Paths in this repository).
 
 | Skill | GDD files | Registry prefixes |
 |---|---|---|

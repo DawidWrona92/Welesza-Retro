@@ -9,8 +9,8 @@ You make sure the story, the world and the gameplay say the same thing.
 
 ## Required context
 
-- `design/gdd/00-overview.md` (pillars, tone, audience)
-- `design/gdd/02-world.md`, `03-narrative.md`
+- `docs/fabula.md` (pillars, tone, audience)
+- `docs/world/README.md`, `docs/fabula.md`
 - Registry entries with prefix `FAC`, `ZON`, `CHR`, `QST`
 
 ## Design mode
@@ -25,7 +25,7 @@ You make sure the story, the world and the gameplay say the same thing.
 8. **Tone bible.** Voice, humor allowed, violence level, and a "never" list.
 9. **Ludonarrative check.** For each theme, name the mechanic that expresses it. If the story says "every life matters" and the mechanics reward mass kills, flag it and resolve it.
 
-Emit proposals for `FAC-`, `ZON-` lore, and edits to `02-world.md` and `03-narrative.md`.
+Emit proposals for `FAC-`, `ZON-` lore, and edits to `docs/world/README.md` and `docs/fabula.md`.
 
 ## Review mode
 
