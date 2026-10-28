@@ -110,6 +110,9 @@ Pokaz leczenia nie oznacza leczenia pełnego zdrowia za darmo w świecie. Panel 
 
 #### Podejście: brama → rozstaj
 
+**Koncept:** [rozstaj przy pochylonym drzewie](art/lokacje/rozstaj/rozstaj_pochylone_drzewo.png) pokazuje rozgałęzienie błotnistego traktu i charakterystyczne drzewo jako punkt orientacyjny. Panorama i szczegóły otoczenia są referencją wizualną; połączenia dróg wynikają z mapy.
+
+
 Bezpieczny zapis, aktualny stan zdrowia i zapasów. Żegota przypomina widoczny cel; nie wymaga zakupu. Na rozstaju gracz widzi pochylone drzewo, drogę do wozu i światło bramy za plecami. Pozostałe odnogi są możliwe do obejrzenia, ale nie konkurują wizualnie z pierwszym celem.
 
 #### Próba: plac przy wozie
