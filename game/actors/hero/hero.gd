@@ -34,7 +34,6 @@ var _combat: Node
 @onready var sprite: AssetSprite = $Sprite
 @onready var stamina: Stamina = $Stamina
 @onready var _agent: NavigationAgent2D = $NavigationAgent2D
-@onready var _hitbox: Area2D = get_node_or_null("Combat/Hitbox")
 
 
 func _ready() -> void:
@@ -62,7 +61,6 @@ func _physics_process(delta: float) -> void:
 		else:
 			_holding_move = false
 	if _combat:
-		_sync_hitbox()
 		_update_guard()
 	step(delta, Input.is_action_pressed(&"sprint"))
 
@@ -244,12 +242,6 @@ func _direction_to(point: Vector2) -> Vector2:
 
 func _cursor_direction() -> Vector2:
 	return _direction_to(get_global_mouse_position())
-
-
-## Hitbox jest dzieckiem węzła Combat (nie Node2D), więc sam nie podąża za bohaterem.
-func _sync_hitbox() -> void:
-	if _hitbox:
-		_hitbox.global_position = global_position
 
 
 ## Zasada: Q wciśnięte oznacza gardę. Polecenie ponawiane co klatkę, więc wraca po ogłuszeniu,
