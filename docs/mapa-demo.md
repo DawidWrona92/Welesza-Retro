@@ -9,6 +9,9 @@ Powiązania: [fabuła](fabula.md), [przeciwnicy](przeciwnicy.md), [mechaniki](me
 
 Niemir jest niewielką osadą wciśniętą między skałę ze źródłem a gęsty las. Jedna główna brama daje czytelny punkt powrotu. Po zewnętrznej stronie palisady biegnie krótka ścieżka gospodarcza; nie otwiera drugiego wyjścia z doliny. W obrębie palisady nie projektujemy walk ani obowiązkowego labiryntu wnętrz.
 
+**Koncepty lokacji:** [brama — wariant preferowany](art/lokacje/niemir/brama_wariant_preferowany.png), [brama ze strażnikiem — wariant słabszy](art/lokacje/niemir/brama_ze_straznikiem_wariant_slabszy.png), [plac przy źródle nocą](art/lokacje/niemir/plac_przy_zrodle_noca.png). Ilustracje pokazują drewnianą palisadę, mokry plac i ciepłe światło przy skalnym źródle; są wzorcem atmosfery, a układ lokacji wynika z mapy.
+
+
 Las układa się w trzy powiązane obszary: **skraj z wozem**, **bór z kamieniami i odnogami**, **obóz i leśne ruiny**. To opis funkcjonalny, nie nowe nazwy własne. Zwykłe drogi dają się zapamiętać; nadprzyrodzone zawracanie występuje w konkretnych miejscach, nie losowo na każdym rozstaju.
 
 Nie ma pól, rozległych miejskich placów, sieci podziemi pod każdym domem ani dalekich panoram świata. Gracz widzi tyle, ile może poznać podczas demo.
@@ -51,6 +54,9 @@ Pierwsze zadanie jest zwyczajne — odzyskać rzeczy za nocleg — a nie wynikaj
 ### 2. Prolog: przed pierwszą walką
 
 #### Trakt i wóz
+
+**Koncepty:** [wóz o poranku](art/lokacje/woz/woz_o_poranku.png) i [wóz nocą](art/lokacje/woz/woz_noca.png). Oba ujęcia pokazują porzucony wóz, konia i buty przy kole; przedstawione światła i rekwizyty są referencją nastroju, nie zmianą przebiegu prologu.
+
 
 Sterowanie zaczyna się na krótkim odcinku drogi. Koń i porzucony wóz są widoczne z przodu, nie ukryte za lasem. Pierwszą satysfakcjonującą czynnością jest podejście i obejrzenie namacalnego śladu: butów ustawionych przy kole. Krótki opis pokazuje, że porządek nie pasuje do śladów szamotaniny. Nie jest to obowiązkowy tekst potrzebny do zadania.
 
