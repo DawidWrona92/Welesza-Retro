@@ -10,6 +10,7 @@ Użycie: python3 tools/sprite_pipeline.py [ID ...]   (bez argumentów: wszystkie
 from __future__ import annotations
 
 import json
+import re
 import shutil
 import sys
 from pathlib import Path
@@ -22,9 +23,15 @@ from welesza_assets import (ART_SRC, DIRECTIONS, GAME_ASSETS, SOURCE_SCALE, grou
                             painted_and_mirrored, split_strip, strip_path, to_rgba)
 
 RES_ROOT = "res://assets"
+# Jak w asset_schema.json. Argument to ID, nie ścieżka: ścieżka absolutna wskazałaby katalog
+# wyjściowy poza game/assets, a build go czyści.
+ID_RE = re.compile(r"^(HERO|ENM|CHR|PROP|TILE|TEST)-[a-z0-9-]+$")
 
 
 def build(asset_id: str, src_root: Path = ART_SRC, out_root: Path = GAME_ASSETS) -> bool:
+    if not ID_RE.match(asset_id):
+        print(f"[BŁĄD] {asset_id}\n  błąd: to nie jest ID assetu (np. ENM-zdziczaly-pies)")
+        return False
     asset_dir = src_root / asset_id
     rep = validate(asset_dir)
     rep.print(asset_id)

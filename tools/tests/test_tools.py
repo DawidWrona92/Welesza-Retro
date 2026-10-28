@@ -47,6 +47,11 @@ class PipelineTest(unittest.TestCase):
         (self.asset / "asset.json").write_text(json.dumps(meta))
         self.assertFalse(validate(self.asset).ok)
 
+    def test_build_rejects_path_instead_of_id(self) -> None:
+        asset_dir = self.src / "TEST-manekin"
+        self.assertFalse(build(str(asset_dir), self.src, self.out))
+        self.assertTrue((asset_dir / "asset.json").exists(), "źródła nietknięte")
+
     def test_build_aligns_mirrors_and_writes_godot_resources(self) -> None:
         self.assertTrue(build("TEST-manekin", self.src, self.out))
         out = self.out / "TEST-manekin"
