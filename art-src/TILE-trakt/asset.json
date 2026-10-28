@@ -1,0 +1,17 @@
+{
+  "schema": "welesza.asset.v1",
+  "id": "TILE-trakt",
+  "kind": "tile",
+  "canvas": [
+    512,
+    256
+  ],
+  "anchor": [
+    256,
+    128
+  ],
+  "status": "test",
+  "source": "GPT-6",
+  "background": "transparent",
+  "variants": 3
+}
