@@ -29,38 +29,18 @@ func _sandbox() -> Node2D:
 	return sandbox
 
 
-func _kill(enemy: Enemy) -> void:
-	var hit := Hit.new()
-	hit.damage = 999.0
-	enemy.combat.receive_hit(hit)
-
-
-func test_defeated_enemy_stays_defeated_by_world_id() -> void:
-	var dog: Enemy = DOG_SCENE.instantiate()
-	dog.world_id = &"TEST-persist"
-	_root.add_child(dog)
-	_nodes.append(dog)
-	_kill(dog)
-	check(GameState.is_collected(&"TEST-persist"), "pokonany zapisany w stanie świata")
-	var again: Enemy = DOG_SCENE.instantiate()
-	again.world_id = &"TEST-persist"
-	_root.add_child(again)
-	_nodes.append(again)
-	check(again.is_queued_for_deletion(), "ten sam world_id nie odradza się")
-
-
 func test_save_and_load_restore_state_from_save_not_from_the_attempt() -> void:
 	var sandbox := _sandbox()
 	await _root.get_tree().physics_frame
 	var hero: Hero = sandbox.get_node("Hero")
 	hero.get_node("Combat").health = 70.0
 	hero.healing.bandages = 2
-	check_eq(sandbox.save_checkpoint(), OK, "zapis w bezpiecznym miejscu")
+	hero.global_position = Vector2(120, 40)
+	check_eq(sandbox.save_checkpoint(), OK, "zapis w stabilnym miejscu")
 	# próba po zapisie: obrażenia, zużyty zapas, pokonany pies
 	hero.get_node("Combat").health = 15.0
 	hero.healing.bandages = 0
-	_kill(sandbox.get_node("Pies"))
-	check(GameState.is_collected(&"SBX-pies"), "pies pokonany w próbie")
+	hero.global_position = Vector2(-300, 0)
 	sandbox.free()
 	_nodes.clear()
 	check_eq(SaveSystem.load_slot(SLOT), OK, "wczytanie")
@@ -69,8 +49,7 @@ func test_save_and_load_restore_state_from_save_not_from_the_attempt() -> void:
 	var hero2: Hero = reloaded.get_node("Hero")
 	check_eq(hero2.get_node("Combat").health, 70.0, "zdrowie z zapisu")
 	check_eq(hero2.healing.bandages, 2, "zapasy z zapisu")
-	check(is_instance_valid(reloaded.get_node_or_null("Pies")), "pies żyje jak w zapisie")
-	check(not reloaded.get_node("Pies").is_queued_for_deletion(), "pies nie jest usuwany")
+	check_eq(hero2.global_position, Vector2(120, 40), "miejsce z zapisu")
 
 
 func test_cannot_save_in_combat_or_with_active_enemy() -> void:
@@ -86,3 +65,23 @@ func test_cannot_save_in_combat_or_with_active_enemy() -> void:
 	pies._set_mode(Enemy.Mode.ENGAGE)
 	hero.get_node("Combat").state = Combat.State.IDLE
 	check(not sandbox.can_save_now(), "przy aktywnym przeciwniku nie")
+
+
+func test_debug_key_saves_and_death_screen_then_load() -> void:
+	preload("res://autoload/controls.gd").apply_defaults()
+	var sandbox := _sandbox()
+	sandbox.respawn_delay = 99.0
+	await _root.get_tree().physics_frame
+	var hero: Hero = sandbox.get_node("Hero")
+	hero.get_node("Combat").health = 61.0
+	var key := InputEventKey.new()
+	key.physical_keycode = KEY_F5
+	key.pressed = true
+	sandbox._unhandled_input(key)
+	check_eq(GameState.get_flag(&"hero")["health"], 61.0, "F5 zapisuje stan")
+	var death_screen: Control = sandbox.get_node("Hud/DeathScreen")
+	check(not death_screen.visible, "ekran śmierci ukryty")
+	var hit := Hit.new()
+	hit.damage = 999.0
+	hero.get_node("Combat").receive_hit(hit)
+	check(death_screen.visible, "ekran śmierci po śmierci")

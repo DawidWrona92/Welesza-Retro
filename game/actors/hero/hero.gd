@@ -95,10 +95,6 @@ func step(delta: float, wants_sprint: bool) -> void:
 	if _dash_left > 0.0:
 		_step_dash(delta)
 		return
-	if healing.is_busy():
-		velocity = Vector2.ZERO
-		_update_animation(Vector2.ZERO)
-		return
 	_update_attack_order()
 	if _combat and _combat.is_movement_locked():
 		velocity = Vector2.ZERO
@@ -113,14 +109,14 @@ func step(delta: float, wants_sprint: bool) -> void:
 
 
 func move_to(point: Vector2) -> void:
-	healing.interrupt(Healing.CAUSE_MOVE)
+	_combat.interrupt_use()
 	_attack_target = null
 	_set_goal(point)
 
 
 ## Podejdź na zasięg walki i zleć jeden atak. Bez walki: zwykły ruch do celu.
 func attack_target(target: Node2D) -> void:
-	healing.interrupt(Healing.CAUSE_MOVE)
+	_combat.interrupt_use()
 	if _combat == null:
 		move_to(target.global_position)
 		return

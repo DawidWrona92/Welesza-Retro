@@ -18,8 +18,13 @@ signal hit_landed(target: Combat, result: Hit.Result, damage: float, crit: bool)
 signal hit_received(result: Hit.Result, damage: float)
 signal health_changed(health: float, max_health: float)
 signal died
+## Użycie przedmiotu (opatrunek, nalewka): czynność w stanie USE. Efekt rozlicza właściciel
+## dopiero po use_finished; przerwanie (ruch, unik, garda, trafienie) kończy się use_interrupted.
+signal use_started(kind: StringName)
+signal use_finished(kind: StringName)
+signal use_interrupted(kind: StringName)
 
-enum State { IDLE, ATTACK, DODGE, GUARD, STAGGER, RECOVER }
+enum State { IDLE, ATTACK, DODGE, GUARD, STAGGER, RECOVER, USE }
 
 @export_group("Atak")
 @export var attack_animation: StringName = &"attack"
@@ -72,6 +77,8 @@ var state: State = State.IDLE
 var health: float
 var facing := Vector2.DOWN
 var chain_link := 0
+## Rodzaj przedmiotu używanego w stanie USE; pusty poza nim.
+var using: StringName = &""
 
 var _rng := RandomNumberGenerator.new()
 var _state_time := 0.0
@@ -137,6 +144,11 @@ func tick(delta: float) -> void:
 		_guard_time += delta
 	if state in [State.DODGE, State.STAGGER, State.RECOVER] and _state_time >= _state_length:
 		_set_state(State.IDLE)
+	elif state == State.USE and _state_time >= _state_length:
+		var kind := using
+		using = &""  # ukończone, więc przejście do IDLE nie jest przerwaniem
+		_set_state(State.IDLE)
+		use_finished.emit(kind)
 
 
 # --- polecenia od właściciela ---------------------------------------------------------------
@@ -182,7 +194,7 @@ func set_guard(active: bool, dir: Vector2 = Vector2.ZERO) -> void:
 		return
 	if dir.length_squared() > 0.0:
 		_guard_dir = dir.normalized()
-	if active and state in [State.IDLE, State.ATTACK]:
+	if active and state in [State.IDLE, State.ATTACK, State.USE]:
 		_end_chain(&"guard")
 		_guard_time = 0.0
 		if _since_guard_lowered >= parry_rearm:
@@ -197,7 +209,7 @@ func set_guard(active: bool, dir: Vector2 = Vector2.ZERO) -> void:
 
 
 func is_movement_locked() -> bool:
-	return state in [State.ATTACK, State.DODGE, State.STAGGER, State.RECOVER]
+	return state in [State.ATTACK, State.DODGE, State.STAGGER, State.RECOVER, State.USE]
 
 
 func move_speed_factor() -> float:
@@ -284,10 +296,34 @@ func receive_hit(hit: Hit) -> Dictionary:
 	var reduction := clampf(armor - hit.armor_pierce, 0.0, max_armor_reduction)
 	var amount := maxf(min_damage, hit.damage * (2.0 if crit else 1.0) * (1.0 - reduction))
 	_take_damage(amount)
+	interrupt_use()
 	if hit.interrupts and not is_dead():
 		stagger(hit_stun)
 	hit_received.emit(Hit.Result.HIT, amount)
 	return {"result": Hit.Result.HIT, "damage": amount, "crit": crit}
+
+
+## Zaczyna użycie przedmiotu na `duration` sekund; tylko ze spokoju (IDLE). Zwraca, czy się zaczęło.
+func use_item(kind: StringName, duration: float) -> bool:
+	if is_dead() or state != State.IDLE:
+		return false
+	_set_state(State.USE, duration)
+	using = kind
+	use_started.emit(kind)
+	return true
+
+
+## Przerywa używanie przedmiotu (ruch właściciela); bez efektu poza stanem USE.
+func interrupt_use() -> void:
+	if state == State.USE:
+		_set_state(State.IDLE)
+
+
+func heal(amount: float) -> void:
+	if is_dead():
+		return
+	health = minf(max_health, health + amount)
+	health_changed.emit(health, max_health)
 
 
 func stagger(duration: float) -> void:
@@ -411,6 +447,10 @@ func _scan_hitbox() -> void:
 
 
 func _set_state(new_state: State, length: float = 0.0) -> void:
+	if state == State.USE and using != &"":
+		var interrupted := using
+		using = &""
+		use_interrupted.emit(interrupted)
 	if new_state != State.ATTACK:
 		_profile = null
 		_contact_open = false
