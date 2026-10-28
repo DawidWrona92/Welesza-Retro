@@ -26,6 +26,9 @@ Nie ma pól, rozległych miejskich placów, sieci podziemi pod każdym domem ani
 | Strażnica osady, ZON-straznica-niemir | Plac; dojście bez zagadki | Wspólna latarnia i krótka wizyta przy powrocie z ruin | Wszebora |
 | Domy przy palisadzie, ZON-domy | Krótka pętla wracająca do placu | Prywatność, żałoba, ślady życia; bez przeszukiwania kilkunastu pustych wnętrz | Dzierżka, Mściwuj, Borzęta, Wojsława |
 
+**Koncepty zabudowy:** [strażnica ze wspólną latarnią](art/lokacje/niemir/budynki/straznica.png), [kuźnia](art/lokacje/niemir/budynki/kuznia.png), [chata zielarki](art/lokacje/niemir/budynki/chata_zielarki.png), [dom kupca ze składem](art/lokacje/niemir/budynki/dom_kupca_i_sklad.png), [domy przy palisadzie](art/lokacje/niemir/budynki/domy_przy_palisadzie.png). Koncepty na białym tle są referencjami wyglądu.
+
+
 **Czcibor** [DECYZJA AUTORA, 28.10.2026] jest łowcą i jednym z pierwszych informatorów gracza, nie zaginionym lokatorem. Lokatorem z „Trzeciego przy stole” jest wędrowny cieśla Uniegost.
 
 Nie wprowadzamy w demie swobodnego zabijania NPC: LPM na mieszkańcu inicjuje interakcję, nie wrogi cios. To propozycja zakresu i ochrony zadań, nie reguła świata, że mieszkańcy są nieśmiertelni. Nauka parady z Żegotą działa w osobnym, bezpiecznym ćwiczeniu.
