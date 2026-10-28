@@ -1,0 +1,44 @@
+{
+  "schema": "welesza.asset.v1",
+  "id": "CHR-zegota",
+  "kind": "character",
+  "canvas": [
+    512,
+    512
+  ],
+  "anchor": [
+    256,
+    448
+  ],
+  "status": "test",
+  "source": "GPT-6",
+  "background": "transparent",
+  "directions": [
+    "s",
+    "sw",
+    "w",
+    "nw",
+    "n",
+    "ne",
+    "e",
+    "se"
+  ],
+  "layers": [
+    "full"
+  ],
+  "animations": {
+    "idle": {
+      "frames": 4,
+      "fps": 12,
+      "loop": true
+    },
+    "talk": {
+      "frames": 6,
+      "fps": 12,
+      "loop": false
+    }
+  },
+  "collision": {
+    "circle": 36
+  }
+}
