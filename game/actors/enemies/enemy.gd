@@ -263,6 +263,11 @@ func _set_mode(new_mode: Mode) -> void:
 		add_to_group(ACTIVE_GROUP)
 	elif not active and is_in_group(ACTIVE_GROUP):
 		remove_from_group(ACTIVE_GROUP)
+	var in_combat := mode in [Mode.ALERT, Mode.ENGAGE, Mode.WARN, Mode.ATTACK]
+	if in_combat:
+		add_to_group(Prop.OCCLUSION_GROUP)  # zapowiedź ataku ma być widoczna za koroną i pniem
+	elif is_in_group(Prop.OCCLUSION_GROUP):
+		remove_from_group(Prop.OCCLUSION_GROUP)
 	_set_vulnerable(mode != Mode.RETURN and mode != Mode.DEAD)
 	_refresh_tint()
 	mode_changed.emit(mode)

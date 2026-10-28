@@ -47,6 +47,7 @@ var _combat: Node
 
 func _ready() -> void:
 	add_to_group(HERO_GROUP)
+	add_to_group(Prop.OCCLUSION_GROUP)
 	_combat = get_node_or_null(COMBAT_NODE)
 	if _combat and _combat.has_signal(&"dash_requested"):
 		_combat.connect(&"dash_requested", _on_dash_requested)
