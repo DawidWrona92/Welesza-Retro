@@ -106,7 +106,7 @@ Bank pomysłów, nie plan. Warunki: lokacja wynika z geografii/gospodarki, bada 
 
 **Bohater demo** idzie Wielkim Traktem na wschód; cel nieznany graczowi (przypadkowy podróżnik — nikt nie jedzie na wschód dla przygody, na wschód się jedzie, bo trzeba).
 
-**Geografia dalekiego wschodu (kanon wewnętrzny twórców, nigdy w grze):** daleko za Niemirem stoi **ostatnie miasto** — ostoja cywilizacji na krawędzi znanej krainy; a za nim **Stare Serce Imperium**, pełne wiedzy i artefaktów. Drogi imperium prowadzą tam. Nikt w grze się tego nie dowie; świedectwa mogą tylko przeciekać (pieśni, szaleńcy, jedna strona z księgi).
+**Geografia dalekiego wschodu:** daleko za Niemirem stoi **ostatnie miasto** — ostoja cywilizacji na krawędzi znanej krainy. **Stare Serce Imperium traktujemy jako legendę:** podobno pełne wiedzy i artefaktów, ale nikt stamtąd nie wrócił, a jeśli ktoś wrócił — to odmieniony i szalony. Drogi imperium podobno prowadzą tam. Świadectwa istnieją wyłącznie jako pieśni, opowieści szaleńców i pojedyncze strony ksiąg; w grze nigdy jako fakt.
 
 **Konsekwencja dla doliny Niemiru:** dolina to pierwsza pułapka na drodze każdego, kto tak myśli — wóz z księgą przewozową („Niemir — nie zatrzymywać się”) to dosłowne ostrzeżenie dla takich ludzi.
 
