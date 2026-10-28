@@ -20,7 +20,7 @@ Nie ma pól, rozległych miejskich placów, sieci podziemi pod każdym domem ani
 | Brama, ZON-brama | Rozstaj ↔ plac | Jedyny główny powrót; ciepłe światło ponad bramą, rzemienie pod dachem | Żegota; Nawoja przed wyprawami; Czcibor jako jeden z pierwszych informatorów |
 | Dziedziniec, ZON-dziedziniec | Brama ↔ kuźnia | Ubita ziemia, trening bez ryzyka, wyraźnie otwarty środek | Żegota podczas ćwiczeń |
 | Plac przy źródle, ZON-plac | Brama ↔ usługi ↔ strażnica | Skała i woda jako stały punkt orientacyjny; miejsce na wozy, nie monumentalny rynek | Domarad, Sambor, Milorad |
-| Dom kupca ze składem, ZON-sklad [DECYZJA AUTORA, 28.10.2026] | Bezpośrednio przy placu | Największy dom w osadzie z przylegającym składem; pozostali kupcy rozkładają towar na placu | Kupiec, gospodarz składu |
+| Dom kupca ze składem, ZON-sklad [DECYZJA AUTORA, 28.10.2026] | Bezpośrednio przy placu | Największy dom w osadzie z przylegającym składem; jedyne miejsce, gdzie płaci się monetą [DECYZJA AUTORA, 28.10.2026]. Pozostali kupcy rozkładają towar na placu i handlują wymiennie | Kupiec, gospodarz składu |
 | Dom gościnny, ZON-dom-goscinny | Bezpośrednio przy placu | Nocleg, zapis i powrót po wyprawie; ława dla gości przy wejściu | Miłka, Sulir |
 | Kuźnia i chata zielarki, ZON-uslugi | Plac ↔ dziedziniec | Dwa odrębne domy po tej samej stronie placu; ogień i suszące się zioła | Radost, Dobrawa |
 | Strażnica osady, ZON-straznica-niemir | Plac; dojście bez zagadki | Wspólna latarnia i krótka wizyta przy powrocie z ruin | Wszebora |
