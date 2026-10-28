@@ -4,12 +4,12 @@ extends Node2D
 const HERO_SCENE := preload("res://actors/hero/hero.tscn")
 const DOG_SCENE := preload("res://actors/enemies/zdziczaly-pies/pies.tscn")
 const TREE_POSITIONS: Array[Vector2] = [
-	Vector2(-590, 310),
-	Vector2(-550, -150),
-	Vector2(-680, 50),
-	Vector2(610, 320),
-	Vector2(650, 40),
-	Vector2(540, -160),
+	Vector2(-900, 430),
+	Vector2(-850, -150),
+	Vector2(-1080, 50),
+	Vector2(900, 440),
+	Vector2(1000, 40),
+	Vector2(850, -180),
 ]
 
 var hero: Hero
@@ -45,9 +45,9 @@ func _build_world() -> void:
 	for point in TREE_POSITIONS:
 		var tree := _add_prop("PROP-drzewo-lisciaste-pixel", point)
 		_trees.append(tree)
-	_add_prop("PROP-woz-pixel", Vector2(380, -170))
-	_add_prop("PROP-kamien-pixel", Vector2(-350, 150))
-	_add_prop("PROP-kamien-pixel", Vector2(420, 230))
+	_add_prop("PROP-woz-pixel", Vector2(640, -270))
+	_add_prop("PROP-kamien-pixel", Vector2(-640, 230))
+	_add_prop("PROP-kamien-pixel", Vector2(640, 300))
 	var navigation := NavigationRegion2D.new()
 	var polygon := NavigationPolygon.new()
 	polygon.add_outline(
@@ -65,20 +65,22 @@ func _build_world() -> void:
 	navigation.bake_navigation_polygon(false)
 	hero = HERO_SCENE.instantiate() as Hero
 	hero.get_node("Sprite").asset_id = "HERO-bohater-pixel"
-	hero.get_node("Sprite").walk_cycle_distance = 140.0
-	hero.get_node("Camera2D").enabled = false
 	hero.position = Vector2(-100, 100)
 	add_child(hero)
 	_add_shadow(hero, 32.0)
 	dog = DOG_SCENE.instantiate() as Dog
 	dog.get_node("Sprite").asset_id = "ENM-zdziczaly-pies-pixel"
-	dog.get_node("Sprite").walk_cycle_distance = 100.0
 	dog.position = Vector2(130, 25)
 	add_child(dog)
 	_add_shadow(dog, 24.0)
-	var camera := Camera2D.new()
-	camera.position = Vector2(0, -70)
-	add_child(camera)
+	var camera: Camera2D = hero.get_node("Camera2D")
+	camera.offset = Vector2(0, -100)
+	camera.position_smoothing_enabled = true
+	camera.limit_left = -1280
+	camera.limit_right = 1280
+	camera.limit_top = -768
+	camera.limit_bottom = 768
+	camera.reset_smoothing()
 	hero.get_node("Combat").hit_landed.connect(_on_hero_hit)
 	dog.get_node("Combat").hit_landed.connect(_on_dog_hit)
 	hero.died.connect(func() -> void: _status.text = "Zginąłeś.  [R] Spróbuj ponownie")
@@ -160,14 +162,14 @@ func _build_hud() -> void:
 	_text(top, "Trakt pod Niemirem", 16)
 	_text(top, "PRÓBA KIERUNKU  /  PIXEL ART", 12, Color("87968b"))
 	var target := VBoxContainer.new()
-	target.position = Vector2(510, 32)
+	target.position = Vector2(830, 32)
 	hud.add_child(target)
 	var target_name := _text(target, "ZDZICZAŁY PIES", 14, Color("cfad75"))
 	target_name.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_dog_health = _meter(target, "895d43", 260)
 	var bottom := PanelContainer.new()
-	bottom.position = Vector2(32, 592)
-	bottom.size = Vector2(1216, 100)
+	bottom.position = Vector2(32, 952)
+	bottom.size = Vector2(1856, 100)
 	bottom.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	bottom.add_theme_stylebox_override("panel", _panel_style("18242af0", "604833"))
 	hud.add_child(bottom)

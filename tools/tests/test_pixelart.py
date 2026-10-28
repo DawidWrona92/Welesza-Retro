@@ -11,6 +11,8 @@ from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from pixelart_generator import PROFILE, apply_override, pixelate, stabilize_walk
 from check_pixelart import frame_issues
+from pixelart_motion import foot_path, knee_point, connected_body
+from pixelart_terrain import iso, make_ground, TERRAIN_COLORS
 
 
 class PixelArtTest(unittest.TestCase):
@@ -85,3 +87,45 @@ class PixelArtTest(unittest.TestCase):
                              stable.crop((32, 0, 64, 32)).tobytes())
         with self.assertRaises(ValueError):
             stabilize_walk(sheet, (32, 32), 3, 2)
+
+    def test_support_foot_stays_in_world_and_other_foot_lifts(self):
+        stride = 64.0
+        contacts = [foot_path(p, stride, .58, 5) for p in (.05, .15, .25, .35, .45, .55)]
+        world_x = [pose[0]+stride*p for pose, p in zip(contacts, (.05, .15, .25, .35, .45, .55))]
+        self.assertLess(max(world_x)-min(world_x), 1e-9)
+        self.assertTrue(all(pose[1] == 0 and pose[2] for pose in contacts))
+        self.assertGreater(foot_path(.78, stride, .58, 5)[1], 4)
+        self.assertNotEqual(foot_path(.2, stride, .58, 5)[1], foot_path(.7, stride, .58, 5)[1])
+
+    def test_knee_respects_bone_lengths_through_full_cycle(self):
+        for phase in np.linspace(0, 1, 120):
+            forward, lift, _ = foot_path(phase, 64, .58, 5)
+            hip, foot = (0, 33), (forward, lift)
+            knee = knee_point(hip, foot, 20, 20)
+            self.assertAlmostEqual(float(np.linalg.norm(np.array(knee)-hip)), 20)
+            self.assertAlmostEqual(float(np.linalg.norm(np.array(knee)-foot)), 20)
+
+    def test_iso_square_has_two_to_one_diamond_and_no_perspective_scale(self):
+        points = [iso(u, v) for u, v in [(-10, -10), (10, -10), (10, 10), (-10, 10)]]
+        self.assertEqual(max(p[0] for p in points)-min(p[0] for p in points), 40)
+        self.assertEqual(max(p[1] for p in points)-min(p[1] for p in points), 20)
+        near = np.array(iso(8, 8))-iso(0, 0)
+        far = np.array(iso(1008, 1008))-iso(1000, 1000)
+        np.testing.assert_array_equal(near, far)
+
+    def test_removed_boot_fragment_does_not_survive_in_torso(self):
+        image = Image.new("RGBA", (32, 32))
+        image.paste((80, 60, 40, 255), (10, 3, 20, 24))
+        image.paste((80, 60, 40, 255), (26, 28, 30, 32))
+        clean = connected_body(image)
+        self.assertEqual(clean.getpixel((12, 12))[3], 255)
+        self.assertEqual(clean.getpixel((28, 30))[3], 0)
+
+    def test_terrain_is_dark_native_resolution_and_deterministic(self):
+        image = make_ground(self.profile, (256, 160))
+        self.assertEqual(image.size, (256, 160))
+        self.assertEqual(image.tobytes(), make_ground(self.profile, (256, 160)).tobytes())
+        data = np.asarray(image)
+        luma = data[:, :, 0]*.2126 + data[:, :, 1]*.7152 + data[:, :, 2]*.0722
+        self.assertLess(float(np.median(luma)), 55)
+        self.assertLess(float(np.percentile(luma, 99)), 80)

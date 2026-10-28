@@ -40,6 +40,7 @@ func load_asset(id: String) -> Error:
 		push_error("Brak zbudowanego assetu %s; uruchom tools/sprite_pipeline.py" % id)
 		return ERR_FILE_NOT_FOUND
 	meta = JSON.parse_string(FileAccess.get_file_as_string(meta_path))
+	walk_cycle_distance = float(meta.get("walk_cycle_distance", walk_cycle_distance))
 	asset_id = id
 	_events = build_event_table(meta.get("animations", {}))
 	for child in _layers.values():

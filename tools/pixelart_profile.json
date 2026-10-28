@@ -2,7 +2,8 @@
   "pixel_size": 2,
   "alpha_threshold": 112,
   "contrast": 1.18,
-  "walk_stabilization": {"enabled": true, "max_shift": 18},
+  "walk_stabilization": {"enabled": false, "max_shift": 18},
+  "walk_rig": "_pixel_rigs/walk.json",
   "seed": 731,
   "asset_tints": {
     "PROP-drzewo-lisciaste": [0.45, 0.64, 0.48],

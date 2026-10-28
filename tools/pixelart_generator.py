@@ -19,7 +19,9 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter
 
-from sprite_pipeline import build
+from sprite_pipeline import build, _write_sprite_frames
+from pixelart_motion import rig_walk
+from pixelart_terrain import make_ground, projection_guide
 from welesza_assets import ART_SRC, GAME_ASSETS, REPO
 
 ASSETS = ("HERO-bohater", "ENM-zdziczaly-pies", "PROP-drzewo-lisciaste", "PROP-kamien", "PROP-woz")
@@ -114,45 +116,6 @@ def stabilize_walk(sheet: Image.Image, cell: tuple[int, int], frames: int,
     return result, corrections
 
 
-def make_ground(profile: dict) -> Image.Image:
-    """Autorski teren z klastrów pikseli, bez modelu generatywnego i tekstur GPT."""
-    rng = random.Random(profile["seed"])
-    im = Image.new("RGB", (896, 544), "#233339")
-    d = ImageDraw.Draw(im)
-    grass = ["#202923", "#2c392b", "#3c4c32", "#52603b", "#6a7548"]
-    earth = ["#352a24", "#49382a", "#604833", "#7c5b3c", "#997348"]
-    # Pochylony trakt, łagodne zmiany szerokości; piksele pogrupowane w płaskie kamyczki.
-    for y in range(544):
-        for x in range(896):
-            center = 445 + (y - 272) * 0.60 + 19 * np.sin(y / 70)
-            edge = abs(x - center) / (130 + 10 * np.sin(y / 43))
-            if edge < 1:
-                c = earth[1 if edge > .85 else 2]
-            else:
-                c = grass[1]
-            d.point((x, y), fill=c)
-    for _ in range(37000):
-        x, y = rng.randrange(896), rng.randrange(544)
-        center = 445 + (y - 272) * .60 + 19 * np.sin(y / 70)
-        distance = abs(x - center)
-        road = distance < 128 + rng.randrange(-20, 20)
-        colors = earth if road else grass
-        color = rng.choices(colors, [2, 4, 5, 3, 1])[0]
-        w, h = rng.randrange(1, 6), rng.randrange(1, 3)
-        d.rectangle((x, y, x + w, y + h), fill=color)
-        if not road and rng.random() < .2:
-            d.line((x, y, x + 1, y - 3), fill=grass[3])
-    # Kałuże z poziomymi odbiciami, zgodne z izometrią.
-    for x, y, w in [(459, 400, 43), (405, 306, 25), (431, 179, 32), (532, 459, 21), (352, 92, 19)]:
-        poly = [(x-w,y), (x-w//2,y-5), (x+w//3,y-7), (x+w,y-1), (x+w//2,y+6), (x-w//3,y+5)]
-        d.polygon(poly, fill="#30464a")
-        d.line([(x-w+5,y+2),(x-w//4,y+4),(x+w//2,y+2)], fill="#5d7574", width=1)
-        for _ in range(12):
-            px, py = x + rng.randrange(-w//2, w//2), y + rng.randrange(-3, 4)
-            d.line((px, py, px + rng.randrange(2, 8), py), fill="#41595b")
-    return im.resize((1792, 1088), Image.Resampling.NEAREST)
-
-
 def motion_preview(out_root: Path, review: Path, profile: dict, attack: bool = False) -> None:
     """Osiem kierunków jednocześnie: ocena pętli/ciosu bez ręcznego cięcia atlasów."""
     hero_anim, dog_anim = ("attack", "leap") if attack else ("walk", "walk")
@@ -183,6 +146,17 @@ def generate(profile: dict, source_root: Path = ART_SRC, out_root: Path = GAME_A
         raise ValueError("Niepoprawna siatka lub próg alfa")
     report = {"profile": profile, "generator_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
               "inputs": {}, "overrides": {}, "outputs": {}, "stabilization": {}}
+    rig_path = source_root / profile["walk_rig"]
+    rigs = json.loads(rig_path.read_text())
+    report["inputs"][rig_path.relative_to(source_root).as_posix()] = hashlib.sha256(rig_path.read_bytes()).hexdigest()
+    for name in ("TILE-sciolka", "TILE-bloto"):
+        for path in sorted((source_root / name).glob("*.png")):
+            report["inputs"][path.relative_to(source_root).as_posix()] = hashlib.sha256(path.read_bytes()).hexdigest()
+    report["generator_sources"] = {
+        name: hashlib.sha256(Path(__file__).with_name(name).read_bytes()).hexdigest()
+        for name in ("pixelart_motion.py", "pixelart_terrain.py")
+    }
+    walk_telemetry = {}
     previews = []
     with tempfile.TemporaryDirectory() as tmp:
         cache = Path(tmp)
@@ -214,7 +188,7 @@ def generate(profile: dict, source_root: Path = ART_SRC, out_root: Path = GAME_A
                                                             source_meta["animations"]["walk"]["frames"],
                                                             stabilization["max_shift"])
                         report["stabilization"][asset_id] = corrections
-                    if overrides:
+                    if overrides and not (p.stem == "walk" and asset_id in rigs):
                         patch = overrides / asset_id / p.name
                         small = apply_override(small, patch, profile["palette"])
                         for f in [patch, patch.with_suffix(".erase.png")]:
@@ -231,13 +205,44 @@ def generate(profile: dict, source_root: Path = ART_SRC, out_root: Path = GAME_A
                 else:
                     text = p.read_text(encoding="utf-8").replace(asset_id, dest_id)
                     (dest / p.name).write_text(text, encoding="utf-8")
+            if asset_id in rigs:
+                runtime = json.loads((dest / "meta.json").read_text())
+                reference_name = "idle.png" if (dest / "idle.png").exists() else "walk.png"
+                with Image.open(dest / reference_name) as source:
+                    reference = source.convert("RGBA").resize(tuple(v//profile["pixel_size"] for v in source.size),
+                                                               Image.Resampling.NEAREST)
+                walk, telemetry = rig_walk(reference, rigs[asset_id], rigs["frames"], profile["pixel_size"])
+                if overrides:
+                    patch = overrides / asset_id / "walk.png"
+                    walk = apply_override(walk, patch, profile["palette"])
+                    for f in [patch, patch.with_suffix(".erase.png")]:
+                        if f.exists():
+                            report["overrides"][f.relative_to(overrides).as_posix()] = hashlib.sha256(f.read_bytes()).hexdigest()
+                walk.resize((rigs["frames"]*256, 8*256), Image.Resampling.NEAREST).save(dest / "walk.png")
+                runtime["animations"]["walk"] = {
+                    "frames": rigs["frames"], "fps": rigs["fps"], "loop": True,
+                    "events": [{"frame": f, "name": "step"} for f in sorted({
+                        round((-leg["phase"] % 1)*rigs["frames"]) % rigs["frames"]
+                        for leg in rigs[asset_id]["legs"]
+                    })]
+                }
+                runtime["walk_cycle_distance"] = rigs[asset_id]["cycle_distance"]
+                (dest / "meta.json").write_text(json.dumps(runtime, ensure_ascii=False, indent=2)+"\n")
+                items = [(anim, f"{anim}.png", spec["frames"]) for anim, spec in runtime["animations"].items()]
+                _write_sprite_frames(dest / "sprite_frames.tres", dest_id, items,
+                                     ["s", "sw", "w", "nw", "n", "ne", "e", "se"], (256, 256), runtime["animations"])
+                walk_telemetry[asset_id] = telemetry
             for p in sorted(dest.iterdir()):
                 if p.suffix in (".png", ".tres", ".json"):
                     report["outputs"][p.relative_to(out_root).as_posix()] = hashlib.sha256(p.read_bytes()).hexdigest()
     review = out_root / "pixelart"
     review.mkdir(parents=True, exist_ok=True)
-    make_ground(profile).save(review / "clearing.png")
+    ground = make_ground(profile)
+    ground.save(review / "clearing.png")
+    projection_guide(ground).save(review / "projection-guide.png")
+    (review / "walk-poses.json").write_text(json.dumps(walk_telemetry, indent=2)+"\n")
     report["outputs"]["pixelart/clearing.png"] = hashlib.sha256((review / "clearing.png").read_bytes()).hexdigest()
+    report["outputs"]["pixelart/walk-poses.json"] = hashlib.sha256((review / "walk-poses.json").read_bytes()).hexdigest()
     sheet = Image.new("RGBA", (1024, 512), "#233339")
     for i, im in enumerate(previews):
         sheet.alpha_composite(im, ((i % 4) * 256, (i // 4) * 256))

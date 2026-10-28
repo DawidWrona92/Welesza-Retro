@@ -63,6 +63,9 @@ def check() -> dict:
     generator = Path(__file__).with_name("pixelart_generator.py")
     if hashlib.sha256(generator.read_bytes()).hexdigest() != manifest["generator_sha256"]:
         raise ValueError("Generator zmieniony: przebuduj pixel art")
+    for name, digest in manifest.get("generator_sources", {}).items():
+        if hashlib.sha256(Path(__file__).with_name(name).read_bytes()).hexdigest() != digest:
+            raise ValueError(f"Moduł {name} zmieniony: przebuduj pixel art")
     for name, digest in manifest["inputs"].items():
         if hashlib.sha256((ART_SRC / name).read_bytes()).hexdigest() != digest:
             raise ValueError(f"Źródło zmienione: {name}")
@@ -88,6 +91,13 @@ def check() -> dict:
         if source.get("animations", {}) != runtime.get("animations", {}):
             # Runtime dopisuje puste events; normalizujemy wyłącznie ten brak.
             expected = {a: dict(s, events=s.get("events", [])) for a, s in source.get("animations", {}).items()}
+            rigs = json.loads((ART_SRC / profile["walk_rig"]).read_text())
+            if asset_id in rigs:
+                expected["walk"] = {"frames": rigs["frames"], "fps": rigs["fps"], "loop": True,
+                                    "events": [{"frame": f, "name": "step"} for f in sorted({
+                                        round((-leg["phase"] % 1)*rigs["frames"]) % rigs["frames"]
+                                        for leg in rigs[asset_id]["legs"]
+                                    })]}
             if expected != runtime.get("animations", {}):
                 raise ValueError(f"Zdarzenia/czasy animacji zmienione: {asset_id}")
         for path in sorted(dest.glob("*.png")):
@@ -106,7 +116,7 @@ def check() -> dict:
                 continue
             cw, ch = [v // step for v in runtime["cell"]]
             anim = path.stem
-            n = source["animations"][anim]["frames"]
+            n = runtime["animations"][anim]["frames"]
             for row, direction in enumerate(("s", "sw", "w", "nw", "n", "ne", "e", "se")):
                 previous = None
                 for frame in range(n):
