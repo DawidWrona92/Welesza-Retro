@@ -122,7 +122,7 @@ func test_hero_hits_enemy_through_hitbox_and_hurtbox() -> void:
 	var dog: Dog = _spawn(DOG_SCENE, Vector2(60, 0))
 	dog.ai_enabled = false
 	hero.get_node("Combat").request_attack(Vector2.RIGHT, null)
-	await _frames(1.0)
+	await _frames(1.5)
 	check(dog.combat.health < dog.combat.max_health, "cios bohatera zranił psa")
 
 

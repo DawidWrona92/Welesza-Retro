@@ -216,6 +216,9 @@ func on_anim_event(event_name: StringName) -> void:
 		return
 	match event_name:
 		&"hit_start":
+			if _profile and _profile.projectile:
+				_launch_projectile()
+				return
 			_contact_open = true
 			if _profile and _profile.lunge_distance > 0.0:
 				var lunge := _to_world(_attack_dir).normalized() * _profile.lunge_distance
@@ -275,7 +278,7 @@ func register_contact(target: Combat) -> void:
 
 
 func receive_hit(hit: Hit) -> Dictionary:
-	if state == State.GUARD and hit.parryable and _in_guard_sector(hit.origin):
+	if state == State.GUARD and (hit.parryable or hit.blockable) and _in_guard_sector(hit.origin):
 		return _defend(hit)
 	var crit := _rng.randf() < hit.crit_chance
 	var reduction := clampf(armor - hit.armor_pierce, 0.0, max_armor_reduction)
@@ -335,6 +338,18 @@ func _start_profile(profile: AttackProfile, dir: Vector2) -> void:
 	attack_started.emit(0)
 
 
+## Atak z profilem z pociskiem: na hit_start leci pocisk po torze ustalonym przy rozpoczęciu
+## ataku, bez okna trafienia w zwarciu. Strzał liczy się jak trafiony (bez miss_recovery).
+func _launch_projectile() -> void:
+	_landed = true
+	var world := get_parent().get_parent()
+	if world == null:
+		return
+	var shot := Projectile.launch(_profile.projectile, world, self, _position(), _attack_dir)
+	shot.damage = _profile.damage
+	shot.guard_cost = _profile.guard_cost
+
+
 func _on_attack_click() -> void:
 	if _next_queued:
 		return  # bez długiej kolejki ataków
@@ -358,7 +373,7 @@ func _end_chain(reason: StringName) -> void:
 
 
 func _defend(hit: Hit) -> Dictionary:
-	var parried := _parry_ready and _guard_time <= parry_window
+	var parried := hit.parryable and _parry_ready and _guard_time <= parry_window
 	if parried:
 		_parry_ready = false
 		_spend(hit.guard_cost * parry_cost_factor)

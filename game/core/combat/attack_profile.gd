@@ -17,3 +17,6 @@ extends Resource
 @export var recovery := 0.0
 ## Dodatkowy powrót po chybieniu (s): okazja dla gracza, np. ostrze ugrzęzło w ziemi.
 @export var miss_recovery := 0.0
+## Pocisk wypuszczany na hit_start (strzał, rzut) zamiast ciosu w zwarciu. Tor jest prosty
+## i ustalony w chwili wypuszczenia; obrażenia i koszt gardy bierze z tego profilu.
+@export var projectile: PackedScene
