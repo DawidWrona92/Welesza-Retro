@@ -11,6 +11,7 @@ Status: propozycja do akceptacji autora, poza punktami z tabeli ustaleń poniże
 | P3 | Interwencje boskie w scenariuszach: jednorazowe i niewyjaśnialne (płonący miecz w krytycznym momencie, po walce znika; wskrzeszenia itd. — skąd, nikt się nie dowie) | Zapisane jako wzorzec scenariuszowy w „Magii gracza”; nigdy systemowe, nigdy potwierdzone |
 | P4 | Imperium to **jeden system** (Drogi, słupy, znamiona = jedna infrastruktura), funkcja nieznana — wewnętrzna reguła dla twórców, by świadectwa się nie gryzły; gracz nigdy nie pozna celu | „Imperium” trzyma się jednej spójnej teorii wewnętrznej; świadectwa pogłębiane, nie rozstrzygane |
 | P5 | W grze występują urządzenia imperium, które gracz może uruchomić: można „odkręcić”, nigdy nie wiadomo co się stanie, efekt opóźniony/niepewny (wzorzec: latarnia z Niemiru) | Haczyk projektowy w [bibli cz. 2](welesza.md); stosować rzadko, bez wyjaśnień |
+| P6 | Kościół zachodu **jednolity** — wzorzec: Zakarum z Diablo (wygląd prawie-katolicki, hierarchia, spisy, misje, sekretne brudy). Wielu bogów (P2) dotyczy Weleszy i bogów słowiańskich miejscowych, nie Kościoła | Kościół = jedna instytucja z jedną doktryną; w Weleszy lokalni bogowie i chramy bez wspólnego panteonu |
 
 ## Zasada nadrzędna: top-up
 
@@ -68,11 +69,11 @@ Ludzie nie wiedzą, że to „imperium”. Znają „stare kamienie” i „drog
 
 ## Religie i wiara
 
-Religia jest realnym zjawiskiem społecznym. W świecie istnieją religie, chramy i kilku bogów — **w różnych miejscach różni bogowie**; nie ma jednego panteonu dla całej krainy. „Co jest na górze” pozostaje pytaniem otwartym dla wszystkich, także dla twórców. To był cud czy przypadek, kto jest świętym a kto nie — nikt nie rozstrzygnie. Jedni znają dogmaty lepiej; w sąsiedniej wiosce czczą innego boga albo tego samego inaczej i obie strony uważają się za pobożne.
+Religia jest realnym zjawiskiem społecznym. **W Weleszy istnieją religie, chramy i kilku bogów — w różnych miejscach różni, bez wspólnego panteonu** (bogowie słowiańscy, lokalni). „Co jest na górze” pozostaje pytaniem otwartym dla wszystkich, także dla twórców. To był cud czy przypadek, kto jest świętym a kto nie — nikt nie rozstrzygnie. W sąsiedniej wiosce czczą innego boga albo tego samego inaczej i obie strony uważają się za pobożne.
 
-**Zachód:** wiara ustrukturyzowana (hierarchia, dogmat, pismo, odruchy inkwizycyjne wobec nieznanej magii). Wygląda pewnie, bo pewność jest jej produktem. Kapłan wie, że jego obrzęd działa i że sąsiedni jest zabobonem — czy to wiedza, czy buta, gracz się nie dowie. Funkcja: realnie naucza, leczy, spisuje — i realnie przeszkadza.
+**Zachód — Kościół jednolity** (decyzja P6, wzorzec: Zakarum z Diablo): jedna instytucja, jedna doktryna, wygląd prawie-katolicki — hierarchia, katedry, procesje, spisy, odruchy inkwizycyjne wobec nieznanej magii, misje na wschód i sekretne brudy w fundamentach, których wierni nie znają. Wygląda pewnie, bo pewność jest jej produktem. Kapłan wie, że jego obrzęd działa i że sąsiedni jest zabobonem — czy to wiedza, czy buta, gracz się nie dowie. Funkcja: realnie naucza, leczy, spisuje — i realnie przeszkadza. Imiona i doktryna Kościoła — do ustalenia z autorem zgodnie z kierunkiem artystycznym.
 
-**Wschód:** wiara na czuja. Cześć przed nieznanym: kamień, drzewo, źródło, most — wszystko starszego niż ludzka pamięć może być miejscem obrzędu. Jeśli lokacja zawiera pozostałość imperium, ktoś ją niemal na pewno czci, nie wiedząc czemu. Obrzędy są inżynierią społeczną: trzymaniem porządku, pamięci i dystansu wobec lasu. Znachorzy i wieszczki przenoszą religijność przez ludzi, nie instytucje; ich wiedza o ziołach, porach i ptakach jest nierozłączna z magiczną.
+**Wschód (Welesza):** wiara na czuja, bogowie miejscowi bez wspólnego panteonu. Cześć przed nieznanym: kamień, drzewo, źródło, most — wszystko starszego niż ludzka pamięć może być miejscem obrzędu. Jeśli lokacja zawiera pozostałość imperium, ktoś ją niemal na pewno czci, nie wiedząc czemu. Obrzędy są inżynierią społeczną: trzymaniem porządku, pamięci i dystansu wobec lasu. Znachorzy i wieszczki przenoszą religijność przez ludzi, nie instytucje; ich wiedza o ziołach, porach i ptakach jest nierozłączna z magiczną.
 
 **Kult latarni w Niemirze** ([fabula](fabula.md)): klasyczny kult resztkowy wokół działającej pozostałości imperium. Nie potwierdzamy, że latarnia „realnie” utrzymuje las na dystans — ani że nie utrzymuje. Rola Wszebory to prototyp wschodniego „kapłana”: autorytet przez obrzęd i pamięć, nie dogmat.
 
