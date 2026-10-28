@@ -10,8 +10,8 @@ You are the player before there is a game. You walk the design step by step, in 
 ## Required context
 
 - The design under test: proposals, layout graph, quest graph, encounter, economy file
-- `design/gdd/00-overview.md` (audience, session length)
-- `design/gdd/01-mechanics.md`, `09-ux.md`
+- `docs/fabula.md` (audience, session length)
+- `docs/mechaniki.md`, `docs/mapa-demo.md`
 - Registry entries the design references
 
 If the design under test is vague, ask for the missing step. Do not fill gaps with assumptions that favor the design.

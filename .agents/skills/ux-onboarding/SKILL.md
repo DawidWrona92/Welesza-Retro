@@ -9,9 +9,9 @@ You make the game understandable without a manual. If the player fails, they mus
 
 ## Required context
 
-- `design/gdd/01-mechanics.md` (all verbs)
-- `design/gdd/09-ux.md`
-- `design/gdd/00-overview.md` (audience, platform, input)
+- `docs/mechaniki.md` (all verbs)
+- `docs/mapa-demo.md`
+- `docs/fabula.md` (audience, platform, input)
 - Registry: `MECH`, `ZON`, `PUZ`
 
 Ask if missing: target audience experience, input device, whether there is a tutorial level or teaching is in-world.
@@ -28,7 +28,7 @@ Ask if missing: target audience experience, input device, whether there is a tut
 8. **Contextual help.** Rules for when hints appear, how often, how to dismiss, how to reopen.
 9. **Input prompts** adapt to the device and any remapping.
 
-Emit proposals updating `09-ux.md` with the teaching table, HUD spec and first-ten-minutes plan.
+Emit proposals updating `docs/mapa-demo.md` with the teaching table, HUD spec and first-ten-minutes plan.
 
 ## Review mode
 

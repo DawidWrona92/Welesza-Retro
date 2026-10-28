@@ -49,7 +49,7 @@ Persistencja przedmiotu (pakunki/księga), trzech słupów, bossa Dźwigacza, zi
 
 ## E. Zjawiska fabularne (mechanizm OTWARTY)
 
-- **Droga, która wraca:** wariant A: zwykła zarośnięta pętla, B: zmieniona topologia przestrzeni bez widocznej przerwy. W grafie v0.2 przedstawiono A wyłącznie jako makietę; porównanie i ryzyko w [`VARIANTS.md`](VARIANTS.md). Nie wolno przedstawiać A jako zatwierdzonego wyjaśnienia nadprzyrodzonego zjawiska.
+- **Droga, która wraca:** wariant B (decyzja autora): zmieniona topologia przestrzeni bez widocznej przerwy, odczuwana przez rozjazd mapy bohatera. W grafie v0.2 polilinia A jest tylko makietą; porównanie i ryzyko w [`VARIANTS.md`](VARIANTS.md). Nie wolno przedstawiać A jako zatwierdzonego wyjaśnienia nadprzyrodzonego zjawiska.
 - **Latarnia:** po `village_lamp_lit` droga staje się dostępna. L1: ujawniona, L2: znika realna przeszkoda, L3: czytelność orientacji. **Nie ustala się** korzeni, mgły ani skarpy jako obowiązkowej blokady.
 - **Skrót obozu:** odblokowanie od strony obozu jest propozycją dotychczasowej mapy; wymaganie płynnej podróży nadal obowiązuje przy nawrocie.
 

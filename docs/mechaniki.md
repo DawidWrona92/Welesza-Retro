@@ -149,7 +149,7 @@ To droga wyjścia z bankructwa, nie optymalny zamiennik przygotowania. Zawartoś
 
 ### C. Odwrót
 
-Odwrót jest fizycznym opuszczeniem zagrożenia i powrotem odkrytą trasą. Nie dodajemy portalu pozwalającego zniknąć w trakcie ciosu. Po przejściu lochu otwiera się krótsze przejście powrotne do początku wyprawy, czasem z drobną nagrodą ([zasada powrotu](mapa-demo.md)).
+Odwrót jest fizycznym opuszczeniem zagrożenia i powrotem odkrytą trasą. Nie dodajemy portalu pozwalającego zniknąć w trakcie ciosu. Po przejściu lochu otwiera się krótsze przejście powrotne do początku wyprawy, czasem z drobną nagrodą ([zasada powrotu](world/README.md#droga-główna-i-powroty)).
 
 Zwycięstwa, znalezione przedmioty, zużyte zapasy i postęp zadania pozostają. Odebrane nagrody nie są przyznawane ponownie. Zwykli pokonani przeciwnicy nie odradzają się po odpoczynku w tym demie.
 

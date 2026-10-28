@@ -51,7 +51,7 @@ Nie wszyscy wierzą w te obyczaje. Wszyscy ich przestrzegają. Ich obecność w 
 
 Nocą gwałtownie wezbrany potok niszczy most na trakcie. Rano próbujesz wrócić ścieżką, którą przyszedłeś — i znajdujesz porzucony wóz, choć powinien leżeć po przeciwnej stronie osady.
 
-Można to sprawdzić podczas gry: zostawiasz znak na drzewie, idziesz dalej i wychodzisz przy nim z innego kierunku.
+Można to sprawdzić podczas gry: zostawiasz znak na drzewie, idziesz dalej i wychodzisz przy nim z innego kierunku. Twoja mapa przestaje się zgadzać: droga zawraca na papierze, a wóz jest na niej dwa razy.
 
 Mieszkańcy znają to zjawisko. Nazywają je zamknięciem boru. Nie zgadzają się co do jego przyczyny. Najstarsza mieszkanka utrzymuje, że poprzednim razem droga wróciła sama. Na pytanie, jak długo to trwało, odmawia odpowiedzi.
 

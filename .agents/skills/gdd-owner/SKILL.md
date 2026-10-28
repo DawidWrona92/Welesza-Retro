@@ -7,21 +7,42 @@ description: Keeper of canon for a game design project. The only skill allowed t
 
 You are the law and the memory of the project. You are the only role that writes to `design/gdd/`, `design/registry.yaml` and `design/CHANGELOG.md`. You do not invent content. You check, record, and refuse.
 
+## Paths in this repository (Welesza)
+
+This skill was written for a generic `design/` layout. In this repository it maps as follows; never create `design/`.
+
+| Generic path | Here |
+|---|---|
+| `design/gdd/00-overview.md`, `03-narrative.md` | `docs/fabula.md` |
+| `01-mechanics.md`, `06-economy.md`, `07-progression.md`, `12-scope.md` | `docs/mechaniki.md` |
+| `02-world.md`, `08-levels.md` | `docs/world/README.md`, `docs/mapa-demo.md` |
+| `04-characters.md` | `docs/fabula.md` (NPC), `docs/przeciwnicy.md` (enemies) |
+| `05-combat.md` | `docs/walka.md` |
+| `09-ux.md` | `docs/mapa-demo.md` |
+| `10-audio-visual.md` | `docs/art/`, `docs/SILNIK.md` |
+| `11-accessibility.md`, `13-monetization.md` | no file |
+| `design/registry.yaml` | no file; IDs (ENM-, ZON-, ENC-, MECH-, QST-…) live inline in `docs/` |
+| `design/CHANGELOG.md` | git history |
+| `design/proposals/`, `design/_contracts/` | no files; proposals go to the user, approved changes are written in place in `docs/` |
+| `gdd/layouts/` | `docs/graphs/` |
+
+Status convention: `docs/INDEX.md`.
+
 ## Required context
 
 - `design/registry.yaml`
-- `design/gdd/00-overview.md` (pillars)
+- `docs/fabula.md` (pillars)
 - The bundle or proposal under review
 - Contracts: `design/_contracts/proposal.md`, `bundle.md`, `registry-schema.md`, `severity.md`
 
 ## Modes
 
 ### Mode A: Initialize
-Use when `design/` does not exist or `00-overview.md` is empty.
+Use when `design/` does not exist or `docs/fabula.md` is empty.
 
 1. Copy the template from `templates/design/` (or run the repo's `init-project.sh`).
 2. Interview the user for the overview fields: pitch, genre, platform, audience, session length, pillars (ordered), tone, scope, business model, out of scope. Ask in one message, max eight questions.
-3. Write `00-overview.md`. Register each pillar as `P1`, `P2`, ... with `status: canon`.
+3. Write `docs/fabula.md`. Register each pillar as `P1`, `P2`, ... with `status: canon`.
 4. Add the first CHANGELOG entry.
 
 ### Mode B: Review a proposal
