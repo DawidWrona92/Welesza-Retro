@@ -2,8 +2,19 @@ extends SceneTree
 ## Uruchamia wszystkie testy res://tests/test_*.gd bez okna:
 ## godot --headless --path game --script res://tests/run_tests.gd
 
+var _started := false
 
-func _initialize() -> void:
+
+## Testy ruszają w pierwszej klatce: w _initialize root nie jest jeszcze w drzewie, więc węzły
+## dodane do niego nie dostają _ready ani fizyki.
+func _process(_delta: float) -> bool:
+	if not _started:
+		_started = true
+		_run_all()
+	return false
+
+
+func _run_all() -> void:
 	var failed := 0
 	var total := 0
 	for file in DirAccess.get_files_at("res://tests"):
@@ -18,7 +29,7 @@ func _initialize() -> void:
 			var suite: Object = script.new()
 			if suite.has_method("setup"):
 				suite.call("setup", root)
-			suite.call(name)
+			await suite.call(name)
 			if suite.has_method("teardown"):
 				suite.call("teardown")
 			if suite.failures.is_empty():

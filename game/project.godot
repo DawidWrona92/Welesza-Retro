@@ -5,7 +5,7 @@ config_version=5
 [application]
 
 config/name="Welesza"
-run/main_scene="res://main.tscn"
+run/main_scene="res://world/sandbox/sandbox.tscn"
 config/features=PackedStringArray("4.7")
 
 [autoload]
@@ -28,6 +28,12 @@ window/stretch/aspect="keep"
 texture={
 "mipmaps/generate": true
 }
+
+[layer_names]
+
+2d_physics/layer_1="world"
+2d_physics/layer_2="hero"
+2d_physics/layer_3="enemies"
 
 [rendering]
 
