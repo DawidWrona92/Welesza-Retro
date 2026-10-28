@@ -1,21 +1,20 @@
 extends Node2D
 ## Sandbox: szara scena z prostych brył do prototypowania ruchu i walki (T10–T13).
 ##
-## Zapis i wczytanie w wersji minimalnej (docs/mechaniki.md, część II D): punkt zapisu na ziemi
-## robi bezpieczny zapis poza walką; po śmierci bohatera wczytywany jest ten zapis i scena startuje
-## od nowa. Stan bohatera leży w fladze GameState, pokonani przeciwnicy w GameState.collected.
+## Zapis i wczytanie w wersji minimalnej (docs/mechaniki.md, część II D): zapis przy starcie
+## sandboksa i pod klawiszem debugowym (F5), po śmierci ekran śmierci i wczytanie zapisu. Stan
+## bohatera (zdrowie, miejsce, zapasy) leży w fladze GameState; stan świata dojdzie w T15.
 
 const HERO_FLAG := &"hero"
 
 @export var save_slot := "sandbox"
 @export var respawn_delay := 2.5
 
-var _saved_this_visit := false
 var _respawning := false
 
 @onready var _navigation: NavigationRegion2D = $NavigationRegion2D
 @onready var _hero: Hero = $Hero
-@onready var _checkpoint: Area2D = $Checkpoint
+@onready var _death_screen: Control = $Hud/DeathScreen
 @onready var _health_bar: ProgressBar = $Hud/HealthBar
 @onready var _bar: ProgressBar = $Hud/StaminaBar
 @onready var _supplies: Label = $Hud/Supplies
@@ -40,16 +39,13 @@ func _ready() -> void:
 	_hero.healing.blocked.connect(_on_heal_blocked)
 	_on_supplies_changed(_hero.healing.bandages, _hero.healing.potions)
 	_hero.died.connect(_on_hero_died)
+	if save_checkpoint() != OK:
+		push_warning("Zapis przy starcie sandboksa nie powiódł się")
 
 
-func _physics_process(_delta: float) -> void:
-	var inside := _checkpoint.overlaps_body(_hero)
-	if not inside:
-		_saved_this_visit = false
-	elif not _saved_this_visit and can_save_now():
-		_saved_this_visit = true
-		if save_checkpoint() == OK:
-			_show("Zapisano")
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed(&"debug_save"):
+		_show("Zapisano" if save_checkpoint() == OK else "Nie teraz")
 
 
 ## Zapis tylko w stabilnym miejscu: bez walki, zapowiedzi, leczenia i odskoku.
@@ -80,7 +76,7 @@ func _on_hero_died() -> void:
 	if _respawning:
 		return
 	_respawning = true
-	_show("Zginąłeś. Wczytuję ostatni zapis…", respawn_delay + 1.0)
+	_death_screen.show()
 	await get_tree().create_timer(respawn_delay).timeout
 	respawn()
 

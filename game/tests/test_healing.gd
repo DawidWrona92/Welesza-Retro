@@ -38,6 +38,7 @@ func _fresh(health := 50.0) -> void:
 func _tick(seconds: float) -> void:
 	var steps := int(round(seconds / DT))
 	for i in steps:
+		_combat.tick(DT)
 		_healing.tick(DT)
 
 
@@ -77,6 +78,7 @@ func test_bandage_is_interrupted_by_move_dodge_guard_and_hit() -> void:
 		check_eq(_healing.bandages, 3, "bez zużycia przy %s" % cause)
 		check(_combat.health <= 50.0, "bez leczenia przy %s" % cause)
 		check_eq(_events, [["cut", Healing.BANDAGE]], "sygnał przerwania przy %s" % cause)
+		check_eq(_combat.using, &"", "po przerwaniu nic nie jest używane")
 
 
 func test_repeated_cancelling_gives_no_free_healing() -> void:
@@ -109,25 +111,43 @@ func test_second_potion_is_blocked_without_loss() -> void:
 	check_eq(_events.back(), ["no", Healing.POTION, &"active"], "powód odmowy")
 
 
-func test_potion_survives_hit_but_not_dodge_or_guard() -> void:
-	_healing.start(Healing.POTION)
-	_tick(0.2)
-	_hit()
-	_tick(0.1)
-	check(_healing.is_busy(), "trafienie nie przerywa nalewki")
-	_tick(_healing.potion_time)
-	check_eq(_healing.potions, 0, "wypita mimo trafienia")
-	for cause in [&"dodge", &"guard"]:
+func test_potion_is_interrupted_by_move_dodge_guard_and_hit() -> void:
+	for cause in [&"move", &"dodge", &"guard", &"hit"]:
 		_fresh()
 		_healing.start(Healing.POTION)
 		_tick(0.2)
-		if cause == &"dodge":
-			_combat.request_dodge(Vector2.RIGHT)
-		else:
-			_combat.set_guard(true, Vector2.RIGHT)
+		match cause:
+			&"move":
+				_hero.move_to(Vector2(500, 0))
+			&"dodge":
+				_combat.request_dodge(Vector2.RIGHT)
+			&"guard":
+				_combat.set_guard(true, Vector2.RIGHT)
+			&"hit":
+				_hit()
 		_tick(0.1)
 		check(not _healing.is_busy(), "przerwana przez %s" % cause)
 		check_eq(_healing.potions, 1, "bez zużycia przy %s" % cause)
+		check(not _healing.is_regenerating(), "bez leczenia przy %s" % cause)
+		check_eq(_events, [["cut", Healing.POTION]], "sygnał przerwania przy %s" % cause)
+
+
+func test_healing_does_not_make_hero_invulnerable() -> void:
+	_healing.start(Healing.BANDAGE)
+	_tick(1.0)
+	var before := _combat.health
+	_hit(8.0)
+	check(_combat.health < before, "w trakcie leczenia przyjmuje obrażenia")
+
+
+func test_using_item_locks_movement_and_is_a_combat_state() -> void:
+	_healing.start(Healing.BANDAGE)
+	check_eq(_combat.state, Combat.State.USE, "stan USE")
+	check(_combat.is_movement_locked(), "postać stoi")
+	check_eq(_combat.using, Healing.BANDAGE, "rodzaj używanego przedmiotu")
+	_tick(_healing.bandage_time + 0.1)
+	check_eq(_combat.state, Combat.State.IDLE, "po czynności wraca do IDLE")
+	check_eq(_combat.using, &"", "nic nie jest używane")
 
 
 func test_refusals_cost_nothing() -> void:

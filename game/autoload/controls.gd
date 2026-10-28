@@ -14,6 +14,8 @@ const DEFAULTS: Dictionary[StringName, Array] = {
 	&"journal": [KEY_J],
 	&"map": [KEY_M],
 	&"pause": [KEY_ESCAPE],
+	## Debug sandboksa: ręczny zapis (stan świata i właściwe punkty zapisu to T15 i T19).
+	&"debug_save": [KEY_F5],
 }
 
 
