@@ -20,6 +20,8 @@ var animation: StringName = &"idle"
 var direction: StringName = &"s"
 var _layers: Dictionary[StringName, AnimatedSprite2D] = {}
 var _events: Dictionary = {}
+## Ostatnia klatka, której zdarzenia już wysłano; przy przeskoku klatek wysyłamy też pominięte.
+var _last_frame := -1
 
 
 func _ready() -> void:
@@ -63,6 +65,7 @@ func play_anim(anim: StringName, dir: StringName = direction) -> void:
 		var sprite := _layers[layer]
 		sprite.z_index = -1 if layer in BEHIND_LAYERS and dir in BACK_FACING else 0
 		sprite.play(name)
+	_last_frame = -1
 	_on_frame_changed()
 
 
@@ -82,7 +85,21 @@ func _on_frame_changed() -> void:
 	var lead := lead_layer()
 	if lead == null:
 		return
-	for event_name: StringName in events_at(animation, lead.frame):
+	# Przy długiej klatce AnimatedSprite2D przeskakuje klatki; ich zdarzenia (np. hit_start)
+	# nie mogą zginąć, bo cios by nie trafił. Wysyłamy je po kolei, także przez zawinięcie pętli.
+	var frame := lead.frame
+	var first := _last_frame + 1
+	if frame < first:
+		for skipped in range(first, lead.sprite_frames.get_frame_count(lead.animation)):
+			_emit_frame(skipped)
+		first = 0
+	for passed in range(first, frame + 1):
+		_emit_frame(passed)
+	_last_frame = frame
+
+
+func _emit_frame(frame: int) -> void:
+	for event_name: StringName in events_at(animation, frame):
 		anim_event.emit(event_name)
 		Events.anim_event.emit(self, event_name)
 

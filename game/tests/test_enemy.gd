@@ -126,6 +126,20 @@ func test_hero_hits_enemy_through_hitbox_and_hurtbox() -> void:
 	check(dog.combat.health < dog.combat.max_health, "cios bohatera zranił psa")
 
 
+func test_hit_window_shorter_than_physics_step_still_lands() -> void:
+	var hero: Node2D = _spawn(HERO_SCENE, Vector2.ZERO)
+	var dog: Dog = _spawn(DOG_SCENE, Vector2(60, 0))
+	dog.ai_enabled = false
+	var combat: Combat = hero.get_node("Combat")
+	combat.request_attack(Vector2.RIGHT, null)
+	await _root.get_tree().physics_frame
+	await _root.get_tree().physics_frame
+	# hit_start i hit_end w tej samej klatce, bez kroku fizyki pomiędzy
+	combat.on_anim_event(&"hit_start")
+	combat.on_anim_event(&"hit_end")
+	check(dog.combat.health < dog.combat.max_health, "krótkie okno trafienia zraniło psa")
+
+
 func test_enemy_hitbox_does_not_hit_other_enemies() -> void:
 	var hero: Node2D = _spawn(HERO_SCENE, Vector2(-2000, 0))
 	var drwal: Drwal = _spawn(DRWAL_SCENE, Vector2.ZERO)

@@ -221,6 +221,9 @@ func on_anim_event(event_name: StringName) -> void:
 				var lunge := _to_world(_attack_dir).normalized() * _profile.lunge_distance
 				dash_requested.emit(_to_screen(lunge), _profile.lunge_duration)
 		&"hit_end":
+			# Okno może trwać krócej niż krok fizyki: sprawdź kontakt choć raz przed zamknięciem.
+			if _contact_open:
+				_scan_hitbox()
 			_contact_open = false
 			if not _landed or _blocked_by_target:
 				_end_chain(&"blocked" if _blocked_by_target else &"miss")
