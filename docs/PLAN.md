@@ -41,7 +41,7 @@ Kolejność nie jest datowana. M1 i M2 mogą iść równolegle po M0. Treść (T
 | T09 | M1 | Scena testowa w kamerze gry z T06–T08 i raport spójności klatek | PM | T04, T06–T08 | Autor ocenia nagranie na bramce B1 |  |
 | T10 | M2 | Ruch myszą, sprint i wytrzymałość, kamera, sortowanie po Y | Programista | T01 | Ruch w 8 kierunkach, sprint zużywa wytrzymałość | zrobione |
 | T11 | M2 | Rdzeń walki: atak na kliknięcie, wiązanki z oknami ze zdarzeń animacji, unik, garda i parada, przerwania | PM | T10 | Scenariusze testów z [walki](walka.md) przechodzą jako testy headless | zrobione |
-| T12 | M2 | AI: Pies i Drwal z zapowiedziami i priorytetami z [przeciwników](przeciwnicy.md) | Programista | T11 | Obie walki da się wygrać podstawowym zestawem | zlecone |
+| T12 | M2 | AI: Pies i Drwal z zapowiedziami i priorytetami z [przeciwników](przeciwnicy.md) | Programista | T11 | Obie walki da się wygrać podstawowym zestawem | zrobione |
 | T13 | M2 | Leczenie (opatrunek, nalewka), śmierć i wczytanie w wersji minimalnej | Programista | T11 | Zgodnie z [mechaniki](mechaniki.md), część II B i D |  |
 | T14 | M2 | Pomiar D, B, U, A, V i wpis do [mapy świata](world/README.md) | PM | T11, T12 | Wartości w dokumentach zamiast symboli |  |
 | T15 | M3 | Greybox WLD-00–02, doczytywanie fragmentów w tle, trwały stan obiektów (`world_id`) | PM | T14 | Przejście tam i z powrotem bez pauzy, bez podwójnych obiektów |  |
