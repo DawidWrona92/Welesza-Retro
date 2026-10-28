@@ -13,6 +13,8 @@ Groza wynika z życia, które nadal próbuje się powtarzać. Przeciwnik może s
 
 Przeciwnicy w borze to demony i duchy lasu albo zwierzęta, nie żywi ludzie [DECYZJA AUTORA, 28.10.2026]. Ludzką sylwetkę mają tylko istoty, które las przejął lub odmienił (Drwal, Łucznik, Powrotnik, Dźwigacz). Wyjątkiem jest Zdziczały pies, zwykłe zwierzę bliżej wioski.
 
+Koncepty wyznaczają kierunek wyglądu, nie wzrost ani wymiary [DECYZJA AUTORA, 28.10.2026]. Skalę ustalamy w kamerze gry; wzrost bohatera się nie zmienia.
+
 Przeciwników będzie wielu, dlatego każdy typ ma warianty wyglądu i uzbrojenia, żeby nie był to atak klonów [DECYZJA AUTORA, 28.10.2026]. Warianty jednego typu dzielą tryby ataku, np. hak i sierp na trzonku. Limit aktywnych wrogów w jednym starciu z projektu spotkań nadal obowiązuje.
 
 Nie używamy dzieci jako przeciwników, przypadkowej makabry jako głównego środka ani żartobliwych odzywek przy śmierci. Ciała i rekwizyty mogą być niepokojące bez eksponowania okaleczeń.
@@ -54,20 +56,20 @@ Nowe ofiary i istoty nie dopisują historii do zatwierdzonych NPC. Ślady człow
 
 **Rola:** powolny napastnik; dawna ofiara traktu. **Pytanie:** czy zauważysz różnicę między niegroźnym powłóczeniem nogami a przygotowaniem chwytu?
 
-**Sylwetka:** pochylony człowiek z workiem na plecach; ręka stale trzymająca węzeł; wyblakły pas tkaniny przy nadgarstku. Dźwięk: oddech i tarcie mokrej tkaniny. Nie wypowiada wyjaśniających zdań.
+**Sylwetka:** pochylony człowiek z ciężkim plecakiem [DECYZJA AUTORA, 28.10.2026]; ręka stale zaciśnięta na pasie plecaka; wyblakły pas tkaniny przy nadgarstku. Dźwięk: oddech i tarcie mokrej tkaniny. Nie wypowiada wyjaśniających zdań.
 
-**Koncepty:** [widoki postaci](art/bestiariusz/powrotnik/01_widoki_postaci.png), [spotkanie na trakcie](art/bestiariusz/powrotnik/02_spotkanie_na_trakcie.png), [scena wspólna z psem i Drwalem](art/bestiariusz/sceny/powrotnik_pies_drwal.png). Na planszach Powrotnik jest pochylony pod ciężarem bagażu, w warstwowym, znoszonym ubraniu. To referencje wyglądu i nastroju; szczegóły ekwipunku wymagają uzgodnienia z opisem worka.
+**Koncepty:** [widoki postaci](art/bestiariusz/powrotnik/01_widoki_postaci.png), [spotkanie na trakcie](art/bestiariusz/powrotnik/02_spotkanie_na_trakcie.png), [scena wspólna z psem i Drwalem](art/bestiariusz/sceny/powrotnik_pies_drwal.png). Na planszach Powrotnik jest pochylony pod ciężarem bagażu, w warstwowym, znoszonym ubraniu. Koncepty są wzorcem wyglądu.
 
 **Zachowanie:** uparty, zagubiony, przywiązany do drogi. Próbuje ruszyć dalej, lecz wraca do tego samego kamienia. Nie ma nowej frakcji ani potwierdzonego związku z duszą pierwotnej osoby.
 
-**Priorytety AI:** powtarza krótki obchód → reaguje na wejście blisko → podchodzi bez sprintu → chwyta tylko z odpowiedniego zasięgu → wraca do worka po utracie celu.
+**Priorytety AI:** powtarza krótki obchód → reaguje na wejście blisko → podchodzi bez sprintu → z dystansu rzuca czymś z plecaka → chwyta tylko z odpowiedniego zasięgu → po utracie celu wraca na obchód.
 
 | Atak | Zapowiedź | Efekt | Odpowiedź i okazja |
 |---|---|---|---|
-| Oburęczny chwyt | Odkłada worek, prostuje ramiona, nabiera powietrza | Krótki frontalny atak; bez QTE i długiej animacji więzienia gracza | Unik na bok, atak z flanki po chybieniu |
-| Uderzenie tobołem | Unosi worek nad bark, słychać przedmioty w środku | Szeroki, bliski zamach | Odejść poza zasięg, wrócić podczas opuszczania worka |
+| Oburęczny chwyt | Prostuje się pod plecakiem, wyciąga ramiona, nabiera powietrza | Krótki frontalny atak; bez QTE i długiej animacji więzienia gracza | Unik na bok, atak z flanki po chybieniu |
+| Rzut z plecaka [DECYZJA AUTORA, 28.10.2026] | Sięga przez ramię do plecaka, słychać przedmioty w środku | Rzut przedmiotem po stałym torze, bez naprowadzania; krótki zasięg | Zejść z toru; skrócić dystans, gdy znów szuka w plecaku |
 
-**Obrona:** chwyty i uderzenie ciężkim workiem traktujemy jako nieparowalne. Sam gatunek „nieumarły” nie gwarantuje parowania — istotny jest atak bronią. **Słabość:** wolne odzyskiwanie pozycji. **Łup:** czasem konkretny przedmiot z historii miejsca, bez losowego skarbu. **Występowanie:** przy wozie, drogowskazach i kamieniach.
+**Obrona:** chwyt jest nieparowalny; rzucony przedmiot zatrzymuje garda, parada go nie odbija. Sam gatunek „nieumarły” nie gwarantuje parowania — istotny jest atak bronią. **Słabość:** wolne odzyskiwanie pozycji. **Łup:** czasem konkretny przedmiot z historii miejsca, bez losowego skarbu. **Występowanie:** przy wozie, drogowskazach i kamieniach.
 
 #### ENM-drwal — Drwal z wygasłego obozu
 
@@ -77,18 +79,19 @@ Nowe ofiary i istoty nie dopisują historii do zatwierdzonych NPC. Ślady człow
 
 **Sylwetka:** ludzka, szeroka postać w kapturze; rozkładające się ciało zrośnięte z korzeniami, z głowy i barków wyrastają gałęzie; skórzane pasy na poszarpanych łachmanach; długi topór. Od Korzeńca odróżnia go ludzka postawa i topór. Dźwięk: przed atakiem przesuwa dłoń po trzonku; poza walką układa drwa.
 
-**Warianty wyglądu** (wspólne tryby ataku): podstawowy, rozkład (widoczne kości), leśny (silniej zrośnięty z drewnem), zimowy (szron i lód), strażnik traktu (najstarszy, pień zamiast ramienia), okrwawiony (świeże ofiary, ludzkie trofea — do decyzji, bo zasady bestiariusza wykluczają makabrę jako główny środek). **Broń:** topór drwala, topór rozwidlony, ciopak, zreb związany z korzeniami, obosieczny.
+**Warianty wyglądu** (wspólne tryby ataku): podstawowy, rozkład (widoczne kości), leśny (silniej zrośnięty z drewnem), zimowy (szron i lód), strażnik traktu (najstarszy, pień zamiast ramienia), okrwawiony (świeże ofiary, ludzkie trofea; rzadki wariant, może nie trafić do gry [DECYZJA AUTORA, 28.10.2026]). **Broń:** topór drwala, topór rozwidlony, ciopak, zreb związany z korzeniami, obosieczny.
 
 **Zachowanie:** pracowity, drażliwy, wyczerpany. Broni pustego paleniska, choć drewno leży w wodzie. Chce przepędzić obcego; nie prowadzi zrozumiałej rozmowy. Pozostaje tragiczną istotą Weleszy: gniew i zapomnienie są wyczuwalne, zanim zaatakuje.
 
 **Koncepty:** [portret i detale](art/bestiariusz/drwal/01_drwal_portret_i_detale.png), [sylwetki, warianty, broń i pozy](art/bestiariusz/drwal/02_drwal_arkusz_koncepcyjny.png), [scena wspólna z Powrotnikiem i psem](art/bestiariusz/sceny/powrotnik_pies_drwal.png). Koncept jest wzorcem wyglądu.
 
-**Priorytety AI:** nie atakuje z zaskoczenia → ostrzega ruchem topora → broni wejścia → zwykły zamach w zasięgu → przy uporczywej gardzie gracza wybiera wyraźnie zapowiedziany ciężki atak → po chybieniu wraca do gotowości. Reakcja nie jest odczytem przycisku gracza w tej samej klatce.
+**Priorytety AI:** nie atakuje z zaskoczenia → ostrzega ruchem topora → broni wejścia → zwykły zamach w zasięgu → przy uporczywej gardzie gracza wybiera wyraźnie zapowiedziany ciężki atak → po chybieniu wraca do gotowości → atak obrotowy tylko wobec gracza krążącego blisko. Reakcja nie jest odczytem przycisku gracza w tej samej klatce.
 
 | Atak | Zapowiedź | Efekt | Odpowiedź i okazja |
 |---|---|---|---|
 | Cięcie z boku | Obrót barków i szurnięcie trzonka | Parowalny zamach toporem | Garda lub precyzyjna parada; odsłonięta strona po zamachu |
 | Rozłupanie | Obie dłonie nad głową, krótki bezruch, głośny wysiłek | Nieparowalne pionowe uderzenie | Zejść w bok; ostrze na chwilę grzęźnie w podłożu |
+| Atak obrotowy [DECYZJA AUTORA, 28.10.2026] | Topór nisko za plecami, skręt tułowia, przeciągły jęk drewna | Pełny obrót wokół siebie, parowalny; rzadki, nie dwa razy z rzędu | Odejść poza zasięg topora albo sparować; po obrocie chwiejny i odsłonięty |
 
 **Słabość:** silny, ale po ciężkim ataku nie odwraca się natychmiast. **Łup:** przygotowany materiał lub narzędzie związane z obozem; zwykła broń nie musi być ulepszeniem. **Występowanie:** obóz węglarzy i zadanie o narzędziach.
 
@@ -119,7 +122,7 @@ Nowe ofiary i istoty nie dopisują historii do zatwierdzonych NPC. Ślady człow
 
 **Kim jest [DECYZJA AUTORA, 28.10.2026]:** demon lasu.
 
-**Sylwetka:** wysoka (około 220 cm), wąska postać w warstwach ciemnych, poszarpanych tkanin; welon i wianek z gałązek; pod welonem twarz bez twarzy; długie, jasne dłonie; talizmany żałoby (medalion, dzwonek). Dźwięk: melodia bez słów, kończąca się za każdym razem przed ostatnią nutą.
+**Sylwetka:** wysoka, wąska postać w warstwach ciemnych, poszarpanych tkanin; welon i wianek z gałązek; pod welonem twarz bez twarzy; długie, jasne dłonie; talizmany żałoby (medalion, dzwonek). Dźwięk: melodia bez słów, kończąca się za każdym razem przed ostatnią nutą.
 
 **Koncept:** [plansza Żałobnicy](art/bestiariusz/zalobnica/01_karta_koncepcyjna.png). Koncept jest wzorcem wyglądu.
 
@@ -177,9 +180,9 @@ Wciąż nosi drewno do dawno zgasłego pieca. Nie wyjaśniamy, czy kieruje nim p
 
 #### ENM-stroz — Stróż, boss finałowy
 
-**Rola:** finałowy test kontroli zachłanności; strażnik o nieznanym celu. **Sylwetka:** bardzo wysoka postać (około 3,5 m, dwa razy wyższa od bohatera) w zardzewiałej zbroi i kolczudze pod postrzępionymi warstwami tkanin; kaptur, a pod nim zamiast twarzy czarna mgła; blade, ludzkie dłonie; długa pika z szerokim grotem; przywiązane do pasa i pleców bagaże podróżnych (zwinięte posłanie, sakwy, pusta klatka na ptaka); zwykła latarnia [DECYZJA AUTORA, 28.10.2026]. Nie jest to magiczna latarnia z komory. Część przedmiotów przypomina wcześniejsze znaleziska, ale nie potwierdza to ich pochodzenia.
+**Rola:** finałowy test kontroli zachłanności; strażnik o nieznanym celu. **Sylwetka:** bardzo wysoka postać, wyraźnie górująca nad bohaterem, w zardzewiałej zbroi i kolczudze pod postrzępionymi warstwami tkanin; kaptur, a pod nim zamiast twarzy czarna mgła; blade, ludzkie dłonie; długa pika z szerokim grotem; przywiązane do pasa i pleców bagaże podróżnych (zwinięte posłanie, sakwy, pusta klatka na ptaka); zwykła latarnia [DECYZJA AUTORA, 28.10.2026]. Nie jest to magiczna latarnia z komory. Część przedmiotów przypomina wcześniejsze znaleziska, ale nie potwierdza to ich pochodzenia.
 
-**Koncept:** [plansza Stróża](art/bestiariusz/stroz/01_karta_koncepcyjna.png): widoki, detale, cztery warianty i widok w grze. Koncept jest wzorcem wyglądu; skalę sprawdzamy w kamerze gry. Obraz nie rozstrzyga pochodzenia Stróża.
+**Koncept:** [plansza Stróża](art/bestiariusz/stroz/01_karta_koncepcyjna.png): widoki, detale, cztery warianty i widok w grze. Koncept jest wzorcem wyglądu. Obraz nie rozstrzyga pochodzenia Stróża.
 
 **Zachowanie:** cierpliwy, nieustępliwy, niemal ceremonialny. Staje między graczem a wyjściem; nie rabuje i nie świętuje zwycięstwa. Głosy są ciche, różne, czasem sprzeczne. Nie naśladuje bliskich bohatera ani nie dopisuje mu osobistej przeszłości.
 
