@@ -10,6 +10,9 @@ var origin: Vector2
 var damage: float = 10.0
 ## Parowalne są ataki bronią; chwyty, ataki zwierząt i ciężkie ciosy nie (docs/przeciwnicy.md).
 var parryable: bool = true
+## Garda w dobrą stronę zatrzymuje cios także wtedy, gdy nie jest parowalny (pocisk): blokuje,
+## ale nie paruje ani nie odbija.
+var blockable: bool = false
 ## Koszt wytrzymałości obrońcy przy zablokowaniu gardą.
 var guard_cost: float = 15.0
 var armor_pierce: float = 0.0
