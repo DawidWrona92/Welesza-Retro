@@ -1,6 +1,6 @@
 # Przegląd projektowy pakietów 02–03
 
-Status: analiza scenariuszy według playtest-simulator, encounter-director i character-concept. Nie są to testy działającej gry, obserwacje graczy ani pomiary czasu walki.
+Status: analiza scenariuszy według playtest-simulator i encounter-director. Nie są to testy działającej gry, obserwacje graczy ani pomiary czasu walki.
 
 Zakres: [wyprawa](propozycja-wyprawy-02.md), [bestiariusz](bestiariusz-demo.md), [spotkania](spotkania-i-bossowie.md). Punktem startu jest bohater z podstawową bronią, umiejętnością uniku i gardą w wariancie z pakietu 01. Nie zakładamy zakupionej aktywnej umiejętności ani szczęśliwych krytyków.
 

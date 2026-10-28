@@ -13,7 +13,7 @@ Nazwy i tytuł pozostają robocze. Dokument opisuje fabułę i zakres treści, n
 - Demo obejmuje niewielką osadę i otaczające ją lasy. Nie ma pól uprawnych.
 - Zakres fabularny: cztery zadania główne, cztery poboczne, czternaście postaci dialogowych i kilku kupców.
 - Tajemnice poznajemy przez otoczenie, obyczaje i sprzeczne świadectwa. Demo nie wymaga wyjaśnienia całej kosmologii ani historii świata.
-- Platforma: PC, mysz i klawiatura; możliwość późniejszego rozszerzenia o pada. Wyłącznie single player. Kamera i sterowanie w stylu Diablo 2.
+- Platforma: PC, mysz i klawiatura; możliwość późniejszego rozszerzenia o pada. Wyłącznie single player. Sterowanie w stylu Diablo 2; perspektywa kamery do ustalenia w prototypie.
 - Walka z mniejszą liczbą groźnych przeciwników, oparta na unikach i wyczuciu momentu ataku; rzadkie, wartościowe łupy oraz rozwój z udziałem nauczycieli. Szczegóły: [Podstawy mechanik](mechaniki-podstawy.md).
 - Czas przejścia oraz szczegółowe reguły walki, rozwoju i gospodarowania zasobami pozostają do ustalenia.
 - Wątpliwości dotyczące kierunku projektu należy konsultować z autorem; nie zastępować brakujących decyzji domysłami.

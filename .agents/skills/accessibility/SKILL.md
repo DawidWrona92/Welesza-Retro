@@ -61,7 +61,7 @@ Emit proposals updating `11-accessibility.md` with targets and the option table.
 ## Handoff
 
 - Emits: target and option proposals, findings `ACC-R*`.
-- Consumed by: ux-onboarding, audio-visual-direction, puzzle-crafter, progression-difficulty.
+- Consumed by: ux-onboarding, puzzle-crafter, progression-difficulty.
 
 ## Don'ts
 

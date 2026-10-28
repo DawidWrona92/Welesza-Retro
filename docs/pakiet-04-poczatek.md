@@ -114,7 +114,7 @@ Budowa w dwóch krokach:
 1. Brama, plac ćwiczeń, rozstaj, wóz, Pies, pakunki, powrót, zapis. Sprawdzamy, czy podstawowe działanie daje przyjemność i czy decyzja o obronie jest czytelna.
 2. Powrotnik, brzeg, pętla, księga i reakcja Nawoi. Sprawdzamy, czy przestrzeń buduje tajemnicę, a nie wrażenie błędu mapy.
 
-Prolog z nocą może być na początku prostą sekwencją tekstową i przejściem, bez docelowych animacji. Grafika koncepcyjna ma pomagać utrzymać kierunek, ale nie jest warunkiem pomiaru kolizji i reakcji sterowania.
+Prolog z nocą może być na początku prostą sekwencją tekstową i przejściem, bez docelowych animacji.
 
 Warunki do sprawdzenia w silniku:
 

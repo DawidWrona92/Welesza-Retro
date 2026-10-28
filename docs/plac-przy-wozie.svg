@@ -3,7 +3,7 @@
 <desc id="desc">Wóz na leśnym trakcie, dwa obejścia, koń, buty i pakunki, wejście prologu, przejście do rozstaju oraz strefa psa przy powrocie.</desc>
 <rect width="1200" height="850" fill="#f3efe5"/>
 <text x="38" y="48" font-family="sans-serif" font-weight="bold" font-size="27" fill="#1e302a">Plac przy wozie — plan z góry</text>
-<text x="38" y="75" font-family="sans-serif" font-size="16" fill="#3d4a43">Propozycja do blockoutu • bez skali i bez ustalonych kierunków geograficznych</text>
+<text x="38" y="75" font-family="sans-serif" font-size="16" fill="#3d4a43">Propozycja do makiety • bez skali i bez ustalonych kierunków geograficznych</text>
 <rect x="30" y="100" width="790" height="690" rx="22" fill="#34483d"/>
 <path d="M30 350 C140 300 195 215 312 226 L620 220 C728 226 774 300 820 320 L820 565 C727 558 697 670 561 663 L279 657 C155 663 118 559 30 565 Z" fill="#b6a47e"/>
 <path d="M0 420 H245 M610 420 H850" fill="none" stroke="#f7efce" stroke-width="8" stroke-dasharray="17 10"/>
@@ -25,5 +25,5 @@
 <path d="M160 120 L160 220 M650 120 L650 220" stroke="#7b8a70" stroke-width="8" stroke-dasharray="8 7"/>
 <text x="77" y="154" font-family="sans-serif" font-size="14" fill="white">ODNOGA: BRZEG*</text><text x="581" y="154" font-family="sans-serif" font-size="14" fill="white">ŚCIEŻKA PĘTLI*</text>
 <g font-family="sans-serif" fill="#203129"><text x="850" y="135" font-size="22" font-weight="bold">Legenda</text><text x="850" y="180" font-size="17">B — buty przy kole</text><text x="850" y="211" font-size="17">P — pakunki / księga</text><text x="850" y="252" font-size="17">Żółte: dwie trasy</text><text x="850" y="280" font-size="17">obejścia do przetestowania</text><text x="850" y="325" font-size="17">Czerwone: orientacyjna</text><text x="850" y="353" font-size="17">strefa Psa rano</text><text x="850" y="400" font-size="17">Jasne: kandydat na</text><text x="850" y="428" font-size="17">przestrzeń do uniku</text><text x="850" y="482" font-size="16">* Odnogi i zachowanie</text><text x="850" y="510" font-size="16">granic wymagają walidacji.</text><text x="850" y="556" font-size="16">Symboliczne pozycje</text><text x="850" y="584" font-size="16">nie są kolizjami ani</text><text x="850" y="612" font-size="16">rzeczywistymi wymiarami.</text><text x="850" y="670" font-size="16">Światło znajduje się dalej</text><text x="850" y="698" font-size="16">w stronę rozstaju i bramy.</text></g>
-<text x="38" y="825" font-family="sans-serif" font-size="15" fill="#405049">Koniec zaprzęgu i dostępność obu obejść zweryfikować w blockoucie, kamerze gry i nawigacji.</text>
+<text x="38" y="825" font-family="sans-serif" font-size="15" fill="#405049">Koniec zaprzęgu i dostępność obu obejść zweryfikować w makiecie, kamerze gry i nawigacji.</text>
 </svg>

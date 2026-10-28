@@ -14,12 +14,12 @@
 | Brak widocznych ekranów ładowania podczas normalnego przemieszczania się | Cel autora | Nie ustala sposobu doczytywania ani zachowania przy uruchomieniu/wczytaniu zapisu |
 | Dokładne ustawienie konia, butów, pakunków i strefy Psa | Propozycja na rysunku | Dostosować do skali, odczytu i nawigacji; nie traktować jako kanonu |
 
-## 2. Plan do blockoutu
+## 2. Plan do makiety
 
 - Oś traktu łączy wejście prologu z placem i dalszą ścieżką do rozstaju oraz bramy. Schemat nie przedstawia dokładnej odległości od osady. W prologu gracza prowadzi punkt światła, nie obowiązkowa daleka panorama Niemiru.
 - Wóz zajmuje środek szerszego fragmentu traktu. Po obu bokach zaplanowano przejście od jednego końca wozu do drugiego. Zaznaczone linie są propozycją przebiegu, nie dowodem dostępności; dyszle, koń i rekwizyty muszą pozostawić obie trasy drożne.
 - Buty umieścić przy widocznym kole, pakunki i księgę w pobliżu wozu, ale osobno. Sprawdzić widoczność ze startowej pozycji; interakcja z butami jest opcjonalna. Ustalenie dokładnego miejsca pakunków jest robocze.
-- Koń jest żywy przy pierwszym spotkaniu. Jego stan przy powrocie, animacje i możliwość interakcji pozostają otwarte; nie zakładać ich na podstawie ilustracji. Zaprzęg i miejsce konia dopasować po sprawdzeniu konstrukcji.
+- Koń jest żywy przy pierwszym spotkaniu. Jego stan przy powrocie, animacje i możliwość interakcji pozostają otwarte; nie zakładać ich. Zaprzęg i miejsce konia dopasować po sprawdzeniu konstrukcji.
 - Przy powrocie strefa Psa jest przy obrzeżu placu, przy jedzeniu; pozwala na czytelne podejście. Powrotnika umieścić dalej poza pierwszym wywołaniem; w schemacie go nie umieszczono. Walka z obydwoma nie jest obowiązkowym warunkiem odzyskania pakunków.
 - Odnogi do brzegu i na zapętlającą się ścieżkę są symboliczne. Ich ostateczne położenie, widoczność i granice w prologu wymagają projektu. Unikać szerokiej drogi, która wygląda na dostępną, a jest niewytłumaczalnie zablokowana.
 - Jasny obszar „unik?” wskazuje kandydata na przestrzeń testową; test wykonać w kilku kierunkach, bez zakładania, że tylko tam można wykonać unik. Rozmiary wynikną z pomiarów postaci, przeciwnika i kamery.
@@ -36,18 +36,18 @@ W istniejącym projekcie pakunki i księga są przy wozie, nie w losowym łupie.
 
 ## 4. Elementy i warstwy
 
-| Element | Wizualnie | Potrzeba w prototypie | Status |
+| Element | Opis | Potrzeba w prototypie | Status |
 |---|---|---|---|
-| Podłoże traktu i ściółka | Moduły; spójne przejścia, mokra paleta | Obszar przechodni, bez dekoracyjnych przeszkód w nawigacji | Placeholdery |
-| Wóz | Skrzynia, rama, koła, zaprzęg; oddzielny cień, jeśli metoda pozwala | Bryła kolizji i test przesłaniania; sprawdzić zasłanianie pocisków według mapy | Istnieje prosty blockout, nie produkcyjny model |
+| Podłoże traktu i ściółka | Spójne przejścia, mokre podłoże | Obszar przechodni, bez dekoracyjnych przeszkód w nawigacji | Placeholdery |
+| Wóz | Skrzynia, rama, koła, zaprzęg | Bryła kolizji i test przesłaniania; sprawdzić zasłanianie pocisków według mapy | Placeholder |
 | Koń | Oddzielny obiekt, czytelny obok wozu | Tymczasowy obrys i pozycja; status zachowania otwarty | Placeholder bez fabularnego dopowiadania |
 | Buty | Oddzielny mały rekwizyt przy kole | Opcjonalny punkt interakcji, dostępny bez klikania koła | Nie ustalać zachowania poza opisem prologu |
 | Pakunki i księga | Oddzielne, widoczne elementy przy wozie | Wykrywalne i zapamiętywane po podniesieniu; test jednokrotnego rozliczenia | Zachowanie przed zadaniem do ustalenia |
-| Kamienie, korzenie, drzewa | Oddzielne dekoracje, korony na osobnej warstwie lub równoważny mechanizm | Obrys tylko tam, gdzie wizualnie i projektowo uzasadniony; test przejść i zasłaniania | Placeholdery |
+| Kamienie, korzenie, drzewa | Oddzielne elementy otoczenia; korony drzew nie mogą zasłaniać celu | Obrys tylko tam, gdzie wizualnie i projektowo uzasadniony; test przejść i zasłaniania | Placeholdery |
 | Pies i Powrotnik | Rozpoznawalne sylwetki, własne stany | Osobne pozycje i wywołania, telegraph widoczny; brak nieoczekiwanego wspólnego ataku | Inscenizacja do walidacji |
 | Światło w kierunku bramy | Mały czytelny punkt, nie rozległa łuna | Prowadzi wzrok; nie wymaga ustawienia odległej bramy w tym samym kadrze | Sposób oświetlenia otwarty |
 
-Sortowanie postaci i obiektów oraz odsłanianie koron należy rozwiązać i sprawdzić w docelowej kamerze. Plan z góry nie przesądza techniki renderowania, cieni ani silnika.
+Sortowanie postaci i obiektów oraz odsłanianie koron należy rozwiązać i sprawdzić w docelowej kamerze. Plan z góry nie przesądza rozwiązań technicznych.
 
 ## 5. Testy odbioru — do wykonania w prototypie
 
@@ -60,13 +60,13 @@ Najpierw zmierzyć D — obrys kolizji bohatera, B — obrys właściwego przeci
 5. **Dwie wizyty:** pierwsza wizyta bez aktywnej walki, następnie powrót i osobne wywołanie Psa; Powrotnik nie pojawia się automatycznie w pierwszym starciu. Test ominięcia i odzyskania pakunków.
 6. **Trwałość:** powrót do osady, zapis/wczytanie i powrót na plac nie duplikują odzyskanych pakunków ani nagrody; stan innych obiektów zgodny z przyjętą implementacją. Nie zakładać nieustalonego stanu konia.
 7. **Płynne przejście:** przejść i wrócić na odcinku wóz → rozstaj → brama bez widocznego ekranu ładowania. Na dostępnej platformie zanotować przycięcia, wyskakiwanie obiektów oraz czasy klatek i pamięć — bez obietnicy wyniku przed pomiarem.
-8. **Pętla:** po jej implementacji sprawdzić rozpoznanie tego samego wozu i znaku, trwałość stanu, brak przeniesienia aktywnej walki i brak widocznego skoku. To osobne zadanie, nie blokuje pierwszego statycznego blockoutu.
+8. **Pętla:** po jej implementacji sprawdzić rozpoznanie tego samego wozu i znaku, trwałość stanu, brak przeniesienia aktywnej walki i brak widocznego skoku. To osobne zadanie, nie blokuje pierwszego statycznej makiety.
 
 ## 6. Przekazanie do prototypu
 
 1. Przeczytaj [fabułę](demo-fabula.md), [początek](pakiet-04-poczatek.md), [mapę](pakiet-04-mapa.md).
-2. Zbuduj na własnej gałęzi geometryczny blockout placu i połączenia z rozstajem. Zastosuj placeholdery dla terenu, Psa, bohatera i konia.
-3. Wóz zbuduj od zera jako prosty blockout: cztery koła, dyszel, osobny koń, pakunki i księga jako oddzielne obiekty.
+2. Zbuduj na własnej gałęzi prostą makietę placu i połączenia z rozstajem. Zastosuj placeholdery dla terenu, Psa, bohatera i konia.
+3. Wóz zbuduj od zera jako prostą makietę: cztery koła, dyszel, osobny koń, pakunki i księga jako oddzielne obiekty.
 4. Zmierz D, B, U i V, zweryfikuj obejścia, unik, widoczność oraz przesłanianie. Wymiary i technikę dostosuj do faktycznego prototypu; wynik pokaż autorowi wraz z wadami.
 5. Przy zastępowaniu placeholderów finalnymi elementami: zastąpienie placeholderów nie może zmienić dostępności przejść ani skali bez ponownego sprawdzenia.
 

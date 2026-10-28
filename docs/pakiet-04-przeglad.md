@@ -1,6 +1,6 @@
 # Pakiet 04 — przegląd i walidacja
 
-Status: przegląd projektu według level-designer, ux-onboarding i playtest-simulator. Nie wykonano grywalnego testu, pomiaru czasu ani oceny gotowych ilustracji.
+Status: przegląd projektu według level-designer, ux-onboarding i playtest-simulator. Nie wykonano grywalnego testu, ani pomiaru czasu.
 
 Zakres: [mapa](pakiet-04-mapa.md), [początek gry](pakiet-04-poczatek.md). Wskazane poniżej wyniki narzędzi dotyczą wyłącznie grafów symbolicznych.
 

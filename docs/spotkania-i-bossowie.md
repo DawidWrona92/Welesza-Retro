@@ -142,7 +142,7 @@ Odwroty są możliwe przez tę samą drogę wejścia. Nie zamykamy gracza magicz
 
 **Powiązanie:** finał „Ten, który chodzi przed tobą”. **Wróg:** ENM-stroz. **Pytanie:** kiedy zrezygnujesz z kolejnego, mocniejszego ciosu, żeby nie stracić drogi odwrotu?
 
-**Arena:** szeroki odcinek dawnego traktu przy ruinach, z przejściem w głębi i powrotem do lasu za graczem. Boczne, uszkodzone słupy określają przestrzeń, ale nie tworzą nieosiągalnych półek. Cała aktywna sylwetka bossa pozostaje czytelna z kamery izometrycznej.
+**Arena:** szeroki odcinek dawnego traktu przy ruinach, z przejściem w głębi i powrotem do lasu za graczem. Boczne, uszkodzone słupy określają przestrzeń, ale nie tworzą nieosiągalnych półek. Cała aktywna sylwetka bossa pozostaje czytelna z kamery gry.
 
 **Wejście:** latarnia odsłania drogę, lecz nie jest bronią ani zużywalnym kluczem. Zapis przed obszarem walki. Stróż stoi i unosi drzewce w poprzek przejścia; daje czas na wycofanie. Nie ma obowiązkowej długiej sceny przed każdą próbą.
 

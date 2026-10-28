@@ -6,14 +6,14 @@ Each chain lists specialists in order. "D" = Design mode, "R" = Review mode. Ste
 
 | Request | Chain |
 |---|---|
-| **New dungeon / level** | level-designer D → encounter-director D + puzzle-crafter D → character-concept D (boss, if any) → quest-designer D (if tied) → economy-designer D (rewards) → R: level-designer, encounter-director, playtest-simulator, ux-onboarding, scope-feasibility |
-| **New enemy** | character-concept D → combat-balancer D → encounter-director D (placement) → audio-visual-direction D → R: combat-balancer, audio-visual-direction, accessibility |
-| **New boss** | character-concept D → encounter-director D → combat-balancer D → narrative-director D (if story-relevant) → economy-designer D (drops) → R: encounter-director, combat-balancer, playtest-simulator |
+| **New dungeon / level** | level-designer D → encounter-director D + puzzle-crafter D → quest-designer D (if tied) → economy-designer D (rewards) → R: level-designer, encounter-director, playtest-simulator, ux-onboarding, scope-feasibility |
+| **New enemy** | combat-balancer D → encounter-director D (placement) → R: combat-balancer, accessibility |
+| **New boss** | encounter-director D → combat-balancer D → narrative-director D (if story-relevant) → economy-designer D (drops) → R: encounter-director, combat-balancer, playtest-simulator |
 | **New quest or quest line** | narrative-director D (if arc-level) → quest-designer D → dialogue-voice D → level-designer D (if new space) → economy-designer D (rewards) → R: quest-designer, dialogue-voice, playtest-simulator |
 | **New puzzle** | puzzle-crafter D → ux-onboarding D (hint and feedback) → R: puzzle-crafter, playtest-simulator, accessibility |
-| **New character (NPC)** | character-concept D → dialogue-voice D → audio-visual-direction D → R: character-concept, dialogue-voice |
+| **New character (NPC)** | dialogue-voice D → R: dialogue-voice |
 | **New mechanic** | core-loop-mechanics D → ux-onboarding D → combat-balancer D or economy-designer D (if numbers) → R: core-loop-mechanics, ux-onboarding, playtest-simulator, scope-feasibility |
-| **Story or world bible** | narrative-director D → character-concept D → dialogue-voice D (tone samples) → R: narrative-director |
+| **Story or world bible** | narrative-director D → dialogue-voice D (tone samples) → R: narrative-director |
 | **First 10 minutes / tutorial** | ux-onboarding D → level-designer D → puzzle-crafter D (if teaching puzzles) → R: ux-onboarding, playtest-simulator, accessibility |
 
 ## Systems workflows
@@ -33,7 +33,7 @@ Each chain lists specialists in order. "D" = Design mode, "R" = Review mode. Ste
 | **Audit this level** | R: level-designer, encounter-director, puzzle-crafter, playtest-simulator, ux-onboarding, accessibility |
 | **Audit the economy** | R: economy-designer, progression-difficulty, monetization-retention |
 | **Audit combat** | R: combat-balancer, encounter-director, playtest-simulator |
-| **Audit the narrative** | R: narrative-director, quest-designer, dialogue-voice, character-concept |
+| **Audit the narrative** | R: narrative-director, quest-designer, dialogue-voice |
 | **Pre-release audit** | R: every specialist on its GDD file, then consolidate by severity |
 | **Is this feasible?** | R: scope-feasibility |
 

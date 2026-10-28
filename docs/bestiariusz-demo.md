@@ -1,9 +1,9 @@
 # Bestiariusz Niemiru — pakiet 03
 
 Status: propozycja do walidacji, nie działające AI. Zależności: [walka 01](propozycja-walki-01.md), [wyprawa 02](propozycja-wyprawy-02.md). Rozmieszczenie i boss fighty: [spotkania](spotkania-i-bossowie.md).
-Przygotowano według character-concept. Nazwy i ID są propozycjami; wartości HP, obrażeń, prędkości i odporności będą osobnym etapem balansu.
+Nazwy i ID są propozycjami; wartości HP, obrażeń, prędkości i odporności będą osobnym etapem balansu.
 
-## Zasady artystyczne i mechaniczne
+## Zasady projektowe
 
 Proponowana obsada: sześć typów zwykłych przeciwników, dwóch minibossów i finałowy Stróż. Minibossowie korzystają z rodzin zachowań zwykłych przeciwników; nie wymagają trzech odrębnych systemów walki z bossami.
 
@@ -161,4 +161,4 @@ Najpierw Pies i Drwal: sprawdzają unik, paradę oraz przerwanie wiązanki. Pote
 
 Przy ograniczaniu zakresu najpierw odkładamy Żałobnicę i opcjonalnego Zbieracza, zachowując ich projekty. Nie usuwamy automatycznie zaakceptowanych zadań; ewentualne cięcie treści wymaga walidacji autora.
 
-Każda broń i sylwetka potrzebują osobnego sprawdzenia czytelności w docelowej kamerze. Nie podajemy wyceny produkcji bez ustalenia silnika, zespołu i źródła assetów.
+Każda broń i sylwetka potrzebują osobnego sprawdzenia czytelności w docelowej kamerze. Nie podajemy wyceny produkcji bez ustalenia silnika, i zespołu.
