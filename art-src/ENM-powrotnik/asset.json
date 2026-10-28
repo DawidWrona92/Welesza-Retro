@@ -1,0 +1,99 @@
+{
+  "schema": "welesza.asset.v1",
+  "id": "ENM-powrotnik",
+  "kind": "character",
+  "canvas": [
+    512,
+    512
+  ],
+  "anchor": [
+    256,
+    448
+  ],
+  "status": "test",
+  "source": "GPT-6",
+  "background": "transparent",
+  "directions": [
+    "s",
+    "sw",
+    "w",
+    "nw",
+    "n"
+  ],
+  "layers": [
+    "full"
+  ],
+  "animations": {
+    "idle": {
+      "frames": 4,
+      "fps": 12,
+      "loop": true
+    },
+    "walk": {
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "events": [
+        {
+          "frame": 0,
+          "name": "step"
+        },
+        {
+          "frame": 4,
+          "name": "step"
+        }
+      ]
+    },
+    "grab": {
+      "frames": 7,
+      "fps": 12,
+      "loop": false,
+      "events": [
+        {
+          "frame": 1,
+          "name": "telegraph_start"
+        },
+        {
+          "frame": 3,
+          "name": "hit_start"
+        },
+        {
+          "frame": 4,
+          "name": "hit_end"
+        }
+      ]
+    },
+    "throw": {
+      "frames": 7,
+      "fps": 12,
+      "loop": false,
+      "events": [
+        {
+          "frame": 1,
+          "name": "telegraph_start"
+        },
+        {
+          "frame": 4,
+          "name": "hit_start"
+        },
+        {
+          "frame": 4,
+          "name": "hit_end"
+        }
+      ]
+    },
+    "hit": {
+      "frames": 3,
+      "fps": 12,
+      "loop": false
+    }
+  },
+  "collision": {
+    "circle": 36
+  },
+  "mirror": {
+    "se": "sw",
+    "e": "w",
+    "ne": "nw"
+  }
+}
