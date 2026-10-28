@@ -28,12 +28,13 @@ var _holding_move := false
 var _stuck_time := 0.0
 var _dash_velocity := Vector2.ZERO
 var _dash_left := 0.0
-var _guard_direction: StringName = &""
+var _guard_held := false
 var _combat: Node
 
 @onready var sprite: AssetSprite = $Sprite
 @onready var stamina: Stamina = $Stamina
 @onready var _agent: NavigationAgent2D = $NavigationAgent2D
+@onready var _hitbox: Area2D = get_node_or_null("Combat/Hitbox")
 
 
 func _ready() -> void:
@@ -52,10 +53,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		_holding_move = false
 	elif event.is_action_pressed(&"dodge") and _combat:
 		_combat.request_dodge(_cursor_direction())
-	elif event.is_action_pressed(&"guard") and _combat:
-		_set_guard(true)
-	elif event.is_action_released(&"guard") and _combat:
-		_set_guard(false)
 
 
 func _physics_process(delta: float) -> void:
@@ -64,8 +61,9 @@ func _physics_process(delta: float) -> void:
 			move_to(get_global_mouse_position())
 		else:
 			_holding_move = false
-	if _combat and _guard_direction != &"":
-		_refresh_guard()
+	if _combat:
+		_sync_hitbox()
+		_update_guard()
 	step(delta, Input.is_action_pressed(&"sprint"))
 
 
@@ -230,6 +228,8 @@ func _arrived(distance_to_next: float) -> bool:
 func _update_animation(move: Vector2) -> void:
 	if sprite.meta.is_empty():
 		return
+	if _combat and _combat.state == Combat.State.GUARD:
+		return  # animację gardy prowadzi walka
 	var anim := &"walk" if move.length_squared() > 0.0 else &"idle"
 	var dir := sprite.direction
 	if move.length_squared() > 0.0:
@@ -246,17 +246,21 @@ func _cursor_direction() -> Vector2:
 	return _direction_to(get_global_mouse_position())
 
 
-func _set_guard(up: bool) -> void:
-	_guard_direction = AssetSprite.direction_from_vector(_cursor_direction()) if up else &""
-	_combat.set_guard(up, _cursor_direction())
+## Hitbox jest dzieckiem węzła Combat (nie Node2D), więc sam nie podąża za bohaterem.
+func _sync_hitbox() -> void:
+	if _hitbox:
+		_hitbox.global_position = global_position
 
 
-## Garda śledzi kursor: walka dostaje nowy kierunek tylko przy zmianie jednego z 8 kierunków.
-func _refresh_guard() -> void:
-	var direction := AssetSprite.direction_from_vector(_cursor_direction())
-	if direction != _guard_direction:
-		_guard_direction = direction
+## Zasada: Q wciśnięte oznacza gardę. Polecenie ponawiane co klatkę, więc wraca po ogłuszeniu,
+## odskoku czy pęknięciu; to, czy parada należy się graczowi, pilnuje walka.
+func _update_guard() -> void:
+	if Input.is_action_pressed(&"guard"):
+		_guard_held = true
 		_combat.set_guard(true, _cursor_direction())
+	elif _guard_held:
+		_guard_held = false
+		_combat.set_guard(false)
 
 
 func _on_dash_requested(offset: Vector2, duration: float) -> void:

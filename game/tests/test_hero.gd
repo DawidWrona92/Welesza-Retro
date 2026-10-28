@@ -1,5 +1,6 @@
 extends "res://tests/test_case.gd"
 
+const HERO_SCENE := preload("res://actors/hero/hero.tscn")
 const DT := 1.0 / 60.0
 
 
@@ -7,7 +8,9 @@ const DT := 1.0 / 60.0
 class FakeCombat:
 	extends Node
 	signal dash_requested(offset: Vector2, duration: float)
+	var state := Combat.State.IDLE
 	var attack_range := 90.0
+	var guard_calls: Array[bool] = []
 	var locked := false
 	var speed_factor := 1.0
 	var attacks: Array = []
@@ -24,8 +27,8 @@ class FakeCombat:
 	func request_dodge(_direction: Vector2) -> void:
 		pass
 
-	func set_guard(_up: bool, _direction: Vector2) -> void:
-		pass
+	func set_guard(up: bool, _direction: Vector2 = Vector2.ZERO) -> void:
+		guard_calls.append(up)
 
 
 var _root: Window
@@ -46,7 +49,8 @@ func teardown() -> void:
 
 
 func _spawn_hero(with_combat: bool) -> Hero:
-	var hero: Hero = load("res://actors/hero/hero.tscn").instantiate()
+	var hero: Hero = HERO_SCENE.instantiate()
+	hero.get_node("Combat").free()
 	if with_combat:
 		_combat = FakeCombat.new()
 		_combat.name = "Combat"
@@ -211,3 +215,35 @@ func test_dash_moves_and_stops_at_obstacle() -> void:
 		_hero.global_position.x < 190.0,
 		"odskok zatrzymany przez ścianę: %s" % _hero.global_position
 	)
+
+
+func test_guard_is_reasserted_while_key_held() -> void:
+	preload("res://autoload/controls.gd").apply_defaults()
+	_hero.free()
+	_hero = _spawn_hero(true)
+	Input.action_press(&"guard")
+	for i in 3:
+		_hero._physics_process(DT)
+	check_eq(_combat.guard_calls, [true, true, true], "garda ponawiana co klatkę przy wciśniętym Q")
+	_combat.guard_calls.clear()
+	Input.action_release(&"guard")
+	for i in 3:
+		_hero._physics_process(DT)
+	check_eq(_combat.guard_calls, [false], "puszczenie Q opuszcza gardę raz")
+
+
+func test_real_combat_hit_through_hitbox_and_hurtbox() -> void:
+	_hero.free()
+	_hero = HERO_SCENE.instantiate()
+	var target: Hero = HERO_SCENE.instantiate()
+	_root.add_child(_hero)
+	_root.add_child(target)
+	_extras.append(target)
+	_hero.global_position = Vector2.ZERO
+	target.global_position = Vector2(60, 0)
+	var attacker: Combat = _hero.get_node("Combat")
+	var victim: Combat = target.get_node("Combat")
+	attacker.request_attack(Vector2.RIGHT, null)
+	await _root.get_tree().create_timer(1.0).timeout
+	check(victim.health < victim.max_health, "cios przez Hitbox i Hurtbox zadał obrażenia")
+	check_eq(attacker.state, Combat.State.IDLE, "bohater wrócił do bezczynności po ciosie")
