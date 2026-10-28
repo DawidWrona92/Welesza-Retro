@@ -39,10 +39,10 @@ Kolejność nie jest datowana. M1 i M2 mogą iść równolegle po M0. Treść (T
 | T07 | M1 | Bohater: pancerz skórzany i miecz, 8 kierunków; bezczynność, chód, cios; warstwy korpus, głowa, broń | Grafik | T05 | Jak T06; ta sama twarz i skala we wszystkich kierunkach | zlecone |
 | T08 | M1 | Teren testowy: kafle podłoża (błoto, ściółka), wóz, drzewo liściaste z koroną na osobnej warstwie, kamień | Grafik | T05 | Assety z kontraktem JSON | zlecone |
 | T09 | M1 | Scena testowa w kamerze gry z T06–T08 i raport spójności klatek | PM | T04, T06–T08 | Autor ocenia nagranie na bramce B1 |  |
-| T10 | M2 | Ruch myszą, sprint i wytrzymałość, kamera, sortowanie po Y | Programista | T01 | Ruch w 8 kierunkach, sprint zużywa wytrzymałość | zlecone |
+| T10 | M2 | Ruch myszą, sprint i wytrzymałość, kamera, sortowanie po Y | Programista | T01 | Ruch w 8 kierunkach, sprint zużywa wytrzymałość | zrobione |
 | T11 | M2 | Rdzeń walki: atak na kliknięcie, wiązanki z oknami ze zdarzeń animacji, unik, garda i parada, przerwania | PM | T10 | Scenariusze testów z [walki](walka.md) przechodzą jako testy headless | zrobione |
 | T12 | M2 | AI: Pies i Drwal z zapowiedziami i priorytetami z [przeciwników](przeciwnicy.md) | Programista | T11 | Obie walki da się wygrać podstawowym zestawem | zrobione |
-| T13 | M2 | Leczenie (opatrunek, nalewka), śmierć i wczytanie w wersji minimalnej | Programista | T11 | Zgodnie z [mechaniki](mechaniki.md), część II B i D | zrobione |
+| T13 | M2 | Leczenie (opatrunek, nalewka), śmierć i wczytanie w wersji minimalnej | Programista | T11 | Zgodnie z [mechaniki](mechaniki.md), część II B i D |  |
 | T14 | M2 | Pomiar D, B, U, A, V i wpis do [mapy świata](world/README.md) | PM | T11, T12 | Wartości w dokumentach zamiast symboli |  |
 | T15 | M3 | Greybox WLD-00–02, doczytywanie fragmentów w tle, trwały stan obiektów (`world_id`) | PM | T14 | Przejście tam i z powrotem bez pauzy, bez podwójnych obiektów |  |
 | T16 | M3 | Zanikanie koron i dachów, przesłanianie postaci | Programista | T15 | Bohater i zapowiedź ataku zawsze widoczne |  |
@@ -54,7 +54,7 @@ Kolejność nie jest datowana. M1 i M2 mogą iść równolegle po M0. Treść (T
 | T22 | M4 | Playtest pierwszej wyprawy według [mapy demo](mapa-demo.md), część II §7 | Autor, PM | T19–T21 | Raport z nagraniem i listą poprawek |  |
 | T23 | M5 | Sektory WLD-03–08, pozostali przeciwnicy i bossowie, zadania, latarnia, finał | Wszyscy, plan szczegółowy po B4 | B4 | Kontrakt demo spełniony |  |
 | T24 | treść | Biblia świata: scalenie do dwóch plików według wskazówek w PR #2 | Agent treści | — | PR #2 gotowy do merge'u | zlecone |
-| T25 | treść | Wygląd przeciwników w kartach [przeciwników](przeciwnicy.md) na podstawie konceptów (PR #3) | Agent treści | — | Karty zgodne z konceptami | zlecone |
+| T25 | treść | Wygląd przeciwników w kartach [przeciwników](przeciwnicy.md) na podstawie konceptów (PR #3) | Agent treści | — | Karty zgodne z konceptami | zrobione |
 | T26 | treść | Wewnętrzna logika tajemnicy: słup, zamknięcie boru, latarnia, Stróż (reguły dla twórców, nie dla gracza) | Autor, PM | — | Zapis w [fabule](fabula.md) przed T20 |  |
 | T27 | treść | Pełna karta wilka | Agent treści | — | Karta w [przeciwnikach](przeciwnicy.md) |  |
 
