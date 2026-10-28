@@ -1,0 +1,25 @@
+{
+  "schema": "welesza.asset.v1",
+  "id": "PROP-olcha",
+  "kind": "prop",
+  "canvas": [
+    1024,
+    1536
+  ],
+  "anchor": [
+    512,
+    1440
+  ],
+  "status": "test",
+  "source": "GPT-6",
+  "background": "transparent",
+  "layers": [
+    "ground",
+    "trunk",
+    "crown"
+  ],
+  "collision": {
+    "circle": 70
+  },
+  "occlusion_y": 1380
+}
