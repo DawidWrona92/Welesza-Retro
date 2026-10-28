@@ -31,6 +31,48 @@
       "frames": 1,
       "fps": 12,
       "loop": false
+    },
+    "walk": {
+      "frames": 8,
+      "fps": 12,
+      "loop": true,
+      "events": [
+        {
+          "frame": 1,
+          "name": "step"
+        },
+        {
+          "frame": 5,
+          "name": "step"
+        }
+      ]
+    },
+    "attack": {
+      "frames": 7,
+      "fps": 12,
+      "loop": false,
+      "events": [
+        {
+          "frame": 0,
+          "name": "telegraph_start"
+        },
+        {
+          "frame": 3,
+          "name": "hit_start"
+        },
+        {
+          "frame": 4,
+          "name": "hit_end"
+        },
+        {
+          "frame": 5,
+          "name": "combo_open"
+        },
+        {
+          "frame": 6,
+          "name": "combo_close"
+        }
+      ]
     }
   },
   "collision": {

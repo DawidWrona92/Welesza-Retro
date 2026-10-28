@@ -1,0 +1,24 @@
+{
+  "schema": "welesza.asset.v1",
+  "id": "PROP-drzewo-lisciaste",
+  "status": "test",
+  "source": "GPT-6",
+  "background": "transparent",
+  "kind": "prop",
+  "canvas": [
+    1024,
+    1536
+  ],
+  "anchor": [
+    512,
+    1440
+  ],
+  "layers": [
+    "trunk",
+    "crown"
+  ],
+  "collision": {
+    "circle": 70
+  },
+  "occlusion_y": 1380
+}
