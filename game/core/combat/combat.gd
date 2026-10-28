@@ -123,10 +123,14 @@ func place_hitbox() -> void:
 	var hitbox := get_node_or_null(^"Hitbox") as Area2D
 	if hitbox == null:
 		return
-	var reach := _to_world(_attack_dir).normalized() * hit_reach
-	hitbox.global_position = _position() + _to_screen(reach)
+	var area := _profile.area_scale if _profile else 1.0
+	if _profile and _profile.around_self:
+		hitbox.global_position = _position()
+	else:
+		var reach := _to_world(_attack_dir).normalized() * hit_reach
+		hitbox.global_position = _position() + _to_screen(reach)
 	hitbox.rotation = 0.0
-	hitbox.scale = Vector2(1.0, AssetSprite.ISO_Y)
+	hitbox.scale = Vector2(area, area * AssetSprite.ISO_Y)
 
 
 ## Postęp czasu stanów niezależnych od animacji (unik, ogłuszenie, garda).

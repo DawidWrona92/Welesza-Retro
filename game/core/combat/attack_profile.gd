@@ -17,3 +17,8 @@ extends Resource
 @export var recovery := 0.0
 ## Dodatkowy powrót po chybieniu (s): okazja dla gracza, np. ostrze ugrzęzło w ziemi.
 @export var miss_recovery := 0.0
+## Obszar trafienia wokół atakującego, nie przed nim (atak obrotowy). Garda i parada liczą kąt
+## nadal od środka atakującego.
+@export var around_self := false
+## Mnożnik wielkości Hitboxa dla tego ataku, np. żeby obrót sięgał dalej niż cios przed sobą.
+@export var area_scale := 1.0
