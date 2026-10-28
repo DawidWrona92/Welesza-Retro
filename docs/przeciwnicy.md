@@ -111,6 +111,8 @@ Nowe ofiary i istoty nie dopisują historii do zatwierdzonych NPC. Ślady człow
 
 **Sylwetka:** wąska postać; zwisający pusty płaszcz przewieszony przez ramiona jak niesiony człowiek; jasne dłonie. Dźwięk: melodia bez słów, kończąca się za każdym razem przed ostatnią nutą.
 
+**Koncept:** [plansza Żałobnicy](art/bestiariusz/zalobnica/01_karta_koncepcyjna.png) przedstawia wąską sylwetkę w warstwach ciemnych, poszarpanych tkanin, twarz ukrytą pod welonem i jasne dłonie. Widoki oraz warianty są referencją wizualną; skalę i czytelność pustego płaszcza należy sprawdzić w grze.
+
 **Zachowanie:** cierpliwa, troskliwa, zaborcza. Zachowuje się, jakby próbowała kogoś ochronić. Nie potwierdzamy, czy jest człowiekiem, duchem czy obrazem wywołanym przez las.
 
 **Priorytety AI:** pozostaje przy chronionym miejscu → rozpoczyna śpiew tylko przy widocznym sojuszniku → podtrzymuje osłonę jednego celu → przerywa po otrzymaniu trafienia lub utracie zasięgu/łączności wzrokowej → szuka nowej pozycji. Nie leczy HP i nie wskrzesza wrogów.
