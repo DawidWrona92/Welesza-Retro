@@ -16,13 +16,13 @@ Proponowane identyfikatory: MECH-cancel-defense, MECH-rhythm-chain, MECH-guard, 
 | Czynność | Wejście — propozycja przypisania | Efekt | Koszt lub ograniczenie | Cel projektowy |
 |---|---|---|---|---|
 | Ruch | LPM na terenie | Przejście do punktu | Przeszkody, czas przejścia | Pozycjonowanie |
-| Sprint [DECYZJA AUTORA, 28.10.2026] | Osobny klawisz, do przypisania | Szybszy ruch | Zużywa wytrzymałość | Szybsze przejście kosztem gotowości do walki |
+| Sprint [DECYZJA AUTORA, 28.10.2026] | Przytrzymanie Shift | Szybszy ruch | Zużywa wytrzymałość | Szybsze przejście kosztem gotowości do walki |
 | Atak wręcz | LPM na przeciwniku | Jeden cios; poza zasięgiem dojście i jeden cios | Czas i wytrzymałość | Świadomy atak |
-| Atak w miejscu | Shift + LPM | Cios albo strzał w kierunku kursora bez dojścia | Te same koszty co zwykły atak | Jednoznaczna intencja |
+| Atak w miejscu | Ctrl + LPM (Shift zajęty przez sprint) | Cios albo strzał w kierunku kursora bez dojścia | Te same koszty co zwykły atak | Jednoznaczna intencja |
 | Unik | Spacja | Krótki odskok ku kursorowi | Wytrzymałość, przestrzeń do ruchu, koniec wiązanki | Reakcja na zagrożenie |
 | Garda/parada | Przytrzymanie Q | Obrona od strony kursora | Koszt przyjęcia ciosu, wolniejszy ruch | Obrona przeciw broni |
 | Umiejętność | PPM | Wybrana aktywna technika | Koszt i ograniczenie techniki | Rozwój możliwości |
-| Strzał | LPM na celu lub Shift + LPM w punkt | Przygotowanie i pojedynczy strzał | Amunicja i czas | Walka na dystans |
+| Strzał | LPM na celu lub Ctrl + LPM w punkt | Przygotowanie i pojedynczy strzał | Amunicja i czas | Walka na dystans |
 
 Klawisze zmienialne. Logika akcji oddzielona od urządzenia wejścia, żeby późniejsze dodanie pada nie wymagało zmiany zasad walki. Nie ustalamy jeszcze mapowania pada.
 
@@ -79,7 +79,7 @@ Propozycja: pancerz redukuje obrażenia według odporności na rodzaj ataku, a p
 
 ## C. Walka na dystans i zakres prototypu
 
-Kliknięcie wroga wskazuje cel, ale strzał po wypuszczeniu nie śledzi go. Shift + LPM pozwala wycelować przed poruszającym się celem. Postać obraca się i przygotowuje strzał, pozostając na miejscu; nie podchodzi automatycznie do wroga podczas przygotowania.
+Kliknięcie wroga wskazuje cel, ale strzał po wypuszczeniu nie śledzi go. Ctrl + LPM pozwala wycelować przed poruszającym się celem. Postać obraca się i przygotowuje strzał, pozostając na miejscu; nie podchodzi automatycznie do wroga podczas przygotowania.
 
 Łuk wymaga przygotowania każdego strzału. Kusza pozwala przygotować bełt wcześniej, ale po strzale potrzebuje dłuższego przeładowania. Unik i garda przerywają przygotowanie, zanim pocisk zostanie wypuszczony; nie tracimy niewystrzelonej amunicji. Przerwane przeładowanie trzeba zacząć ponownie. Po wypuszczeniu pocisk pozostaje aktywny niezależnie od dalszych akcji bohatera.
 

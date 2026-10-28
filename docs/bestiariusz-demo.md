@@ -40,7 +40,7 @@ Nowe ofiary i istoty nie dopisują historii do zatwierdzonych NPC. Ślady człow
 
 **[DECYZJA AUTORA, 28.10.2026]** Osobny potwór, odrębny od Zdziczałego psa. Duży i szary, wyraźnie większy od burego psa ([kierunek artystyczny](art/WELESZA_DARK_PAINTERLY_2D_KIERUNEK_ARTYSTYCZNY_v1.pdf), s. 9).
 
-**Rola:** samotny myśliwy głębszego lasu; rodzina zachowań psa (skok do gardła, kłapnięcie, obieganie celu), ale trudniejszy. **Różnice:** więcej zdrowia i mocniejsze ugryzienie, krótsza okazja po chybionym skoku, chętniej atakuje z zaskoczenia; zapowiedź pozostaje równie czytelna. Wartości w etapie balansu.
+**Rola:** samotny myśliwy głębszego lasu; rodzina zachowań psa (skok do gardła, kłapnięcie, obieganie celu), ale trudniejszy. **Różnice:** więcej zdrowia i mocniejsze ugryzienie, krótsza okazja po chybionym skoku; potrafi wyskoczyć z boru na idącego ścieżką gracza; zapowiedź pozostaje równie czytelna. Wartości w etapie balansu.
 
 **Występowanie:** las: kamienie, obóz, dalsze odnogi. Pojedynczo, najwyżej w parze, zgodnie z limitem aktywnych wrogów.
 
@@ -69,7 +69,7 @@ Nowe ofiary i istoty nie dopisują historii do zatwierdzonych NPC. Ślady człow
 
 **Zachowanie:** pracowity, drażliwy, wyczerpany. Broni pustego paleniska, choć drewno leży w wodzie. Chce przepędzić obcego; nie prowadzi zrozumiałej rozmowy.
 
-**Priorytety AI:** ostrzega ruchem topora → broni wejścia → zwykły zamach w zasięgu → przy uporczywej gardzie gracza wybiera wyraźnie zapowiedziany ciężki atak → po chybieniu wraca do gotowości. Reakcja nie jest odczytem przycisku gracza w tej samej klatce.
+**Priorytety AI:** nie atakuje z zaskoczenia → ostrzega ruchem topora → broni wejścia → zwykły zamach w zasięgu → przy uporczywej gardzie gracza wybiera wyraźnie zapowiedziany ciężki atak → po chybieniu wraca do gotowości. Reakcja nie jest odczytem przycisku gracza w tej samej klatce.
 
 | Atak | Zapowiedź | Efekt | Odpowiedź i okazja |
 |---|---|---|---|

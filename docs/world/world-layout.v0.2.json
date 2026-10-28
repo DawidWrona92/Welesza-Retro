@@ -447,7 +447,7 @@
       ],
       "area": "optional",
       "type": "quest",
-      "design_note": "missing lodger (cast open), no escort quest",
+      "design_note": "Uniegost, missing lodger; no escort quest",
       "owner_sector": "S02"
     },
     {

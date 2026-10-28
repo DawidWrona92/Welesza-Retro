@@ -59,7 +59,7 @@
 
 ### S02 — Północne ścieżki
 
-**Funkcja:** Leśne schronienie zaginionego lokatora i fragment górnego dojścia obozowego.
+**Funkcja:** Leśne schronienie Uniegosta i fragment górnego dojścia obozowego.
 
 **Geometria/inscenizacja:** Odcinki dróg `camp__shelter` i `camp__crossroads` przecinają S02; nie utożsamiać z całym skrótem.
 
