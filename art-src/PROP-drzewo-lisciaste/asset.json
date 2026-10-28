@@ -3,7 +3,7 @@
   "id": "PROP-drzewo-lisciaste",
   "status": "test",
   "source": "GPT-6",
-  "background": "transparent",
+  "background": "magenta",
   "kind": "prop",
   "canvas": [
     1024,
