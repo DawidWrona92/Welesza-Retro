@@ -50,9 +50,9 @@ GRADING = {
     "rock_lichen_moss_ground": (.65, .84, 1.06, 200),
     "rock_stones_mossy": (.66, .84, 1.07, 199),
 }
-WORK_SIZE = 256
-COLORS = 28
-SEAM = 12
+WORK_SIZE = 128
+COLORS = 20
+SEAM = 8
 
 
 def _grade(im: Image.Image, stem: str) -> Image.Image:
@@ -91,7 +91,7 @@ def pixelart(source: Image.Image, stem: str) -> Image.Image:
     """Zachowaj plamy i układ oryginału, odrzuć fotograficzny szum."""
     dimensions = source.size
     low = source.convert("RGB").resize((WORK_SIZE, WORK_SIZE), Image.Resampling.BOX)
-    low = low.filter(ImageFilter.MedianFilter(3))
+    low = low.filter(ImageFilter.MedianFilter(5))
     low = low.filter(ImageFilter.GaussianBlur(.42))
     low = _grade(low, stem)
     low = _seamless(low)
