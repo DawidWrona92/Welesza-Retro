@@ -174,3 +174,41 @@ Autor dopuścił propozycje zmiany palety lub timingów do wspólnej, pogłębio
 analizy. Przed taką zmianą przedstaw konkretny problem, porównanie wariantów oraz
 wpływ na czytelność, zdarzenia i balans walki. Nie traktuj ogólnych zaleceń PDF
 (np. minimalnego windupu gracza) jako decyzji o zmianie obecnego kontraktu.
+
+## Nagranie z rzeczywistej sceny Godota
+
+`game/world/pixelart/recording.tscn` jest osobnym pokazem: osiem kierunków ruchu
+bohatera, następnie istniejący scenariusz walki z AI psa. Chód korzysta z `move_to`,
+nawigacji i fizyki gry. Podczas prezentacji chodu pies jest ukryty i ma wstrzymane
+AI; podczas walki działa normalnie. Kamera ma całkowite powiększenie 2×, aby
+pokazać kończyny i broń. Nie zmieniamy prędkości gry, klatek ani zdarzeń animacji.
+
+Godot 4.7.2 wymaga działającego ekranu X11/Wayland; `--headless` nadaje się do
+sprawdzenia scenariusza, ale nie renderuje filmu. W chmurze można użyć Xvfb
+z ekranem 1920×1080×24 i renderera Mesa llvmpipe. Ustaw `DISPLAY` na własny
+wirtualny ekran (w bieżącym środowisku `:99`). Nie zakładaj, że proces Xvfb
+przetrwa odtworzenie środowiska.
+
+Z katalogu repozytorium, po budowie/importowaniu assetów:
+
+```bash
+mkdir -p /tmp/welesza-film
+godot --path game res://world/pixelart/recording.tscn \
+  --audio-driver Dummy --write-movie /tmp/welesza-film/recording.avi \
+  --fixed-fps 60 --disable-vsync
+ffmpeg -i /tmp/welesza-film/recording.avi -an -c:v libx264 -threads 4 \
+  -preset medium -crf 18 -pix_fmt yuv420p -movflags +faststart \
+  /tmp/welesza-film/chod-i-walka.mp4
+```
+
+Nagranie kończy się samo. Kod 0 wymaga osiągnięcia celów ruchu, pokazania ośmiu
+kierunków i trafień obu stron; w logu muszą wystąpić `PIXEL_WALK directions=8`
+i `PIXEL_DEMO` z dodatnimi licznikami. Nie dodawaj `--demo`: nagranie samo
+uruchamia walkę po części poświęconej chodowi. Wyjście MP4 jest bez dźwięku.
+Sprawdź również log pod kątem `ERROR`/`SCRIPT ERROR`, liczbę klatek przez ffprobe
+oraz obrazy z części ruchowej i walki. Zapis klatka po klatce zachowuje tempo 1×
+w filmie nawet wtedy, gdy renderowanie na CPU trwa dłużej.
+
+Film służy ocenie obecnego stanu, nie stanowi potwierdzenia ukończenia animacji.
+Krótki krok i wynikająca z niego wysoka kadencja pozostają widoczne. Do oceny
+anatomii używaj równolegle arkuszy sylwetek i różnic z sekcji wyżej.
