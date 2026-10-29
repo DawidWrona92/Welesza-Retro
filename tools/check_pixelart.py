@@ -17,6 +17,7 @@ import numpy as np
 from PIL import Image, ImageDraw
 
 from pixelart_generator import ASSETS, PROFILE, generate
+from pixelart_geometry import geometry_issues, interior_mask, review_strips
 from welesza_assets import ART_SRC, GAME_ASSETS, REPO
 
 
@@ -99,7 +100,7 @@ def check() -> dict:
         if hashlib.sha256((GAME_ASSETS / name).read_bytes()).hexdigest() != digest:
             raise ValueError(f"Wynik zmieniony poza pipeline'em: {name}")
     allowed = {tuple(bytes.fromhex(c)) for c in profile["palette"]}
-    report = {"assets": len(ASSETS), "atlases": 0, "frames": 0, "warnings": []}
+    report = {"assets": len(ASSETS), "atlases": 0, "frames": 0, "warnings": [], "geometry": [], "review_sheets": [], "anatomy_status": "requires_pose_review"}
     step = profile["pixel_size"]
     for asset_id in ASSETS:
         source = json.loads((ART_SRC / asset_id / "asset.json").read_text())
@@ -128,6 +129,15 @@ def check() -> dict:
             cw, ch = [v // step for v in runtime["cell"]]
             anim = path.stem
             n = runtime["animations"][anim]["frames"]
+            review_path = GAME_ASSETS / "pixelart/review" / asset_id / anim
+            review_path.mkdir(parents=True, exist_ok=True)
+            review_strips(small, n, (cw, ch), review_path)
+            report["review_sheets"].append(review_path.relative_to(GAME_ASSETS).as_posix())
+            reference = fixed = None
+            if anim == "walk":
+                audit_path = GAME_ASSETS / "pixelart/audit" / asset_id
+                reference = np.asarray(Image.open(audit_path / "reference.png").convert("RGBA"))
+                fixed = np.asarray(Image.open(audit_path / "fixed.png").convert("L")) > 0
             directions = ("s", "sw", "w", "nw", "n", "ne", "e", "se")
             if anim == "walk":
                 for target, origin in source.get("mirror", {}).items():
@@ -142,6 +152,15 @@ def check() -> dict:
                 previous = None
                 for frame in range(n):
                     alpha = small[row*ch:(row+1)*ch, frame*cw:(frame+1)*cw, 3]
+                    if anim == "walk":
+                        frame_pixels = small[row*ch:(row+1)*ch, frame*cw:(frame+1)*cw]
+                        ref = reference[row*ch:(row+1)*ch]
+                        for issue in geometry_issues(frame_pixels, ref, fixed[row*ch:(row+1)*ch]):
+                            report["warnings"].append(dict(issue, asset=asset_id, animation=anim,
+                                                           direction=direction, frame=frame))
+                    report["geometry"].append({"asset": asset_id, "animation": anim,
+                        "direction": direction, "frame": frame, "area": int((alpha > 0).sum()),
+                        "interior_pixels": int(interior_mask(alpha).sum())})
                     ys, xs = np.nonzero(alpha)
                     if not len(xs):
                         raise ValueError(f"Pusta klatka {asset_id}/{anim}/{direction}/{frame}")

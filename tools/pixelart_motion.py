@@ -70,7 +70,8 @@ def deform_cutout(cutout: Image.Image, dx: float, dy: float) -> Image.Image:
     return Image.fromarray(data)
 
 
-def rig_walk(reference: Image.Image, rig: dict, frames: int, step: int = 2) -> tuple[Image.Image, dict]:
+def rig_walk(reference: Image.Image, rig: dict, frames: int, step: int = 2,
+             audit: dict | None = None) -> tuple[Image.Image, dict]:
     """Chód z teksturowanych wycinków jednej pozy, bez zastępowania nóg wielokątami.
 
     Maski i amplitudy są w jawnej siatce 128 px. Inna siatka wymaga osobnego rigu.
@@ -79,6 +80,9 @@ def rig_walk(reference: Image.Image, rig: dict, frames: int, step: int = 2) -> t
         raise ValueError("Rig wycinkowy wymaga pixel_size=2; przygotuj osobny rig dla innej siatki")
     size = 128
     sheet = Image.new("RGBA", (size * frames, size * 8))
+    if audit is not None:
+        audit["reference"] = Image.new("RGBA", (size, size * 8))
+        audit["fixed"] = Image.new("L", (size, size * 8))
     telemetry = {"mode": "textured_cutouts", "cycle_distance": rig["cycle_distance"],
                  "frames": frames, "directions": {}}
     for row, direction in enumerate(DIRECTIONS):
@@ -91,10 +95,12 @@ def rig_walk(reference: Image.Image, rig: dict, frames: int, step: int = 2) -> t
             masks.append(np.asarray(mask) > 0)
         # Wycinaj całe spójne fragmenty, nigdy połowy buta według mediany X.
         occupied = np.logical_or.reduce(masks) & (original[:, :, 3] > 0)
+        protected = np.zeros_like(occupied)
         for polygon in rig.get("protect", {}).get(direction, []):
             mask = Image.new("L", base.size)
             ImageDraw.Draw(mask).polygon([tuple(p) for p in polygon], fill=255)
-            occupied &= np.asarray(mask) == 0
+            protected |= np.asarray(mask) > 0
+            occupied &= ~protected
         # W widokach z przodu osobne maski rozdzielają nogi także wtedy, gdy
         # stykają się pikselem przy biodrach. Złączone maski nie mogą zsynchronizować nóg.
         owners = np.zeros_like(occupied, dtype=int)
@@ -131,6 +137,14 @@ def rig_walk(reference: Image.Image, rig: dict, frames: int, step: int = 2) -> t
         if not parts:
             raise ValueError(f"Brak wyciętych kończyn: {direction}")
         parts.sort(key=lambda part: part.getbbox()[0])
+        if audit is not None:
+            fixed = (original[:, :, 3] > 0) & ~claimed
+            for polygon in rig.get("rigid_regions", {}).get(direction, []):
+                mask = Image.new("L", base.size)
+                ImageDraw.Draw(mask).polygon([tuple(p) for p in polygon], fill=255)
+                fixed |= np.asarray(mask) > 0
+            audit["reference"].paste(base, (0, row * size))
+            audit["fixed"].paste(Image.fromarray(fixed.astype(np.uint8) * 255), (0, row * size))
         body = original.copy()
         body[claimed] = 0
         body = Image.fromarray(body)

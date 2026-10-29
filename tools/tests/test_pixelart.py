@@ -171,3 +171,44 @@ class PixelArtTest(unittest.TestCase):
         image.paste((96, 72, 51, 255), (54, 12, 63, 48))
         with self.assertRaisesRegex(ValueError, "krawędzi"):
             deform_cutout(image, 7, 0)
+
+    def test_geometry_catches_internal_hole_without_changing_outline(self):
+        from pixelart_geometry import geometry_issues
+        base = np.zeros((32, 32, 4), dtype=np.uint8)
+        base[4:28, 8:24] = [96, 72, 51, 255]
+        broken = base.copy()
+        broken[12:15, 14:17] = 0
+        kinds = {p['kind'] for p in geometry_issues(broken, base, base[:, :, 3] > 0)}
+        self.assertIn('interior_material_lost', kinds)
+        self.assertIn('fixed_region_changed', kinds)
+
+    def test_geometry_catches_open_notch_and_repainted_connected_sword(self):
+        from pixelart_geometry import geometry_issues
+        base = np.zeros((32, 32, 4), dtype=np.uint8)
+        base[4:28, 8:24] = [96, 72, 51, 255]
+        fixed = base[:, :, 3] > 0
+        for pixel in ([0, 0, 0, 0], [120, 90, 50, 255]):
+            broken = base.copy()
+            broken[16, 8] = pixel
+            self.assertIn('fixed_region_changed', {p['kind'] for p in geometry_issues(broken, base, fixed)})
+
+    def test_legitimate_negative_space_and_diagonal_openings_are_not_new_damage(self):
+        from pixelart_geometry import geometry_issues, interior_mask
+        base = np.zeros((16, 16, 4), dtype=np.uint8)
+        base[2:14, 2:14] = [96, 72, 51, 255]
+        base[6:10, 6:10] = 0  # świadoma przestrzeń między ręką a tułowiem
+        self.assertEqual(geometry_issues(base, base, base[:, :, 3] > 0), [])
+        self.assertEqual(int(interior_mask(base[:, :, 3]).sum()), 16)
+        for i in range(7):
+            base[i, i] = 0
+        self.assertEqual(int(interior_mask(base[:, :, 3]).sum()), 0)
+
+    def test_fixed_mask_protects_transparent_space_beside_weapon(self):
+        from pixelart_geometry import geometry_issues
+        reference = np.zeros((16, 16, 4), dtype=np.uint8)
+        reference[2:14, 7] = [96, 72, 51, 255]
+        fixed = np.zeros((16, 16), dtype=bool)
+        fixed[:, 5:10] = True
+        broken = reference.copy()
+        broken[8:10, 8] = [96, 72, 51, 255]  # zygzak ciągle połączony z ostrzem
+        self.assertIn('fixed_region_changed', {p['kind'] for p in geometry_issues(broken, reference, fixed)})
