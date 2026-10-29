@@ -130,3 +130,47 @@ Korpus i ramiona nie mają jeszcze przeciwskrętu. Naturalny dłuższy krok oraz
 pełny chód czworonożny wymagają osobno opracowanych części i póz kontaktowych.
 Pozostałe animacje zachowują źródłowe pozy i istniejące korekty; konwersja nie
 stanowi dowodu naprawienia wszystkich błędów rysunków GPT.
+
+## Kontrola bryły i wnioski z przewodnika autora
+
+Materiał: „Rysowany pixel art dla agentów LLM: uniwersalny przewodnik”, PDF
+przekazany przez autora 29.10.2026, zwłaszcza sekcje 2, 5 i 6. Stosujemy z niego
+kontrolę sylwetki, zachowania materiału, rozdzielenia części oraz filmstripów.
+Konwersja painted artów jest bazą roboczą; poprawna paleta i siatka nie dowodzą
+jakości rysowanego pixel artu. Progi dla 16–32 px z PDF nie są automatycznie
+przenoszone na nasze płótna 128×128.
+
+Walidacja chodu porównuje każdą klatkę ze źródłową pozą, sprzed deformacji:
+
+- `fixed_region_changed`: choćby jeden zmieniony piksel RGBA w nieruchomym
+  korpusie lub chronionej części. W masce miecza kontrolujemy również otoczenie
+  przezroczyste, aby wykryć dodany zygzak przy nadal połączonym ostrzu.
+- `interior_material_lost`: nowa zamknięta luka w miejscu, gdzie źródło zawierało
+  materiał. Kontrola dotyczy pełnej maski alfa, również pojedynczego piksela we
+  wnętrzu. Istniejąca przestrzeń między ręką a ciałem sama w sobie nie jest błędem.
+- `quality.json` zapisuje powierzchnię sylwetki i liczbę pikseli wnętrz wszystkich
+  klatek. Powierzchnia jest wskaźnikiem 2D, nie pomiarem objętości anatomicznej.
+
+`pixelart/audit/<ID>/reference.png` i `fixed.png` są hashowane w manifeście.
+Błąd jednakowy we wszystkich wygenerowanych klatkach nie staje się wzorcem tylko
+przez porównanie do klatki 0. Maski rigu nadal wymagają oceny: błędnie opisanej
+anatomii w samym źródle ta kontrola nie naprawia.
+
+`pixelart/review/<ID>/<animacja>/<kierunek>.png` zawiera wszystkie klatki w trzech
+pasach: obraz, pełną białą sylwetkę oraz różnicę z poprzednią klatką. Szary to
+wspólny materiał, czerwony ubytek, zielony przyrost. W chodzie klatka 0 pokazuje
+szew pętli; w niepętlących akcjach zestawienie końca z początkiem jest wyłącznie
+porównaniem póz, nie wymaganiem zapętlenia. Oceniaj również atak, skok i reakcję
+na trafienie — odtwarzacz GIF nie zastępuje arkuszy.
+
+Przed uznaniem ruchu za ukończony trzeba jeszcze ocenić łańcuchy biodro–kolano–
+kostka–stopa i bark–łokieć–dłoń–broń, ich proporcje oraz okluzję. Sam brak dziur,
+stała powierzchnia i połączona sylwetka nie wykluczają stopy wyrastającej z kolana.
+W szczególności porównanie nieruchomych części dotyczy chodu, a nie swobodnego
+ruchu miecza podczas ataku; dla ataku potrzebne są jawnie ocenione pozy i punkty
+anatomiczne. Nie raportuj automatycznej akceptacji anatomii.
+
+Autor dopuścił propozycje zmiany palety lub timingów do wspólnej, pogłębionej
+analizy. Przed taką zmianą przedstaw konkretny problem, porównanie wariantów oraz
+wpływ na czytelność, zdarzenia i balans walki. Nie traktuj ogólnych zaleceń PDF
+(np. minimalnego windupu gracza) jako decyzji o zmianie obecnego kontraktu.
