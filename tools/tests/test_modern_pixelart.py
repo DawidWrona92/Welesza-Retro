@@ -7,7 +7,9 @@ import numpy as np
 from PIL import Image, ImageDraw
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from modern_pixelart_textures import COLORS, GRADING, MATERIALS, WORK_SIZE, pixelart
+from modern_pixelart_textures import (COLORS, GRADING, MATERIALS, WORK_SIZES,
+                                      POSTERIZE_LEVELS, _material_group,
+                                      _posterize_bands, pixelart)
 
 
 def specimen() -> Image.Image:
@@ -26,36 +28,70 @@ class ModernPixelartTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.src = specimen()
-        cls.out = pixelart(cls.src, "old_bark_weathered")
-        cls.out_rgb = np.asarray(cls.out.convert("RGB"))
+        cls.examples = {
+            "bark": ("old_bark_weathered", pixelart(cls.src, "old_bark_weathered")),
+            "ground": ("forest_litter_mixed", pixelart(cls.src, "forest_litter_mixed")),
+            "rock": ("rock_stones_mossy", pixelart(cls.src, "rock_stones_mossy")),
+        }
 
     def test_source_set_complete(self) -> None:
         names = {Path(f).stem for paths in MATERIALS.values() for f in paths}
         self.assertEqual(names, set(GRADING))
         self.assertEqual(len(names), 15)
+        self.assertEqual(set(MATERIALS), set(WORK_SIZES))
+        self.assertEqual(set(MATERIALS), set(COLORS))
+        for group, files in MATERIALS.items():
+            for filename in files:
+                self.assertEqual(_material_group(Path(filename).stem), group)
 
-    def test_true_pixel_grid(self) -> None:
-        self.assertEqual(self.out.size, (1024, 1024))
-        scale = 1024 // WORK_SIZE
-        self.assertGreaterEqual(scale, 8)
-        base = self.out_rgb[::scale, ::scale]
-        reconstructed = np.repeat(np.repeat(base, scale, axis=0), scale, axis=1)
-        np.testing.assert_array_equal(reconstructed, self.out_rgb)
+    def test_different_material_scales(self) -> None:
+        self.assertEqual(WORK_SIZES["bark"], 128)
+        self.assertEqual(WORK_SIZES["ground"], 64)
+        self.assertEqual(WORK_SIZES["rock"], 64)
+        for group, (stem, out) in self.examples.items():
+            with self.subTest(group=group):
+                self.assertEqual(out.size, (1024, 1024))
+                scale = 1024 // WORK_SIZES[group]
+                rgb = np.asarray(out.convert("RGB"))
+                small = rgb[::scale, ::scale]
+                recreated = np.repeat(np.repeat(small, scale, axis=0), scale, axis=1)
+                np.testing.assert_array_equal(rgb, recreated)
 
-    def test_limit_palette(self) -> None:
-        self.assertLessEqual(len(self.out.getcolors(maxcolors=1024 * 1024) or []), COLORS)
+    def test_palette_limit(self) -> None:
+        for group, (_, out) in self.examples.items():
+            with self.subTest(group=group):
+                self.assertLessEqual(len(out.getcolors(maxcolors=1024 * 1024) or []),
+                                     COLORS[group])
 
     def test_tile_edges_match(self) -> None:
-        np.testing.assert_array_equal(self.out_rgb[:, 0], self.out_rgb[:, -1])
-        np.testing.assert_array_equal(self.out_rgb[0], self.out_rgb[-1])
+        for group, (_, out) in self.examples.items():
+            with self.subTest(group=group):
+                rgb = np.asarray(out.convert("RGB"))
+                np.testing.assert_array_equal(rgb[:, 0], rgb[:, -1])
+                np.testing.assert_array_equal(rgb[0], rgb[-1])
 
     def test_reproducibility(self) -> None:
-        second = pixelart(self.src, "old_bark_weathered")
-        self.assertEqual(self.out.tobytes(), second.tobytes())
+        for group, (stem, out) in self.examples.items():
+            with self.subTest(group=group):
+                self.assertEqual(out.tobytes(), pixelart(self.src, stem).tobytes())
 
-    def test_shape_is_not_flat_color(self) -> None:
-        gray = np.asarray(self.out.convert("L"))
-        self.assertGreater(float(gray.std()), 10)
+    def test_distinct_shapes_remain(self) -> None:
+        for group, (_, out) in self.examples.items():
+            with self.subTest(group=group):
+                self.assertGreater(float(np.asarray(out.convert("L")).std()), 10)
+
+    def test_posterization_bands_no_uint8_overflow(self) -> None:
+        ramp = Image.fromarray(np.tile(np.arange(256, dtype=np.uint8),
+                                     (256, 1)), "L").convert("RGB")
+        arr = np.asarray(_posterize_bands(ramp, POSTERIZE_LEVELS))
+        self.assertLessEqual(len(np.unique(arr[..., 0])), POSTERIZE_LEVELS)
+        self.assertEqual(int(arr[0, 0, 0]), 0)
+        self.assertEqual(int(arr[0, -1, 0]), 255)
+        self.assertTrue(np.all(np.diff(arr[0, :, 0].astype(np.int16)) >= 0))
+
+    def test_reject_unknown_material(self) -> None:
+        with self.assertRaises(ValueError):
+            pixelart(self.src, "unknown_material")
 
     def test_reject_wrong_dimensions(self) -> None:
         with self.assertRaises(ValueError):
