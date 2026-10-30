@@ -50,9 +50,13 @@ GRADING = {
     "rock_lichen_moss_ground": (.65, .84, 1.06, 200),
     "rock_stones_mossy": (.66, .84, 1.07, 199),
 }
-WORK_SIZE = 256
-COLORS = 18
-SEAM = 12
+# Przy 1024x1024 jeden logiczny piksel ma dokładnie 8x8 pikseli.
+# Niewielka paleta i szerokie, twarde klastry zamiast fotograficznego szumu.
+WORK_SIZE = 128
+COLORS = 14
+SEAM = 8
+CONTRAST_BOOST = 1.20
+CLUSTER_PASSES = 2
 
 
 def _grade(im: Image.Image, stem: str) -> Image.Image:
@@ -88,15 +92,27 @@ def _seamless(im: Image.Image) -> Image.Image:
 
 
 def pixelart(source: Image.Image, stem: str) -> Image.Image:
-    """Zachowaj plamy i układ oryginału, odrzuć fotograficzny szum."""
+    """Stylizacja kształtów, nie sam downsampling.
+
+    1. BOX wydobywa większe bryły z oryginału; medianą usuwamy punktowy szum.
+    2. Mocniejszy kontrast eksponuje formy zamiast miękko rozmywać przejścia.
+    3. Bez ditheringu i połączenie sąsiednich klastrów tworzą płaskie plamy barw.
+    4. NEAREST odtwarza czytelną siatkę 8x8 bez interpolacji.
+    """
     dimensions = source.size
+    if dimensions != (1024, 1024):
+        raise ValueError(f"Oczekiwano tekstury 1024x1024: {stem}: {dimensions}")
+    if stem not in GRADING:
+        raise ValueError(f"Nieznany materiał: {stem}")
     low = source.convert("RGB").resize((WORK_SIZE, WORK_SIZE), Image.Resampling.BOX)
     low = low.filter(ImageFilter.MedianFilter(3))
-    
     low = _grade(low, stem)
+    low = ImageEnhance.Contrast(low).enhance(CONTRAST_BOOST)
     low = _seamless(low)
     low = low.quantize(colors=COLORS, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)
-    low = low.filter(ImageFilter.ModeFilter(3))
+    # Usuwamy piksele samotne, utrzymując kontury w małej rozdzielczości.
+    for _ in range(CLUSTER_PASSES):
+        low = low.filter(ImageFilter.ModeFilter(3))
     indices = np.asarray(low, dtype=np.uint8).copy()
     indices[:, -1] = indices[:, 0]
     indices[-1, :] = indices[0, :]
@@ -111,8 +127,9 @@ def _png_bytes(image: Image.Image) -> bytes:
 
 
 def _preview(previews: list[tuple[str, Image.Image]]) -> bytes:
+    """Przegląd 15 tekstur: skalowanie NEAREST, bez ukrywania struktury."""
     from PIL import ImageDraw
-    cell, label, columns = 190, 31, 3
+    cell, label, columns = 256, 30, 3
     rows = (len(previews) + columns - 1) // columns
     sheet = Image.new("RGB", (columns * cell, rows * (cell + label)), (27, 30, 29))
     pen = ImageDraw.Draw(sheet)
@@ -146,7 +163,7 @@ def generate(check: bool) -> int:
             else:
                 dst.write_bytes(payload)
             previews.append((Path(name).stem, generated))
-            print(f"{'OK' if not check or dst.read_bytes() == payload else 'FAIL'} {group}/{name}: {generated.size}, {COLORS} kolorów")
+            print(f"{'OK' if not check or dst.read_bytes() == payload else 'FAIL'} {group}/{name}: {generated.size}, <= {COLORS} kolorów, piksel {1024 // WORK_SIZE}x{1024 // WORK_SIZE}")
     sheet = _preview(previews)
     if check:
         if not PREVIEW.is_file() or PREVIEW.read_bytes() != sheet:
