@@ -112,10 +112,16 @@ def _posterize_bands(im: Image.Image, levels: int) -> Image.Image:
         raise ValueError("Posterize: levels musi być >= 2")
     arr = np.asarray(im.convert("RGB"), dtype=np.float32)
     lum = arr[..., 0] * .2126 + arr[..., 1] * .7152 + arr[..., 2] * .0722
-    quant = np.floor(lum * (levels - 1) / 255 + .5) * (255 / (levels - 1))
+    index = np.floor(lum * (levels - 1) / 255 + .5).astype(np.int16)
+    ramp = np.floor(np.arange(levels, dtype=np.float32) * 255 / (levels - 1) + .5)
+    quant = ramp[index]
     factor = quant / np.maximum(lum, 1)
-    poster = np.clip(arr * factor[..., None] + .5, 0, 255)
-    return Image.fromarray(poster.astype(np.uint8), "RGB")
+    poster = np.clip(arr * factor[..., None] + .5, 0, 255).astype(np.uint8)
+    # Dla neutralnych szarości ton musi być dokładnie jednym poziomem rampy.
+    # Zapobiega to dodatkowym odcieniom przez zaokrąglenie float32.
+    gray = (arr[..., 0] == arr[..., 1]) & (arr[..., 1] == arr[..., 2])
+    poster[gray] = quant[gray, None].astype(np.uint8)
+    return Image.fromarray(poster, "RGB")
 
 def pixelart(source: Image.Image, stem: str) -> Image.Image:
     """Wyraźny modern pixel-art: oddzielne siatki dla kory / ziemi / skał.
