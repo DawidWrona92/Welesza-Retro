@@ -40,6 +40,7 @@ class ModernPixelartTests(unittest.TestCase):
         self.assertEqual(len(names), 15)
         self.assertEqual(set(MATERIALS), set(WORK_SIZES))
         self.assertEqual(set(MATERIALS), set(COLORS))
+        self.assertEqual(set(MATERIALS), set(POSTERIZE_LEVELS))
         for group, files in MATERIALS.items():
             for filename in files:
                 self.assertEqual(_material_group(Path(filename).stem), group)
@@ -83,11 +84,13 @@ class ModernPixelartTests(unittest.TestCase):
     def test_posterization_bands_no_uint8_overflow(self) -> None:
         ramp = Image.fromarray(np.tile(np.arange(256, dtype=np.uint8),
                                      (256, 1)), "L").convert("RGB")
-        arr = np.asarray(_posterize_bands(ramp, POSTERIZE_LEVELS))
-        self.assertLessEqual(len(np.unique(arr[..., 0])), POSTERIZE_LEVELS)
-        self.assertEqual(int(arr[0, 0, 0]), 0)
-        self.assertEqual(int(arr[0, -1, 0]), 255)
-        self.assertTrue(np.all(np.diff(arr[0, :, 0].astype(np.int16)) >= 0))
+        for group, levels in POSTERIZE_LEVELS.items():
+            with self.subTest(group=group):
+                arr = np.asarray(_posterize_bands(ramp, levels))
+                self.assertLessEqual(len(np.unique(arr[..., 0])), levels)
+                self.assertEqual(int(arr[0, 0, 0]), 0)
+                self.assertEqual(int(arr[0, -1, 0]), 255)
+                self.assertTrue(np.all(np.diff(arr[0, :, 0].astype(np.int16)) >= 0))
 
     def test_reject_unknown_material(self) -> None:
         with self.assertRaises(ValueError):
