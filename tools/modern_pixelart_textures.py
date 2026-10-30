@@ -58,7 +58,7 @@ WORK_SIZES = {"bark": 128, "ground": 64, "rock": 64}
 COLORS = {"bark": 12, "ground": 10, "rock": 10}
 SEAM = 8
 CONTRAST_BOOST = 1.28
-CLUSTER_PASSES = 3
+CLUSTER_PASSES = 1  # 5x5 przez trzy przebiegi niszczyło detale materiałów
 POSTERIZE_LEVELS = 5
 
 
@@ -103,18 +103,19 @@ def _material_group(stem: str) -> str:
 
 
 def _posterize_bands(im: Image.Image, levels: int) -> Image.Image:
-    """Oddzielne, twarde pasma tonalne bez przepełnienia uint8.
+    """Dyskretyzuje luminancję, a nie trzy kanały RGB osobno.
 
-    5 poziomów obejmuje 0..255, włącznie z czernią i bielą.
-    Wyrównane zakresy nie tworzą nowych pośrednich półtonów.
+    Niezależna posterizacja R/G/B zmieniała brązy i zielenie w jaskrawe
+    czerwienie/fiolety. Jedna wspólna skala zachowuje odcień materiału.
     """
     if levels < 2:
         raise ValueError("Posterize: levels musi być >= 2")
-    arr = np.asarray(im.convert("RGB"), dtype=np.uint16)
-    arr = (arr * (levels - 1) + 127) // 255
-    arr = (arr * 255 + (levels - 1) // 2) // (levels - 1)
-    return Image.fromarray(arr.astype(np.uint8), "RGB")
-
+    arr = np.asarray(im.convert("RGB"), dtype=np.float32)
+    lum = arr[..., 0] * .2126 + arr[..., 1] * .7152 + arr[..., 2] * .0722
+    quant = np.floor(lum * (levels - 1) / 255 + .5) * (255 / (levels - 1))
+    factor = quant / np.maximum(lum, 1)
+    poster = np.clip(arr * factor[..., None] + .5, 0, 255)
+    return Image.fromarray(poster.astype(np.uint8), "RGB")
 
 def pixelart(source: Image.Image, stem: str) -> Image.Image:
     """Wyraźny modern pixel-art: oddzielne siatki dla kory / ziemi / skał.
@@ -139,8 +140,9 @@ def pixelart(source: Image.Image, stem: str) -> Image.Image:
     low = _seamless(low)
     low = low.quantize(colors=colors, method=Image.Quantize.MEDIANCUT,
                        dither=Image.Dither.NONE)
+    # Lekki filtr usuwa samotne piksele; nie zjada form liści i pęknięć.
     for _ in range(CLUSTER_PASSES):
-        low = low.filter(ImageFilter.ModeFilter(5))
+        low = low.filter(ImageFilter.ModeFilter(3))
 
     # Szwów na skrajach kafla nie może uszkodzić filtr klastrów.
     indices = np.asarray(low, dtype=np.uint8).copy()
