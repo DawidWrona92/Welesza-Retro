@@ -57,9 +57,9 @@ GRADING = {
 WORK_SIZES = {"bark": 128, "ground": 64, "rock": 64}
 COLORS = {"bark": 12, "ground": 10, "rock": 10}
 SEAM = 8
-CONTRAST_BOOST = 1.28
-CLUSTER_PASSES = 1  # 5x5 przez trzy przebiegi niszczyło detale materiałów
-POSTERIZE_LEVELS = 5
+CONTRAST_BOOST = {"bark": 1.28, "ground": 1.58, "rock": 1.42}
+CLUSTER_PASSES = 1  # Jeden mały przebieg: detale liści i pęknięcia zostają
+POSTERIZE_LEVELS = {"bark": 5, "ground": 7, "rock": 7}
 
 
 def _grade(im: Image.Image, stem: str) -> Image.Image:
@@ -131,11 +131,19 @@ def pixelart(source: Image.Image, stem: str) -> Image.Image:
     work_size = WORK_SIZES[group]
     colors = COLORS[group]
 
-    low = source.convert("RGB").resize((work_size, work_size), Image.Resampling.BOX)
+    # Przy 64x64 zwykły BOX uśredniał wszystko do jednolitej plamy.
+    # Zachowaj detale przez antyaliasing tylko w próbkowanej ćwiartce pola.
+    # To deterministyczny wybór barwy, nie losowy szum i bez wygładzania pikseli.
+    if group == "bark":
+        low = source.convert("RGB").resize((work_size, work_size), Image.Resampling.BOX)
+    else:
+        sample = source.convert("RGB").resize((work_size * 2, work_size * 2),
+                                              Image.Resampling.BOX)
+        low = sample.resize((work_size, work_size), Image.Resampling.NEAREST)
     low = low.filter(ImageFilter.MedianFilter(3))
     low = _grade(low, stem)
-    low = ImageEnhance.Contrast(low).enhance(CONTRAST_BOOST)
-    low = _posterize_bands(low, POSTERIZE_LEVELS)
+    low = ImageEnhance.Contrast(low).enhance(CONTRAST_BOOST[group])
+    low = _posterize_bands(low, POSTERIZE_LEVELS[group])
     low = low.filter(ImageFilter.UnsharpMask(radius=1, percent=180, threshold=2))
     low = _seamless(low)
     low = low.quantize(colors=colors, method=Image.Quantize.MEDIANCUT,
