@@ -1,0 +1,48 @@
+name: Generowanie tekstur modern pixel-art
+
+on:
+  push:
+    branches: [got/textures-pixelart]
+    paths:
+      - 'tools/modern_pixelart_textures.py'
+      - '.github/workflows/modern-pixelart-textures.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Zależności generatora
+        run: python -m pip install pillow==12.3.0 numpy==2.3.5
+      - name: Zarchiwizuj oryginały i skonwertuj wszystkie 15 map
+        run: python tools/modern_pixelart_textures.py --write
+      - name: Walidacja odtwarzalności bajt po bajcie
+        run: python tools/modern_pixelart_textures.py --check
+      - name: Commit i push gotowych PNG na branch, bez zmian na main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add art-src/_tekstury art-src/_tekstury-source docs/art/modern-pixelart-textures-preview.png
+          if ! git diff --cached --quiet; then
+            git commit -m "Wygeneruj 15 tekstur modern pixel-art [skip ci]"
+            # Agent może w międzyczasie dodać test lub dokumentację.
+            # Zawsze integruj z aktualnym remote; nigdy nie używaj force push.
+            for attempt in 1 2 3; do
+              git fetch origin got/textures-pixelart
+              git rebase origin/got/textures-pixelart
+              if git push origin HEAD:got/textures-pixelart; then
+                exit 0
+              fi
+              echo "Branch przesunął się podczas wysyłania (próba ${attempt}/3)"
+            done
+            exit 1
+          fi
