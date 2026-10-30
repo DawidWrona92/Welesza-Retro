@@ -34,5 +34,15 @@ jobs:
           git add art-src/_tekstury art-src/_tekstury-source docs/art/modern-pixelart-textures-preview.png
           if ! git diff --cached --quiet; then
             git commit -m "Wygeneruj 15 tekstur modern pixel-art [skip ci]"
-            git push origin HEAD:got/textures-pixelart
+            # Agent może w międzyczasie dodać test lub dokumentację.
+            # Zawsze integruj z aktualnym remote; nigdy nie używaj force push.
+            for attempt in 1 2 3; do
+              git fetch origin got/textures-pixelart
+              git rebase origin/got/textures-pixelart
+              if git push origin HEAD:got/textures-pixelart; then
+                exit 0
+              fi
+              echo "Branch przesunął się podczas wysyłania (próba ${attempt}/3)"
+            done
+            exit 1
           fi
