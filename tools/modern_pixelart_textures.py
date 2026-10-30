@@ -1,7 +1,10 @@
-"""Deterministyczny generator modern pixel-art tekstur Weleszy.
+"""Deterministyczny generator modern pixel-art v3 dla 15 tekstur Weleszy.
 
-python tools/modern_pixelart_textures.py --write   # konwersja i archiwizacja oryginałów
+python tools/modern_pixelart_textures.py --write   # generacja od oryginałów
 python tools/modern_pixelart_textures.py --check   # weryfikacja bajt po bajcie
+
+Kora zachowuje drobniejszy rytm 128x128, podłoże i skały 64x64.
+Ostre klastry, posterization + wyostrzenie zamiast rozmytych półtonów.
 """
 from __future__ import annotations
 
@@ -50,13 +53,13 @@ GRADING = {
     "rock_lichen_moss_ground": (.65, .84, 1.06, 200),
     "rock_stones_mossy": (.66, .84, 1.07, 199),
 }
-# Przy 1024x1024 jeden logiczny piksel ma dokładnie 8x8 pikseli.
-# Niewielka paleta i szerokie, twarde klastry zamiast fotograficznego szumu.
-WORK_SIZE = 128
-COLORS = 14
+# Parametry per grupa materiału: większy piksel w ziemi i skałach.
+WORK_SIZES = {"bark": 128, "ground": 64, "rock": 64}
+COLORS = {"bark": 12, "ground": 10, "rock": 10}
 SEAM = 8
-CONTRAST_BOOST = 1.20
-CLUSTER_PASSES = 2
+CONTRAST_BOOST = 1.28
+CLUSTER_PASSES = 3
+POSTERIZE_LEVELS = 5
 
 
 def _grade(im: Image.Image, stem: str) -> Image.Image:
@@ -91,34 +94,60 @@ def _seamless(im: Image.Image) -> Image.Image:
     return Image.fromarray(np.clip(px + .5, 0, 255).astype(np.uint8), "RGB")
 
 
-def pixelart(source: Image.Image, stem: str) -> Image.Image:
-    """Stylizacja kształtów, nie sam downsampling.
+def _material_group(stem: str) -> str:
+    """Zwraca kategorię materiału (źródłem prawdy jest MATERIALS)."""
+    for group, names in MATERIALS.items():
+        if f"{stem}.png" in names:
+            return group
+    raise ValueError(f"Nieznany materiał: {stem}")
 
-    1. BOX wydobywa większe bryły z oryginału; medianą usuwamy punktowy szum.
-    2. Mocniejszy kontrast eksponuje formy zamiast miękko rozmywać przejścia.
-    3. Bez ditheringu i połączenie sąsiednich klastrów tworzą płaskie plamy barw.
-    4. NEAREST odtwarza czytelną siatkę 8x8 bez interpolacji.
+
+def _posterize_bands(im: Image.Image, levels: int) -> Image.Image:
+    """Oddzielne, twarde pasma tonalne bez przepełnienia uint8.
+
+    5 poziomów obejmuje 0..255, włącznie z czernią i bielą.
+    Wyrównane zakresy nie tworzą nowych pośrednich półtonów.
+    """
+    if levels < 2:
+        raise ValueError("Posterize: levels musi być >= 2")
+    arr = np.asarray(im.convert("RGB"), dtype=np.uint16)
+    arr = (arr * (levels - 1) + 127) // 255
+    arr = (arr * 255 + (levels - 1) // 2) // (levels - 1)
+    return Image.fromarray(arr.astype(np.uint8), "RGB")
+
+
+def pixelart(source: Image.Image, stem: str) -> Image.Image:
+    """Wyraźny modern pixel-art: oddzielne siatki dla kory / ziemi / skał.
+
+    Odrzucamy szum, ograniczamy półtony, wyostrzamy znaczące kontury
+    i budujemy duże jednorodne klastry przed powiększeniem NEAREST.
     """
     dimensions = source.size
     if dimensions != (1024, 1024):
         raise ValueError(f"Oczekiwano tekstury 1024x1024: {stem}: {dimensions}")
-    if stem not in GRADING:
-        raise ValueError(f"Nieznany materiał: {stem}")
-    low = source.convert("RGB").resize((WORK_SIZE, WORK_SIZE), Image.Resampling.BOX)
+
+    group = _material_group(stem)
+    work_size = WORK_SIZES[group]
+    colors = COLORS[group]
+
+    low = source.convert("RGB").resize((work_size, work_size), Image.Resampling.BOX)
     low = low.filter(ImageFilter.MedianFilter(3))
     low = _grade(low, stem)
     low = ImageEnhance.Contrast(low).enhance(CONTRAST_BOOST)
+    low = _posterize_bands(low, POSTERIZE_LEVELS)
+    low = low.filter(ImageFilter.UnsharpMask(radius=1, percent=180, threshold=2))
     low = _seamless(low)
-    low = low.quantize(colors=COLORS, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)
-    # Usuwamy piksele samotne, utrzymując kontury w małej rozdzielczości.
+    low = low.quantize(colors=colors, method=Image.Quantize.MEDIANCUT,
+                       dither=Image.Dither.NONE)
     for _ in range(CLUSTER_PASSES):
-        low = low.filter(ImageFilter.ModeFilter(3))
+        low = low.filter(ImageFilter.ModeFilter(5))
+
+    # Szwów na skrajach kafla nie może uszkodzić filtr klastrów.
     indices = np.asarray(low, dtype=np.uint8).copy()
     indices[:, -1] = indices[:, 0]
     indices[-1, :] = indices[0, :]
     low.putdata(indices.reshape(-1).tolist())
     return low.resize(dimensions, Image.Resampling.NEAREST)
-
 
 def _png_bytes(image: Image.Image) -> bytes:
     out = io.BytesIO()
@@ -129,7 +158,7 @@ def _png_bytes(image: Image.Image) -> bytes:
 def _preview(previews: list[tuple[str, Image.Image]]) -> bytes:
     """Przegląd 15 tekstur: skalowanie NEAREST, bez ukrywania struktury."""
     from PIL import ImageDraw
-    cell, label, columns = 256, 30, 3
+    cell, label, columns = 320, 30, 3
     rows = (len(previews) + columns - 1) // columns
     sheet = Image.new("RGB", (columns * cell, rows * (cell + label)), (27, 30, 29))
     pen = ImageDraw.Draw(sheet)
@@ -163,7 +192,11 @@ def generate(check: bool) -> int:
             else:
                 dst.write_bytes(payload)
             previews.append((Path(name).stem, generated))
-            print(f"{'OK' if not check or dst.read_bytes() == payload else 'FAIL'} {group}/{name}: {generated.size}, <= {COLORS} kolorów, piksel {1024 // WORK_SIZE}x{1024 // WORK_SIZE}")
+            pixel_size = 1024 // WORK_SIZES[group]
+            ok = not check or (dst.exists() and dst.read_bytes() == payload)
+            print(f"{'OK' if ok else 'FAIL'} {group}/{name}: {generated.size}, "
+                  f"<= {COLORS[group]} kolorów, siatka {WORK_SIZES[group]}x{WORK_SIZES[group]}, "
+                  f"piksel {pixel_size}x{pixel_size}")
     sheet = _preview(previews)
     if check:
         if not PREVIEW.is_file() or PREVIEW.read_bytes() != sheet:
