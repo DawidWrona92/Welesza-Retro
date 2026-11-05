@@ -428,3 +428,204 @@ python3 .agents/skills/level-designer/scripts/validate_graph.py docs/graphs/boss
 ```
 
 Skrypt sprawdza tylko osiągalność stanów; nie wykonuje pól `condition`, nie sprawdza kolizji, zasobów, progów zdrowia ani atomowości zapisu.
+
+## Część IV — parametry prototypowe i balans v0.1 (5 listopada 2026)
+
+**Status: PROPOZYCJA DO WALIDACJI AUTORA — nie kanon.** Dotychczasowe opisy, decyzje autora i przebieg spotkań w częściach I–III pozostają bez zmian. Poniżej są propozycje liczb, timingu i doprecyzowania zachowań do pierwszego testu w Godot 4; **nie były testowane w działającej grze**. Materiał rozwinięty na podstawie `docs/przeciwnicy.md`, `docs/walka.md`, `docs/mechaniki.md`, `docs/fabula.md` oraz roboczej Biblii z gałęzi `vibe/world-bible-2a3b59` (`docs/swiat.md`, `docs/welesza.md`). Konflikt priorytetu Biblii i kanonu demo między plikami `AGENTS.md` różnych gałęzi pozostaje do decyzji autora; nie rozstrzygamy go tym wpisem.
+
+### 1. Skala i model do wstępnych obliczeń
+
+- **Bohater testowy:** 100 HP, bez pancerza, bez leczenia, bez zakupionych technik i bez krytyków; 100 wytrzymałości jako hipotetyczna baza, nie zatwierdzony parametr.
+- **Trzy testowe style broni:** miecz jednoręczny — 21 obrażeń, 0,60 efektywnego trafienia/s; topór dwuręczny — 33 obrażenia, 0,35 trafienia/s; włócznia — 16 obrażeń, 0,80 trafienia/s. Są to *efektywne kontakty na sekundę* uwzględniające przerwy na ruch i obronę, nie losowa celność ani szansa trafienia.
+- **Wzór porównawczy:** `DPS = max(damage - armor, 0.1 × damage) × effective_hits_per_second`; `TTK = enemy_HP / DPS`. Liczby to umowne jednostki walki, czasy w sekundach. Płaska redukcja pancerza jest **tymczasowym uproszczeniem**; nie zastępuje docelowej odporności na typ obrażeń z `docs/walka.md`.
+- **Prototypowe koszty wytrzymałości** (oddzielna propozycja do walidacji pakietu walki): atak 12, unik 24, zwykła garda 14 za przyjęty cios, precyzyjna parada 7, sprint 12/s, regeneracja 18/s poza kosztowną akcją. Nie ustanawiać ich jako zasad bez testu.
+- Kierunek ataku należy zablokować przed fazą aktywną (wstępny punkt testowy: przynajmniej 0,20 s). Nie śledzić celu już po rozpoczęciu skoku, zamachu lub wypuszczeniu pocisku. Bez ataków zza kadru; sygnały zarówno wizualne, jak i dźwiękowe.
+- TTK nie uwzględnia ruchu w konkretnych arenach, trafień krytycznych, przerwań wiązanek, leczenia, przejść faz i rzeczywistej animacji. **Nie jest prognozą czasu przejścia** ani dowodem skutecznego zbalansowania gry.
+
+### 2. Porównawcza macierz TTK
+
+| Wróg | HP | Pancerz testowy | Miecz 1H | Topór 2H | Włócznia |
+|---|---:|---:|---:|---:|---:|
+| Zdziczały pies | 54 | 0 | 4,29 s | 4,68 s | 4,22 s |
+| Wilk | 86 | 0 | 6,83 s | 7,45 s | 6,72 s |
+| Powrotnik | 96 | 1 | 8,00 s | 8,57 s | 8,00 s |
+| Drwal | 150 | 4 | 14,71 s | 14,78 s | 15,62 s |
+| Łucznik | 70 | 0 | 5,56 s | 6,06 s | 5,47 s |
+| Żałobnica | 82 | 0 | 6,51 s | 7,10 s | 6,41 s |
+| Korzeniec | 156 | 4 | 15,29 s | 15,37 s | 16,25 s |
+| Zbieracz | 420 | 5 | 43,75 s | 42,86 s | 47,73 s |
+| Dźwigacz | 480 | 6 | 53,33 s | 50,79 s | 60,00 s |
+| Stróż | 780 | 8 | 100,00 s | 89,14 s | 121,88 s |
+
+**Wynik modelu:** włócznia jest najszybsza przeciw większości lekkich celów, miecz przeciw średnio opancerzonym, a topór przeciw minibossom i Stróżowi; brak jednej broni z najlepszym TTK we wszystkich dziesięciu porównaniach. To nie uwzględnia przewagi zasięgu ani kosztów obrony. **Ryzyko:** modelowy TTK Stróża mieczem (100 s) i włócznią (122 s) *przed* przerwami faz może być za długi; sprawdzić, czy walka nie staje się męcząca. Przy 100 HP gracza ciężki cios Stróża (44) i Dźwigacza (42) oznacza porażkę po trzech nieobronionych trafieniach; z Drwalem i Łucznikiem dwa nakładające się zagrożenia mogą zabrać 56 HP.
+
+### 3. Karty liczbowe i doprecyzowania zachowań
+
+**Wszystkie wartości w poniższych kartach są propozycjami.** „Zapowiedź”, „faza aktywna” i „odsłonięcie” są czasami w sekundach; nie należy utożsamiać ich z zatwierdzonymi klatkami animacji. Odpowiedź gracza na atak musi być możliwa w kamerze 2:1 i przy rzeczywistych kolizjach.
+
+#### `ENM-zdziczaly-pies` — Zdziczały pies
+
+**HP / pancerz testowy:** 54 / 0. **Rola:** Wprowadzenie do uniku; flanker.
+
+| Akcja | Obrażenia | Zapowiedź | Aktywność | Odsłonięcie | Parada | Odpowiedź gracza |
+|---|---:|---:|---:|---:|---|---|
+| Kłapnięcie | 11 | 0,45 s | 0,18 s | 0,60 s | nie | Odejść poza krótki zasięg |
+| Skok do gardła | 19 | 0,80 s | 0,28 s | 0,95 s | nie | Unik w bok, pojedyncza kontra |
+
+**AI i ograniczenia:** Pilnuje pożywienia → ostrzega → szuka flanki → skacze po zablokowaniu kierunku → odzyskuje równowagę; po utracie celu wraca do wozu.
+
+#### `ENM-wilk` — Wilk
+
+**HP / pancerz testowy:** 86 / 0. **Rola:** Drapieżnik głębszego boru; trudniejszy wariant lekcji uniku.
+
+| Akcja | Obrażenia | Zapowiedź | Aktywność | Odsłonięcie | Parada | Odpowiedź gracza |
+|---|---:|---:|---:|---:|---|---|
+| Kąśnięcie | 17 | 0,50 s | 0,20 s | 0,60 s | nie | Zejść z frontu |
+| Długi skok | 28 | 0,78 s | 0,32 s | 0,65 s | nie | Unik poprzeczny; krótsze okno kontry |
+
+**AI i ograniczenia:** Może wyjść z zarośli tylko po widocznym ruchu gałęzi i pełnej zapowiedzi w kadrze. Nie teleportuje się ani nie namierza celu podczas skoku. Szybciej odzyskuje gotowość niż pies.
+
+#### `ENM-powrotnik` — Powrotnik
+
+**HP / pancerz testowy:** 96 / 1. **Rola:** Wolny napastnik i krótki ostrzał przeciw biernemu cofaniu.
+
+| Akcja | Obrażenia | Zapowiedź | Aktywność | Odsłonięcie | Parada | Odpowiedź gracza |
+|---|---:|---:|---:|---:|---|---|
+| Chwyt oburącz | 23 | 1,00 s | 0,30 s | 1,25 s | nie | Unik na bok; po pudle atak z flanki |
+| Rzut z plecaka | 13 | 1,10 s | 0,15 s | 1,20 s | nie (garda tak) | Unik lub osłona; skrócenie dystansu |
+
+**AI i ograniczenia:** Powtarza obchód → zbliża się bez sprintu → rzuca z krótkiego dystansu → chwyta tylko w zwarciu. Kierunek rzutu blokuje się przed wyrzuceniem przedmiotu. Rzut zatrzymuje garda, bez odbicia precyzyjną paradą.
+
+#### `ENM-drwal` — Drwal
+
+**HP / pancerz testowy:** 150 / 4. **Rola:** Ciężko uzbrojony wróg: rozróżnienie parady i uniku.
+
+| Akcja | Obrażenia | Zapowiedź | Aktywność | Odsłonięcie | Parada | Odpowiedź gracza |
+|---|---:|---:|---:|---:|---|---|
+| Cięcie z boku | 24 | 0,80 s | 0,34 s | 0,95 s | tak | Garda lub parada, krótka kontra |
+| Rozłupanie | 38 | 1,25 s | 0,30 s | 1,50 s | nie | Unik poprzeczny; 1–2 ciosy po pudle |
+| Obrót toporem | 26 | 1,10 s | 0,58 s | 1,35 s | tak | Odejść poza zasięg lub sparować |
+
+**AI i ograniczenia:** Nie atakuje z zasadzki. Najpierw daje czytelne ostrzeżenie. Wybiera rozłupanie wobec długiej gardy, bez odczytu klawisza w tej samej klatce. Obrót jest rzadki i nigdy nie występuje dwa razy pod rząd. Wszystkie warianty graficzne korzystają ze wspólnej rodziny zachowań.
+
+#### `ENM-lucznik` — Łucznik pustego traktu
+
+**HP / pancerz testowy:** 70 / 0. **Rola:** Presja dystansowa i wykorzystanie osłon.
+
+| Akcja | Obrażenia | Zapowiedź | Aktywność | Odsłonięcie | Parada | Odpowiedź gracza |
+|---|---:|---:|---:|---:|---|---|
+| Strzał | 18 | 1,10 s | 0,10 s | 1,45 s | nie | Osłona, ruch w poprzek toru |
+| Cięcie nożem | 14 | 0,65 s | 0,23 s | 0,85 s | tak | Parada lub unik |
+
+**AI i ograniczenia:** Strzela wyłącznie z linii widzenia. Po przygotowaniu strzała nie naprowadza się. Ma ograniczone punkty odwrotu, nie strzela przez drewno ani kamień; w zwarciu korzysta z noża.
+
+#### `ENM-zalobnica` — Żałobnica
+
+**HP / pancerz testowy:** 82 / 0. **Rola:** Wsparcie jednego wroga, rozwiązywanie priorytetu celu.
+
+| Akcja | Obrażenia | Zapowiedź | Aktywność | Odsłonięcie | Parada | Odpowiedź gracza |
+|---|---:|---:|---:|---:|---|---|
+| Odepchnięcie | 16 | 0,95 s | 0,24 s | 1,30 s | nie | Odejść ze stożka i wykorzystać przerwę |
+| Niedokończona pieśń | 0 | 1,20 s | 0,15 s | 0,90 s | — | Następne pojedyncze trafienie w sojusznika: −35% obrażeń; ponowne nałożenie najwcześniej po 8 s |
+
+**AI i ograniczenia:** Śpiewa tylko dla jednego widocznego sojusznika; nie osłania siebie, nie leczy, nie wskrzesza. Śpiew można przerwać trafieniem lub zerwaniem linii widzenia. Efekt nie kumuluje się.
+
+#### `ENM-korzeniec` — Korzeniec
+
+**HP / pancerz testowy:** 156 / 4. **Rola:** Kontrola kąta podejścia i dalekiego frontu.
+
+| Akcja | Obrażenia | Zapowiedź | Aktywność | Odsłonięcie | Parada | Odpowiedź gracza |
+|---|---:|---:|---:|---:|---|---|
+| Zagarnięcie | 28 | 1,15 s | 0,45 s | 1,35 s | nie | Unik w poprzek stożka; wejść na bok |
+| Przetoczenie | 21 | 0,92 s | 0,40 s | 1,15 s | nie | Odsunąć się od kadłuba |
+
+**AI i ograniczenia:** Przed walką widocznie porusza korzeniami. Obraca się wolno, nie teleportuje się. Gracz może obejść go i zbadać słup. Przetoczenie kontruje ciągłe krążenie po boku, ale ma własną zapowiedź.
+
+#### `ENM-zbieracz` — Zbieracz spod korzeni
+
+**HP / pancerz testowy:** 420 / 5. **Rola:** Opcjonalny miniboss: kontrola frontu, bez obowiązkowego zabójstwa.
+
+| Akcja | Obrażenia | Zapowiedź | Aktywność | Odsłonięcie | Parada | Odpowiedź gracza |
+|---|---:|---:|---:|---:|---|---|
+| Zagarnięcie | 30 | 1,20 s | 0,45 s | 1,50 s | nie | Wyjść poza front |
+| Przetoczenie | 23 | 1,00 s | 0,38 s | 1,20 s | nie | Odsunąć się od boku |
+| Szeroki zamach (II) | 36 | 1,55 s | 0,55 s | 1,95 s | nie | Unik poprzeczny; 1–2 kontry po odsłonięciu |
+
+**AI i ograniczenia:** Broni pustego legowiska, nie opuszcza jamy. Faza II od 55% HP dodaje szeroki zamach. Przejście bez zadawania obrażeń; po wyjściu z areny pełny reset. Nagroda z niszy, nie z ciała.
+
+#### `ENM-dzwigacz` — Dźwigacz
+
+**HP / pancerz testowy:** 480 / 6. **Rola:** Miniboss: świadomy wybór między paradą i unikiem.
+
+| Akcja | Obrażenia | Zapowiedź | Aktywność | Odsłonięcie | Parada | Odpowiedź gracza |
+|---|---:|---:|---:|---:|---|---|
+| Cięcie hakiem/sierpem | 25 | 0,90 s | 0,34 s | 1,10 s | tak | Precyzyjna parada i krótka kontra |
+| Rozłupanie | 42 | 1,30 s | 0,35 s | 1,60 s | nie | Unik poprzeczny |
+| Pchnięcie nosidłem (I) | 28 | 1,08 s | 0,36 s | 1,40 s | nie | Unik w bok |
+| Drugi zamach (II) | 25 | 0,68 s | 0,31 s | 1,55 s | tak | Parada lub unik po osobnej zapowiedzi |
+
+**AI i ograniczenia:** Faza I z nosidłem. Od 55% HP odkłada je nieofensywnie; w fazie II znika pchnięcie i dochodzi drugi, osobno zapowiadany zamach. Broń to hak albo sierp na trzonku — nie topór. Odkładane nosidło nie tworzy nowej kolizji.
+
+#### `ENM-stroz` — Stróż
+
+**HP / pancerz testowy:** 780 / 8. **Rola:** Boss finałowy: przerwanie zachłannej wiązanki.
+
+| Akcja | Obrażenia | Zapowiedź | Aktywność | Odsłonięcie | Parada | Odpowiedź gracza |
+|---|---:|---:|---:|---:|---|---|
+| Cięcie drzewcem | 27 | 0,95 s | 0,35 s | 1,05 s | tak | Parada lub unik |
+| Przybicie | 44 | 1,42 s | 0,36 s | 1,75 s | nie | Unik poprzeczny; kontra |
+| Pochód (II+) | 38 | 1,30 s | 0,60 s | 1,80 s | nie | Unik poza ustalony tor |
+| Oślepienie latarnią | 0 | 1,20 s | 0,25 s | 1,35 s | nie | Unik poza wąski stożek; 0,8 s spowolnienia bez gwarantowanego kolejnego trafienia |
+
+**AI i ograniczenia:** Faza I: posterunek; od 70% HP faza II dodaje pochód po ustalonej linii; od 35% HP faza III łączy cięcie i przybicie z odrębnymi zapowiedziami. Bez fal, globalnego przyspieszania ataków i regeneracji. Latarnia jest zwykła, różna od lampy fabularnej.
+
+### 4. Reżyseria spotkań — powiązanie istniejących kart
+
+| Spotkanie | Kolejność i skład (bez nowych spawnów) | Nauka / warunek odbioru |
+|---|---|---|
+| `ENC-woz` | Pies sam, następnie Pies + Powrotnik | Unik przed skokiem i rozdzielanie przez wóz. Podniesienie łupu nie aktywuje automatycznie walki |
+| `ENC-kamienie` | Korzeniec, osobno Powrotnik; Wilk tylko na zapowiedzianej ścieżce | Obchodzenie frontu, możliwość zbadania słupa bez zabijania |
+| `ENC-oboz` | Drwal sam, następnie Drwal + Łucznik | Garda/parada, unik ciężkiego zamachu, osłona stosu drewna zatrzymuje strzałę |
+| `ENC-piesn` | Żałobnica + Powrotnik, opcjonalnie | Przerwanie pieśni, zerwanie linii widzenia albo zużycie pojedynczej osłony |
+| `BOSS-zbieracz` | Zbieracz sam | Kąt podejścia i szansa wyjścia z jamy; zadanie poboczne możliwe też bez walki |
+| `BOSS-dzwigacz` | Dźwigacz sam | Zmiana parady na unik i nieofensywne przejście faz |
+| `BOSS-stroz` | Stróż sam | Przerwanie wiązanki zamiast zachłannego finiszu; otwarcie suchej drogi po zwycięstwie |
+
+**Propozycja zabezpieczenia par:** ciężkie ataki dwóch aktywnych przeciwników nie powinny kończyć zapowiedzi w tym samym, niemożliwym do obrony momencie. Punkt startowy testu AI: przesunięcie końców zapowiedzi o 0,35–0,50 s, jeśli oba ataki nie są rozdzielone osłoną. Nie wyłącza to flankowania ani ryzyka przy złym ustawieniu. Limit obejmuje także pobliskie grupy mogące wspólnie wejść do walki.
+
+### 5. Fazy bossów — numeryczny szkic, nie nowy kanon
+
+- **Zbieracz:** faza I (zagarnięcie/przetoczenie), faza II od **55% HP** (dochodzi szeroki zamach); przejście nie zadaje obrażeń. Brak fal i blokady wyjścia.
+- **Dźwigacz:** faza I z nosidłem, faza II od **55% HP** — odstawienie nosidła, usunięcie pchnięcia, osobno zapowiedziany drugi zamach hakiem/sierpem. Nie podmieniać broni na topór.
+- **Stróż:** faza I 100–70% HP (cięcie, przybicie, oślepienie zwykłą latarnią), faza II od **70% HP** (pochód), faza III od **35% HP** (łączenie znanych cięcia i przybicia, osobne zapowiedzi). Nie przyspieszać automatycznie animacji, nie dodawać fal, odporności absolutnej ani wymaganego poziomu umiejętności.
+
+Dla każdego bossa: zmiana fazy dopiero po zakończeniu bieżącego ataku, krótki oddech dla gracza, przy wyjściu z obszaru pełny reset do pierwszej fazy, zapis i nagroda jednorazowe. Nagroda Dźwigacza (komora latarni) i Stróża (droga) nie jest losowym łupem.
+
+### 6. Przegląd ryzyk (review projektowe, nie testy Godota)
+
+| Waga | Ryzyko | Próba / możliwe działanie |
+|---|---|---|
+| Major | Pancerz płaski odbiega od docelowej odporności na rodzaje obrażeń | Przeliczyć model z cięciem, kłuciem i obuchem po decyzji o formule |
+| Major | Zbyt długi TTK Stróża przy podstawowym wyposażeniu | Test miecza, włóczni i topora bez krytyków i PPM; ewentualnie HP / odporności |
+| Major | Zbieżność trafień Drwala i Łucznika (38 + 18 z 100 HP) | Kontrola LoS, czytelnych telegrafów i zachowania osłony przy stosie drewna |
+| Major | Wilk atakuje z zarośli przy wyczerpanej po sprincie wytrzymałości | Widoczna zapowiedź wewnątrz kamery, próba bez dźwięku |
+| Major | Żałobnica przedłuża walkę nieograniczonym odświeżaniem osłony | Jedno trafienie, brak kumulacji, przerwanie, co najmniej 8 s przerwy |
+| Major | Brak pomiaru `D`, `U`, `A`, `V` i rzeczywistych zasięgów | Greybox i test kamerowej widoczności; korekta timingów |
+| Minor | Warianty wizualne Drwala przestają mieć rozpoznawalne zapowiedzi | Wspólne sygnały ataków dla wszystkich wariantów |
+| Minor | Koszt produkcji efektów Żałobnicy i opcjonalnego Zbieracza | Rozważyć przesunięcie do dalszej iteracji, bez usuwania przyjętych zadań |
+
+### 7. Minimalny plan testów do pierwszego prototypu
+
+1. **Pies i Wilk:** próby uniku przed blokadą kierunku, po blokadzie i w sam tor skoku; zasadzka również z niską wytrzymałością i wyłączonym dźwiękiem.
+2. **Drwal:** parowanie zwykłego ciosu, próby parowania rozłupania, ciągła garda, spam atak–garda; sprawdzić, czy kosztów i opóźnień nie można ominąć.
+3. **Powrotnik i Łucznik:** pociski zablokowane przez kolizję wozu, stosu drewna i filara, brak naprowadzania oraz strzelania poza kadr.
+4. **Korzeniec:** obejście bez zabijania, inspekcja słupa; przetoczenie nie pojawia się bez zapowiedzi.
+5. **Żałobnica:** przerwanie pieśni trafieniem i zasłoną; brak kumulacji osłony; test bez dźwięku.
+6. **Bossowie:** przejście przez próg fazy podczas ataku, mocne trafienie przekraczające kilka progów, odwrót, reset, jednoczesna śmierć, wczytanie zapisu i jednorazowość nagrody.
+7. **Każdy wróg:** próba przy zasłaniających koronach drzew, test bez dźwięku, bezpieczny odwrót, brak ataków przez collider i trwałego zakleszczenia.
+8. **Każda testowa broń:** pokonanie minibossów i Stróża bez zakupionych umiejętności, krytyków, określonej amunicji i magii. Wypatrywać dominującej strategii ciągłego cofania i strzelania.
+
+**Pytania pozostające do decyzji autora:** tymczasowy pancerz kontra model rodzajów obrażeń; docelowa długość finału; termin implementacji Żałobnicy i Zbieracza; rodziny broni zdolne do parady; rozstrzygnięcie kolizji hierarchii Biblii i kanonu dema po scaleniu gałęzi.
+
+**Weryfikacja:** powyższe TTK obliczono porównawczo na danych testowych. Żadne ataki, progi, czasy ani modele AI z tej części nie były uruchamiane lub zatwierdzane w Godocie. Dalszy krok: prototyp Psa i Drwala, następnie pomiary oraz ponowne liczenie balansu.
+
