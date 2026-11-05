@@ -82,7 +82,7 @@ To **gradient nastroju i narracji**, nie cztery poziomy trudności ani cztery ob
 
 1. **Nazewnictwo do ponownego zaprojektowania [DECYZJA AUTORA]:** cały zestaw A odrzucony; zestaw B pozostaje niezatwierdzoną propozycją, a dawne nazwy funkcjonują jako odniesienia.
 2. **Zmienia główną oś nastroju:** zachód to konflikty ludzi i znajome potwory, środek to izolacja i „życie, które nadal próbuje się powtarzać”, wschód to niepewność relacji i przestrzeni.
-3. **Zmienia język lokacji:** każdy region ma odróżniać się architekturą, obyczajem, gospodarką, zagrożeniami i stosunkiem do magii (szczegóły: [Biblia świata I](swiat.md#proponowany-gradient-grozy-i-rzeczywistosci-05112026)).
+3. **Zmienia język lokacji:** każdy region ma odróżniać się architekturą, obyczajem, gospodarką, zagrożeniami i stosunkiem do magii (szczegóły: [Biblia świata I](swiat.md)).
 4. **Nie zmienia geografii dema:** Niemir zostaje w lesie obok Wielkiego Traktu; mapa doliny, trzy słupy, zamknięcie boru, latarnia, Stróż i suchy szlak pozostają w ustalonym układzie.
 5. **Nie zmienia tonu bohatera:** nadal jest przypadkowym podróżnikiem, bez przeznaczenia i wiedzy, która tłumaczy zagadki świata.
 6. **Nie znosi innych wymiarów grozy:** nawet na zachodzie są anomalie, a na wschodzie istnieją zwykłe rodziny, targi i miejsca dające nadzieję.
@@ -129,6 +129,8 @@ Nie projektujemy: mapy całej krainy w grze (tylko mapy lokalne w rękach postac
 | „Drogi prowadzą dokądś” | Najsłabszy i najbardziej niepokojący: coś jest na końcu Dróg imperium |
 
 **Bohater demo jest przybyszem** — idzie Wielkim Traktem na wschód; cel nieznany graczowi (nikt nie jedzie na wschód dla przygody, na wschód się jedzie, bo trzeba).
+
+**[DECYZJA AUTORA, 05.11.2026 — zakres decyzji]** To opis drogi przed i podczas demo, **nie** decyzja o kierunku ani kolejności wyprawy po jego zakończeniu. Wątek późniejszego marszu na wschód pozostaje opcją z banku pomysłów.
 
 **Daleki wschód (opowieści; kierunek kampanii nieustalony):** daleko za Niemirem ma podobno stać **ostatnie miasto** — nie klejnot wschodu: obóz łowców przygód, który rozrósł się w miasto podróżników i zbiegów (wzorzec: miasta na Amazonce), żyjące siłą rozpędu, nie celem. Za nim opowieści umieszczają **Stare Serce Imperium**. **[DECYZJA AUTORA, 05.11.2026]** W pełnej grze można dotrzeć do jego **ruin**, lecz nie dowiedzieć się, kim byli budowniczowie, po co powstała sieć Dróg ani dlaczego Imperium zniknęło. Położenie ruin, ich zawartość i rola w fabule są otwarte, a legenda o ostatnim mieście nie wyznacza obowiązkowej trasy bohatera.
 
