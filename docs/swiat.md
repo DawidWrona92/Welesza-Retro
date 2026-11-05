@@ -8,7 +8,7 @@ Kosmologia nie istnieje jako zamknięta struktura. Istnieją trzy warstwy: **ży
 
 ### Tajemnice nigdy nierozstrzygane
 
-Niezależnie od decyzji twórców, w grze nigdy nie pada odpowiedź na: czy zabobony Niemiru realnie działają (latarnia może być starym zabobonem albo ostatnią zaporą przed rozgniewanym lasem — nie sprawdzamy), czym jest Stróż, kto uszkodził słupek, co powoduje zamknięcie boru, ludzkie czy nieludzkie pochodzenie imperium, dokąd prowadzą stare Drogi. Świadectwa wolno pogłębiać, nie rozstrzygać. Retcon zamkniętej tajemnicy wymaga zgody autora.
+Niezależnie od decyzji twórców, w grze nigdy nie pada odpowiedź na: czy zabobony Niemiru realnie działają (latarnia może być starym zabobonem albo ostatnią zaporą przed rozgniewanym lasem — nie sprawdzamy), czym jest Stróż, kto uszkodził słupek, co powoduje zamknięcie boru, ludzkie czy nieludzkie pochodzenie imperium, dokąd prowadzą stare Drogi. Wizyta w ruinach Starego Serca nie znosi tych zakazów wiedzy [DECYZJA AUTORA, 05.11.2026]. Świadectwa wolno pogłębiać, nie rozstrzygać. Retcon zamkniętej tajemnicy wymaga zgody autora.
 
 ### Lista „nigdy”
 
@@ -23,11 +23,11 @@ Niezależnie od decyzji twórców, w grze nigdy nie pada odpowiedź na: czy zabo
 - „X lat temu” jako głos narratora. Daty tylko w ustach postaci, jako ich lokalna pamięć.
 
 
-### Proponowany gradient grozy i rzeczywistości (05.11.2026)
+### Gradient grozy i rzeczywistości — **[DECYZJA AUTORA, 05.11.2026]**
 
-**Status: propozycja do zatwierdzenia przez autora.** To nowa **oś nastroju w geografii**, uzupełniająca obowiązujący już gradient **mocy/rzadkości potworów**. Nie zastępuje go. Nazwy i rozkład regionów: [Biblia Weleszy II](welesza.md).
+**Status: [DECYZJA AUTORA, 05.11.2026]** Nowa oś nastroju została zatwierdzona: od klasycznego średniowiecznego dark fantasy na zachodzie do **mocnego horroru psychologicznego i onirycznego na wschodzie**, z lokalnymi wyjątkami. Nie zastępuje to wcześniejszego gradientu mocy/rzadkości potworów. **Kierunek podróży bohatera po Niemirze pozostaje nieustalony.** Nazwy i rozkład regionów: [Biblia Weleszy II](welesza.md).
 
-**Zasada dramatyczna:** na zachodzie ludzie boją się tego, co znają; ku wschodowi coraz częściej boją się tego, czego nie potrafią zrozumieć. Nie oznacza to automatycznie, że świat fizycznie rozpada się w każdej wschodniej miejscowości, ani że mieszkańcy wschodu są mniej cywilizowani. Gradacja dotyczy **doświadczenia gracza, świadectw, obyczajów i rodzaju spotkań**.
+**Zasada dramatyczna [DECYZJA AUTORA]:** na zachodzie ludzie boją się tego, co znają; ku wschodowi coraz częściej boją się tego, czego nie potrafią zrozumieć. Ten gradient może być mocno oniryczny i psychologiczny — także za dnia, bez krwawych scen i bez wyskakujących wrogów. Nie oznacza to automatycznie, że świat fizycznie rozpada się w każdej wschodniej miejscowości, ani że mieszkańcy wschodu są mniej cywilizowani. Gradacja dotyczy **doświadczenia gracza, świadectw, obyczajów i rodzaju spotkań**.
 
 | Warstwa przedstawienia | Zachód: świat ludzi | Środek: pogranicze | Daleki wschód: majak |
 |---|---|---|---|
@@ -37,7 +37,7 @@ Niezależnie od decyzji twórców, w grze nigdy nie pada odpowiedź na: czy zabo
 | **Magia i wiara** | Magię bada się, potępia albo instytucjonalnie ogranicza; praktyki religijne są uregulowane. | Magia stapia się z obyczajem, przedmiotem i strachem, ale nie jest objaśniona. | Coraz trudniej odróżnić cud, przekłamanie relacji, praktykę i zjawisko naturalne; nie ogłaszamy obiektywnej odpowiedzi. |
 | **Źródło lęku** | Śmierć, głód, przemoc, choroba i kara. | Utrata bezpieczeństwa, bliskich, pamięci o dawnym życiu. | Niepewność, kto mówi prawdę, czy ścieżka dokądś prowadzi i co jest rzeczywiste. |
 
-**Zasady realizacji:**
+**Zasady realizacji — sposób wykonania do testów, kierunek klimatu zatwierdzony:**
 
 1. **Najpierw znajoma czynność, potem niepokój.** Drwal układa mokre drewno, Powrotnik wraca do tego samego kamienia. Makabra jest konsekwencją historii, nie jedyną cechą potwora.
 2. **Groza przestrzeni ma mieć świadectwa.** Porzucony wóz, powtórzony znak na drzewie, pozornie zamieszkany dom albo dwa sprzeczne zeznania — gracz widzi konkret. „Wszystko jest snem” nie może wymazywać konsekwencji.
@@ -45,12 +45,12 @@ Niezależnie od decyzji twórców, w grze nigdy nie pada odpowiedź na: czy zabo
 4. **Lokalne wyjątki są obowiązkowe.** Nawet na zachodzie może być miejsce podobne do koszmaru; na wschodzie może istnieć życzliwa, zwyczajna osada. Dzięki temu gradient nie zdradza z góry każdego spotkania.
 5. **Ciepło jest potrzebne mrokowi.** Zostawiamy posiłek, ogień, schronienie, ludzką solidarność i chwile zwyczajności. Bez nich każda lokacja będzie tak samo ponura i przestanie przerażać.
 6. **Dwa niezależne gradienty:** potęga istoty → rzadkość (obowiązująca decyzja); kierunek/typ miejsca → charakter niepokoju (nowa propozycja). Wschodni potwór nie jest automatycznie silniejszy od zachodniego.
-7. **Stare Serce Imperium jest pogłoską.** Nie opisujemy go jak zatwierdzonej lokacji finałowej; nie potwierdzamy przeznaczenia starych Dróg ani ludzkiego lub nieludzkiego pochodzenia imperium.
+7. **Ruiny Starego Serca Imperium [DECYZJA AUTORA, 05.11.2026].** W pełnej grze **można do nich dotrzeć**, ale nie wyjaśnić tajemnicy Imperium. Nie oznacza to, że ruiny są finałem, na wschód prowadzi fabuła ani że znamy położenie ruin. Nie potwierdzamy przeznaczenia dawnych Dróg ani ludzkiego lub nieludzkiego pochodzenia Imperium.
 8. **Bez objaśniającej ekspozycji.** Zmiany tonu pokazują architektura, dźwięk, zachowania, przedmioty i niezgodne relacje, a nie narrator przedstawiający cztery poziomy „skażenia”.
 
 **Bank dwóch scen (nie kanon):** strażnik pobierający myto przy nieistniejącej bramie; grabarz codziennie kopiący ten sam grób. Obydwa pomysły przechodzą do produkcji dopiero po wyborze konkretnej lokacji i sprawdzeniu, czy nie wyjaśniają nierozstrzygniętej tajemnicy.
 
-**Granica prawdy:** projektant może wiedzieć, jak odtworzyć zjawisko technicznie, lecz nie powinien nadawać mu jednej ujawnionej kosmologii. Ogień i latarnia Niemiru pozostają istniejącym, działającym elementem dawnej infrastruktury zgodnie z decyzją autora; nie potwierdza to skuteczności każdego miejscowego zabobonu.
+**Granica prawdy:** mocny horror psychologiczny i oniryczny ma wynikać z zachowania istot, powtarzalnych, niewłaściwie znajomych zdarzeń, sprzecznych relacji i niepewnej percepcji; nie z arbitralnego odebrania graczowi sterowania, czytelnych zasad walki lub zapisanych przedmiotów. Projektant może wiedzieć, jak odtworzyć zjawisko technicznie, lecz nie powinien nadawać mu jednej ujawnionej kosmologii. Ogień i latarnia Niemiru pozostają istniejącym, działającym elementem dawnej infrastruktury zgodnie z decyzją autora; nie potwierdza to skuteczności każdego miejscowego zabobonu.
 
 ## Kosmos i magia
 
@@ -78,6 +78,8 @@ Magia zostawia ślady materialne: oszronione okno w środku lata, sen psa, któr
 ## Imperium
 
 Na kontynencie istniało dawnie imperium. Zniknęło; kiedy i dlaczego — nie ustalamy. **[DECYZJA AUTORA]** Imperium to **jeden system** (Drogi, słupy, ogniowe znamiona = jedna infrastruktura) o funkcji nieznanej — wewnętrzna reguła dla twórców, by świadectwa się nie gryzły; gracz nigdy nie pozna celu.
+
+**[DECYZJA AUTORA, 05.11.2026]** Można odwiedzić **ruiny Starego Serca Imperium** w pełnej grze, nie poznając prawdy o jego budowniczych, celu infrastruktury ani przyczynach upadku. **Otwarte:** położenie, wygląd, sposób dotarcia, zawartość i rola w kampanii. Znalezienie ruin nie rozstrzyga zagadki pochodzenia wszystkich Dróg.
 
 Jedyne twarde świadectwo to architektura, wszędzie: fundamenty, słupy, drogi, piece, kominy, pod późniejszymi osadami.
 
