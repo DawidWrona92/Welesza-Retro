@@ -162,7 +162,7 @@ Nie projektujemy: wielkiej polityki, armii i wojen „w tle” (wojna istnieje j
 
 **Kanon nazw regionów:** Nadmorze, Zakraj, Okole, Rudogórje, Suchodrzewie; Wielka Woda i Wielki Trakt zostają; ostatnie miasto bez nazwy (opisowo, legenda).
 
-**Proponowana rewizja:** zob. [projekt przebudowy nazw i tożsamości krain](#projekt-przebudowy-swiata-nazwy-i-tozsamosc-krain-propozycja-05112026). Dopóki autor nie zatwierdzi zmiany, stare nazwy pozostają decyzją autorską, a nowe są wyłącznie kandydatami.
+**Proponowana rewizja:** zob. projekt przebudowy nazw i tożsamości krain w niniejszym dokumencie. Dopóki autor nie zatwierdzi zmiany, stare nazwy pozostają decyzją autorską, a nowe są wyłącznie kandydatami.
 
 **Reguły schematu:**
 
