@@ -1,0 +1,177 @@
+# Biblia świata Weleszy — cz. 1: świat, magia, imperium, religie, frakcje, ton
+
+Status: propozycja do akceptacji autora, poza miejscami oznaczonymi **[DECYZJA AUTORA]**. Kanon demo ([fabula](fabula.md), [mapa świata](world/README.md)) ma pierwszeństwo; imiona bogów i nowe miejsca kultu — zawsze do decyzji autora zgodnie z kierunkiem artystycznym.
+
+## Zasada nadrzędna: top-up
+
+Kosmologia nie istnieje jako zamknięta struktura. Istnieją trzy warstwy: **życie** (wszyscy), **wiara** (większość), **wiedza** (nieliczni, zawsze niepełna). Każda treść o świecie musi mieć nosiciela: postać, dokument, obrzęd, przedmiot. Lore bez źródła w grze nie wchodzi do kanonu. Gracz nigdy nie wie, czy słucha wiedzy, wiary czy pogłoski — projektant musi wiedzieć, gracz nie.
+
+### Tajemnice nigdy nierozstrzygane
+
+Niezależnie od decyzji twórców, w grze nigdy nie pada odpowiedź na: czy zabobony Niemiru realnie działają (latarnia może być starym zabobonem albo ostatnią zaporą przed rozgniewanym lasem — nie sprawdzamy), czym jest Stróż, kto uszkodził słupek, co powoduje zamknięcie boru, ludzkie czy nieludzkie pochodzenie imperium, dokąd prowadzą stare Drogi. Wizyta w ruinach Starego Serca nie znosi tych zakazów wiedzy [DECYZJA AUTORA, 05.11.2026]. Świadectwa wolno pogłębiać, nie rozstrzygać. Retcon zamkniętej tajemnicy wymaga zgody autora.
+
+### Lista „nigdy”
+
+- Kosmologia z lotu ptaka (mapy planów, boskich hierarchii, opisów stworzenia świata).
+- Obiektywna metafizyka dobra i zła. Zło to skutki motywacji istot, nie siła z kosmosu.
+- Bohater „błogosławiony wiedzą”. Wie mniej niż kapłan, a kapłan mniej, niż myśli.
+- Diegetyczna, liczbowa mechanika magii. System gry to system gry.
+- Faerie i potwory jako codzienna siatka świata.
+
+**Gradient grozy [DECYZJA AUTORA]:** im potężniejszy potwór, tym bardziej magiczny i tym rzadszy. Zwierzęta (wataha wilków 3–4, stada dzików) są pospolite i bywają liczne wszędzie w lesie; niskie plugastwo (utopce, nocnice) gromadzi się na przeklętych terenach; groźne demony jak Drwal to poważne zagrożenie — najwyżej dwóch naraz, zwykle jeden; elity, potwory kontraktowe i bossowie to wydarzenia, nie populacja. Rzadkość dotyczy mocy, nie liczebności najniższego szczebla.
+- Świadectwo bez kontrapunktu: każda „pewna” prawda potrzebuje głosiciela wersji przeciwnej.
+- „X lat temu” jako głos narratora. Daty tylko w ustach postaci, jako ich lokalna pamięć.
+
+
+### Gradient grozy i rzeczywistości — **[DECYZJA AUTORA, 05.11.2026]**
+
+**Status: [DECYZJA AUTORA, 05.11.2026]** Nowa oś nastroju została zatwierdzona: od klasycznego średniowiecznego dark fantasy na zachodzie do **mocnego horroru psychologicznego i onirycznego na wschodzie**, z lokalnymi wyjątkami. **[DECYZJA AUTORA] Wariant B: międzyświat przenika rzeczywistość bez widocznej granicy** — zwyczajny trakt może niezauważalnie zmienić się w drogę bez powrotu. Nie zastępuje to wcześniejszego gradientu mocy/rzadkości potworów. **Kierunek podróży bohatera po Niemirze pozostaje nieustalony.** Nazwy i rozkład regionów: [Biblia Weleszy II](welesza.md).
+
+**Zasada dramatyczna [DECYZJA AUTORA, doprecyzowanie 05.11.2026]:** na zachodzie ludzie boją się śmierci, wojny, zarazy, klątw i potworów, które potrafią nazwać; ku wschodowi coraz silniejszy staje się lęk przed **uwięzieniem w swojskim „międzyświecie” — czyśćcu niedokończonych istnień**. Niepewność, co jest rzeczywiste, wzmacnia to zagrożenie, ale **nie jest jego najgłębszym źródłem**. Horror może być mocno oniryczny i psychologiczny także za dnia, bez krwawych scen i bez wyskakujących wrogów. Nie oznacza to automatycznie, że świat fizycznie rozpada się w każdej wschodniej miejscowości, ani że mieszkańcy wschodu są mniej cywilizowani. Gradacja dotyczy **doświadczenia gracza, świadectw, obyczajów i rodzaju spotkań**.
+
+| Warstwa przedstawienia | Zachód: świat ludzi | Środek: pogranicze | Daleki wschód: majak |
+|---|---|---|---|
+| **Architektura** | Grody, mury, targowiska i **przeklęte zamki** obok normalnych budowli Kościoła. | Palisady, opuszczone domy, strażnice i zarastające trakty. | Relikty oraz budowle o niejasnej funkcji, miejsca powtarzające swój dawny rytm jak w śnie. |
+| **Społeczeństwo** | Książęta, pisane nakazy, spory, wojny, daniny. | Obrzędy, zależność od sąsiadów, zamykanie bram, ukrywane tajemnice. | Izolacja i sprzeczne wspomnienia, ale też sprawne lokalne wspólnoty z własnymi rozwiązaniami. |
+| **Potwory** | Zwierzęta, upiory, **groźne demony** i istoty z przeklętych miejsc; znajomość nazwy nie zapewnia bezpieczeństwa. | Drwal, Powrotnik, Żałobnica — istoty wykonujące resztki dawnych czynności, obowiązków i uczuć. | Coraz bardziej obce i niezrozumiałe zachowania; istoty **uwięzione w międzyświecie**, powtarzające niedokończone czynności. Nie muszą być większe ani potężniejsze. |
+| **Magia i wiara** | Zakazana, badana lub kontrolowana; praktyki religijne bywają uregulowane, ale nie usuwają demonów i klątw. | Traktowana jak niebezpieczna tradycja, stapia się z obyczajem, przedmiotem i strachem. | Zjawiska niemal nieodróżnialne od otoczenia; niepewne przejścia ku międzyświatu i powtarzalność zdarzeń, bez wyjaśnienia całej kosmologii. |
+| **Źródło lęku** | Śmierć, wojna, zaraza, demony, klątwy i przemoc. | Utrata bliskich i bezpieczeństwa; groza resztek dawnego życia. | **Niepostrzeżone wejście w przenikający rzeczywistość międzyświat i utknięcie w nim**, być może na zawsze — groźba stania się istotą podobną do Drwala czy Powrotnika. Utrata pewności jest objawem i narzędziem tej grozy. |
+
+**Zasady realizacji — sposób wykonania do testów, kierunek klimatu zatwierdzony:**
+
+1. **Najpierw znajoma czynność, potem niepokój.** Drwal układa mokre drewno, Powrotnik wraca do tego samego kamienia. Makabra jest konsekwencją historii, nie jedyną cechą potwora.
+2. **Groza przestrzeni ma mieć świadectwa.** Porzucony wóz, powtórzony znak na drzewie, pozornie zamieszkany dom albo dwa sprzeczne zeznania — gracz widzi konkret. „Wszystko jest snem” nie może wymazywać konsekwencji.
+3. **Strach nie może niszczyć uczciwej rozgrywki.** Potwory pozostają fizyczne i możliwe do pokonania; ataki mają czytelną zapowiedź, kolizje działają, a anomalia mapy nie teleportuje bohatera w czasie walki ani nie kasuje postępu. Wschód nie daje licencji na losowe uniki wroga, niewidzialne obrażenia czy manipulowanie sterowaniem.
+4. **Lokalne wyjątki są obowiązkowe.** **Zachód nigdy nie jest bezpieczną krainą startową:** ma potwory, demony, upiory, przeklęte zamki i miejsca realnie nawiedzone. Na wschodzie może istnieć życzliwa, zwyczajna osada; nie każda droga prowadzi do międzyświata. Gradient dotyczy **rodzaju** grozy, a nie jej istnienia.
+5. **Ciepło jest potrzebne mrokowi.** Zostawiamy posiłek, ogień, schronienie, ludzką solidarność i chwile zwyczajności. Bez nich każda lokacja będzie tak samo ponura i przestanie przerażać.
+6. **Dwa niezależne gradienty [DECYZJA AUTORA]:** potęga istoty → rzadkość; kierunek/typ miejsca → dominujący rodzaj niepokoju, coraz częściej **międzyświat i groza uwięzienia**. Wschodni potwór nie jest automatycznie silniejszy od zachodniego.
+7. **Ruiny Starego Serca Imperium [DECYZJA AUTORA, 05.11.2026].** W pełnej grze **można do nich dotrzeć**, ale nie wyjaśnić tajemnicy Imperium. Nie oznacza to, że ruiny są finałem, na wschód prowadzi fabuła ani że znamy położenie ruin. Nie potwierdzamy przeznaczenia dawnych Dróg ani ludzkiego lub nieludzkiego pochodzenia Imperium.
+8. **Bez objaśniającej ekspozycji.** Zmiany tonu pokazują architektura, dźwięk, zachowania, przedmioty i niezgodne relacje, a nie narrator przedstawiający cztery poziomy „skażenia”.
+
+#### Międzyświat — centralny motyw horroru wschodniego [DECYZJA AUTORA, doprecyzowanie 05.11.2026]
+
+**Międzyświat [DECYZJA AUTORA, wariant B] przenika codzienną rzeczywistość**, zamiast stanowić wydzieloną mapę z portalem. Zwyczajna ścieżka może niemal niezauważalnie przejść w miejsce, z którego nie da się wrócić. Skojarzenie z *Silent Hill* dotyczy przenikania i dysonansu znajomych miejsc, a nie kopiowania estetyki, potworów czy fabuły tamtej gry. Międzyświat przypomina **swojski czyściec**: można w niego wpaść, utknąć i zostać sprowadzonym do powtarzania tego, czego nie udało się dokończyć. **Nie jest to jedynie utrata pewności, co jest prawdziwe.** Tragedią może być realne uwięzienie i utrata możliwości powrotu.
+
+- **Drwal, Powrotnik i pokrewne istoty mistyczno-przerażające** są wzorcem ludzi lub istnień, które **utknęły** w tego rodzaju losie. **[DECYZJA AUTORA]** Nadciągają z **serca boru**, czasem zapuszczając się także dalej na zachód. **Serce boru to nie Stare Serce Imperium.** Zamiast „szalonych bestii” widzimy resztki dawnych prac, dróg, obowiązków i uczuć. Wcześniejszy bestiariusz dema nadal wyznacza ich konkretne sylwetki i zachowania.
+- **Niemir jest strefą mieszaną [DECYZJA AUTORA]:** Drwal i Powrotnik występują tu obok zwykłych zwierząt, ludzi i przyziemnych zagrożeń. Daleki wschód silniej eksponuje *groźbę wejścia bez ostrzeżenia i utknięcia*, ale międzyświata nie oddziela sztywna granica. Nie rozstrzygamy źródła zamknięcia boru.
+- **Nie narzucamy teologii:** słowo „czyściec” oddaje swojski, zawieszony nastrój, lecz nie potwierdza odrębnego życia po śmierci, sądu nad duszami ani religijnej prawdy o świecie. **Przenikanie świata bez widocznej granicy jest zatwierdzone; metafizyczne pochodzenie, przyczyny, zasięg i reguły pozostają otwarte.**
+- **Walka pozostaje walką:** przeciwnicy są fizyczni, można ich zranić i pokonać, ataki muszą być czytelne. Międzyświat nie daje pretekstu do przypadkowych obrażeń, niezrozumiałych kolizji, arbitralnego odebrania sterowania czy niemożliwych do przewidzenia kar.
+- **Ryzyko dla bohatera jest osią dramaturgiczną, nie gotową mechaniką:** przyjęliśmy przenikanie rzeczywistości bez ostrej granicy; konkretne sposoby wejścia, wyjścia i ewentualne konsekwencje utknięcia zostają **OTWARTE**. Nie zatwierdzono trwałego uwięzienia gracza, utraty zapisu, systemu szaleństwa ani osobnej mapy wymiaru.
+
+**Ostatnie miasto [DECYZJA AUTORA, 05.11.2026]:** na skraju silnego przenikania międzyświata ludzie podtrzymują **pozory normalności** — **straż miejska** pełni warty, **świątynie** odprawiają obrzędy, działają bramy i targowiska. Mieszkańcy żyją pośród obłędu, zachowując się, jakby twardo stąpali po ziemi. **Za bramą** podróżny nie wie, czy żyje, umarł, czy trafił w to, co niektórzy nazywają piekłem. Nie potwierdzamy dosłownego piekła ani rzeczywistej ochrony miasta. Nazwa, plan, trasa bohatera i zasady działania miejsca pozostają otwarte. [Opis miejsca w Biblii II](welesza.md).
+
+**Grywalność Niemiru [DECYZJA AUTORA]:** to **mieszanka** klasycznych starć dark fantasy oraz rzadszych, pamiętnych spotkań z międzyświatową grozą. Dobre RPG akcji jest ważniejsze niż nieczytelna symulacja snu: sygnały ataków, czytelna przestrzeń, możliwość uczciwego zwycięstwa i zachowanie postępu pozostają nienaruszone. Liczby i układ starć podlegają dalszemu balansowi.
+
+**Bank dwóch scen (nie kanon):** strażnik pobierający myto przy nieistniejącej bramie; grabarz codziennie kopiący ten sam grób. Obydwa pomysły przechodzą do produkcji dopiero po wyborze konkretnej lokacji i sprawdzeniu, czy nie wyjaśniają nierozstrzygniętej tajemnicy.
+
+**Granica prawdy:** mocny horror psychologiczny i oniryczny ma wynikać z zachowania istot, powtarzalnych, niewłaściwie znajomych zdarzeń, sprzecznych relacji i niepewnej percepcji; nie z arbitralnego odebrania graczowi sterowania, czytelnych zasad walki lub zapisanych przedmiotów. Projektant może wiedzieć, jak odtworzyć zjawisko technicznie, lecz nie powinien nadawać mu jednej ujawnionej kosmologii. Ogień i latarnia Niemiru pozostają istniejącym, działającym elementem dawnej infrastruktury zgodnie z decyzją autora; nie potwierdza to skuteczności każdego miejscowego zabobonu.
+
+## Kosmos i magia
+
+Wieśniak widzi w niebie księżyc (po nim liczy czas), gwiazdy (wróżą podróże) i pory roku. Nie pyta, „czym jest kosmos”, tylko czy zaćmienie wróży chorobę bydła. Kapłani zachodu uczą, że niebiosa są uporządkowane, bo porządek jest cnotą. Znachorzy wschodu mówią, że gwiazdy to „ogień, który płonął przed pierwszym lasem”. Czarodzieje mają teorie i spierają się o nie w listach. Żadnej wersji nie pokazujemy jako słusznej.
+
+Magia jest rzadka, otoczona strachem i tajemnicą. Kontrolują ją:
+
+| Tradycja | Kto | Na czym polega | Czego nie robi |
+|---|---|---|---|
+| Boska | Kapłani, mnisi | Obrzęd i kanon; skutek zawsze da się też wytłumaczyć wiarą, zimnem, trafem | Nie działa na żądanie jak mana |
+| Księgowa | Kręgi czarodziejów | Wyczytana z ksiąg; nie opiera się na wierze — dlatego kapłani jej nie ufają | Nie jest „systemem” z czytelnymi regułami |
+| Czarnoksiężnictwo | Samouki poza kręgiem | Zawłaszczenie tego samego, co księgi, bez etyki i wiedzy o skutkach | Nie jest z definicji złe — jest z definicji niebezpieczne |
+| Dar wrodzony | Losowi ludzie | „Po babce”; nikt nie umie go szkolić ani zdjąć | To nie supermoce, to tragedia społeczna |
+| Bestie i potwory | Nie-ludzie | Nadprzyrodzone jako natura, nie umiejętność | Nie występują masowo na każdym szczeblu mocy — liczebność spada z potęgą (gradient grozy) |
+
+Magia zostawia ślady materialne: oszronione okno w środku lata, sen psa, który nie śpi, pęknięty dzban. Cena magii to strach, plotka, dystans, proces albo wygnanie — nie punkty. Magia miesza się z rzemiosłem, medycyną i dogmatem jak alchemia w realnym średniowieczu; ścisłą granicę zna tylko krąg czarodziejów, i to jest ich jedyna tajemnica.
+
+### Magia gracza **[DECYZJA AUTORA]**
+
+- **Demo:** bohater nie rzuca zaklęć. Używa magicznych przedmiotów o ograniczonej liczbie użyć, które trzeba naładować; ewentualnie umiejętności obdarowane przez bogów. Zasada: **używa, nie rozumie** — przedmiot działa, nikt nie wyjaśni dlaczego.
+- **Pełna gra:** gracz otrzymuje dostęp do magii (zakres i forma do ustalenia przy projektowaniu rozwoju postaci).
+- **Demo bez magów i kapłanów w scenariuszu**; magia ludzka — najwyżej ślad („rzecz po kimś” bez właściciela). Spotkania z żywą magią człowieka dopiero w pełnej grze.
+- Interwencje boskie w scenariuszach: **jednorazowe i niewyjaśnialne** (wzorzec: Melisandre z „Gry o Tron”). Przykład: gracz pada po dwóch ciosach bossa, woła bogów o pomoc — i ma w dłoniach płonący miecz; po starciu wszystko znika. Który bóg to sprawił, stary czy nowy, a może tylko cudza magia — nikt się nie dowie, także twórcy. Tak samo wskrzeszenia i inne cuda: są, ale skąd — pytanie otwarte dla wszystkich. Po fakcie nie ma dowodu; inne postacie mogą twierdzić, że to był przypadek albo czarnoksiężnik, i nie potwierdzamy żadnej wersji.
+
+## Imperium
+
+Na kontynencie istniało dawnie imperium. Zniknęło; kiedy i dlaczego — nie ustalamy. **[DECYZJA AUTORA]** Imperium to **jeden system** (Drogi, słupy, ogniowe znamiona = jedna infrastruktura) o funkcji nieznanej — wewnętrzna reguła dla twórców, by świadectwa się nie gryzły; gracz nigdy nie pozna celu.
+
+**[DECYZJA AUTORA, 05.11.2026]** Można odwiedzić **ruiny Starego Serca Imperium** w pełnej grze, nie poznając prawdy o jego budowniczych, celu infrastruktury ani przyczynach upadku. **Otwarte:** położenie, wygląd, sposób dotarcia, zawartość i rola w kampanii. Znalezienie ruin nie rozstrzyga zagadki pochodzenia wszystkich Dróg.
+
+Jedyne twarde świadectwo to architektura, wszędzie: fundamenty, słupy, drogi, piece, kominy, pod późniejszymi osadami.
+
+**Język architektury** (dla grafiki i level designu, odrębny od średniowiecza):
+
+- Materiał: ciemny, drobnoziarnisty kamień, nienaturalnie równo ciosany, spoiny ciasne jak nóż.
+- Forma: proste bryły, gładkie płaszczyzny, powtarzalne moduły; bez łuków, witraży, wieżyczek, ornamentu. Miejscowi murarze nie potrafią tego kopać ani naprawiać.
+- Detal: nacięcia o funkcji nieznanej (możliwe pismo — nigdy nie tłumaczymy); obręcze i pierścienie w kamieniu, w które ludzie wbijają gwoździe i wieszają kości oraz zioła (obręcze nad bramą Niemiru — ten wzorzec).
+- Stan: fundamenty, słupy, drogi przejęte przez przyrodę; gwoździe wbite w drzewa od strony drewna, jakby pień urósł wokół gotowych okuć (kanon demo, „Żelazo pod korą”).
+- Skala: elementy nieco za duże jak na ludzkie potrzeby — nieco za wysokie słupy, za szerokie przejścia. Nigdy nie potwierdzamy, dla kogo.
+
+Ludzie nie wiedzą, że to „imperium”. Znają „stare kamienie” i „drogi przedprzodków”. Nazwa jest wyrazem uczonych z kręgów. Ludzie czczą magię pozostałą po imperium, nie wiedząc, skąd się bierze — ogień w Niemirze to ten mechanizm: urządzenie działa i jest traktowane jako sacrum. Osady budują na fundamentach imperium; to nie profanacja, to codzienność. Kręgi czarodziejów czytają księgi, które mogą (albo nie) być resztkami imperium — nie potwierdzamy.
+
+**[DECYZJA AUTORA]** W grze występują urządzenia imperium, które gracz może uruchomić: można „odkręcić”, nigdy nie wiadomo, co się stanie, efekt opóźniony/niepewny (wzorzec: latarnia z Niemiru). Stosować rzadko, bez wyjaśnień.
+
+## Religie i wiara
+
+Religia jest realnym zjawiskiem społecznym. W Weleszy istnieją religie, chramy i kilku bogów — w różnych miejscach różni, bez wspólnego panteonu (bogowie słowiańscy, miejscowi). „Co jest na górze” pozostaje pytaniem otwartym dla wszystkich, także dla twórców. To był cud czy przypadek, kto jest świętym a kto nie — nikt nie rozstrzygnie. W sąsiedniej wiosce czczą innego boga albo tego samego inaczej i obie strony uważają się za pobożne.
+
+**Zachód — Kościół jednolity [DECYZJA AUTORA]:** jedna instytucja, jedna doktryna, wzorzec: Zakarum z Diablo. Wygląd prawie-katolicki — hierarchia, katedry, procesje, spisy, odruchy inkwizycyjne wobec nieznanej magii, misje na wschód i sekretne brudy w fundamentach, których wierni nie znają. Wygląda pewnie, bo pewność jest jej produktem. Kapłan wie, że jego obrzęd działa i że sąsiedni jest zabobonem — czy to wiedza, czy buta, gracz się nie dowie. Funkcja: realnie naucza, leczy, spisuje — i realnie przeszkadza.
+
+**Wschód (Welesza) — gradient kultu [DECYZJA AUTORA]:** na zachodzie krainy bogowie słowiańscy są dość mocno zinstytucjonalizowani — chramy, kapłani, stałe obrzędy. Im dalej na wschód, tym dziczej: bogowie mieszają się z demonami lasu, dogmaty obowiązują tylko tam, gdzie konieczne lub wygodne, a panem jest puszcza i chęć przetrwania. Wzorzec wschodniego kultu: trzy wiedzmy na moczarach z Wiedźmina 3 — tubylcy oddają cześć nie z miłości, lecz z braku wyboru. Cześć przed nieznanym: kamień, drzewo, źródło, most — wszystko starszego niż ludzka pamięć może być miejscem obrzędu. Jeśli lokacja zawiera pozostałość imperium, ktoś ją niemal na pewno czci, nie wiedząc czemu. Obrzędy są inżynierią społeczną: trzymaniem porządku, pamięci i dystansu wobec lasu. Znachorzy i wieszczki przenoszą religijność przez ludzi, nie instytucje.
+
+**Kult latarni w Niemirze** ([fabula](fabula.md)): klasyczny kult resztkowy wokół działającej pozostałości imperium. Nie potwierdzamy, że latarnia „realnie” utrzymuje las na dystans — ani że nie utrzymuje. Rola Wszebory to prototyp wschodniego „kapłana”: autorytet przez obrzęd i pamięć, nie dogmat.
+
+Bank motywów: świętość jako plotka (nadają ją ludzie, nie niebiosa); cud z dostępnym „niewierzącym” odczytem, nigdy niepotwierdzony; herezja jako „prawie-dogmat” z innej wioski (konflikt o pamięć i autorytet, nie o metafizykę); dla wiernych magia czarodziejów jest podejrzana, bo nie opiera się na wierze — dla czarodziei religia to „niedokładny opis tego samego”.
+
+## Frakcje
+
+Frakcja w Weleszy to nie organizacja z siedzibą — to grupa ludzi o wspólnym interesie, strachu albo wierze, rozmywająca się po wioskach. Wszystkie są lokalne, biedne, przeciążone własnym przetrwaniem; „sypiące się” to nie dekoracja, to stan instytucji w czasach upadku.
+
+| Frakcja | Cel i metody | Znak rozpoznawczy |
+|---|---|---|
+| Kościół zachodu | Uporządkować wiarę na wschodzie; kazania, spisy, relikwie | Tabliczki woskowe — mnisi spisują cuda i grzechy nawet w lesie; wschód boi się nie diabła, tylko że go spiszą |
+| Kręgi czarodziejów | Zachować wiedzę z ksiąg; listy, archiwa, płatne ekspertyzy | Kadzie — ciężka, okuta beczka, w której „stoi” ich moc; biblioteka, warsztat i słabość w jednym |
+| Czarnoksiężnicy | Przetrwać i coś osiągnąć bez kręgu i etyki | Rzeczy „po kimś” — zawsze noszą jeden przedmiot po zmarłym; to cała ich magia |
+| Watażkowie | Utrzymać lub zdobyć kruche władztwo; haracz i ochrona (prawdziwa) | Znaki haraczu — nacięcia na bramach i drzewach; księgowość bez pisma |
+| Kupieckie rody | Utrzymać szlaki, którymi świat trzyma się razem | Wagi na trzy systemy monetarne; fałszowanie wagi to jedyna zbrodnia, za którą zabijają własnych |
+| Plemiona i koczownicy | Przetrwać zimę i to, „co duchy lasu powiedzą” | Skrzynie przodków — cała pamięć i prawo plemienia; zniszczenie skrzyni zabija je bardziej niż miecz |
+| Ludzie obdarzeni | Przetrwać z darem, którego nikt nie szkoli | Znamię „po babce” — ostrzeżenie, przepustka i wyrok zarazem |
+| Strażnicy traktów | Nieznany — **zawieszeni także dla twórców [DECYZJA AUTORA]** | Ogniowe znamiona na słupach starych Dróg: nikt ich nie kładzie, nikt nie wie, kiedy się pojawiają |
+
+Gracz poznaje znak frakcji przed samą frakcją (najpierw rysy na bramie, potem watażka). Znak ma być czytelny po kilku spotkaniach, nigdy wykładany w dialogu.
+
+Konflikt główny świata to ludzkość vs mrok i entropia, ale frakcje nie współpracują przeciwko niemu — każda ma inną teorię obrony (dogmat / wiedza / haracz / obrzęd / handel), więc gracz czuje chaos pogranicza, nie „sojusz vs siły zła”. Dolina Niemiru nie ma frakcji — ma społeczność z obyczajami; utknięci kupcy (Sambor, Sulir) są nosicielami świata zewnętrznego, tyle, ile potrzeba.
+
+## Historia, tematy, ton
+
+Historia świata nie jest nigdzie spisana w całości. Istnieją warstwy pamięci: **kamień imperium** (bez dat i imion), **pamięć ustna** (do trzeciego pokolenia, dalej pieśń), **spisy Kościoła** (daty bywają „poprawione”), **rachunki kupieckie** (najwiarygodniejsze i najbardziej lakoniczne). Przy projektowaniu wydarzeń określamy, która warstwa je pamięta i jak je zniekształca.
+
+Świat jest w schyłku: mniej ludzi, dróg i pamięci niż „kiedyś”. Balans między śmiercią a cywilizacją trzyma się na starym kamieniu, obyczaju, kaganku oświaty i kupieckim wozie. To nie świat beznadziei — wszędzie są ludzie, którzy chcą pomagać i walczyć o lepsze jutro. Emocja bazowa gry to nie heroizm wybrańca, lecz wytrwałość przypadkowego człowieka.
+
+### Tematy jako pytania badane przez mechanikę
+
+| Pytanie | Jak gra je bada |
+|---|---|
+| Czy posłuszeństwo wobec niezrozumiałych obyczajów chroni, czy więzi? | Zabobony Niemiru: przestrzeganie nigdy nie ma potwierdzonego efektu, łamanie nigdy pewnej kary; gracz żyje w niepewności |
+| Czy bezpieczeństwo wymaga cudzej winy? | Niemir ma kogoś podejrzewać i to trzyma go w kupie; gracz może podtrzymać narrację winy albo ją podważyć |
+| Co zostawiamy po sobie, gdy nie wiemy, co budujemy? | Kult urządzenia, którego funkcji nikt nie zna — scheda w każdej lokacji imperium |
+| Czy wiedza chroni lepiej niż wiara? | Czarodziej, kapłan i wieśniak: trzy odpowiedzi na ten sam las, bez werdyktu |
+| Czy lepiej mieć drogę otwartą, czy powód, by zostać? | Struktura demo: celem jest wyjście; finał podważa prostotę tego celu |
+
+Temat bez sceny lub mechaniki, która go bada, wycinamy — kazanie nie jest designem.
+
+### Tone bible
+
+Punkt odniesienia: Diablo 4 — miks, który gdzieś idzie dobrze, gdzieś źle; brudny świat z kagankami ciepła (wzorzec: Imperium z Warhammer Fantasy Roleplay). Głos: poważny, oszczędny, wiejski; im groźniejsza rzecz, tym ciszej o niej mówią. Humor tylko omyłkowy, ludzki; czarny humor sporadyczny, nigdy dekonstruujący świat. Przemoc brudna, z konsekwencjami, nie dla szoku. Nadzieja niska, ale niezerowa — zawsze ktoś pali światło.
+
+Nigdy: groza efektowności; moderny autoparodystyczny żart; przemoc wobec dzieci jako motyw; NPC-doradca wiedzący więcej niż jego społeczność; jednoznaczny morał finału — niepewność zostaje.
+
+### Ludonarracyjny check
+
+- „Świat trzyma się na strachu i obyczaju” ↔ walka z małą liczbą groźnych wrogów i ograniczone zasoby osady.
+- „Bohater jest nikim” ↔ brak wybrańca; kompetencje nabyte u nauczycieli, nie z przeznaczenia.
+- „Historia działa bez czytania” ↔ tajemnica przez środowisko i świadectwa; żadnej informacji krytycznej tylko w tekście.
+
+## Kalendarz
+
+Rytmy jak na ziemi (pory roku, długość dnia i roku), ale czas liczony po księżycu: miesiąc to lunacja, rok to 12–13 księżyców (lata „pełne” i „krótkie” — świat ma na to obrzędy, nie matematykę). Pory dnia: świt, południe, zmierzch, noc; zmierzch jest momentem religijnym (zapalanie świateł od latarni w Niemiru to ryt zmierzchu). Nów to „ciemne noce” z lokalnymi zakazami (nie wołać po imieniu — kanon demo pasuje tu idealnie); nów nie jest „magiczny” w sposób potwierdzony — jest po prostu najczarniej i wszyscy to czują.
+
+Ludzie datują opisowo: „trzeci księżyc po głodzie”, „w rok po wielkiej wodzie”. Precyzyjne datowanie to zachodnia dziwacja Kościoła i kupców — i każda z tych dat może służyć czemuś innemu niż prawdzie. Nie ustalamy daty upadku imperium ani żadnej wielkiej liczby lat; kalendarz księżycowy „nie sięga” tak daleko i to jest wbudowany mechanizm tajemnicy. Okresy nazywamy opisowo: czasy przedprzodków / dziadek pamięta / teraźniejsze czasy. System gry prowadzi ukryty zegar; daty nie eksponujemy w HUD ani dialogach.

@@ -15,6 +15,9 @@
 | [Kierunek artystyczny (PDF)](art/WELESZA_DARK_PAINTERLY_2D_KIERUNEK_ARTYSTYCZNY_v1.pdf) | Dark Painterly 2D, zatwierdzony. Doprecyzowania autora z 28.10.2026 (Dźwigacz z hakiem lub sierpem, Stróż ze zwykłą latarnią) są w [przeciwnikach](przeciwnicy.md). Las to gęsty słowiański bór, głównie liściasty, nie świerkowy (PDF s. 7) |
 | [Przyroda boru](art/przyroda/) | Arkusze [B](art/przyroda/arkusz-przyrody-b.png) (paleta, detale) i [D](art/przyroda/arkusz-przyrody-d.png) (skarpy, zbocza): wzór rekwizytów i krawędzi terenu boru [DECYZJA AUTORA, 28.10.2026]. Z drzew bierzemy liściaste i martwe; sosny i świerki pomijamy |
 | [Tekstury podłoża](../art-src/_tekstury/) | 15 map koloru (podłoże, skały, kora) z poprzedniego projektu, na później: jeszcze ich nie używamy. Są prawie fotograficzne i wymagają korekty kolorów; igliwie i kora sosny nie pasują do boru liściastego |
+| [Biblia świata I — świat](swiat.md) | Magia, religie, Imperium, zasady przenikania międzyświata, ton i kalendarz |
+| [Biblia świata II — Welesza](welesza.md) | Geografia, regiony (nazwy w projekcie), Niemir, ostatnie miasto, gospodarka, decyzje autora i pytania otwarte |
+| [Bestiariusz pełnej gry](bestiariusz-swiat.md) | Propozycje przeciwników spoza dema, nie zastępuje zatwierdzonych spotkań Niemiru |
 | [Grafy](graphs/) | Grafy poziomów i bossów — dane projektowe, nie implementacja |
 
 Skille projektowe: [`.agents/skills/`](../.agents/skills/) — zacznij od design-maestro.
