@@ -33,8 +33,8 @@ Gradient wschód–zachód (dzikość ↔ kaganek oświaty) ma drugą oś, tylko
 
 | Temat | Ustalenie | Status |
 |---|---|---|
-| Zachód–wschód | Zachód ma przypominać klasyczne średniowieczne dark fantasy; ku wschodowi groza narasta, staje się bardziej senna i psychologiczna. Występują lokalne wyjątki. | **[DECYZJA AUTORA]** |
-| Intensywność | **Mocny horror psychologiczny i oniryczny**. Nie ograniczamy go do ciemności i krwawych potworów. | **[DECYZJA AUTORA]** |
+| Zachód–wschód | Zachód ma przypominać klasyczne średniowieczne dark fantasy, z prawdziwymi demonami, potworami i przeklętymi zamkami. Ku wschodowi groza coraz silniej wiąże się z międzyświatem, powtarzalnością i sennym horrorem; możliwe są lokalne wyjątki. | **[DECYZJA AUTORA]** |
+| Intensywność | **Mocny horror psychologiczny i oniryczny**. Na dalekim wschodzie najgłębszym lękiem jest **wpadnięcie i utknięcie w swojskim „międzyświecie”, przypominającym czyściec**; sama niepewność percepcji jest środkiem budowania tego zagrożenia. | **[DECYZJA AUTORA, 05.11.2026 — doprecyzowanie]** |
 | Nazwy regionów | **Przeprojektować wszystkie sześć nazw** — odrzucono również komplet kandydatów z poprzedniej propozycji. | **[DECYZJA AUTORA]** dotycząca zadania, nie zatwierdzenie nowych nazw |
 | Posługiwanie się nazwami | **Model mieszany:** część nazw funkcjonuje szerzej u kupców, podróżników i mieszkańców; obok nich istnieją nazwy lokalne, potoczne i odmienne zwyczaje. | **[DECYZJA AUTORA]** |
 | Stare Serce Imperium | W pełnej grze można **dotrzeć do jego ruin**, ale nie poznać prawdy o Imperium. | **[DECYZJA AUTORA]** |
@@ -64,12 +64,22 @@ Gradient wschód–zachód (dzikość ↔ kaganek oświaty) ma drugą oś, tylko
 
 | Obszar doświadczenia | Krajobraz i ludzie | Dominujący rodzaj lęku |
 |---|---|---|
-| **Zachód — świat ludzi** | Grody, targi, zbrojni, książęta, Kościół, polityka i prawo; bieda, wojna, bandyci, klasyczne demony i upiory. Cywilizacja umie część zagrożeń nazwać i próbować je zwalczać. | Strach przed śmiercią, wojną, karą, głodem i tym, co już znane. |
+| **Zachód — świat ludzi** | Grody, mury, targowiska, książęta, Kościół i prawo; także **potwory, demony, upiory, przeklęte zamki i autentycznie niebezpieczne pustkowia**. Cywilizacja zna część zagrożeń, ale niekoniecznie umie je zwalczyć. | Strach przed śmiercią, wojną, zarazą, klątwami i przemocą. **Zachód nie jest bezpieczny** ani pozbawiony nadprzyrodzonej grozy. |
 | **Środek — pogranicze** | Odcinane trakty, opuszczone osady i gęste lasy; zamknięte bramy, obrzędy, nieufność; Drwal wciąż układa drewno, Powrotnik bez końca szuka drogi. **Niemir** jest miejscową anomalią tej strefy, nie dowodem, że cała strefa działa jednakowo. | Strach przed utratą domu, bliskich, pamięci i poczucia bezpieczeństwa. |
-| **Daleki wschód — świat majaków** | Rzadkie lub sprzeczne drogowskazy, niepewne mapy, pozornie zamieszkane pustki, relacje ludzi niemożliwe do pogodzenia. Mogą żyć tu zwykłe, funkcjonujące społeczności. | Strach przed utratą pewności, co się widziało, dokąd prowadzi droga i komu wierzyć. |
+| **Daleki wschód — sąsiedztwo międzyświata** | Rzadkie drogowskazy, pozornie zamieszkane domy, miejsca więżące w powtarzających się czynnościach i wspomnieniach. **Międzyświat** przypomina swojski, koszmarny czyściec; nie każda wieś i nie każdy trakt jest w nim uwięziony. | **Największy strach: wpaść w międzyświat i już nie wrócić** — pozostać w niedokończonym życiu, jak istoty z kręgu Drwala i Powrotnika. Utrata pewności, co rzeczywiste, jest drogą do tej grozy, nie jej jedynym celem. |
 | **Stare Serce Imperium — ruiny dostępne w pełnej grze** | Można dotrzeć do jego ruin [DECYZJA AUTORA, 05.11.2026], lecz położenie, wygląd, ścieżka dotarcia i rola w fabule są nieustalone; nie ujawniamy pochodzenia i celu Imperium. | Strach przed tym, czego nie ma jak sprawdzić ani zrozumieć. |
 
-To **gradient nastroju i narracji**, nie cztery poziomy trudności ani cztery obiektywnie rozdzielone pasy na mapie. Zachodnie miejsce może być koszmarem, a wschodnia wieś może prowadzić zwyczajne życie. Groza nie czyni mieszkańców wschodu „mniej rozwiniętymi”; mają własną wiedzę, strukturę społeczną i sposoby przetrwania.
+To **gradient nastroju i narracji**, nie cztery poziomy trudności ani cztery obiektywnie rozdzielone pasy na mapie. Zachodnie miejsce może być koszmarem, a wschodnia wieś może prowadzić zwyczajne życie. Groza nie czyni mieszkańców wschodu „mniej rozwiniętymi”; mają własną wiedzę, strukturę społeczną i sposoby przetrwania. **Drwal i Powrotnik już występują w Niemirze**, więc międzyświatowy rodzaj grozy nie może zostać geograficznie ograniczony tylko do dalekiego wschodu; na wschodzie ma być dominującym doświadczeniem, ale szczegóły jego związku z Niemirem pozostają otwarte.
+
+#### Międzyświat — rdzeń wschodniej grozy [DECYZJA AUTORA, 05.11.2026 — doprecyzowanie]
+
+**Międzyświat** jest roboczym określeniem stanu lub miejsca uwięzienia, odczuwanego jak **swojski czyściec**: dróg, z których nie sposób wyjść; domów, do których wciąż się wraca; pracy, której nie da się skończyć. To nie tylko halucynacja bohatera. **Największy lęk na dalekim wschodzie to możliwość wpadnięcia w taki stan i utknięcia w nim**.
+
+**Drwal, Powrotnik i podobne istoty z kręgu mistyczno-przerażającego** są wzorcem tych, którzy utknęli: ciało nadal wykonuje resztki znanych czynności, choć ich sens został odebrany lub wypaczony. Nie trzeba zamieniać ich w niewidzialne duchy: **pozostają materialne, fizyczne i możliwe do pokonania w walce**, z czytelnymi sygnałami ataku. Groza nie jest ich nietykalnością, tylko tym, co spotkało ich istnienie.
+
+**[DECYZJA AUTORA]** Zachód nie jest strefą bezpieczeństwa. Groźne demony, potwory, upiory, przeklęte zamki i miejsca z klątwą mogą pojawiać się również tam. Różnica między zachodem i dalekim wschodem dotyczy **dominującej natury horroru**, nie obecności lub braku potworów.
+
+**Otwarte, nie ustanawiamy kosmologii:** czy międzyświat jest odrębną płaszczyzną istnienia, częścią zwykłego świata, stanem po śmierci czy innym zjawiskiem; kto i w jakich okolicznościach tam trafia; jak można się wydostać; czy Drwal i Powrotnik z Niemiru trafili do tego samego zjawiska. Określenie „czyściec” to **analogia atmosfery**, nie potwierdzenie religijnego życia po śmierci. Nie tworzymy jeszcze mechaniki wciągania gracza, trwałego uwięzienia ani nowych zasad śmierci postaci.
 
 #### Dwie osie geografii, nie jeden korytarz
 
@@ -81,11 +91,11 @@ To **gradient nastroju i narracji**, nie cztery poziomy trudności ani cztery ob
 #### Co nowy kierunek zmienia, a czego nie
 
 1. **Nazewnictwo do ponownego zaprojektowania [DECYZJA AUTORA]:** cały zestaw A odrzucony; zestaw B pozostaje niezatwierdzoną propozycją, a dawne nazwy funkcjonują jako odniesienia.
-2. **Zmienia główną oś nastroju:** zachód to konflikty ludzi i znajome potwory, środek to izolacja i „życie, które nadal próbuje się powtarzać”, wschód to niepewność relacji i przestrzeni.
+2. **Oś nastroju [DECYZJA AUTORA]:** zachód to grody, wojny, potwory, demony i przeklęte zamki; środek to izolacja i „życie, które nadal próbuje się powtarzać”; daleki wschód to groźba **utknięcia w międzyświecie**, a nie jedynie niepewność relacji i przestrzeni.
 3. **Zmienia język lokacji:** każdy region ma odróżniać się architekturą, obyczajem, gospodarką, zagrożeniami i stosunkiem do magii (szczegóły: [Biblia świata I](swiat.md)).
 4. **Nie zmienia geografii dema:** Niemir zostaje w lesie obok Wielkiego Traktu; mapa doliny, trzy słupy, zamknięcie boru, latarnia, Stróż i suchy szlak pozostają w ustalonym układzie.
 5. **Nie zmienia tonu bohatera:** nadal jest przypadkowym podróżnikiem, bez przeznaczenia i wiedzy, która tłumaczy zagadki świata.
-6. **Nie znosi innych wymiarów grozy:** nawet na zachodzie są anomalie, a na wschodzie istnieją zwykłe rodziny, targi i miejsca dające nadzieję.
+6. **Nie znosi innych wymiarów grozy:** na zachodzie istnieją realnie niebezpieczne potwory, demony, upiory i przeklęte zamki, a na wschodzie również zwykłe rodziny, targi i miejsca dające nadzieję. Międzyświat nie jest synonimem całego wschodu.
 7. **Nie wyjaśnia imperium:** w pełnej grze można dotrzeć do ruin Starego Serca [DECYZJA AUTORA], ale cel Dróg, pochodzenie i historia Imperium pozostają tajemnicą.
 8. **Nie potwierdza działania zabobonów:** ludzie mogą wierzyć, że obrzędy ich chronią, ale opowieść nie daje jednoznacznego werdyktu.
 9. **Nie oznacza masowych potworów:** zachowujemy zasadę, że groźniejsze i bardziej magiczne istoty spotyka się rzadziej; atmosfera nie zależy od mnożenia wrogów.
@@ -225,3 +235,4 @@ Oś nie jest misją zbawienia świata; nie ma antagonisty; nie wyjaśnia doliny 
 3. Gdzie i jak gracz może dotrzeć do **ruin Starego Serca Imperium** oraz co tam zastanie? **Możliwość dotarcia jest zatwierdzona**, ale nie ich lokalizacja ani odpowiedź na tajemnice.
 4. Dokąd uda się bohater **po Niemirze**, jakie krainy zobaczy i w jakiej kolejności? **Brak decyzji**; nie interpretować gradientu jako trasy fabuły.
 5. Jak dokładnie realizować zatwierdzony **mocny horror psychologiczny i oniryczny** w scenach? Szczegóły efektów i ich testy pozostają do zaprojektowania.
+6. **Międzyświat:** jak do niego wpaść, czy i jak się z niego wydostać, czy istnieją granice i jaki jest związek z anomalią Niemiru? **Nieustalone**; nie utożsamiamy go automatycznie z religijnym czyśćcem ani nie dodajemy mechaniki bez projektu i decyzji.
