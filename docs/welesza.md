@@ -15,7 +15,7 @@ Welesza to kraina wszystkiego, co na wschód od Odry: niziny, wielkie bory, dzic
 
 Gradient wschód–zachód (dzikość ↔ kaganek oświaty) ma drugą oś, tylko dla twórców: północ (morze, obcy, ruch) — południe (step, karawany, sucho) — środek (bór, pamięć, stagnacja). W grze pokazywana skutkami, nigdy wykładana.
 
-### Regiony — dotychczasowy zapis (obowiązujące nazwy)
+### Regiony — dotychczasowe nazwy odwoławcze (do przeprojektowania)
 
 | Region | Charakter | Życie |
 |---|---|---|
@@ -27,26 +27,38 @@ Gradient wschód–zachód (dzikość ↔ kaganek oświaty) ma drugą oś, tylko
 | Pogranicze wschodnie | Knieje, mgły, Drogi rzednące w nic | Sezonowi zbieracze, pustelnicy, plemiona koczujące; „to, co duchy lasu powiedzą” |
 
 
-### Projekt przebudowy świata: nazwy i tożsamość krain (PROPOZYCJA, 05.11.2026)
+### Przebudowa świata — decyzje autora i nazwy do wyboru (05.11.2026)
 
-**Status:** wariant do decyzji autora, a nie nowy kanon. Dotychczasowe nazwy są oznaczone jako **[DECYZJA AUTORA]** i obowiązują do czasu jawnej akceptacji ich zmiany. Wprowadzamy projekt do Biblii bez zmieniania zatwierdzonej fabuły, nazw NPC, topologii doliny Niemiru ani mapy gry. Nie projektujemy tutaj pełnej mapy gry po suchym szlaku.
+#### Decyzje autora (05.11.2026)
 
-**Cel:** Welesza ma zaczynać się od brudnego, ale rozpoznawalnego średniowiecznego dark fantasy i stopniowo przechodzić na wschód w horror przypominający majak senny. Nie chodzi o prosty podział „cywilizacja kontra barbarzyństwo” ani o wzrost poziomu potworów: zmienia się przede wszystkim to, jak ludzie rozumieją zagrożenia, jak postępują i czy potrafią ufać własnemu doświadczeniu.
-
-#### Kandydaci na nazwy (wszystkie niezatwierdzone)
-
-| Dotychczasowa nazwa | Kandydat | Tożsamość i motywacja |
+| Temat | Ustalenie | Status |
 |---|---|---|
-| Zakraj | **Brodne Ziemie** | Zachodnie przeprawy, grody, książęta, granice prawa, handel i Kościół; bezpieczeństwo ma cenę. |
-| Nadmorze | **Słonowody** | Porty, rybacy, żeglarze, sól i wieści od obcych; nie jest automatycznie „krainą bez grozy”. |
-| Okole | **Głuchobór** | Wielka puszcza, mokradła, stare trakty i izolowane osady; w jego obrębie pozostaje dolina Niemiru. |
-| Rudogórje | **Rudne Granie** | Góry, trudne przełęcze, kopalnie i starsze od górników sztolnie; inna odmiana tajemnicy niż leśna. |
-| Suchodrzewie | **Bezwodzie** | Suche równiny, studnie, karawany, walki o dostęp do wody; zachowuje samodzielną kulturę Południa. |
-| Pogranicze wschodnie | **Niedroża** | Obszary, w których szlaki przestają być pewne, osady są odcięte, a świadectwa podróżnych sobie przeczą. |
+| Zachód–wschód | Zachód ma przypominać klasyczne średniowieczne dark fantasy; ku wschodowi groza narasta, staje się bardziej senna i psychologiczna. Występują lokalne wyjątki. | **[DECYZJA AUTORA]** |
+| Intensywność | **Mocny horror psychologiczny i oniryczny**. Nie ograniczamy go do ciemności i krwawych potworów. | **[DECYZJA AUTORA]** |
+| Nazwy regionów | **Przeprojektować wszystkie sześć nazw** — odrzucono również komplet kandydatów z poprzedniej propozycji. | **[DECYZJA AUTORA]** dotycząca zadania, nie zatwierdzenie nowych nazw |
+| Posługiwanie się nazwami | **Model mieszany:** część nazw funkcjonuje szerzej u kupców, podróżników i mieszkańców; obok nich istnieją nazwy lokalne, potoczne i odmienne zwyczaje. | **[DECYZJA AUTORA]** |
+| Stare Serce Imperium | W pełnej grze można **dotrzeć do jego ruin**, ale nie poznać prawdy o Imperium. | **[DECYZJA AUTORA]** |
+| Podróż bohatera po Niemirze | Kierunek i kolejność podróży pozostają **nieustalone**. Oś klimatu zachód–wschód nie wyznacza trasy kampanii. | **OTWARTE** |
 
-**Ocena nazw:** „Głuchobór”, „Słonowody” i „Niedroża” są najmocniejszymi kandydatami; „Brodne Ziemie”, „Rudne Granie” i „Bezwodzie” wymagają jeszcze oceny brzmienia i odróżnialności od zwykłych opisów terenu. To nazwy robocze, nie przenosimy ich jeszcze do nazw miast, questów ani identyfikatorów.
+**Status dawnych nazw:** Zakraj, Nadmorze, Okole, Rudogórje, Suchodrzewie i opisowe „Pogranicze wschodnie” służą jako *etykiety odwoławcze* w dotychczasowych tekstach. Wcześniej zatwierdzony zestaw nazw został skierowany przez autora do ponownego zaprojektowania. Dopóki nie zatwierdzi zamienników, nie wykonujemy masowej podmiany w innych dokumentach. Bez zmian pozostają **Welesza, Niemir, Wielka Woda, Wielki Trakt**, postacie i osady zatwierdzonego demo.
 
-**Zachować bez zmiany:** Welesza, Niemir, Wielka Woda, Wielki Trakt i bezimienne ostatnie miasto. Nazwy osad i postaci zatwierdzonych dla demo pozostają nietknięte. Nie dodajemy sztucznych końcówek fantasy, apostrofów ani nazw popularnych istniejących polskich miejscowości. Regiony nie muszą mieć administracyjnych, ostro wytyczonych granic.
+#### Nazewnictwo — nowy zestaw B, wyłącznie propozycje
+
+**Odrzucony zestaw A:** Brodne Ziemie, Słonowody, Głuchobór, Rudne Granie, Bezwodzie, Niedroża. Nie przedstawiamy go ponownie jako listy do zatwierdzenia.
+
+| Dotychczasowa nazwa odniesienia | Nowy kandydat B | Uzasadnienie nazwy i charakter krainy |
+|---|---|---|
+| Zakraj | **Wartawy** | Zachodnie przeprawy i grody, warty, straż i pobór danin. Obyczaj pilnowania granic ważniejszy od samego krajobrazu. |
+| Nadmorze | **Żarwędy** | Północne porty i wybrzeża; nazwa może nawiązywać do legendy o światłach i ogniskach ostrzegawczych nad morzem. To propozycja ludowej etymologii, nie ustalona historia. |
+| Okole | **Ostrowrzec** | Leśne ostrowy, mokradła, skryte trakty i dolina Niemiru. Nazwa akcentuje dawne drogi pośród wód, nie deklaruje „krainy potworów”. |
+| Rudogórje | **Kruszary** | Skały, kruszenie rudy, górnicy i stare sztolnie; społeczna historia wydobycia, nie samo określenie gór. |
+| Suchodrzewie | **Studwary** | Południowe karawany i strzeżone studnie; woda jako przedmiot sporów, prawa i gościnności. |
+| Pogranicze wschodnie | **Niewrocie** | Nazwa z opowieści o ludziach, którzy nie wracają; ścieżki i relacje stają się niepewne. Nie ustalamy, że każde zaginięcie jest nadprzyrodzone. |
+
+**Status: PROPOZYCJA — żadna z sześciu nowych nazw nie jest zatwierdzona.** Są to neologizmy stylizowane na słowiańskie, nie poświadczone historycznie formy prasłowiańskie. Trzeba jeszcze sprawdzić ich brzmienie w dialogach, odmianę i kolizje z rzeczywistymi nazwami. Jeśli nie odpowiadają kierunkowi autora, projektujemy następny zestaw zamiast przyjmować je automatycznie.
+
+**Model mieszany [DECYZJA AUTORA]:** nazwy większych krain mogą być znane w handlu i częściowo w mowie codziennej, ale lokalne społeczności używają też nazw sąsiedzkich, topograficznych i przekazywanych ustnie. Nie istnieje obowiązek jednolitego nazewnictwa całej Weleszy. Szczegółowy rozkład nazw pozostaje propozycją.
+
 
 #### Cztery stany świata wzdłuż drogi na wschód
 
@@ -55,7 +67,7 @@ Gradient wschód–zachód (dzikość ↔ kaganek oświaty) ma drugą oś, tylko
 | **Zachód — świat ludzi** | Grody, targi, zbrojni, książęta, Kościół, polityka i prawo; bieda, wojna, bandyci, klasyczne demony i upiory. Cywilizacja umie część zagrożeń nazwać i próbować je zwalczać. | Strach przed śmiercią, wojną, karą, głodem i tym, co już znane. |
 | **Środek — pogranicze** | Odcinane trakty, opuszczone osady i gęste lasy; zamknięte bramy, obrzędy, nieufność; Drwal wciąż układa drewno, Powrotnik bez końca szuka drogi. **Niemir** jest miejscową anomalią tej strefy, nie dowodem, że cała strefa działa jednakowo. | Strach przed utratą domu, bliskich, pamięci i poczucia bezpieczeństwa. |
 | **Daleki wschód — świat majaków** | Rzadkie lub sprzeczne drogowskazy, niepewne mapy, pozornie zamieszkane pustki, relacje ludzi niemożliwe do pogodzenia. Mogą żyć tu zwykłe, funkcjonujące społeczności. | Strach przed utratą pewności, co się widziało, dokąd prowadzi droga i komu wierzyć. |
-| **Stare Serce Imperium — legenda** | Jedynie niezgodne opowieści o pozostałościach i odmienionych powracających; nie potwierdzamy położenia, wyglądu ani nawet tego, czy istnieje w opisanej formie. | Strach przed tym, czego nie ma jak sprawdzić ani zrozumieć. |
+| **Stare Serce Imperium — ruiny dostępne w pełnej grze** | Można dotrzeć do jego ruin [DECYZJA AUTORA, 05.11.2026], lecz położenie, wygląd, ścieżka dotarcia i rola w fabule są nieustalone; nie ujawniamy pochodzenia i celu Imperium. | Strach przed tym, czego nie ma jak sprawdzić ani zrozumieć. |
 
 To **gradient nastroju i narracji**, nie cztery poziomy trudności ani cztery obiektywnie rozdzielone pasy na mapie. Zachodnie miejsce może być koszmarem, a wschodnia wieś może prowadzić zwyczajne życie. Groza nie czyni mieszkańców wschodu „mniej rozwiniętymi”; mają własną wiedzę, strukturę społeczną i sposoby przetrwania.
 
@@ -64,20 +76,20 @@ To **gradient nastroju i narracji**, nie cztery poziomy trudności ani cztery ob
 - **Zachód–wschód:** od czytelnego średniowiecznego konfliktu do niepewności pamięci, przestrzeni i pochodzenia przedmiotów.
 - **Północ–południe:** morze, ruch i obcy przybysze kontra step, suchość, studnie i karawany; w centrum mokry bór i stagnacja. Góry tworzą dodatkową osobną odmianę odosobnienia.
 - Tożsamość każdej krainy wynika z **gospodarki, sposobu sprawowania władzy, wierzeń, architektury i zachowania mieszkańców**, nie tylko z listy biomów i potworów.
-- Granice nazw są umowne i zależą od mówiącego: kupiec może używać nazwy krainy, mieszkaniec Niemiru powie raczej „nasz bór”, „za rozstajem” lub „za starym traktem”. Nie dodajemy na siłę nazw do każdej osady i nie wymagamy od postaci jednej mapy całej Weleszy.
+- **Model mieszany [DECYZJA AUTORA, 05.11.2026]:** kupcy i mieszkańcy mogą znać nazwy krain, a równocześnie stosować nazwy lokalne („nasz bór”, „za rozstajem”). Nie każda społeczność musi mówić tak samo.
 
 #### Co nowy kierunek zmienia, a czego nie
 
-1. **Zmienia nazewnictwo do dyskusji:** sześć kandydatów na nazwy, bez automatycznej podmiany dotychczasowych nazw kanonicznych.
+1. **Nazewnictwo do ponownego zaprojektowania [DECYZJA AUTORA]:** cały zestaw A odrzucony; zestaw B pozostaje niezatwierdzoną propozycją, a dawne nazwy funkcjonują jako odniesienia.
 2. **Zmienia główną oś nastroju:** zachód to konflikty ludzi i znajome potwory, środek to izolacja i „życie, które nadal próbuje się powtarzać”, wschód to niepewność relacji i przestrzeni.
 3. **Zmienia język lokacji:** każdy region ma odróżniać się architekturą, obyczajem, gospodarką, zagrożeniami i stosunkiem do magii (szczegóły: [Biblia świata I](swiat.md#proponowany-gradient-grozy-i-rzeczywistosci-05112026)).
 4. **Nie zmienia geografii dema:** Niemir zostaje w lesie obok Wielkiego Traktu; mapa doliny, trzy słupy, zamknięcie boru, latarnia, Stróż i suchy szlak pozostają w ustalonym układzie.
 5. **Nie zmienia tonu bohatera:** nadal jest przypadkowym podróżnikiem, bez przeznaczenia i wiedzy, która tłumaczy zagadki świata.
 6. **Nie znosi innych wymiarów grozy:** nawet na zachodzie są anomalie, a na wschodzie istnieją zwykłe rodziny, targi i miejsca dające nadzieję.
-7. **Nie wyjaśnia imperium:** jego system Dróg, słupów i ogniowych znamion pozostaje jedną infrastrukturą o nieznanym celu; Stare Serce Imperium pozostaje pogłoską.
+7. **Nie wyjaśnia imperium:** w pełnej grze można dotrzeć do ruin Starego Serca [DECYZJA AUTORA], ale cel Dróg, pochodzenie i historia Imperium pozostają tajemnicą.
 8. **Nie potwierdza działania zabobonów:** ludzie mogą wierzyć, że obrzędy ich chronią, ale opowieść nie daje jednoznacznego werdyktu.
 9. **Nie oznacza masowych potworów:** zachowujemy zasadę, że groźniejsze i bardziej magiczne istoty spotyka się rzadziej; atmosfera nie zależy od mnożenia wrogów.
-10. **Nie narzuca kolejności rozdziałów:** podróż na wschód to silny kierunek tematyczny, ale mapa pełnej gry i jej finał nadal wymagają osobnej decyzji.
+10. **Nie narzuca kolejności rozdziałów:** gradient zachód–wschód jest zatwierdzony, ale **kierunek podróży po Niemirze i kolejność krain pozostają otwarte**.
 
 #### Dwa przykłady lokacji/istot do banku pomysłów — nie kanon
 
@@ -106,7 +118,7 @@ Nie projektujemy: mapy całej krainy w grze (tylko mapy lokalne w rękach postac
 
 **Krucjaty.** Welesza jest w ogniu krucjat: Kościół zachodu nawraca, książęta Weleszy ciągną krainę w swoją stronę, a wschód pozostaje poza zasięgiem obu. Wschód to ucieczka — ale czy dobra? Nikt, kto tam poszedł, nie odpowiada na to pytanie.
 
-**Magnes wschodu.** Ludzie idą tam nie dlatego, że tam coś jest — ale dlatego, że **tu już nic dla nich nie ma**. Wschód to miejsce, gdzie świat jeszcze nie powiedział „nie”:
+**Magnes wschodu (motyw świata, nie zatwierdzony kierunek bohatera po Niemirze).** Niektórzy ludzie idą tam nie dlatego, że wiedzą, co znajdą — lecz dlatego, że **tu już nic dla nich nie ma**. Wschód to miejsce, gdzie świat jeszcze nie powiedział „nie”:
 
 | Siła ciągnąca | Skutek |
 |---|---|
@@ -118,7 +130,7 @@ Nie projektujemy: mapy całej krainy w grze (tylko mapy lokalne w rękach postac
 
 **Bohater demo jest przybyszem** — idzie Wielkim Traktem na wschód; cel nieznany graczowi (nikt nie jedzie na wschód dla przygody, na wschód się jedzie, bo trzeba).
 
-**Daleki wschód (legenda):** daleko za Niemirem stoi **ostatnie miasto** — nie klejnot wschodu: obóz łowców przygód, który rozrósł się w miasto podróżników i zbiegów (wzorzec: miasta na Amazonce), żyjące siłą rozpędu, nie celem. Za nim podobno **Stare Serce Imperium**, pełne wiedzy i artefaktów — ale to legenda: nikt stamtąd nie wrócił, a jeśli ktoś wrócił — to odmieniony i szalony. Świadectwa istnieją wyłącznie jako pieśni, opowieści szaleńców i pojedyncze strony ksiąg; w grze nigdy jako fakt.
+**Daleki wschód (opowieści; kierunek kampanii nieustalony):** daleko za Niemirem ma podobno stać **ostatnie miasto** — nie klejnot wschodu: obóz łowców przygód, który rozrósł się w miasto podróżników i zbiegów (wzorzec: miasta na Amazonce), żyjące siłą rozpędu, nie celem. Za nim opowieści umieszczają **Stare Serce Imperium**. **[DECYZJA AUTORA, 05.11.2026]** W pełnej grze można dotrzeć do jego **ruin**, lecz nie dowiedzieć się, kim byli budowniczowie, po co powstała sieć Dróg ani dlaczego Imperium zniknęło. Położenie ruin, ich zawartość i rola w fabule są otwarte, a legenda o ostatnim mieście nie wyznacza obowiązkowej trasy bohatera.
 
 **Konsekwencja dla doliny Niemiru:** dolina to pierwsza pułapka na drodze każdego, kto tak myśli — wóz z księgą przewozową („Niemir — nie zatrzymywać się”) to dosłowne ostrzeżenie dla takich ludzi.
 
@@ -160,9 +172,9 @@ Nie projektujemy: wielkiej polityki, armii i wojen „w tle” (wojna istnieje j
 
 ## Nazewnictwo **[DECYZJA AUTORA]**
 
-**Kanon nazw regionów:** Nadmorze, Zakraj, Okole, Rudogórje, Suchodrzewie; Wielka Woda i Wielki Trakt zostają; ostatnie miasto bez nazwy (opisowo, legenda).
+**Dotychczasowy wykaz nazw [wcześniejsza DECYZJA AUTORA, skierowana do zmiany 05.11.2026]:** Nadmorze, Zakraj, Okole, Rudogórje, Suchodrzewie, plus opisowe Pogranicze wschodnie. **Wszystkie sześć nazw jest do przeprojektowania**; do zatwierdzenia zamienników to wyłącznie historyczne etykiety w dokumentacji. Wielka Woda, Wielki Trakt i bezimienne ostatnie miasto pozostają bez zmian.
 
-**Proponowana rewizja:** zob. projekt przebudowy nazw i tożsamości krain w niniejszym dokumencie. Dopóki autor nie zatwierdzi zmiany, stare nazwy pozostają decyzją autorską, a nowe są wyłącznie kandydatami.
+**Aktualna rewizja:** autor odrzucił zestaw A i polecił zaprojektować wszystkie nazwy ponownie. Zestaw B w sekcji „Przebudowa świata” jest wyłącznie propozycją.
 
 **Reguły schematu:**
 
@@ -204,13 +216,10 @@ Oś nie jest misją zbawienia świata; nie ma antagonisty; nie wyjaśnia doliny 
 
 **Otwarte pytania do autora:** finał z trzema wyborami czy jeden kanoniczny; czy znamiona i spis „nie zatrzymywać się” mogą być znajdowalne w grze, czy zostają w bibli; akt I zaraz po finale demo czy później; czy dolina wraca w pełnej grze (jeśli tak: tylko zmiany stanu, bez nowych zadań i wyjaśnień).
 
-## Pytania do autora — przebudowa świata (05.11.2026)
+## Otwarte pytania — do kolejnego zatwierdzenia
 
-1. Czy zatwierdzamy zasadę **zachód: średniowieczne dark fantasy → środek: niepokojące pogranicze → wschód: horror podobny do majaku**, z lokalnymi wyjątkami i bez sztywnych granic?
-2. Które nazwy przyjmujemy, a które wymyślamy ponownie? Szczególnie: **Głuchobór, Słonowody, Niedroża** oraz słabsze propozycje **Brodne Ziemie, Rudne Granie, Bezwodzie**.
-3. Czy nazwy krain mają funkcjonować głównie wśród kupców i uczonych, a mieszkańcy posługiwać się przede wszystkim nazwami lokalnymi?
-4. Jak daleko ma sięgać **psychologiczny i oniryczny horror** na wschodzie, przy zachowaniu materialności świata i uczciwych reguł walki?
-5. Czy **Stare Serce Imperium** ma na stałe pozostać jedynie legendą, czy w pełnej grze wolno dotrzeć do jego śladów bez wyjaśniania funkcji imperium?
-6. Czy po demo kierunek podróży bohatera ma rzeczywiście prowadzić coraz dalej **na wschód**, czy gradient ma działać niezależnie od kolejności odwiedzanych krain?
-
-Do rozstrzygnięcia **przed** zamianą propozycji na kanon i zmianą nazw w kolejnych dokumentach. Nie zatwierdzamy odpowiedzi w imieniu autora.
+1. Czy zestaw B (**Wartawy, Żarwędy, Ostrowrzec, Kruszary, Studwary, Niewrocie**) ma właściwe brzmienie, czy przygotować kolejną serię? Żadna nazwa nie jest zatwierdzona.
+2. Jak rozłożyć lokalne i szerzej znane nazwy w konkretnych regionach? **Model mieszany jest zatwierdzony**, a szczegóły pozostają otwarte.
+3. Gdzie i jak gracz może dotrzeć do **ruin Starego Serca Imperium** oraz co tam zastanie? **Możliwość dotarcia jest zatwierdzona**, ale nie ich lokalizacja ani odpowiedź na tajemnice.
+4. Dokąd uda się bohater **po Niemirze**, jakie krainy zobaczy i w jakiej kolejności? **Brak decyzji**; nie interpretować gradientu jako trasy fabuły.
+5. Jak dokładnie realizować zatwierdzony **mocny horror psychologiczny i oniryczny** w scenach? Szczegóły efektów i ich testy pozostają do zaprojektowania.
