@@ -38,14 +38,14 @@ Kolejność nie jest datowana. M1 i M2 mogą iść równolegle po M0. Treść (T
 | T06 | M1 | Pies: 5 kierunków + odbicia; chód, skok, trafienie | Grafik | T05 | Klatki przechodzą walidator T03 | zlecone |
 | T07 | M1 | Bohater: pancerz skórzany i miecz, 8 kierunków; bezczynność, chód, cios; warstwy korpus, głowa, broń | Grafik | T05 | Jak T06; ta sama twarz i skala we wszystkich kierunkach | zlecone |
 | T08 | M1 | Teren testowy: kafle podłoża (błoto, ściółka), wóz, drzewo liściaste z koroną na osobnej warstwie, kamień | Grafik | T05 | Assety z kontraktem JSON | zlecone |
-| T09 | M1 | Scena testowa w kamerze gry z T06–T08 i raport spójności klatek | PM | T04, T06–T08 | Autor ocenia nagranie na bramce B1 |  |
+| T09 | M1 | Scena testowa w kamerze gry z T06–T08 i raport spójności klatek | PM | T04, T06–T08 | Autor ocenia nagranie na bramce B1 | zrobione; B1: walka przyjęta, chód do poprawy [DECYZJA AUTORA, 28.10.2026] |
 | T10 | M2 | Ruch myszą, sprint i wytrzymałość, kamera, sortowanie po Y | Programista | T01 | Ruch w 8 kierunkach, sprint zużywa wytrzymałość | zrobione |
 | T11 | M2 | Rdzeń walki: atak na kliknięcie, wiązanki z oknami ze zdarzeń animacji, unik, garda i parada, przerwania | PM | T10 | Scenariusze testów z [walki](walka.md) przechodzą jako testy headless | zrobione |
 | T12 | M2 | AI: Pies i Drwal z zapowiedziami i priorytetami z [przeciwników](przeciwnicy.md) | Programista | T11 | Obie walki da się wygrać podstawowym zestawem | zrobione |
 | T13 | M2 | Leczenie (opatrunek, nalewka), śmierć i wczytanie w wersji minimalnej | Programista | T11 | Zgodnie z [mechaniki](mechaniki.md), część II B i D |  |
 | T14 | M2 | Pomiar D, B, U, A, V i wpis do [mapy świata](world/README.md) | PM | T11, T12 | Wartości w dokumentach zamiast symboli |  |
 | T15 | M3 | Greybox WLD-00–02, doczytywanie fragmentów w tle, trwały stan obiektów (`world_id`) | PM | T14 | Przejście tam i z powrotem bez pauzy, bez podwójnych obiektów |  |
-| T16 | M3 | Zanikanie koron i dachów, przesłanianie postaci | Programista | T15 | Bohater i zapowiedź ataku zawsze widoczne |  |
+| T16 | M3 | Zanikanie koron i dachów, przesłanianie postaci | Programista | T09 | Bohater i zapowiedź ataku zawsze widoczne |  |
 | T17 | M3 | Mapa bohatera i prototyp anomalii B | PM | T15 | Testerzy odbierają rozjazd mapy jako tajemnicę, nie błąd |  |
 | T18 | M3 | Profilowanie pamięci i czasu klatek | PM | T15 | Pomiary do warunków 3 i 4 z [SILNIK.md](SILNIK.md) |  |
 | T19 | M4 | Systemy: zapis i wczytanie, dziennik, interakcje, dialogi | Programista, PM (zapis) | T13, T15 | Zapis atomowy według [mechaniki](mechaniki.md), część II D |  |

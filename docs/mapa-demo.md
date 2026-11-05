@@ -29,6 +29,9 @@ Nie ma pól, rozległych miejskich placów, sieci podziemi pod każdym domem ani
 | Strażnica osady, ZON-straznica-niemir | Plac; dojście bez zagadki | Wspólna latarnia i krótka wizyta przy powrocie z ruin | Wszebora |
 | Domy przy palisadzie, ZON-domy | Krótka pętla wracająca do placu | Prywatność, żałoba, ślady życia; bez przeszukiwania kilkunastu pustych wnętrz | Dzierżka, Mściwuj, Borzęta, Wojsława |
 
+**Koncepty zabudowy:** [strażnica ze wspólną latarnią](art/lokacje/niemir/budynki/straznica.png), [kuźnia](art/lokacje/niemir/budynki/kuznia.png), [chata zielarki](art/lokacje/niemir/budynki/chata_zielarki.png), [dom kupca ze składem](art/lokacje/niemir/budynki/dom_kupca_i_sklad.png), [domy przy palisadzie](art/lokacje/niemir/budynki/domy_przy_palisadzie.png). Koncepty na białym tle są referencjami wyglądu.
+
+
 **Czcibor** [DECYZJA AUTORA, 28.10.2026] jest łowcą i jednym z pierwszych informatorów gracza, nie zaginionym lokatorem. Lokatorem z „Trzeciego przy stole” jest wędrowny cieśla Uniegost.
 
 Nie wprowadzamy w demie swobodnego zabijania NPC: LPM na mieszkańcu inicjuje interakcję, nie wrogi cios. To propozycja zakresu i ochrony zadań, nie reguła świata, że mieszkańcy są nieśmiertelni. Nauka parady z Żegotą działa w osobnym, bezpiecznym ćwiczeniu.
@@ -39,7 +42,7 @@ Pierwszy nocleg jest miejscem przy wspólnym ogniu na kredyt za odzyskanie pakun
 
 **Brama i mały fragment osady → rozstaj → plac przy wozie → powrót do Żegoty.** Potrzebne są: jedno miejsce ćwiczeń, Pies, Powrotnik jako drugi krok, przedmiot zadania, rozmowa rozliczenia, zapis i ponowne wczytanie. Zależności oraz kolejność budowy opisuje początek gry.
 
-Pełna osada, wszystkie sklepy, trzy słupy, Dźwigacz i Stróż nie są warunkiem pierwszego testu pętli. Ich miejsca pozostają zaprojektowane, ale nie muszą zostać zbudowane naraz.
+Pełna osada, wszystkie sklepy, trzy słupy, Dźwigacz i Stróż nie są warunkiem pierwszego testu pętl Ich miejsca pozostają zaprojektowane, ale nie muszą zostać zbudowane naraz.
 
 Grafy: [układ demo](graphs/layout-demo.json), [pierwsza wyprawa](graphs/layout-first-expedition.json). Ich bramki są symbolicznymi stanami zadania i świata; graf nie modeluje skali, kolizji ani czasu.
 
@@ -116,6 +119,9 @@ Pokaz leczenia nie oznacza leczenia pełnego zdrowia za darmo w świecie. Panel 
 
 #### Podejście: brama → rozstaj
 
+**Koncept:** [rozstaj przy pochylonym drzewie](art/lokacje/rozstaj/rozstaj_pochylone_drzewo.png) pokazuje rozgałęzienie błotnistego traktu i charakterystyczne drzewo jako punkt orientacyjny. Panorama i szczegóły otoczenia są referencją wizualną; połączenia dróg wynikają z mapy.
+
+
 Bezpieczny zapis, aktualny stan zdrowia i zapasów. Żegota przypomina widoczny cel; nie wymaga zakupu. Na rozstaju gracz widzi pochylone drzewo, drogę do wozu i światło bramy za plecami. Pozostałe odnogi są możliwe do obejrzenia, ale nie konkurują wizualnie z pierwszym celem.
 
 #### Próba: plac przy wozie
@@ -127,6 +133,9 @@ Powrotnik znajduje się dalej, poza zasięgiem pierwszego wywołania. Może zost
 Pakunki i księga są przy wozie, a nie w losowym łupie przeciwnika. Szybki gracz może zdobyć je bez zabicia obu wrogów. Znikają z tego miejsca dokładnie raz i pojawiają się w stanie zadania, nie w zapełnionym plecaku jako przedmiot możliwy do zgubienia.
 
 #### Odkrycie: most i pętla
+
+**Koncept:** [brzeg z zerwanym mostem](art/lokacje/brzeg/zerwany_most.png) pokazuje błotnisty trakt, zniszczoną drewnianą przeprawę, wodę i widoczny drugi przyczółek. Koncept jest referencją wyglądu lokacji.
+
 
 Brzeg pokazuje realny powód zamknięcia jednej drogi. Dawny kierunek powrotu prowadzi obok charakterystycznego drzewa; po przejściu gracz rozpoznaje ten sam wóz. Może naciąć znak w wyznaczonym miejscu i sprawdzić to ponownie.
 

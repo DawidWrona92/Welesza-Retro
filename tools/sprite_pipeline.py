@@ -55,6 +55,8 @@ def build(asset_id: str, src_root: Path = ART_SRC, out_root: Path = GAME_ASSETS)
                                 {"polygon": [[x / SOURCE_SCALE, y / SOURCE_SCALE] for x, y in col["polygon"]]})
     if "occlusion_y" in meta:
         runtime["occlusion_y"] = meta["occlusion_y"] / SOURCE_SCALE
+    if meta["kind"] == "tile":
+        runtime["variants"] = meta["variants"]
     if meta["kind"] == "character":
         runtime["animations"] = _build_character(asset_dir, meta, out, rep)
     else:

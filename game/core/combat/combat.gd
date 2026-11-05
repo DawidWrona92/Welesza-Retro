@@ -377,7 +377,8 @@ func _start_profile(profile: AttackProfile, dir: Vector2) -> void:
 	_spend(profile.cost)
 	_set_state(State.ATTACK)
 	_profile = profile
-	_play(profile.animation)
+	if not _play(profile.animation):
+		_play(attack_animation)  # asset bez animacji profilu (np. manekin bez skoku psa)
 	attack_started.emit(0)
 
 
@@ -480,15 +481,16 @@ func _set_state(new_state: State, length: float = 0.0) -> void:
 	state_changed.emit(new_state)
 
 
-func _play(anim: StringName, speed: float = 1.0) -> void:
+## Zwraca, czy asset ma tę animację; bez niej (np. unik w teście grafiki) stan walki działa dalej.
+func _play(anim: StringName, speed: float = 1.0) -> bool:
 	if sprite == null or sprite.meta.is_empty():
-		return
+		return false
 	var dir := AssetSprite.direction_from_vector(facing)
-	var lead := sprite.lead_layer()
-	if lead == null or not lead.sprite_frames.has_animation("%s_%s" % [anim, dir]):
-		return  # asset bez tej animacji (np. unik w teście grafiki): stan walki działa dalej
+	if not sprite.has_anim(anim, dir):
+		return false
 	sprite.play_anim(anim, dir)
-	lead.speed_scale = speed
+	sprite.lead_layer().speed_scale = speed
+	return true
 
 
 func _spend(amount: float) -> void:

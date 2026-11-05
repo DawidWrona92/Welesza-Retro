@@ -28,7 +28,7 @@
     },
     "layers": {
       "type": "array",
-      "items": {"enum": ["full", "body", "head", "weapon", "shield", "trunk", "crown"]},
+      "items": {"enum": ["full", "body", "head", "weapon", "shield", "ground", "trunk", "crown"]},
       "uniqueItems": true,
       "minItems": 1
     },

@@ -19,6 +19,8 @@ from welesza_assets import (ART_SRC, image_size, DIRECTIONS, SCHEMA, Report, bbo
 GROUND_TOLERANCE = 0.06   # odchylenie styku z ziemią od kotwicy, jako część wysokości płótna
 HEIGHT_TOLERANCE = 0.08   # dopuszczalna zmienność wysokości sylwetki w animacjach chodu i spoczynku
 STABLE_ANIMS = ("idle", "walk")
+JITTER_TOLERANCE = 0.025  # dopuszczalny skok głowy w poziomie między kolejnymi klatkami (część szerokości płótna)
+HEAD_SHARE = 0.15         # górna część sylwetki traktowana jako głowa przy pomiarze drgania
 
 
 def validate(asset_dir: Path) -> Report:
@@ -92,6 +94,7 @@ def _check_frames(rel: Path, frames: list[np.ndarray], meta: dict, anim: str, la
     h = meta["canvas"][1]
     ay = meta["anchor"][1]
     grounds = []
+    heads: list[float] = []
     for i, fr in enumerate(frames):
         box = bbox(fr)
         if box is None:
@@ -106,10 +109,32 @@ def _check_frames(rel: Path, frames: list[np.ndarray], meta: dict, anim: str, la
         grounds.append(ground_point(fr)[1])
         if layer in ("full", "body") and anim in STABLE_ANIMS:
             heights.setdefault(anim, []).append(float(y1 - y0))
+            heads.append(_head_x(fr, box))
+    if len(heads) > 1:
+        _check_jitter(rel, heads, meta, anim, rep)
     if grounds and layer in ("full", "body"):
         med = float(np.median(grounds))
         if abs(med - ay) > GROUND_TOLERANCE * h:
             rep.warn(f"{rel}: styk z ziemią na y={med:.0f}, kotwica y={ay} (pipeline wyrówna)")
+
+
+def _head_x(frame: np.ndarray, box: tuple[int, int, int, int]) -> float:
+    """Środek głowy w poziomie: średnia kolumn widocznych w górnej części sylwetki."""
+    x0, y0, x1, y1 = box
+    top = frame[y0:y0 + max(1, int((y1 - y0) * HEAD_SHARE)), :, 3] > 40
+    cols = np.nonzero(top.any(axis=0))[0]
+    return float(cols.mean())
+
+
+def _check_jitter(rel: Path, heads: list[float], meta: dict, anim: str, rep: Report) -> None:
+    """Chód i spoczynek: głowa przesuwa się płynnie; duży skok między klatkami to drganie postaci."""
+    loop = meta["animations"][anim].get("loop", False)
+    pairs = list(zip(heads, heads[1:] + (heads[:1] if loop else [])))
+    jump, at = max((abs(b - a), i) for i, (a, b) in enumerate(pairs))
+    limit = JITTER_TOLERANCE * meta["canvas"][0]
+    if jump > limit:
+        rep.warn(f"{rel}: głowa skacze w poziomie o {jump:.0f} px między klatkami {at} i "
+                 f"{(at + 1) % len(heads)} (limit {limit:.0f} px): postać drga")
 
 
 def _prop(asset_dir: Path, meta: dict, rep: Report) -> None:

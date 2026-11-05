@@ -32,7 +32,7 @@ Całość jest malowana w 2D; w produkcji nie ma modeli ani renderów 3D.
 
 **Światło.** `CanvasModulate` przyciemnia całą scenę, a `PointLight2D` daje ogień, okna i latarnie, z cieniami od `LightOccluder2D`. Opcjonalnie mapy normalnych generowane osobnym przebiegiem z malowanego obrazu. Mgła i deszcz to cząsteczki 2D i nakładka z shaderem.
 
-**Postacie.** Arkusze klatek w 8 kierunkach; bohatera malujemy we wszystkich 8, bo broń w prawej ręce wyklucza odbicie lustrzane. Przeciwników bez asymetrii można malować w 5 kierunkach i odbijać pozostałe. Bohater składa się z warstw o wspólnej kotwicy i czasie klatek: korpus z pancerzem, głowa, broń, tarcza. Kolejność warstw zależy od kierunku (broń za ciałem przy widoku od tyłu). Animacja w 12 kl./s, np. chód 8, cios wiązanki 6–8, unik 6, trafienie 3, śmierć 8 klatek. Duzi przeciwnicy (Korzeniec, Stróż) mogą zamiast klatek używać animacji wycinankowej `Skeleton2D` z malowanych części.
+**Postacie.** Arkusze klatek w 8 kierunkach; bohatera malujemy we wszystkich 8, bo broń w prawej ręce wyklucza odbicie lustrzane. Przeciwników bez asymetrii można malować w 5 kierunkach i odbijać pozostałe. Bohater składa się z warstw o wspólnej kotwicy i czasie klatek: korpus z pancerzem, głowa, broń, tarcza. Kolejność warstw zależy od kierunku (broń za ciałem przy widoku od tyłu). Animacja w 12 kl./s, np. chód 8 (nogi naprzemiennie, głowa przesuwa się płynnie; walidator ostrzega o drganiu), cios wiązanki 6–8, unik 6, trafienie 3, śmierć 8 klatek. Duzi przeciwnicy (Korzeniec, Stróż) mogą zamiast klatek używać animacji wycinankowej `Skeleton2D` z malowanych części.
 
 **Proces z GPT‑6.**
 1. Arkusz obrotu postaci w 8 kierunkach w kamerze gry, na siatce z zaznaczoną linią ziemi.
@@ -54,7 +54,7 @@ Pierwszy test: Pies w 8 kierunkach (chód, skok, trafienie) i bohater w jednym p
 | Tło | przezroczyste albo jednolite magenta `#FF00FF`, które pipeline usuwa |
 | Animacja | 12 kl./s; zdarzenia na klatkach: `telegraph_start`, `hit_start`, `hit_end`, `combo_open`, `combo_close`, `step` |
 | Kafel | romb 512×256 (`TILE-…`), warianty `01.png`, `02.png`… |
-| Rekwizyt | `PROP-…`, warstwy `full.png` albo `trunk.png` + `crown.png` na wspólnym płótnie; obrys kolizji i linia przesłaniania |
+| Rekwizyt | `PROP-…`, warstwy `full.png` albo `trunk.png` + `crown.png` na wspólnym płótnie; obrys kolizji i linia przesłaniania. Opcjonalnie `ground.png`: to, co leży na ziemi (korzenie), rysowane pod postaciami [DECYZJA AUTORA, 28.10.2026] |
 
 Szablony dla grafika: `art-src/_templates/` (`python3 tools/make_templates.py`).
 
