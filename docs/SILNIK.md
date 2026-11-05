@@ -24,7 +24,7 @@
 
 Całość jest malowana w 2D; w produkcji nie ma modeli ani renderów 3D.
 
-**Kamera.** Stała izometria 2:1 (jak Diablo 2), bez obrotu. `Camera2D` z wygładzaniem ruchu, niewielki zakres przybliżenia. Rozdzielczość odniesienia 1920×1080, tryb skalowania `canvas_items`; grafika malowana w 2× i skalowana w dół, filtr liniowy z mipmapami (to nie pixel art). Bohater ma około 160 px wysokości przy 1080p.
+**Kamera.** Stała izometria 2:1 (jak Diablo 2), bez obrotu. Postacie i obiekty malujemy z góry pod kątem około 30°: widać górę ramion i głowy, stopy są lekko skrócone; widok bliski poziomu oczu jest odrzucony (decyzja autora, 28.10.2026, po teście bohatera). `Camera2D` z wygładzaniem ruchu, niewielki zakres przybliżenia. Rozdzielczość odniesienia 1920×1080, tryb skalowania `canvas_items`; grafika malowana w 2× i skalowana w dół, filtr liniowy z mipmapami (to nie pixel art). Bohater ma około 160 px wysokości przy 1080p.
 
 **Świat.** Logika działa w płaskich współrzędnych ekranu, jak w izometrycznej `TileMapLayer`; ruch w pionie jest skracany o połowę, żeby odpowiadał perspektywie. Teren to malowane kafle podłoża (wielokrotnego użytku, oszczędne dla pamięci) z malowanymi naklejkami: błoto, kałuże, ścieżki. Rekwizyty i budynki to osobne malowane PNG z przezroczystością.
 
@@ -32,7 +32,7 @@ Całość jest malowana w 2D; w produkcji nie ma modeli ani renderów 3D.
 
 **Światło.** `CanvasModulate` przyciemnia całą scenę, a `PointLight2D` daje ogień, okna i latarnie, z cieniami od `LightOccluder2D`. Opcjonalnie mapy normalnych generowane osobnym przebiegiem z malowanego obrazu. Mgła i deszcz to cząsteczki 2D i nakładka z shaderem.
 
-**Postacie.** Arkusze klatek w 8 kierunkach; bohatera malujemy we wszystkich 8, bo broń w prawej ręce wyklucza odbicie lustrzane. Przeciwników bez asymetrii można malować w 5 kierunkach i odbijać pozostałe. Bohater składa się z warstw o wspólnej kotwicy i czasie klatek: korpus z pancerzem, głowa, broń, tarcza. Kolejność warstw zależy od kierunku (broń za ciałem przy widoku od tyłu). Animacja w 12 kl./s, np. chód 8, cios wiązanki 6–8, unik 6, trafienie 3, śmierć 8 klatek. Duzi przeciwnicy (Korzeniec, Stróż) mogą zamiast klatek używać animacji wycinankowej `Skeleton2D` z malowanych części.
+**Postacie.** Arkusze klatek w 8 kierunkach; bohatera malujemy we wszystkich 8, bo broń w prawej ręce wyklucza odbicie lustrzane. Przeciwników bez asymetrii można malować w 5 kierunkach i odbijać pozostałe. Bohater składa się z warstw o wspólnej kotwicy i czasie klatek: korpus z pancerzem, głowa, broń, tarcza. Kolejność warstw zależy od kierunku (broń za ciałem przy widoku od tyłu). Animacja w 12 kl./s, np. chód 8 (nogi naprzemiennie, głowa przesuwa się płynnie; walidator ostrzega o drganiu), cios wiązanki 6–8, unik 6, trafienie 3, śmierć 8 klatek. Duzi przeciwnicy (Korzeniec, Stróż) mogą zamiast klatek używać animacji wycinankowej `Skeleton2D` z malowanych części.
 
 **Proces z GPT‑6.**
 1. Arkusz obrotu postaci w 8 kierunkach w kamerze gry, na siatce z zaznaczoną linią ziemi.
@@ -41,6 +41,56 @@ Całość jest malowana w 2D; w produkcji nie ma modeli ani renderów 3D.
 4. Skrypty agenta (Python, Pillow): przycięcie, wyrównanie do kotwicy, kontrola spójności (wysokość sylwetki, rozkład kolorów), pakowanie atlasu, generowanie `SpriteFrames` oraz `AnimationPlayer` ze zdarzeniami trafień z metadanych.
 
 Pierwszy test: Pies w 8 kierunkach (chód, skok, trafienie) i bohater w jednym pancerzu z mieczem.
+
+**Kontrakt assetu v1** ([`tools/asset_schema.json`](../tools/asset_schema.json)):
+
+| Element | Ustalenie |
+|---|---|
+| Płótno postaci | 512×512 px na klatkę (2× gry); w grze 256×256 |
+| Kotwica | (256, 448): punkt styku z ziemią między stopami |
+| Wzrost | bohater ~320 px w płótnie (160 px w grze); pies ~110 px w kłębie |
+| Kierunki | `s, sw, w, nw, n, ne, e, se`; `s` to przodem do kamery, dalej zgodnie z ruchem wskazówek zegara |
+| Dostawa | `art-src/<ID>/asset.json` + jeden poziomy pasek PNG na animację i kierunek: `<anim>/<kierunek>.png` (warstwy: `<anim>/<warstwa>/<kierunek>.png`) |
+| Tło | przezroczyste albo jednolite magenta `#FF00FF`, które pipeline usuwa |
+| Animacja | 12 kl./s; zdarzenia na klatkach: `telegraph_start`, `hit_start`, `hit_end`, `combo_open`, `combo_close`, `step` |
+| Kafel | romb 512×256 (`TILE-…`), warianty `01.png`, `02.png`… |
+| Rekwizyt | `PROP-…`, warstwy `full.png` albo `trunk.png` + `crown.png` na wspólnym płótnie; obrys kolizji i linia przesłaniania. Opcjonalnie `ground.png`: to, co leży na ziemi (korzenie), rysowane pod postaciami [DECYZJA AUTORA, 28.10.2026] |
+
+Szablony dla grafika: `art-src/_templates/` (`python3 tools/make_templates.py`).
+
+**Polecenia:**
+
+```bash
+python3 tools/validate_asset.py              # sprawdza art-src/
+python3 tools/sprite_pipeline.py             # buduje game/assets/ (nie jest w repo)
+godot --headless --path game --import
+godot --headless --path game --script res://tests/run_tests.gd
+```
+
+## Struktura projektu i dane
+
+```text
+game/                  projekt Godota
+  autoload/            GameState, SaveSystem, WorldStreamer, Events
+  core/                wejście, kamera, ruch, walka, statystyki
+  actors/hero/         bohater: sceny, skrypty
+  actors/enemies/<id>/ przeciwnik na katalog, np. zdziczaly-pies
+  world/sectors/<Sxx>/ sceny sektorów z world/SECTORS.md
+  world/props/         rekwizyty
+  ui/                  HUD, dziennik, mapa bohatera, dialogi
+  data/                treść jako JSON: przeciwnicy, zadania, dialogi, przedmioty
+  assets/              wynik pipeline'u: atlasy, SpriteFrames, kontrakty JSON
+  tests/               testy headless (run_tests.gd)
+art-src/<ID>/          surowe obrazy od grafika z asset.json (wejście pipeline'u)
+tools/                 pipeline sprite'ów, walidatory assetów, grafów i danych
+```
+
+- **Identyfikatory** w kodzie, danych i nazwach plików są te same co w `docs/`: `ENM-`, `ZON-`, `ENC-`, `QST-`, `CHR-`, `ITM-`, `MECH-`, sektory `Sxx`. Treść żyje w `game/data/`, nie w skryptach.
+- **Dialogi i zadania**: JSON z węzłami, warunkami i flagami świata (`persistent_flags` jak w `world-layout.v0.2.json`). Format i walidator powstają w T19.
+- **Zapis**: jeden plik JSON z wersją formatu; stan świata według `world_id`; zwycięstwo nad bossem i nagroda w jednej transakcji.
+- **Sceny**: sektor nie wie o sąsiadach; połączenia i doczytywanie prowadzi `WorldStreamer`. Systemy komunikują się przez sygnały w `Events`, bez bezpośrednich ścieżek do węzłów innych systemów.
+- **Koncepty** (`docs/art/`) nie trafiają do gry; do gry trafia tylko wynik pipeline'u z `art-src/`.
+- **Zdarzenia animacji** czyta `core/asset_sprite.gd` z `meta.json` i wysyła je jako sygnały; walka nie używa stałych czasów w kodzie.
 
 ## Znane ryzyka
 

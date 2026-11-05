@@ -2,17 +2,11 @@
 
 ## Zespół
 
-| Rola | Kto | Zakres |
-|---|---|---|
-| Autor projektu | Dawid Wrona | Wizja, decyzje kanoniczne, akceptacja PR |
-| PM | Claude (Claude Code) | Zarządza pozostałymi agentami, dzieli i przydziela pracę, pilnuje spójności dokumentacji i kodu, przegląda wyniki innych agentów, bierze najtrudniejsze zadania |
-| Grafik | GPT‑6 | Grafika malowana 2D według [kierunku artystycznego](docs/art/WELESZA_DARK_PAINTERLY_2D_KIERUNEK_ARTYSTYCZNY_v1.pdf) i kontraktu assetów z [SILNIK.md](docs/SILNIK.md) |
-
-Pozostali agenci pracują na zadaniach przydzielonych przez PM. Spór o kierunek rozstrzyga autor; PM przedstawia mu go z rekomendacją.
+Role, zadania i kamienie milowe: [docs/PLAN.md](docs/PLAN.md). PM (Claude) zarządza pozostałymi agentami, przydziela zadania z planu, przegląda każdy PR przed autorem i bierze najtrudniejsze prace. Spór o kierunek rozstrzyga autor; PM przedstawia mu go z rekomendacją.
 
 ## Zasady pracy
 
-- **Hierarchia dokumentów [DECYZJA AUTORA]:** biblia świata ([swiat.md](docs/swiat.md), [welesza.md](docs/welesza.md)) jest jedynym źródłem prawdy o świecie; kanon demo (fabuła, przeciwnicy, mapa) z niej wynika i jej nie sprzeciwia. Sprzeczność między nimi to błąd do zgłoszenia autorowi; różny poziom szczegółu nim nie jest.
+- **Hierarchia dokumentów:** biblia świata opisuje, co jest w świecie (kosmos, wiara, frakcje, architektura, kraina). Kierunek artystyczny wyznacza, jak to wygląda, i wzoruje się na biblii; nie ustanawia faktów o świecie. Kanon demo (fabuła, przeciwnicy, mapa) ma pierwszeństwo przed biblią. Sprzeczność treści między tymi dokumentami (np. „wielkie katedry” wobec „małych chramów”) to błąd do zgłoszenia autorowi; różny poziom szczegółu nim nie jest.
 - Zacznij od [docs/INDEX.md](docs/INDEX.md). Obowiązuje opisana tam konwencja statusu: wszystko jest propozycją, chyba że oznaczono decyzję autora.
 - Nie zmieniaj statusu decyzji bez potwierdzenia autora. Nie dopisuj faktów fabularnych bez jego zgody.
 - Zmiany i doprecyzowania zapisuj w dokumencie, którego dotyczą. Nie twórz nowych plików, rejestrów ani dokumentów pomocniczych bez potrzeby.

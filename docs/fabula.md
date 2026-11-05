@@ -129,10 +129,10 @@ Nie wyjaśniamy jeszcze, kto zbudował strażnicę, dlaczego Niemiru nie ma na m
 Poniższe kwestie pozostają otwarte; zapis koncepcji nie rozstrzyga ich automatycznie:
 
 - Autor i cel uszkodzenia słupa oraz zakres wiedzy poszczególnych mieszkańców.
-- Związek między uszkodzeniem słupa, zamknięciem boru, latarnią i Stróżem: wewnętrzne reguły dla twórców, niezależne od informacji dostępnych graczowi.
+- Związek między uszkodzeniem słupa, zamknięciem boru, latarnią i Stróżem: wewnętrzne reguły dla twórców, niezależne od informacji dostępnych graczowi. **[DECYZJA AUTORA, 28.10.2026]** Ogień w Niemirze i latarnia z komory to działająca resztka urządzenia dawnego imperium; gracz nie poznaje tego wprost. Latarnia ma dostać dramatyczny finał (do zaprojektowania).
 - Rozmieszczenie strażnicy w osadzie i leśnych ruin: czy opuszczona i zniszczona strażnica to ten sam obiekt.
 - Przypisanie zleceniodawców i sprawców do obsady; koncepcja nie przydziela jeszcze wszystkich ról.
 - Warunki rozpoczęcia i ukończenia zadań, obsługa innej kolejności eksploracji, konsekwencje wyborów oraz konkretne nagrody.
 - Sposób pokazania odkrytego wyjścia i uzasadnienie powrotu bohatera do osady w finale.
 
-Dalsza kolejność pracy: [Decyzje przed prototypem](mechaniki.md).
+Dalsza kolejność pracy: [plan](PLAN.md).

@@ -11,6 +11,10 @@ Proponowana obsada: siedem typów zwykłych przeciwników (karta wilka do opraco
 
 Groza wynika z życia, które nadal próbuje się powtarzać. Przeciwnik może strzec pustego domu, nieść niepotrzebny już zapas albo wołać kogoś, kto nie odpowie. Nie każdy jest świadomy i nie każdy rozumie, co robi. To wskazówki wykonawcze, nie ujawniona prawda o kosmologii Weleszy.
 
+Przeciwnicy w borze to demony i duchy lasu albo zwierzęta, nie żywi ludzie [DECYZJA AUTORA, 28.10.2026]. Ludzką sylwetkę mają tylko istoty, które las przejął lub odmienił (Drwal, Łucznik, Powrotnik, Dźwigacz). Wyjątkiem jest Zdziczały pies, zwykłe zwierzę bliżej wioski.
+
+Koncepty wyznaczają kierunek wyglądu, nie wzrost ani wymiary [DECYZJA AUTORA, 28.10.2026]. Skalę ustalamy w kamerze gry; wzrost bohatera się nie zmienia.
+
 Przeciwników będzie wielu, dlatego każdy typ ma warianty wyglądu i uzbrojenia, żeby nie był to atak klonów [DECYZJA AUTORA, 28.10.2026]. Warianty jednego typu dzielą tryby ataku, np. hak i sierp na trzonku. Limit aktywnych wrogów w jednym starciu z projektu spotkań nadal obowiązuje.
 
 Nie używamy dzieci jako przeciwników, przypadkowej makabry jako głównego środka ani żartobliwych odzywek przy śmierci. Ciała i rekwizyty mogą być niepokojące bez eksponowania okaleczeń.
@@ -26,6 +30,8 @@ Nowe ofiary i istoty nie dopisują historii do zatwierdzonych NPC. Ślady człow
 **Rola:** flankujący napastnik; porzucone zwierzę. **Pytanie:** czy potrafisz zejść z linii skoku, nie oddając drugiemu napastnikowi pleców?
 
 **Sylwetka:** niski, wychudzony korpus; zerwany rzemień obroży; jasna łatka widoczna w ciemnym futrze. Dźwięk: warkot przechodzi w ciche skomlenie, kiedy traci cel. Nie jest to magiczny wilk.
+
+**Koncept sceny:** [pies, Powrotnik i Drwal na mokrym trakcie](art/bestiariusz/sceny/powrotnik_pies_drwal.png). Pies ma niską, napiętą sylwetkę i zmoczone, ciemne futro; scena służy porównaniu skali przeciwników.
 
 **Zachowanie:** czujny, głodny, nerwowy. Chce bronić znalezionego pożywienia, boi się osaczenia. Przeczucie dawnego przywiązania: po walce siada czasem przy porzuconym wozie zamiast szukać kolejnej ofiary.
 
@@ -50,43 +56,56 @@ Nowe ofiary i istoty nie dopisują historii do zatwierdzonych NPC. Ślady człow
 
 **Rola:** powolny napastnik; dawna ofiara traktu. **Pytanie:** czy zauważysz różnicę między niegroźnym powłóczeniem nogami a przygotowaniem chwytu?
 
-**Sylwetka:** pochylony człowiek z workiem na plecach; ręka stale trzymająca węzeł; wyblakły pas tkaniny przy nadgarstku. Dźwięk: oddech i tarcie mokrej tkaniny. Nie wypowiada wyjaśniających zdań.
+**Sylwetka:** pochylony człowiek z ciężkim plecakiem [DECYZJA AUTORA, 28.10.2026]; ręka stale zaciśnięta na pasie plecaka; wyblakły pas tkaniny przy nadgarstku. Dźwięk: oddech i tarcie mokrej tkaniny. Nie wypowiada wyjaśniających zdań.
+
+**Koncepty:** [widoki postaci](art/bestiariusz/powrotnik/01_widoki_postaci.png), [spotkanie na trakcie](art/bestiariusz/powrotnik/02_spotkanie_na_trakcie.png), [scena wspólna z psem i Drwalem](art/bestiariusz/sceny/powrotnik_pies_drwal.png). Na planszach Powrotnik jest pochylony pod ciężarem bagażu, w warstwowym, znoszonym ubraniu. Koncepty są wzorcem wyglądu.
 
 **Zachowanie:** uparty, zagubiony, przywiązany do drogi. Próbuje ruszyć dalej, lecz wraca do tego samego kamienia. Nie ma nowej frakcji ani potwierdzonego związku z duszą pierwotnej osoby.
 
-**Priorytety AI:** powtarza krótki obchód → reaguje na wejście blisko → podchodzi bez sprintu → chwyta tylko z odpowiedniego zasięgu → wraca do worka po utracie celu.
+**Priorytety AI:** powtarza krótki obchód → reaguje na wejście blisko → podchodzi bez sprintu → z dystansu rzuca czymś z plecaka → chwyta tylko z odpowiedniego zasięgu → po utracie celu wraca na obchód.
 
 | Atak | Zapowiedź | Efekt | Odpowiedź i okazja |
 |---|---|---|---|
-| Oburęczny chwyt | Odkłada worek, prostuje ramiona, nabiera powietrza | Krótki frontalny atak; bez QTE i długiej animacji więzienia gracza | Unik na bok, atak z flanki po chybieniu |
-| Uderzenie tobołem | Unosi worek nad bark, słychać przedmioty w środku | Szeroki, bliski zamach | Odejść poza zasięg, wrócić podczas opuszczania worka |
+| Oburęczny chwyt | Prostuje się pod plecakiem, wyciąga ramiona, nabiera powietrza | Krótki frontalny atak; bez QTE i długiej animacji więzienia gracza | Unik na bok, atak z flanki po chybieniu |
+| Rzut z plecaka [DECYZJA AUTORA, 28.10.2026] | Sięga przez ramię do plecaka, słychać przedmioty w środku | Rzut przedmiotem po stałym torze, bez naprowadzania; krótki zasięg | Zejść z toru; skrócić dystans, gdy znów szuka w plecaku |
 
-**Obrona:** chwyty i uderzenie ciężkim workiem traktujemy jako nieparowalne. Sam gatunek „nieumarły” nie gwarantuje parowania — istotny jest atak bronią. **Słabość:** wolne odzyskiwanie pozycji. **Łup:** czasem konkretny przedmiot z historii miejsca, bez losowego skarbu. **Występowanie:** przy wozie, drogowskazach i kamieniach.
+**Obrona:** chwyt jest nieparowalny; rzucony przedmiot zatrzymuje garda, parada go nie odbija. Sam gatunek „nieumarły” nie gwarantuje parowania — istotny jest atak bronią. **Słabość:** wolne odzyskiwanie pozycji. **Łup:** czasem konkretny przedmiot z historii miejsca, bez losowego skarbu. **Występowanie:** przy wozie, drogowskazach i kamieniach.
 
 #### ENM-drwal — Drwal z wygasłego obozu
 
-**Rola:** uzbrojony przeciwnik uczący gardy; człowiek lub jego poruszające się szczątki, bez rozstrzygnięcia w karcie. **Pytanie:** kiedy parować narzędzie, a kiedy zejść z drogi ciężkiemu zamachowi?
+**Rola:** uzbrojony przeciwnik uczący gardy. **Pytanie:** kiedy parować narzędzie, a kiedy zejść z drogi ciężkiemu zamachowi?
 
-**Sylwetka:** szerokie barki; długi topór; ciemny fartuch z jednym jasnym szwem. Dźwięk: przed atakiem przesuwa dłoń po trzonku; poza walką układa drwa.
+**Kim jest [DECYZJA AUTORA, 28.10.2026]:** ożywieniec związany z lasem — dawny drwal, którego ciało i duszę przejęły korzenie i gniew zapomnienia. Siła, brutalność, powolna nieustępliwość: porusza się ciężko, ale uderza z ogromną mocą.
 
-**Zachowanie:** pracowity, drażliwy, wyczerpany. Broni pustego paleniska, choć drewno leży w wodzie. Chce przepędzić obcego; nie prowadzi zrozumiałej rozmowy.
+**Sylwetka:** ludzka, szeroka postać w kapturze; rozkładające się ciało zrośnięte z korzeniami, z głowy i barków wyrastają gałęzie; skórzane pasy na poszarpanych łachmanach; długi topór. Od Korzeńca odróżnia go ludzka postawa i topór. Dźwięk: przed atakiem przesuwa dłoń po trzonku; poza walką układa drwa.
 
-**Priorytety AI:** nie atakuje z zaskoczenia → ostrzega ruchem topora → broni wejścia → zwykły zamach w zasięgu → przy uporczywej gardzie gracza wybiera wyraźnie zapowiedziany ciężki atak → po chybieniu wraca do gotowości. Reakcja nie jest odczytem przycisku gracza w tej samej klatce.
+**Warianty wyglądu** (wspólne tryby ataku): podstawowy, rozkład (widoczne kości), leśny (silniej zrośnięty z drewnem), zimowy (szron i lód), najstarszy (pień zamiast ramienia), okrwawiony (świeże ofiary, ludzkie trofea; rzadki wariant, może nie trafić do gry [DECYZJA AUTORA, 28.10.2026]). **Broń:** topór drwala, topór rozwidlony, ciopak, zreb związany z korzeniami, obosieczny.
+
+**Zachowanie:** pracowity, drażliwy, wyczerpany. Broni pustego paleniska, choć drewno leży w wodzie. Chce przepędzić obcego; nie prowadzi zrozumiałej rozmowy. Pozostaje tragiczną istotą Weleszy: gniew i zapomnienie są wyczuwalne, zanim zaatakuje.
+
+**Koncepty:** [portret i detale](art/bestiariusz/drwal/01_drwal_portret_i_detale.png), [sylwetki, warianty, broń i pozy](art/bestiariusz/drwal/02_drwal_arkusz_koncepcyjny.png), [scena wspólna z Powrotnikiem i psem](art/bestiariusz/sceny/powrotnik_pies_drwal.png). Koncept jest wzorcem wyglądu.
+
+**Priorytety AI:** nie atakuje z zaskoczenia → ostrzega ruchem topora → broni wejścia → zwykły zamach w zasięgu → przy uporczywej gardzie gracza wybiera wyraźnie zapowiedziany ciężki atak → po chybieniu wraca do gotowości → atak obrotowy tylko wobec gracza krążącego blisko. Reakcja nie jest odczytem przycisku gracza w tej samej klatce.
 
 | Atak | Zapowiedź | Efekt | Odpowiedź i okazja |
 |---|---|---|---|
 | Cięcie z boku | Obrót barków i szurnięcie trzonka | Parowalny zamach toporem | Garda lub precyzyjna parada; odsłonięta strona po zamachu |
 | Rozłupanie | Obie dłonie nad głową, krótki bezruch, głośny wysiłek | Nieparowalne pionowe uderzenie | Zejść w bok; ostrze na chwilę grzęźnie w podłożu |
+| Atak obrotowy [DECYZJA AUTORA, 28.10.2026] | Topór nisko za plecami, skręt tułowia, przeciągły jęk drewna | Pełny obrót wokół siebie, parowalny; rzadki, nie dwa razy z rzędu | Odejść poza zasięg topora albo sparować; po obrocie chwiejny i odsłonięty |
 
 **Słabość:** silny, ale po ciężkim ataku nie odwraca się natychmiast. **Łup:** przygotowany materiał lub narzędzie związane z obozem; zwykła broń nie musi być ulepszeniem. **Występowanie:** obóz węglarzy i zadanie o narzędziach.
 
 #### ENM-lucznik — Łucznik pustego traktu
 
-**Rola:** napastnik dystansowy; porzucony strażnik. **Pytanie:** jak skrócić dystans, korzystając z osłon i przerw między strzałami?
+**Rola:** napastnik dystansowy. **Pytanie:** jak skrócić dystans, korzystając z osłon i przerw między strzałami?
 
-**Sylwetka:** wysoki łuk; asymetryczna peleryna; jasny kościany gwizdek na piersi. Dźwięk: tarcie cięciwy, czasem urwany sygnał, na który nikt nie odpowiada.
+**Kim jest [DECYZJA AUTORA, 28.10.2026]:** porzucony strażnik kupieckiej odprawy, odmieniony przez las w szaleńca. Obdarty, pokryty ranami i bliznami, żyje już tylko siłą nienawiści lasu do intruzów.
 
-**Zachowanie:** zdyscyplinowany, ostrożny, samotny. Pilnuje nieistniejącej już odprawy kupieckiej. Boi się zamknięcia drogi odwrotu; nie ucieka w nieskończoność.
+**Sylwetka:** wychudzony, obdarty, z dzikimi włosami i brodą; łuk, kołczan ze strzałami o czerwonych lotkach, nóż; mały wisior na piersi jako ślad dawnej służby. Twarz wykrzywiona w krzyku. Dźwięk: tarcie cięciwy, urywany krzyk albo sygnał, na który nikt nie odpowiada.
+
+**Koncept:** [plansza łucznika, warianty i sceny](art/bestiariusz/lucznik-pustego-traktu/01_karta_koncepcyjna.png). Koncept jest wzorcem wyglądu; warianty dzielą tryby ataku.
+
+**Zachowanie:** szaleńczy w gestach i głosie, ale w strzale nadal strażnik: odruchy dawnej służby zostały. Krąży przy trakcie, jakby wciąż pilnował odprawy kupieckiej, której już nie ma. Nie ucieka w nieskończoność.
 
 **Priorytety AI:** obserwuje drogę → ustawia linię strzału → naciąga widocznie → strzela w zablokowany przed wypuszczeniem kierunek → zmienia pozycję do wcześniej dostępnego punktu. W zwarciu odsuwa się, a jeśli nie ma miejsca, używa noża. Nie strzela przez osłony ani ściany.
 
@@ -101,18 +120,22 @@ Nowe ofiary i istoty nie dopisują historii do zatwierdzonych NPC. Ślady człow
 
 **Rola:** wsparcie blokujące łatwą okazję; ślad żałoby. **Pytanie:** czy najpierw przerwiesz śpiew, czy odciągniesz chronionego przeciwnika?
 
-**Sylwetka:** wąska postać; zwisający pusty płaszcz przewieszony przez ramiona jak niesiony człowiek; jasne dłonie. Dźwięk: melodia bez słów, kończąca się za każdym razem przed ostatnią nutą.
+**Kim jest [DECYZJA AUTORA, 28.10.2026]:** demon lasu.
 
-**Zachowanie:** cierpliwa, troskliwa, zaborcza. Zachowuje się, jakby próbowała kogoś ochronić. Nie potwierdzamy, czy jest człowiekiem, duchem czy obrazem wywołanym przez las.
+**Sylwetka:** wysoka, wąska postać w warstwach ciemnych, poszarpanych tkanin; welon i wianek z gałązek; pod welonem twarz bez twarzy; długie, jasne dłonie; talizmany żałoby (medalion, dzwonek). Dźwięk: melodia bez słów, kończąca się za każdym razem przed ostatnią nutą.
+
+**Koncept:** [plansza Żałobnicy](art/bestiariusz/zalobnica/01_karta_koncepcyjna.png). Koncept jest wzorcem wyglądu.
+
+**Zachowanie:** cierpliwa, troskliwa, zaborcza. Zachowuje się, jakby próbowała kogoś ochronić.
 
 **Priorytety AI:** pozostaje przy chronionym miejscu → rozpoczyna śpiew tylko przy widocznym sojuszniku → podtrzymuje osłonę jednego celu → przerywa po otrzymaniu trafienia lub utracie zasięgu/łączności wzrokowej → szuka nowej pozycji. Nie leczy HP i nie wskrzesza wrogów.
 
 | Zdolność | Zapowiedź | Efekt | Odpowiedź i okazja |
 |---|---|---|---|
-| Niedokończona pieśń | Podniesienie pustego płaszcza, początek melodii, widoczne połączenie z celem | Jednorazowa redukcja następnego trafienia w chronionego wroga; nigdy pełna odporność; nie kumuluje się | Trafić śpiewającą, przerwać widoczność albo wyczerpać osłonę zwykłym ciosem |
-| Odepchnięcie | Zbiera płaszcz przy piersi, gwałtowny wdech | Bliski, nieparowalny atak odpychający, bez dalszego przyciągania | Odskok, po ataku przerwa w śpiewie |
+| Niedokończona pieśń | Podnosi welon i odsłania twarz bez twarzy; początek melodii, widoczne połączenie z celem | Jednorazowa redukcja następnego trafienia w chronionego wroga; nigdy pełna odporność; nie kumuluje się | Trafić śpiewającą, przerwać widoczność albo wyczerpać osłonę zwykłym ciosem |
+| Odepchnięcie | Zbiera tkaniny przy piersi, gwałtowny wdech | Bliski, nieparowalny atak odpychający, bez dalszego przyciągania | Odskok, po ataku przerwa w śpiewie |
 
-**Słabość:** nieruchoma podczas pieśni, osłona nie obejmuje jej samej. **Łup:** brak automatycznej kosztowności; po walce zostaje płaszcz jako ślad. **Występowanie:** późny fragment lasu; nowy efekt osłony wymaga implementacji i jest kandydatem do odłożenia przy ograniczeniu zakresu.
+**Słabość:** nieruchoma podczas pieśni, osłona nie obejmuje jej samej. **Łup:** brak automatycznej kosztowności; po walce zostaje welon jako ślad. **Występowanie:** późny fragment lasu; nowy efekt osłony wymaga implementacji i jest kandydatem do odłożenia przy ograniczeniu zakresu.
 
 #### ENM-korzeniec — Korzeniec
 
@@ -157,7 +180,9 @@ Wciąż nosi drewno do dawno zgasłego pieca. Nie wyjaśniamy, czy kieruje nim p
 
 #### ENM-stroz — Stróż, boss finałowy
 
-**Rola:** finałowy test kontroli zachłanności; strażnik o nieznanym celu. **Sylwetka:** wysoka postać w starym żelazie; długa broń drzewcowa; przywiązane do pasa fragmenty podróżnych pakunków; zwykła latarnia [DECYZJA AUTORA, 28.10.2026]. Nie jest to magiczna latarnia z komory. Część przedmiotów przypomina wcześniejsze znaleziska, ale nie potwierdza to ich pochodzenia.
+**Rola:** finałowy test kontroli zachłanności; strażnik o nieznanym celu. **Sylwetka:** bardzo wysoka postać, wyraźnie górująca nad bohaterem, w zardzewiałej zbroi i kolczudze pod postrzępionymi warstwami tkanin; kaptur, a pod nim zamiast twarzy czarna mgła; blade, ludzkie dłonie; długa pika z szerokim grotem; przywiązane do pasa i pleców bagaże podróżnych (zwinięte posłanie, sakwy, pusta klatka na ptaka); zwykła latarnia [DECYZJA AUTORA, 28.10.2026]. Nie jest to magiczna latarnia z komory. Część przedmiotów przypomina wcześniejsze znaleziska, ale nie potwierdza to ich pochodzenia.
+
+**Koncept:** [plansza Stróża](art/bestiariusz/stroz/01_karta_koncepcyjna.png): widoki, detale, cztery warianty i widok w grze. Koncept jest wzorcem wyglądu. Obraz nie rozstrzyga pochodzenia Stróża.
 
 **Zachowanie:** cierpliwy, nieustępliwy, niemal ceremonialny. Staje między graczem a wyjściem; nie rabuje i nie świętuje zwycięstwa. Głosy są ciche, różne, czasem sprzeczne. Nie naśladuje bliskich bohatera ani nie dopisuje mu osobistej przeszłości.
 
@@ -419,3 +444,204 @@ python3 .agents/skills/level-designer/scripts/validate_graph.py docs/graphs/boss
 ```
 
 Skrypt sprawdza tylko osiągalność stanów; nie wykonuje pól `condition`, nie sprawdza kolizji, zasobów, progów zdrowia ani atomowości zapisu.
+
+## Część IV — parametry prototypowe i balans v0.1 (5 listopada 2026)
+
+**Status: PROPOZYCJA DO WALIDACJI AUTORA — nie kanon.** Dotychczasowe opisy, decyzje autora i przebieg spotkań w częściach I–III pozostają bez zmian. Poniżej są propozycje liczb, timingu i doprecyzowania zachowań do pierwszego testu w Godot 4; **nie były testowane w działającej grze**. Materiał rozwinięty na podstawie `docs/przeciwnicy.md`, `docs/walka.md`, `docs/mechaniki.md`, `docs/fabula.md` oraz roboczej Biblii z gałęzi `vibe/world-bible-2a3b59` (`docs/swiat.md`, `docs/welesza.md`). Konflikt priorytetu Biblii i kanonu demo między plikami `AGENTS.md` różnych gałęzi pozostaje do decyzji autora; nie rozstrzygamy go tym wpisem.
+
+### 1. Skala i model do wstępnych obliczeń
+
+- **Bohater testowy:** 100 HP, bez pancerza, bez leczenia, bez zakupionych technik i bez krytyków; 100 wytrzymałości jako hipotetyczna baza, nie zatwierdzony parametr.
+- **Trzy testowe style broni:** miecz jednoręczny — 21 obrażeń, 0,60 efektywnego trafienia/s; topór dwuręczny — 33 obrażenia, 0,35 trafienia/s; włócznia — 16 obrażeń, 0,80 trafienia/s. Są to *efektywne kontakty na sekundę* uwzględniające przerwy na ruch i obronę, nie losowa celność ani szansa trafienia.
+- **Wzór porównawczy:** `DPS = max(damage - armor, 0.1 × damage) × effective_hits_per_second`; `TTK = enemy_HP / DPS`. Liczby to umowne jednostki walki, czasy w sekundach. Płaska redukcja pancerza jest **tymczasowym uproszczeniem**; nie zastępuje docelowej odporności na typ obrażeń z `docs/walka.md`.
+- **Prototypowe koszty wytrzymałości** (oddzielna propozycja do walidacji pakietu walki): atak 12, unik 24, zwykła garda 14 za przyjęty cios, precyzyjna parada 7, sprint 12/s, regeneracja 18/s poza kosztowną akcją. Nie ustanawiać ich jako zasad bez testu.
+- Kierunek ataku należy zablokować przed fazą aktywną (wstępny punkt testowy: przynajmniej 0,20 s). Nie śledzić celu już po rozpoczęciu skoku, zamachu lub wypuszczeniu pocisku. Bez ataków zza kadru; sygnały zarówno wizualne, jak i dźwiękowe.
+- TTK nie uwzględnia ruchu w konkretnych arenach, trafień krytycznych, przerwań wiązanek, leczenia, przejść faz i rzeczywistej animacji. **Nie jest prognozą czasu przejścia** ani dowodem skutecznego zbalansowania gry.
+
+### 2. Porównawcza macierz TTK
+
+| Wróg | HP | Pancerz testowy | Miecz 1H | Topór 2H | Włócznia |
+|---|---:|---:|---:|---:|---:|
+| Zdziczały pies | 54 | 0 | 4,29 s | 4,68 s | 4,22 s |
+| Wilk | 86 | 0 | 6,83 s | 7,45 s | 6,72 s |
+| Powrotnik | 96 | 1 | 8,00 s | 8,57 s | 8,00 s |
+| Drwal | 150 | 4 | 14,71 s | 14,78 s | 15,62 s |
+| Łucznik | 70 | 0 | 5,56 s | 6,06 s | 5,47 s |
+| Żałobnica | 82 | 0 | 6,51 s | 7,10 s | 6,41 s |
+| Korzeniec | 156 | 4 | 15,29 s | 15,37 s | 16,25 s |
+| Zbieracz | 420 | 5 | 43,75 s | 42,86 s | 47,73 s |
+| Dźwigacz | 480 | 6 | 53,33 s | 50,79 s | 60,00 s |
+| Stróż | 780 | 8 | 100,00 s | 89,14 s | 121,88 s |
+
+**Wynik modelu:** włócznia jest najszybsza przeciw większości lekkich celów, miecz przeciw średnio opancerzonym, a topór przeciw minibossom i Stróżowi; brak jednej broni z najlepszym TTK we wszystkich dziesięciu porównaniach. To nie uwzględnia przewagi zasięgu ani kosztów obrony. **Ryzyko:** modelowy TTK Stróża mieczem (100 s) i włócznią (122 s) *przed* przerwami faz może być za długi; sprawdzić, czy walka nie staje się męcząca. Przy 100 HP gracza ciężki cios Stróża (44) i Dźwigacza (42) oznacza porażkę po trzech nieobronionych trafieniach; z Drwalem i Łucznikiem dwa nakładające się zagrożenia mogą zabrać 56 HP.
+
+### 3. Karty liczbowe i doprecyzowania zachowań
+
+**Wszystkie wartości w poniższych kartach są propozycjami.** „Zapowiedź”, „faza aktywna” i „odsłonięcie” są czasami w sekundach; nie należy utożsamiać ich z zatwierdzonymi klatkami animacji. Odpowiedź gracza na atak musi być możliwa w kamerze 2:1 i przy rzeczywistych kolizjach.
+
+#### `ENM-zdziczaly-pies` — Zdziczały pies
+
+**HP / pancerz testowy:** 54 / 0. **Rola:** Wprowadzenie do uniku; flanker.
+
+| Akcja | Obrażenia | Zapowiedź | Aktywność | Odsłonięcie | Parada | Odpowiedź gracza |
+|---|---:|---:|---:|---:|---|---|
+| Kłapnięcie | 11 | 0,45 s | 0,18 s | 0,60 s | nie | Odejść poza krótki zasięg |
+| Skok do gardła | 19 | 0,80 s | 0,28 s | 0,95 s | nie | Unik w bok, pojedyncza kontra |
+
+**AI i ograniczenia:** Pilnuje pożywienia → ostrzega → szuka flanki → skacze po zablokowaniu kierunku → odzyskuje równowagę; po utracie celu wraca do wozu.
+
+#### `ENM-wilk` — Wilk
+
+**HP / pancerz testowy:** 86 / 0. **Rola:** Drapieżnik głębszego boru; trudniejszy wariant lekcji uniku.
+
+| Akcja | Obrażenia | Zapowiedź | Aktywność | Odsłonięcie | Parada | Odpowiedź gracza |
+|---|---:|---:|---:|---:|---|---|
+| Kąśnięcie | 17 | 0,50 s | 0,20 s | 0,60 s | nie | Zejść z frontu |
+| Długi skok | 28 | 0,78 s | 0,32 s | 0,65 s | nie | Unik poprzeczny; krótsze okno kontry |
+
+**AI i ograniczenia:** Może wyjść z zarośli tylko po widocznym ruchu gałęzi i pełnej zapowiedzi w kadrze. Nie teleportuje się ani nie namierza celu podczas skoku. Szybciej odzyskuje gotowość niż pies.
+
+#### `ENM-powrotnik` — Powrotnik
+
+**HP / pancerz testowy:** 96 / 1. **Rola:** Wolny napastnik i krótki ostrzał przeciw biernemu cofaniu.
+
+| Akcja | Obrażenia | Zapowiedź | Aktywność | Odsłonięcie | Parada | Odpowiedź gracza |
+|---|---:|---:|---:|---:|---|---|
+| Chwyt oburącz | 23 | 1,00 s | 0,30 s | 1,25 s | nie | Unik na bok; po pudle atak z flanki |
+| Rzut z plecaka | 13 | 1,10 s | 0,15 s | 1,20 s | nie (garda tak) | Unik lub osłona; skrócenie dystansu |
+
+**AI i ograniczenia:** Powtarza obchód → zbliża się bez sprintu → rzuca z krótkiego dystansu → chwyta tylko w zwarciu. Kierunek rzutu blokuje się przed wyrzuceniem przedmiotu. Rzut zatrzymuje garda, bez odbicia precyzyjną paradą.
+
+#### `ENM-drwal` — Drwal
+
+**HP / pancerz testowy:** 150 / 4. **Rola:** Ciężko uzbrojony wróg: rozróżnienie parady i uniku.
+
+| Akcja | Obrażenia | Zapowiedź | Aktywność | Odsłonięcie | Parada | Odpowiedź gracza |
+|---|---:|---:|---:|---:|---|---|
+| Cięcie z boku | 24 | 0,80 s | 0,34 s | 0,95 s | tak | Garda lub parada, krótka kontra |
+| Rozłupanie | 38 | 1,25 s | 0,30 s | 1,50 s | nie | Unik poprzeczny; 1–2 ciosy po pudle |
+| Obrót toporem | 26 | 1,10 s | 0,58 s | 1,35 s | tak | Odejść poza zasięg lub sparować |
+
+**AI i ograniczenia:** Nie atakuje z zasadzki. Najpierw daje czytelne ostrzeżenie. Wybiera rozłupanie wobec długiej gardy, bez odczytu klawisza w tej samej klatce. Obrót jest rzadki i nigdy nie występuje dwa razy pod rząd. Wszystkie warianty graficzne korzystają ze wspólnej rodziny zachowań.
+
+#### `ENM-lucznik` — Łucznik pustego traktu
+
+**HP / pancerz testowy:** 70 / 0. **Rola:** Presja dystansowa i wykorzystanie osłon.
+
+| Akcja | Obrażenia | Zapowiedź | Aktywność | Odsłonięcie | Parada | Odpowiedź gracza |
+|---|---:|---:|---:|---:|---|---|
+| Strzał | 18 | 1,10 s | 0,10 s | 1,45 s | nie | Osłona, ruch w poprzek toru |
+| Cięcie nożem | 14 | 0,65 s | 0,23 s | 0,85 s | tak | Parada lub unik |
+
+**AI i ograniczenia:** Strzela wyłącznie z linii widzenia. Po przygotowaniu strzała nie naprowadza się. Ma ograniczone punkty odwrotu, nie strzela przez drewno ani kamień; w zwarciu korzysta z noża.
+
+#### `ENM-zalobnica` — Żałobnica
+
+**HP / pancerz testowy:** 82 / 0. **Rola:** Wsparcie jednego wroga, rozwiązywanie priorytetu celu.
+
+| Akcja | Obrażenia | Zapowiedź | Aktywność | Odsłonięcie | Parada | Odpowiedź gracza |
+|---|---:|---:|---:|---:|---|---|
+| Odepchnięcie | 16 | 0,95 s | 0,24 s | 1,30 s | nie | Odejść ze stożka i wykorzystać przerwę |
+| Niedokończona pieśń | 0 | 1,20 s | 0,15 s | 0,90 s | — | Następne pojedyncze trafienie w sojusznika: −35% obrażeń; ponowne nałożenie najwcześniej po 8 s |
+
+**AI i ograniczenia:** Śpiewa tylko dla jednego widocznego sojusznika; nie osłania siebie, nie leczy, nie wskrzesza. Śpiew można przerwać trafieniem lub zerwaniem linii widzenia. Efekt nie kumuluje się.
+
+#### `ENM-korzeniec` — Korzeniec
+
+**HP / pancerz testowy:** 156 / 4. **Rola:** Kontrola kąta podejścia i dalekiego frontu.
+
+| Akcja | Obrażenia | Zapowiedź | Aktywność | Odsłonięcie | Parada | Odpowiedź gracza |
+|---|---:|---:|---:|---:|---|---|
+| Zagarnięcie | 28 | 1,15 s | 0,45 s | 1,35 s | nie | Unik w poprzek stożka; wejść na bok |
+| Przetoczenie | 21 | 0,92 s | 0,40 s | 1,15 s | nie | Odsunąć się od kadłuba |
+
+**AI i ograniczenia:** Przed walką widocznie porusza korzeniami. Obraca się wolno, nie teleportuje się. Gracz może obejść go i zbadać słup. Przetoczenie kontruje ciągłe krążenie po boku, ale ma własną zapowiedź.
+
+#### `ENM-zbieracz` — Zbieracz spod korzeni
+
+**HP / pancerz testowy:** 420 / 5. **Rola:** Opcjonalny miniboss: kontrola frontu, bez obowiązkowego zabójstwa.
+
+| Akcja | Obrażenia | Zapowiedź | Aktywność | Odsłonięcie | Parada | Odpowiedź gracza |
+|---|---:|---:|---:|---:|---|---|
+| Zagarnięcie | 30 | 1,20 s | 0,45 s | 1,50 s | nie | Wyjść poza front |
+| Przetoczenie | 23 | 1,00 s | 0,38 s | 1,20 s | nie | Odsunąć się od boku |
+| Szeroki zamach (II) | 36 | 1,55 s | 0,55 s | 1,95 s | nie | Unik poprzeczny; 1–2 kontry po odsłonięciu |
+
+**AI i ograniczenia:** Broni pustego legowiska, nie opuszcza jamy. Faza II od 55% HP dodaje szeroki zamach. Przejście bez zadawania obrażeń; po wyjściu z areny pełny reset. Nagroda z niszy, nie z ciała.
+
+#### `ENM-dzwigacz` — Dźwigacz
+
+**HP / pancerz testowy:** 480 / 6. **Rola:** Miniboss: świadomy wybór między paradą i unikiem.
+
+| Akcja | Obrażenia | Zapowiedź | Aktywność | Odsłonięcie | Parada | Odpowiedź gracza |
+|---|---:|---:|---:|---:|---|---|
+| Cięcie hakiem/sierpem | 25 | 0,90 s | 0,34 s | 1,10 s | tak | Precyzyjna parada i krótka kontra |
+| Rozłupanie | 42 | 1,30 s | 0,35 s | 1,60 s | nie | Unik poprzeczny |
+| Pchnięcie nosidłem (I) | 28 | 1,08 s | 0,36 s | 1,40 s | nie | Unik w bok |
+| Drugi zamach (II) | 25 | 0,68 s | 0,31 s | 1,55 s | tak | Parada lub unik po osobnej zapowiedzi |
+
+**AI i ograniczenia:** Faza I z nosidłem. Od 55% HP odkłada je nieofensywnie; w fazie II znika pchnięcie i dochodzi drugi, osobno zapowiadany zamach. Broń to hak albo sierp na trzonku — nie topór. Odkładane nosidło nie tworzy nowej kolizji.
+
+#### `ENM-stroz` — Stróż
+
+**HP / pancerz testowy:** 780 / 8. **Rola:** Boss finałowy: przerwanie zachłannej wiązanki.
+
+| Akcja | Obrażenia | Zapowiedź | Aktywność | Odsłonięcie | Parada | Odpowiedź gracza |
+|---|---:|---:|---:|---:|---|---|
+| Cięcie drzewcem | 27 | 0,95 s | 0,35 s | 1,05 s | tak | Parada lub unik |
+| Przybicie | 44 | 1,42 s | 0,36 s | 1,75 s | nie | Unik poprzeczny; kontra |
+| Pochód (II+) | 38 | 1,30 s | 0,60 s | 1,80 s | nie | Unik poza ustalony tor |
+| Oślepienie latarnią | 0 | 1,20 s | 0,25 s | 1,35 s | nie | Unik poza wąski stożek; 0,8 s spowolnienia bez gwarantowanego kolejnego trafienia |
+
+**AI i ograniczenia:** Faza I: posterunek; od 70% HP faza II dodaje pochód po ustalonej linii; od 35% HP faza III łączy cięcie i przybicie z odrębnymi zapowiedziami. Bez fal, globalnego przyspieszania ataków i regeneracji. Latarnia jest zwykła, różna od lampy fabularnej.
+
+### 4. Reżyseria spotkań — powiązanie istniejących kart
+
+| Spotkanie | Kolejność i skład (bez nowych spawnów) | Nauka / warunek odbioru |
+|---|---|---|
+| `ENC-woz` | Pies sam, następnie Pies + Powrotnik | Unik przed skokiem i rozdzielanie przez wóz. Podniesienie łupu nie aktywuje automatycznie walki |
+| `ENC-kamienie` | Korzeniec, osobno Powrotnik; Wilk tylko na zapowiedzianej ścieżce | Obchodzenie frontu, możliwość zbadania słupa bez zabijania |
+| `ENC-oboz` | Drwal sam, następnie Drwal + Łucznik | Garda/parada, unik ciężkiego zamachu, osłona stosu drewna zatrzymuje strzałę |
+| `ENC-piesn` | Żałobnica + Powrotnik, opcjonalnie | Przerwanie pieśni, zerwanie linii widzenia albo zużycie pojedynczej osłony |
+| `BOSS-zbieracz` | Zbieracz sam | Kąt podejścia i szansa wyjścia z jamy; zadanie poboczne możliwe też bez walki |
+| `BOSS-dzwigacz` | Dźwigacz sam | Zmiana parady na unik i nieofensywne przejście faz |
+| `BOSS-stroz` | Stróż sam | Przerwanie wiązanki zamiast zachłannego finiszu; otwarcie suchej drogi po zwycięstwie |
+
+**Propozycja zabezpieczenia par:** ciężkie ataki dwóch aktywnych przeciwników nie powinny kończyć zapowiedzi w tym samym, niemożliwym do obrony momencie. Punkt startowy testu AI: przesunięcie końców zapowiedzi o 0,35–0,50 s, jeśli oba ataki nie są rozdzielone osłoną. Nie wyłącza to flankowania ani ryzyka przy złym ustawieniu. Limit obejmuje także pobliskie grupy mogące wspólnie wejść do walki.
+
+### 5. Fazy bossów — numeryczny szkic, nie nowy kanon
+
+- **Zbieracz:** faza I (zagarnięcie/przetoczenie), faza II od **55% HP** (dochodzi szeroki zamach); przejście nie zadaje obrażeń. Brak fal i blokady wyjścia.
+- **Dźwigacz:** faza I z nosidłem, faza II od **55% HP** — odstawienie nosidła, usunięcie pchnięcia, osobno zapowiedziany drugi zamach hakiem/sierpem. Nie podmieniać broni na topór.
+- **Stróż:** faza I 100–70% HP (cięcie, przybicie, oślepienie zwykłą latarnią), faza II od **70% HP** (pochód), faza III od **35% HP** (łączenie znanych cięcia i przybicia, osobne zapowiedzi). Nie przyspieszać automatycznie animacji, nie dodawać fal, odporności absolutnej ani wymaganego poziomu umiejętności.
+
+Dla każdego bossa: zmiana fazy dopiero po zakończeniu bieżącego ataku, krótki oddech dla gracza, przy wyjściu z obszaru pełny reset do pierwszej fazy, zapis i nagroda jednorazowe. Nagroda Dźwigacza (komora latarni) i Stróża (droga) nie jest losowym łupem.
+
+### 6. Przegląd ryzyk (review projektowe, nie testy Godota)
+
+| Waga | Ryzyko | Próba / możliwe działanie |
+|---|---|---|
+| Major | Pancerz płaski odbiega od docelowej odporności na rodzaje obrażeń | Przeliczyć model z cięciem, kłuciem i obuchem po decyzji o formule |
+| Major | Zbyt długi TTK Stróża przy podstawowym wyposażeniu | Test miecza, włóczni i topora bez krytyków i PPM; ewentualnie HP / odporności |
+| Major | Zbieżność trafień Drwala i Łucznika (38 + 18 z 100 HP) | Kontrola LoS, czytelnych telegrafów i zachowania osłony przy stosie drewna |
+| Major | Wilk atakuje z zarośli przy wyczerpanej po sprincie wytrzymałości | Widoczna zapowiedź wewnątrz kamery, próba bez dźwięku |
+| Major | Żałobnica przedłuża walkę nieograniczonym odświeżaniem osłony | Jedno trafienie, brak kumulacji, przerwanie, co najmniej 8 s przerwy |
+| Major | Brak pomiaru `D`, `U`, `A`, `V` i rzeczywistych zasięgów | Greybox i test kamerowej widoczności; korekta timingów |
+| Minor | Warianty wizualne Drwala przestają mieć rozpoznawalne zapowiedzi | Wspólne sygnały ataków dla wszystkich wariantów |
+| Minor | Koszt produkcji efektów Żałobnicy i opcjonalnego Zbieracza | Rozważyć przesunięcie do dalszej iteracji, bez usuwania przyjętych zadań |
+
+### 7. Minimalny plan testów do pierwszego prototypu
+
+1. **Pies i Wilk:** próby uniku przed blokadą kierunku, po blokadzie i w sam tor skoku; zasadzka również z niską wytrzymałością i wyłączonym dźwiękiem.
+2. **Drwal:** parowanie zwykłego ciosu, próby parowania rozłupania, ciągła garda, spam atak–garda; sprawdzić, czy kosztów i opóźnień nie można ominąć.
+3. **Powrotnik i Łucznik:** pociski zablokowane przez kolizję wozu, stosu drewna i filara, brak naprowadzania oraz strzelania poza kadr.
+4. **Korzeniec:** obejście bez zabijania, inspekcja słupa; przetoczenie nie pojawia się bez zapowiedzi.
+5. **Żałobnica:** przerwanie pieśni trafieniem i zasłoną; brak kumulacji osłony; test bez dźwięku.
+6. **Bossowie:** przejście przez próg fazy podczas ataku, mocne trafienie przekraczające kilka progów, odwrót, reset, jednoczesna śmierć, wczytanie zapisu i jednorazowość nagrody.
+7. **Każdy wróg:** próba przy zasłaniających koronach drzew, test bez dźwięku, bezpieczny odwrót, brak ataków przez collider i trwałego zakleszczenia.
+8. **Każda testowa broń:** pokonanie minibossów i Stróża bez zakupionych umiejętności, krytyków, określonej amunicji i magii. Wypatrywać dominującej strategii ciągłego cofania i strzelania.
+
+**Pytania pozostające do decyzji autora:** tymczasowy pancerz kontra model rodzajów obrażeń; docelowa długość finału; termin implementacji Żałobnicy i Zbieracza; rodziny broni zdolne do parady; stosowanie obowiązującej hierarchii Biblii i kanonu dema z AGENTS.md (kanon dema ma pierwszeństwo).
+
+**Weryfikacja:** powyższe TTK obliczono porównawczo na danych testowych. Żadne ataki, progi, czasy ani modele AI z tej części nie były uruchamiane lub zatwierdzane w Godocie. Dalszy krok: prototyp Psa i Drwala, następnie pomiary oraz ponowne liczenie balansu.
+
