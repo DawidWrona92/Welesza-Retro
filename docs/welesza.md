@@ -39,6 +39,8 @@ Gradient wschód–zachód (dzikość ↔ kaganek oświaty) ma drugą oś, tylko
 | Posługiwanie się nazwami | **Model mieszany:** część nazw funkcjonuje szerzej u kupców, podróżników i mieszkańców; obok nich istnieją nazwy lokalne, potoczne i odmienne zwyczaje. | **[DECYZJA AUTORA]** |
 | Stare Serce Imperium | W pełnej grze można **dotrzeć do jego ruin**, ale nie poznać prawdy o Imperium. | **[DECYZJA AUTORA]** |
 | Podróż bohatera po Niemirze | Kierunek i kolejność podróży pozostają **nieustalone**. Oś klimatu zachód–wschód nie wyznacza trasy kampanii. | **OTWARTE** |
+| Międzyświat | **Wariant B: przenika rzeczywistość.** Nie widać ostrej granicy, można niepostrzeżenie zejść ze zwykłego traktu w miejsce, z którego trudno wrócić. | **[DECYZJA AUTORA, 05.11.2026]** |
+| Niemir i istoty boru | **Niemir stanowi mieszankę zwykłego dark fantasy i międzyświatowej grozy.** Drwal, Powrotnik i podobne istoty ciągną z serca boru i czasem docierają także na zachód. | **[DECYZJA AUTORA, 05.11.2026]** |
 
 **Status dawnych nazw:** Zakraj, Nadmorze, Okole, Rudogórje, Suchodrzewie i opisowe „Pogranicze wschodnie” służą jako *etykiety odwoławcze* w dotychczasowych tekstach. Wcześniej zatwierdzony zestaw nazw został skierowany przez autora do ponownego zaprojektowania. Dopóki nie zatwierdzi zamienników, nie wykonujemy masowej podmiany w innych dokumentach. Bez zmian pozostają **Welesza, Niemir, Wielka Woda, Wielki Trakt**, postacie i osady zatwierdzonego demo.
 
@@ -65,21 +67,21 @@ Gradient wschód–zachód (dzikość ↔ kaganek oświaty) ma drugą oś, tylko
 | Obszar doświadczenia | Krajobraz i ludzie | Dominujący rodzaj lęku |
 |---|---|---|
 | **Zachód — świat ludzi** | Grody, mury, targowiska, książęta, Kościół i prawo; także **potwory, demony, upiory, przeklęte zamki i autentycznie niebezpieczne pustkowia**. Cywilizacja zna część zagrożeń, ale niekoniecznie umie je zwalczyć. | Strach przed śmiercią, wojną, zarazą, klątwami i przemocą. **Zachód nie jest bezpieczny** ani pozbawiony nadprzyrodzonej grozy. |
-| **Środek — pogranicze** | Odcinane trakty, opuszczone osady i gęste lasy; zamknięte bramy, obrzędy, nieufność; Drwal wciąż układa drewno, Powrotnik bez końca szuka drogi. **Niemir** jest miejscową anomalią tej strefy, nie dowodem, że cała strefa działa jednakowo. | Strach przed utratą domu, bliskich, pamięci i poczucia bezpieczeństwa. |
-| **Daleki wschód — sąsiedztwo międzyświata** | Rzadkie drogowskazy, pozornie zamieszkane domy, miejsca więżące w powtarzających się czynnościach i wspomnieniach. **Międzyświat** przypomina swojski, koszmarny czyściec; nie każda wieś i nie każdy trakt jest w nim uwięziony. | **Największy strach: wpaść w międzyświat i już nie wrócić** — pozostać w niedokończonym życiu, jak istoty z kręgu Drwala i Powrotnika. Utrata pewności, co rzeczywiste, jest drogą do tej grozy, nie jej jedynym celem. |
+| **Środek — pogranicze** | Odcinane trakty, palisady, osady i głębokie bory. **Niemir jest mieszaniną** ludzkiego, przyziemnego zagrożenia i międzyświatowej grozy: obok zwierząt pojawiają się Drwal i Powrotnik, nadciągający z serca boru. | Strach przed utratą bliskich i bezpieczeństwa, pierwsze doświadczenie utknięcia i powracających dróg. |
+| **Daleki wschód — przenikanie międzyświata** | Zwykły trakt może bez widocznej granicy przechodzić w swojski koszmarny czyściec. Osady wciąż żyją normalnie obok miejsc, gdzie historia i codzienność zapętlają się. | **Największy strach: wejść nieświadomie w międzyświat i nie wrócić** — pozostać w niedokończonym życiu, jak Drwal i Powrotnik. Niepewność percepcji jest oznaką grozy, nie jej jedynym sensem. |
 | **Stare Serce Imperium — ruiny dostępne w pełnej grze** | Można dotrzeć do jego ruin [DECYZJA AUTORA, 05.11.2026], lecz położenie, wygląd, ścieżka dotarcia i rola w fabule są nieustalone; nie ujawniamy pochodzenia i celu Imperium. | Strach przed tym, czego nie ma jak sprawdzić ani zrozumieć. |
 
 To **gradient nastroju i narracji**, nie cztery poziomy trudności ani cztery obiektywnie rozdzielone pasy na mapie. Zachodnie miejsce może być koszmarem, a wschodnia wieś może prowadzić zwyczajne życie. Groza nie czyni mieszkańców wschodu „mniej rozwiniętymi”; mają własną wiedzę, strukturę społeczną i sposoby przetrwania. **Drwal i Powrotnik już występują w Niemirze**, więc międzyświatowy rodzaj grozy nie może zostać geograficznie ograniczony tylko do dalekiego wschodu; na wschodzie ma być dominującym doświadczeniem, ale szczegóły jego związku z Niemirem pozostają otwarte.
 
 #### Międzyświat — rdzeń wschodniej grozy [DECYZJA AUTORA, 05.11.2026 — doprecyzowanie]
 
-**Międzyświat** jest roboczym określeniem stanu lub miejsca uwięzienia, odczuwanego jak **swojski czyściec**: dróg, z których nie sposób wyjść; domów, do których wciąż się wraca; pracy, której nie da się skończyć. To nie tylko halucynacja bohatera. **Największy lęk na dalekim wschodzie to możliwość wpadnięcia w taki stan i utknięcia w nim**.
+**Międzyświat [DECYZJA AUTORA, wariant B] przenika codzienną rzeczywistość, a nie stanowi osobnego poziomu z oczywistą bramą.** Zwykła droga może niepostrzeżenie stać się miejscem bez powrotu. Granica jest płynna; nawiązanie do *Silent Hill* dotyczy doświadczenia przenikania, nie kopiowania jego estetyki, mitologii czy potworów. Międzyświat jest roboczym określeniem stanu lub miejsca uwięzienia, odczuwanego jak **swojski czyściec**: dróg, z których nie sposób wyjść; domów, do których wciąż się wraca; pracy, której nie da się skończyć. To nie tylko halucynacja bohatera. **Największy lęk na dalekim wschodzie to możliwość wpadnięcia w taki stan i utknięcia w nim**.
 
-**Drwal, Powrotnik i podobne istoty z kręgu mistyczno-przerażającego** są wzorcem tych, którzy utknęli: ciało nadal wykonuje resztki znanych czynności, choć ich sens został odebrany lub wypaczony. Nie trzeba zamieniać ich w niewidzialne duchy: **pozostają materialne, fizyczne i możliwe do pokonania w walce**, z czytelnymi sygnałami ataku. Groza nie jest ich nietykalnością, tylko tym, co spotkało ich istnienie.
+**Drwal, Powrotnik i podobne istoty z kręgu mistyczno-przerażającego** są wzorcem tych, którzy utknęli. **[DECYZJA AUTORA, 05.11.2026]** Nadciągają z **serca boru**, wędrując ku obrzeżom, i **czasem zapuszczają się również na zachód**. Serce boru nie oznacza Starego Serca Imperium. Ich historia pozostaje tajemnicza:  ciało nadal wykonuje resztki znanych czynności, choć ich sens został odebrany lub wypaczony. Nie trzeba zamieniać ich w niewidzialne duchy: **pozostają materialne, fizyczne i możliwe do pokonania w walce**, z czytelnymi sygnałami ataku. Groza nie jest ich nietykalnością, tylko tym, co spotkało ich istnienie.
 
 **[DECYZJA AUTORA]** Zachód nie jest strefą bezpieczeństwa. Groźne demony, potwory, upiory, przeklęte zamki i miejsca z klątwą mogą pojawiać się również tam. Różnica między zachodem i dalekim wschodem dotyczy **dominującej natury horroru**, nie obecności lub braku potworów.
 
-**Otwarte, nie ustanawiamy kosmologii:** czy międzyświat jest odrębną płaszczyzną istnienia, częścią zwykłego świata, stanem po śmierci czy innym zjawiskiem; kto i w jakich okolicznościach tam trafia; jak można się wydostać; czy Drwal i Powrotnik z Niemiru trafili do tego samego zjawiska. Określenie „czyściec” to **analogia atmosfery**, nie potwierdzenie religijnego życia po śmierci. Nie tworzymy jeszcze mechaniki wciągania gracza, trwałego uwięzienia ani nowych zasad śmierci postaci.
+**Otwarte, nie ustanawiamy kosmologii:** międzyświat **przenika świat fizyczny [DECYZJA AUTORA]**, ale czy to zjawisko jest duchowe, magiczne, związane ze śmiercią czy ze starymi Drogami, pozostaje niejasne. Nie wiemy, jak się do niego wpada i czy zawsze istnieje wyjście; nie rozstrzygamy dokładnej natury uwięzienia Drwala i Powrotnika. Określenie „czyściec” to **analogia atmosfery**, nie potwierdzenie religijnego życia po śmierci. Nie tworzymy jeszcze mechaniki wciągania gracza, trwałego uwięzienia ani nowych zasad śmierci postaci.
 
 #### Dwie osie geografii, nie jeden korytarz
 
@@ -142,9 +144,19 @@ Nie projektujemy: mapy całej krainy w grze (tylko mapy lokalne w rękach postac
 
 **[DECYZJA AUTORA, 05.11.2026 — zakres decyzji]** To opis drogi przed i podczas demo, **nie** decyzja o kierunku ani kolejności wyprawy po jego zakończeniu. Wątek późniejszego marszu na wschód pozostaje opcją z banku pomysłów.
 
+### Ostatnie miasto na wschodzie — pozory normalności pośród majaku [DECYZJA AUTORA, 05.11.2026]
+
+**Ostatnie miasto** to najostrzejszy kontrast ludzkiego ładu i przenikającego międzyświata. **Straż miejska** strzeże bram i pełni służbę; **świątynie** odprawiają obrzędy; działają targowiska, przepisy i codzienny rytm. Ludzie żyją pośród obłędu, lecz zachowują się tak, jakby **twardo stąpali po ziemi**. Nie ustalamy, czy wszyscy świadomie udają, nie wierzą własnym zmysłom czy przywykli do lęku.
+
+**Za bramą** nie wiesz, czy nadal żyjesz, czy już umarłeś i trafiłeś do czegoś, co ludzie mogą nazywać **piekłem**. **Międzyświat przenika realny świat bez wyraźnej granicy**; sama brama miasta nie jest gwarancją bezpieczeństwa, ale rytuały codzienności dają ludziom iluzję lub namiastkę porządku. „Piekło” to język przeżyć i wierzeń, nie obiektywny opis życia po śmierci.
+
+**Zatwierdzono wizję miasta**, funkcjonujące pozory instytucji oraz koszmarną rzeczywistość za bramą. **Otwarte:** nazwa i plan miasta, funkcjonowanie straży, rzeczywista skuteczność świątyń i murów, zachowanie NPC, ilość międzyświatowych anomalii, związek z ruinami Starego Serca i czy bohater musi tu dotrzeć. Miasto **nie** jest automatycznym finałem kampanii.
+
 **Daleki wschód (opowieści; kierunek kampanii nieustalony):** daleko za Niemirem ma podobno stać **ostatnie miasto** — nie klejnot wschodu: obóz łowców przygód, który rozrósł się w miasto podróżników i zbiegów (wzorzec: miasta na Amazonce), żyjące siłą rozpędu, nie celem. Za nim opowieści umieszczają **Stare Serce Imperium**. **[DECYZJA AUTORA, 05.11.2026]** W pełnej grze można dotrzeć do jego **ruin**, lecz nie dowiedzieć się, kim byli budowniczowie, po co powstała sieć Dróg ani dlaczego Imperium zniknęło. Położenie ruin, ich zawartość i rola w fabule są otwarte, a legenda o ostatnim mieście nie wyznacza obowiązkowej trasy bohatera.
 
-**Konsekwencja dla doliny Niemiru:** dolina to pierwsza pułapka na drodze każdego, kto tak myśli — wóz z księgą przewozową („Niemir — nie zatrzymywać się”) to dosłowne ostrzeżenie dla takich ludzi.
+**Konsekwencja dla doliny Niemiru [DECYZJA AUTORA, 05.11.2026]:** Niemir ma być grywalnym **punktem pośrednim między klasycznym dark fantasy i koszmarem międzyświata**. Tu żyją zwyczajni ludzie, atakują zwykłe zwierzęta, a z serca boru nadchodzą sporadycznie Drwal, Powrotnik i podobne istoty. **Czasem zapuszczają się także na zachód**, ale nie stanowią tam podstawowej populacji. To ich tendencja występowania, nie twarda granica ani mechanika losowych fal. Wóz z księgą przewozową („Niemir — nie zatrzymywać się”) pozostaje ostrzeżeniem.
+
+**Grywalność ma pierwszeństwo przed efektem grozy:** typowe walki zrozumiałe i sprawiedliwe, międzyświatowe spotkania rzadsze i zapadające w pamięć, zapowiedzi ataków czytelne, brak losowego teleportowania, permanentnych pułapek bez wyjścia lub niszczenia postępów. Niemir nie ma być wyłącznie symulatorem snu; ma być dobrą grą akcji w atmosferze rodzącego się koszmaru. Nie wyjaśniamy w ten sposób przyczyny zamknięcia boru.
 
 ## Ludzie i gospodarka
 
@@ -235,4 +247,5 @@ Oś nie jest misją zbawienia świata; nie ma antagonisty; nie wyjaśnia doliny 
 3. Gdzie i jak gracz może dotrzeć do **ruin Starego Serca Imperium** oraz co tam zastanie? **Możliwość dotarcia jest zatwierdzona**, ale nie ich lokalizacja ani odpowiedź na tajemnice.
 4. Dokąd uda się bohater **po Niemirze**, jakie krainy zobaczy i w jakiej kolejności? **Brak decyzji**; nie interpretować gradientu jako trasy fabuły.
 5. Jak dokładnie realizować zatwierdzony **mocny horror psychologiczny i oniryczny** w scenach? Szczegóły efektów i ich testy pozostają do zaprojektowania.
-6. **Międzyświat:** jak do niego wpaść, czy i jak się z niego wydostać, czy istnieją granice i jaki jest związek z anomalią Niemiru? **Nieustalone**; nie utożsamiamy go automatycznie z religijnym czyśćcem ani nie dodajemy mechaniki bez projektu i decyzji.
+6. **Międzyświat:** **zatwierdzono wariant B — przenikanie rzeczywistości bez ostrej granicy**. Jak konkretnie się weń wpada, czy i jak wydostać, jaki jest związek z Niemirem? **Otwarte**, bez gotowej mechaniki trwałego uwięzienia.
+7. **Ostatnie miasto:** wizja normalności pośród obłędu, straży, świątyń i grozy za bramą jest **zatwierdzona**. Nazwa, plan, mieszkańcy, działanie ochrony i rola w fabule pozostają **otwarte**.
