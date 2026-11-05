@@ -12,6 +12,7 @@ Pozostali agenci pracują na zadaniach przydzielonych przez PM. Spór o kierunek
 
 ## Zasady pracy
 
+- **Hierarchia dokumentów [DECYZJA AUTORA]:** biblia świata ([swiat.md](docs/swiat.md), [welesza.md](docs/welesza.md)) jest jedynym źródłem prawdy o świecie; kanon demo (fabuła, przeciwnicy, mapa) z niej wynika i jej nie sprzeciwia. Sprzeczność między nimi to błąd do zgłoszenia autorowi; różny poziom szczegółu nim nie jest.
 - Zacznij od [docs/INDEX.md](docs/INDEX.md). Obowiązuje opisana tam konwencja statusu: wszystko jest propozycją, chyba że oznaczono decyzję autora.
 - Nie zmieniaj statusu decyzji bez potwierdzenia autora. Nie dopisuj faktów fabularnych bez jego zgody.
 - Zmiany i doprecyzowania zapisuj w dokumencie, którego dotyczą. Nie twórz nowych plików, rejestrów ani dokumentów pomocniczych bez potrzeby.

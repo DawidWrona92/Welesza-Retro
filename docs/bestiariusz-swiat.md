@@ -5,12 +5,12 @@ Status: propozycja do akceptacji autora. Rozszerza [bestiariusz demo](przeciwnic
 ## Zasady
 
 - Folklor słowiański w pierwszej linii; inspiracje Wiedźminem (książki i gry) dopuszczalne, kopiowanie nazw własnych Sapkowskiego — nie.
-- Potwory są **rzadkie, potężne i bardzo mroczne** ([biblia świata](swiat.md)); żadnych hord faerie „na każdym kroku".
+- Obowiązuje **gradient grozy** ([biblia świata](swiat.md), [DECYZJA AUTORA]): im potężniejszy potwór, tym bardziej magiczny i rzadszy. Potężne istoty pozostają **mroczne i przerażające** — groza bierze się z mocy, nie z liczebności.
 - Karty nie rozstrzygają tajemnic: czy potwór jest duchem, zmierzchem czy czymś trzecim — zostawiamy otwarte (zasada top-up).
 - Bez dzieci, bez makabry dla szoku, bez żartobliwych odzywek; każdy groźny ruch ma wizualny i dźwiękowy telegraf (zgodnie z [walką](walka.md) i zasadami demo).
 - Nazewnictwo wg [schematu](welesza.md): starosłowiańskie, nie-istniejące w Polsce, bez „fantasy" końcówek.
 - Pochodzenie potworów trzymamy w legendach ludowych, nie w kosmologii: wieśniak wie, że południcy nie można zagadać; nie wie, czym ona **jest**. My też nie potwierdzamy.
-- Tłum wrogów budują zwierzęta i najmniejsze demony; potężniejsze istoty pozostają rzadkie — horda nie może być nadprzyrodzona.
+- Tłum wrogów to zwierzęta i niskie plugastwo; liczebność spada z potęgą: wataha wilków 3–4, stada dzików 2–3, gromady utopców na mokradłach, Drwal najwyżej dwóch naraz, elity i bossowie pojedynczo.
 - Potwory kontraktowe (część kontraktowa) wymagają przygotowania, ale nigdy go nie wymuszają: bez apotropei walka jest wyraźnie trudniejsza, nie niemożliwa. Wiedza pochodzi od ludzi (zleceniodawca, znachorka, pijany traper), nie z kodeksu; bywa niepełna i sprzeczna. Po walce nie potwierdzamy, czy apotropeje realnie działały.
 
 ## Część I — mobki (zwykli przeciwnicy)

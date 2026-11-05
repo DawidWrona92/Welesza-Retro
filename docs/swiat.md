@@ -16,7 +16,9 @@ Niezależnie od decyzji twórców, w grze nigdy nie pada odpowiedź na: czy zabo
 - Obiektywna metafizyka dobra i zła. Zło to skutki motywacji istot, nie siła z kosmosu.
 - Bohater „błogosławiony wiedzą”. Wie mniej niż kapłan, a kapłan mniej, niż myśli.
 - Diegetyczna, liczbowa mechanika magii. System gry to system gry.
-- Faerie i potwory „na każdym kroku”. Nadprzyrodzone jest rzadkie, potężne, bardzo mroczne.
+- Faerie i potwory jako codzienna siatka świata.
+
+**Gradient grozy [DECYZJA AUTORA]:** im potężniejszy potwór, tym bardziej magiczny i tym rzadszy. Zwierzęta (wataha wilków 3–4, stada dzików) są pospolite i bywają liczne wszędzie w lesie; niskie plugastwo (utopce, nocnice) gromadzi się na przeklętych terenach; groźne demony jak Drwal to poważne zagrożenie — najwyżej dwóch naraz, zwykle jeden; elity, potwory kontraktowe i bossowie to wydarzenia, nie populacja. Rzadkość dotyczy mocy, nie liczebności najniższego szczebla.
 - Świadectwo bez kontrapunktu: każda „pewna” prawda potrzebuje głosiciela wersji przeciwnej.
 - „X lat temu” jako głos narratora. Daty tylko w ustach postaci, jako ich lokalna pamięć.
 
@@ -32,7 +34,7 @@ Magia jest rzadka, otoczona strachem i tajemnicą. Kontrolują ją:
 | Księgowa | Kręgi czarodziejów | Wyczytana z ksiąg; nie opiera się na wierze — dlatego kapłani jej nie ufają | Nie jest „systemem” z czytelnymi regułami |
 | Czarnoksiężnictwo | Samouki poza kręgiem | Zawłaszczenie tego samego, co księgi, bez etyki i wiedzy o skutkach | Nie jest z definicji złe — jest z definicji niebezpieczne |
 | Dar wrodzony | Losowi ludzie | „Po babce”; nikt nie umie go szkolić ani zdjąć | To nie supermoce, to tragedia społeczna |
-| Bestie i potwory | Nie-ludzie | Nadprzyrodzone jako natura, nie umiejętność | Rzadkie, potężne, bardzo mroczne |
+| Bestie i potwory | Nie-ludzie | Nadprzyrodzone jako natura, nie umiejętność | Nie występują masowo na każdym szczeblu mocy — liczebność spada z potęgą (gradient grozy) |
 
 Magia zostawia ślady materialne: oszronione okno w środku lata, sen psa, który nie śpi, pęknięty dzban. Cena magii to strach, plotka, dystans, proces albo wygnanie — nie punkty. Magia miesza się z rzemiosłem, medycyną i dogmatem jak alchemia w realnym średniowieczu; ścisłą granicę zna tylko krąg czarodziejów, i to jest ich jedyna tajemnica.
 
