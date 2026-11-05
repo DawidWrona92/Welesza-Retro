@@ -10,6 +10,8 @@ Status: propozycja do akceptacji autora. Rozszerza [bestiariusz demo](przeciwnic
 - Bez dzieci, bez makabry dla szoku, bez żartobliwych odzywek; każdy groźny ruch ma wizualny i dźwiękowy telegraf (zgodnie z [walką](walka.md) i zasadami demo).
 - Nazewnictwo wg [schematu](welesza.md): starosłowiańskie, nie-istniejące w Polsce, bez „fantasy" końcówek.
 - Pochodzenie potworów trzymamy w legendach ludowych, nie w kosmologii: wieśniak wie, że południcy nie można zagadać; nie wie, czym ona **jest**. My też nie potwierdzamy.
+- Tłum wrogów budują zwierzęta i najmniejsze demony; potężniejsze istoty pozostają rzadkie — horda nie może być nadprzyrodzona.
+- Potwory kontraktowe (część kontraktowa) wymagają przygotowania, ale nigdy go nie wymuszają: bez apotropei walka jest wyraźnie trudniejsza, nie niemożliwa. Wiedza pochodzi od ludzi (zleceniodawca, znachorka, pijany traper), nie z kodeksu; bywa niepełna i sprzeczna. Po walce nie potwierdzamy, czy apotropeje realnie działały.
 
 ## Część I — mobki (zwykli przeciwnicy)
 
@@ -75,6 +77,66 @@ Kartę psa, wilka, powrotnika, drwala, łucznika, żałobnicy i korzeńca ma bes
 
 **Słabość:** sama włókna — po zerwaniu pauza na przetasowanie. **Łup:** próg sieci (materiał). **Występowanie:** głębia Okolu, stare barcie.
 
+### ENM-dzik — Dzik
+
+**Rola:** mob leśny; zwierz, nie demon — razem z psem i wilkiem nosiciel „tłumu” wrogów, gdy nadprzyrodzone ma być rzadkie. **Pytanie:** czy przejdziesz przez buczynę, nie zirytowawszy stada?
+
+**Sylwetka:** szarobrunatna szczecina na garbionym grzbiecie, kły widoczne przy opuszczonym łbie. Dźwięk: chrząkanie i rycie ziemi; stado słychać, zanim je widać.
+
+**Zachowanie:** żeruje przy dębach i ścieżkach do wodopoju; atakuje, gdy ktoś zajdzie między stado a odwrót. Nie ściga daleko — obrona terytorium, nie polowanie.
+
+| Atak | Zapowiedź | Efekt | Odpowiedź i okazja |
+|---|---|---|---|
+| Szarża | Rycie przednimi racicami, charkot, przybieranie garbu | Szybki czołowy pęd po prostej, bez śledzenia gracza w biegu | Unik w bok; szarża kończy się na przeszkodzie — dzik chwilę „zbiera” głowę z ziemi |
+| Kły | Opuszczony łeb od boku, odsłonięcie kłów | Niski cios z łuku, nieparowalny (zwierz) | Odskok; po chybieniu dzik odsuwa się o krok i chrząka (pauza) |
+
+**Obrona:** ataków zwierzęcia nie parujemy [demo]. **Słabość:** szarża w drzewo lub pień = długie wygrzebywanie. **Łup:** nie generuje wartości; kły i szczecina jako rekwizyt rzemiosła. **Występowanie:** buczyny Okolu, żołędzie, wodopoje; stada po 2–3, w ramach limitu aktywnych wrogów.
+
+### ENM-zmora — Zmora
+
+**Rola:** mob obozowy; nocny duszek gniotący śpiących — w grze atakuje obóz, w którym zgasło światło. **Pytanie:** czy dopilnujesz ognia, zanim zaśniesz?
+
+**Sylwetka:** niski, siwy zarys człowieka bez twarzy; „meszek” porusza się pod wiatr wbrew wiatrowi. Dźwięk: mlaskanie i ciężki oddech na karku; nigdy w polu widzenia kamery, dopóki nie zacznie gnieść.
+
+**Zachowanie:** czeka na ciemność; krąży poza kręgiem światła i wchodzi, gdy ogień slabnie. Nie walczy na dystans — tylko z bliska, na „gniecenie”.
+
+| Atak | Zapowiedź | Efekt | Odpowiedź i okazja |
+|---|---|---|---|
+| Gniecenie | Cień kładzie się na kucniętym graczu, zapada cisza | Ucisk: uszkodzenie i krótkie unieruchomienie | Nie kucnąć i nie stać w ciemności; rozpalenie ogniska w trakcie przerywa ucisk |
+| Zgniecenie garści | Syk i mlaśnięcie przy uchu | Szybki cios, nieparowalny | Odskok w krąg światła; zmora nie przekracza jasnego kręgu |
+
+**Słabość:** światło — w kręgu ognia nie podchodzi, a rażona pochodnią rozpływa się na chwilę. **Łup:** nic; zostaje zapach zimnego popiołu. **Występowanie:** nocne obozy, polany Pogranicza; nigdy w dzień.
+
+### ENM-licho — Licho
+
+**Rola:** mob-płatrusz; mały psotnik kradnący drobiazgi i wołający więcej siebie. **Pytanie:** czy pościsz drobiazg, czy obronisz plecak przed trzema?
+
+**Sylwetka:** chude, garbate stworzenie wielkości kota, w czapce z kawałka garncarskiego glinu; nosi zawsze jedną skradzioną rzecz. Dźwięk: chichot jak trzeszczenie mokrej gliny; chichot znaczy, że są co najmniej dwa.
+
+**Zachowanie:** nie walczy o terytorium — walczy o rzeczy. Podmienia przedmiot z ziemi, ucieka; jeśli gracz goni, reszta watahy podcina od tyłu.
+
+| Atak | Zapowiedź | Efekt | Odpowiedź i okazja |
+|---|---|---|---|
+| Podcięcie | Trzask gałązki za plecami | Niski cios po łydkach, nieparowalny | Unik do przodu (nie do tyłu); po chybieniu licho przewraca się |
+| Rzut gliną | Zamach czapką, mlask | Rzut po stałym torze, krótki zasięg, oślepia na moment | Zejście z toru; po rzucie licho stoi bez czapki (długa pauza) |
+
+**Słabość:** chciwość — rzucona moneta lub błyskotka zatrzymuje je na kilka sekund. **Łup:** skradziony drobiazg (zwykle bez wartości, czasem czyjś rekwizyt z historią). **Występowanie:** rozstaje, opuszczone targowiska, przydroża; watagi 2–4.
+
+### ENM-bledny-ognik — Błędny ognik
+
+**Rola:** mob-pułapka; nie walczy sam — wabi na mokradła, gdzie czekają utopce. **Pytanie:** czy zauważysz, że światło idzie wbrew drodze?
+
+**Sylwetka:** chłodna, zielonkawa kula światła unosząca się nad topielem; w bezruchu wygląda na odbicie gwiazd. Dźwięk: ciche, jednostajne cykanie jak zimny komar.
+
+**Zachowanie:** trzyma się kałuż i rozlewisk; gdy gracz patrzy, „gaśnie”, gdy odwraca wzrok, przesuwa się. Prowadzi w głąb mokradeł; nie podąża na suchy ląd.
+
+| Zdolność | Zapowiedź | Efekt | Odpowiedź i okazja |
+|---|---|---|---|
+| Wabienie | Cykanie narasta, światło faluje | Znacznik-pułapka: przekroczenie granicy światła wywołuje 1–2 utopce z kałuży | Nie iść za światłem; ognik bezbronny przy uderzeniu z bliska |
+| Zgaszenie | Płachta lub kij w poprzek światła | Rozproszenie na moment, ognik wraca po chwili | Uderzyć raz i odejść; nie jest celem samym w sobie |
+
+**Słabość:** płachta i ogień — po rozproszeniu kałuża pod nim „pustoszeje” (utopce nie zrywają się). **Łup:** brak. **Występowanie:** mokradła Okolu i Suchodrzewia, noce i zmierzch.
+
 ## Część II — groźniejsi (elity)
 
 Pojedynczo groźni; spotykani rzadko, stanowią „wydarzenie" na mapie.
@@ -125,6 +187,63 @@ Pojedynczo groźni; spotykani rzadko, stanowią „wydarzenie" na mapie.
 
 **Słabość:** w przemianie krótkie okno bezbronności (ciało „nie jest już ludzkie, nie jest jeszcze wilcze"). **Łup:** pas z ludzkiego życia (rekwizyt z historią). **Występowanie:** głębia Okolu; zima.
 
+## Część kontraktowa — potwory do przygotowania
+
+Warstwa „wiedźmińska”: potwór, na którego osada wystawia zlecenie. Zawsze groźniejszy od elity, często nie do pokonania „z marszu” w sposób oczywisty — ale nigdy nie ma zamka, którego nie otwiera zwykły miecz. Zasady:
+
+- **Zlecenie:** kontrakt zaczyna się w osadzie (zleceniodawca, znachorka, obłąkany traper); wersje mieszkańców się różnią, żadna nie jest „podręcznikowa”.
+- **Przygotowanie:** apotropeje dostępne w świecie (sól, ogień, osika, żelazo, lustro, przynęta); uzyskanie ich to krótka wyprawa lub zapłata, nie osobna przygoda.
+- **Ryzyko:** bez przygotowania walka jest dłuższa i bardziej kosztowna, nie zablokowana; apotropeje tworzą czytelne okna, nie „klucz-drzwi”.
+- **Werdykt:** po walce nikt nie potwierdzi, czy to sól pomogła, czy szczęście (zasada top-up).
+
+### KTR-bazyliszek — Bazyliszek ze studni
+
+**Rola:** kontrakt grodowy; gad ze studni o spojrzeniu i jadzie (legenda miejska, nie słowiańska — celowo, jako „nie jedynie słowiańskie”). **Pytanie:** czy zejdziesz do niego z lustrem, czy z zamkniętymi oczami?
+
+**Sylwetka:** ociężały, grzebieniasty gad w czarnej łusce z zielonym nalotem; oczy o barwie żółtka. Wyłania się ze studni i piwnic; jego terytorium pachnie zgniłym jajem.
+
+**Zachowanie:** terytorialny, wychodzi głównie po zmroku; nie ściga poza mury swojej siedziby. Jego spojrzenie jest zapowiadane — żółty błysk łuski nad krawędzią studni.
+
+| Atak | Zapowiedź | Efekt | Odpowiedź i okazja |
+|---|---|---|---|
+| Spojrzenie | Żółty błysk, cisza, „zapadanie” dźwięku | Krótkie skostnienie (gracz nie może się ruszyć, może gardować) | Odwrócić wzrok w oknie błysku (garda z odwróconym profilem) albo zasłonić lustrem |
+| Jad | Syk i prychanie, odchylenie łba | Strumień po prostej, nieparowalny | Unik w bok; jad zostawia kałużę wolno parującą (widoczna pułapka) |
+| Ogłuszające bicie ogonem | Trzask łuski o kamień | Obszarowy cios w piwnicy/studni | Wyjście z kręgu; po biciu długa pauza |
+
+**Przygotowanie:** lustro z osikową ramą (odbija jego spojrzenia — „widok widoku”); bez lustra spojrzenia trzeba unikać, co wydłuża walkę i zamyka gardę. **Słabość:** własne odbicie — postawione lustro na chwilę unieruchamia go (największe okno). **Łup:** grzebień z łuski (rekwizyt rzemiosła i powód zlecenia). **Występowanie:** studnie i piwnice grodów, Rudawie; jeden na region.
+
+### KTR-latawiec — Latawiec
+
+**Rola:** kontrakt powietrzny; demon wiatru i lata wieszający się na dachach — walka w ruinach wiatraków. **Pytanie:** czy zdołasz go obciążyć, zanim uniesie twój dobytek?
+
+**Sylwetka:** poskręcany kłąb linek, szmat i smolistych skrzydeł bez tułowia; w bezruchu wygląda na zerwaną sieć na dachu. Dźwięk: trzepot i skrzypienie lin; wiatr w jego obecności kręci w jednym miejscu.
+
+**Zachowanie:** atakuje rzeczy — rzuca dachówki, wyrywa płachty, wciąga przedmioty; przechodzi do ataków na gracza, gdy ten uchwyci „linę”. Nie opuszcza ruin wiatraka.
+
+| Atak | Zapowiedź | Efekt | Odpowiedź i okazja |
+|---|---|---|---|
+| Podmuch | Wicher zwija kurz w spiralę, świst lin | Zepchnięcie w tył (może strącić z belki) | Zejście z linii wiatru; po podmuchu chwilę „rozwija się” z powrotem |
+| Nurkowanie szponami | Zamiera w bezruchu nad graczem | Szybki zjazd po łuku, nieparowalny | Unik; po wryciu w dach długa pauza — najlepsze okno |
+| Zryw liny | Świst i brzęk metalu | Wyrwanie broni z ręki gracza na chwilę (nie na stałe) | Krótka garda z linią (broń w obu rękach); po zrywie latawiec „przegląda” zdobycz — pauza |
+
+**Przygotowanie:** obciążniki i liny z osiki (przytwierdzenie do ziemi: po trafieniu obciążnikiem latawiec na kilka sekund traci lot); przynęta na smalcu odciąga go od obozu. Bez tego walka toczy się wyłącznie w oknach po nurkowaniach. **Słabość:** przytwierdzenie — ściągnięty na ziemię walczy słabo, serią parowalnych ciosów linek. **Łup:** smoliste skrzydło (rzemiosło, dowód zlecenia). **Występowanie:** ruiny wiatraków, wysokie stodoły; późne lato.
+
+### KTR-mamuna — Mamuna
+
+**Rola:** kontrakt mokradłowy; pani zamian — wabi w mgłę, z której wraca się „innym”. **Pytanie:** czy rozpoznasz prawdziwą ścieżkę w jej mgle?
+
+**Sylwetka:** wysoka kobieta z trzcinami zamiast włosów, w chuście mokrej od rosy; jej odbicie w wodzie nie powtarza ruchów. Dźwięk: kołysanie trzcin i cichy śpiew bez słów, zawsze o jedną zwrotkę za daleko.
+
+**Zachowanie:** nie wychodzi z mgły; wewnątrz niej stawia fałszywe ścieżki i sylwetki wędrowców (widmowe „towarzysze” bez twarzy). Atakuje tylko tych, którzy poszli za fałszywą ścieżką.
+
+| Atak | Zapowiedź | Efekt | Odpowiedź i okazja |
+|---|---|---|---|
+| Fałszywa ścieżka | Śpiew przybiera dwie strony naraz | Gracz wskakuje na ścieżkę-pułapkę (obszar uszkodzeń i spowolnienia w trzcinach) | Patrzeć na wodę: fałszywe sylwetki nie mają odbić; prawdziwa mamuna ma |
+| Chwyt trzcinowy | Trzciny prostują się wokół gracza, skrzypnienie | Nieparowalny chwyt przytrzymujący (krótki) | Unik przed wyprostem trzcin; po zerwaniu mamuna odsuwa się głęboko w mgłę |
+| Zew rosy | Mgła gęstnieje, zapach zsiadłego mleka | Obszarowe spowolnienie i przygaszenie pochodni | Wyjście z kręgu rosy; mamuna w tym czasie nieruchoma (ryzyko i okazja zarazem) |
+
+**Przygotowanie:** sól w butach i macierzanka przy pasie (wieśniacka apotropeja „przeciw zamianie”): w kręgu zapachu mamuna nie stawia fałszywych ścieżek — mgła staje się czytelniejsza, walka krótsza. **Słabość:** odbicie — jej jedyny pewny znak; rozpoznanie prawdziwej postaci odsłania ją na czysty cios. **Łup:** nic z ciała; w jej trzcinach zostają rzeczy „zamienionych” (rekwizyty z historią, powód zlecenia). **Występowanie:** wielkie trzcinowiska, odnogi Okolu; zmierzch.
+
 ## Część III — minibossowie
 
 ### ENM-boruta — Boruta z kniei
@@ -174,6 +293,22 @@ Pojedynczo groźni; spotykani rzadko, stanowią „wydarzenie" na mapie.
 | Test progu | Zatrzymuje się, rozdziawia ręką | Przytrzymanie gracza na moment (jeśli gracz przekracza próg) | Nie przekraczać progu w jego obecności; strefy do widzenia |
 
 **Słabość:** rytm — ataki zawsze po tej samej liczbie kroków (gracz czyta rytm, nie kolor). **Łup:** nic z ciała; **w ruinie, nie w potworze** — zgodnie z [biblią]: artefakty imperium nie wymagają zabójstwa, tylko wejścia. **Występowanie:** ruiny Rudawie, sztolnie, komora latarni (jeśli autor zechce głębsze rusztowanie imperium w demo).
+
+### ENM-rokita — Rokita z mokradeł
+
+**Rola:** miniboss wierzbowy; starzec z witków, „pan starej wierzby” — pokazujemy tylko tyle, że stare wierzby pochylają się w jego stronę. **Pytanie:** czy zetniesz jego wierzby, nim on zajmie twoją drogę?
+
+**Sylwetka:** wysoki, poskręcany pień z twarzą w pęknięciach kory; zamiast rąk — witek-wici, którymi „miota” błotem i gałęziami. Dźwięk: skrzypienie mokrego drewna, zawsze w rytmie kroków gracza.
+
+**Zachowanie:** strzeże kęp i przepraw; nie rusza się z kępy, ale jego wici sięgają dalej, niż wygląda. Przywołuje błędne ogniki i 1 utopca.
+
+| Atak | Zapowiedź | Efekt | Odpowiedź i okazja |
+|---|---|---|---|
+| Bicz witki | Świst nad głową, cień wici na wodzie | Szeroki, parowalny zamach po łuku | Parada; po parze ciosów wita „więdnie” (pauza) |
+| Zaciśnięcie | Obie wici w górze, skrzyp narasta | Nieparowalny chwyt przytrzymujący | Unik w przód pod wici; po chybieniu Rokita przechyla pień (odsłona) |
+| Zew mokradeł | Cisza, błędne ogniki gasną | Przywołanie 1 utopca i rozświetlenie kałuż (pułapki) | Zabić w oknie ciszy; utopce trzymają się zapowiedzi z [demo] |
+
+**Słabość:** ogień na witkach — podpalona wita nie wraca do końca walki (każda utrata wici to trwały postęp, nie tylko obrażenia). **Łup:** serce wierzby (kawałek drewna, rekwizyt zlecenia). **Występowanie:** przeprawy przez Okole; raz na region.
 
 ## Część IV — bossowie
 
@@ -255,9 +390,10 @@ Pojedynczo groźni; spotykani rzadko, stanowią „wydarzenie" na mapie.
 
 | Typ | Ilość | Priorytet |
 |---|---|---|
-| Mobki (utopiec, nocnica, poroniec, kikimora) | 4 nowe + 7 z demo | przy projektowaniu pierwszego regionu pełnej gry |
+| Mobki (dzik, zmora, licho, błędny ognik, utopiec, nocnica, poroniec, kikimora) | 8 nowych + 7 z demo | przy projektowaniu pierwszego regionu pełnej gry |
 | Elity (południca, upiór, wilkołak) | 3 | wczesne — uczą czytania telegrafów nietypowych |
-| Minibossowie (boruta, młoda strzyga, kamienny chód) | 3 | po elitach; chód najtańszy (przy reuse'ie architektury imperium) |
+| Kontraktowe (bazyliszek, latawiec, mamuna) | 3 | razem z systemem zleceń; wymagają apotropei w ekonomii |
+| Minibossowie (boruta, młoda strzyga, kamienny chód, rokita) | 4 | po elitach; chód najtańszy (przy reuse'ie architektury imperium) |
 | Bossowie (topielica, bies, psotnik, matka głuszy) | 4 | projekt walki jak w demo: fazy, telegrafy, limity wrogów |
 
 ## Otwarte pytania do autora
@@ -265,4 +401,6 @@ Pojedynczo groźni; spotykani rzadko, stanowią „wydarzenie" na mapie.
 1. Czy wszystkie typy zostają, czy wybierasz podzbiór na pełną grę?
 2. Czy Matka Głuszy (boss-przestrzeń) jest zbyt eksperymentalna, czy zostaje jako finał aktu II?
 3. Czy Psotnik (boss-bez-walki) pasuje do ARPG, czy przenieść go do zadania (quest) zamiast bossa?
-4. Czy dodatkowe karty zwierząt (niedźwiedź, łoś-cień) wliczyć, czy zostawić przy śmierci-ludzi i resztek-ludu (jak dotychczasowy kanon)?
+4. Czy dodatkowe karty zwierząt (niedźwiedź, łoś-cień) wliczyć, czy zostawić przy śmierci-ludzi i resztek-ludu (jak dotychczasowy kanon)? Dzik już zakłada zwierzęta jako pełnoprawny tłum wrogów.
+5. Czy warstwa kontraktowa (bazyliszek, latawiec, mamuna) zostaje, czy wybierasz podzbiór? Bazyliszek jest celowo nie-słowiański (legenda miejska) — czy taki miks jest pożądany, czy trzymamy się wyłącznie słowiańszczyzny?
+6. Czy apotropeje (sól, ogień, osika, lustro) mają być kupowane, znajdowane, czy obydwoma — i czy ich działanie ma być widoczne w liczbach, czy pozostawione niepewne (zalecamy niepewne, zgodnie z bibliją)?
