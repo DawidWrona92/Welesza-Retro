@@ -22,6 +22,36 @@ Niezależnie od decyzji twórców, w grze nigdy nie pada odpowiedź na: czy zabo
 - Świadectwo bez kontrapunktu: każda „pewna” prawda potrzebuje głosiciela wersji przeciwnej.
 - „X lat temu” jako głos narratora. Daty tylko w ustach postaci, jako ich lokalna pamięć.
 
+
+### Proponowany gradient grozy i rzeczywistości (05.11.2026)
+
+**Status: propozycja do zatwierdzenia przez autora.** To nowa **oś nastroju w geografii**, uzupełniająca obowiązujący już gradient **mocy/rzadkości potworów**. Nie zastępuje go. Nazwy i rozkład regionów: [Biblia Weleszy II](welesza.md#projekt-przebudowy-swiata-nazwy-i-tozsamosc-krain-propozycja-05112026).
+
+**Zasada dramatyczna:** na zachodzie ludzie boją się tego, co znają; ku wschodowi coraz częściej boją się tego, czego nie potrafią zrozumieć. Nie oznacza to automatycznie, że świat fizycznie rozpada się w każdej wschodniej miejscowości, ani że mieszkańcy wschodu są mniej cywilizowani. Gradacja dotyczy **doświadczenia gracza, świadectw, obyczajów i rodzaju spotkań**.
+
+| Warstwa przedstawienia | Zachód: świat ludzi | Środek: pogranicze | Daleki wschód: majak |
+|---|---|---|---|
+| **Architektura** | Grody, mury, warsztaty, targi, domy i budowle Kościoła. | Palisady, opuszczone domostwa, strażnice na starszych fundamentach, zarastające trakty. | Stare kamienie i pozornie zamieszkane miejsca, których funkcja albo historia przeczy świadectwom. |
+| **Społeczeństwo** | Książęta, pisane nakazy, spory, wojny, daniny. | Obrzędy, zależność od sąsiadów, zamykanie bram, ukrywane tajemnice. | Izolacja i sprzeczne wspomnienia, ale też sprawne lokalne wspólnoty z własnymi rozwiązaniami. |
+| **Potwory** | Zwierzęta, upiory i znane demony; zagrożenie można często nazwać. | Powrotnik, Drwal, Żałobnica: strzępy dawnych czynności, obowiązków, uczuć. | Istoty i zjawiska zrozumiałe tylko częściowo; koszmar wynika z zachowania, nie z obowiązkowo większej ilości krwi. |
+| **Magia i wiara** | Magię bada się, potępia albo instytucjonalnie ogranicza; praktyki religijne są uregulowane. | Magia stapia się z obyczajem, przedmiotem i strachem, ale nie jest objaśniona. | Coraz trudniej odróżnić cud, przekłamanie relacji, praktykę i zjawisko naturalne; nie ogłaszamy obiektywnej odpowiedzi. |
+| **Źródło lęku** | Śmierć, głód, przemoc, choroba i kara. | Utrata bezpieczeństwa, bliskich, pamięci o dawnym życiu. | Niepewność, kto mówi prawdę, czy ścieżka dokądś prowadzi i co jest rzeczywiste. |
+
+**Zasady realizacji:**
+
+1. **Najpierw znajoma czynność, potem niepokój.** Drwal układa mokre drewno, Powrotnik wraca do tego samego kamienia. Makabra jest konsekwencją historii, nie jedyną cechą potwora.
+2. **Groza przestrzeni ma mieć świadectwa.** Porzucony wóz, powtórzony znak na drzewie, pozornie zamieszkany dom albo dwa sprzeczne zeznania — gracz widzi konkret. „Wszystko jest snem” nie może wymazywać konsekwencji.
+3. **Strach nie może niszczyć uczciwej rozgrywki.** Potwory pozostają fizyczne i możliwe do pokonania; ataki mają czytelną zapowiedź, kolizje działają, a anomalia mapy nie teleportuje bohatera w czasie walki ani nie kasuje postępu. Wschód nie daje licencji na losowe uniki wroga, niewidzialne obrażenia czy manipulowanie sterowaniem.
+4. **Lokalne wyjątki są obowiązkowe.** Nawet na zachodzie może być miejsce podobne do koszmaru; na wschodzie może istnieć życzliwa, zwyczajna osada. Dzięki temu gradient nie zdradza z góry każdego spotkania.
+5. **Ciepło jest potrzebne mrokowi.** Zostawiamy posiłek, ogień, schronienie, ludzką solidarność i chwile zwyczajności. Bez nich każda lokacja będzie tak samo ponura i przestanie przerażać.
+6. **Dwa niezależne gradienty:** potęga istoty → rzadkość (obowiązująca decyzja); kierunek/typ miejsca → charakter niepokoju (nowa propozycja). Wschodni potwór nie jest automatycznie silniejszy od zachodniego.
+7. **Stare Serce Imperium jest pogłoską.** Nie opisujemy go jak zatwierdzonej lokacji finałowej; nie potwierdzamy przeznaczenia starych Dróg ani ludzkiego lub nieludzkiego pochodzenia imperium.
+8. **Bez objaśniającej ekspozycji.** Zmiany tonu pokazują architektura, dźwięk, zachowania, przedmioty i niezgodne relacje, a nie narrator przedstawiający cztery poziomy „skażenia”.
+
+**Bank dwóch scen (nie kanon):** strażnik pobierający myto przy nieistniejącej bramie; grabarz codziennie kopiący ten sam grób. Obydwa pomysły przechodzą do produkcji dopiero po wyborze konkretnej lokacji i sprawdzeniu, czy nie wyjaśniają nierozstrzygniętej tajemnicy.
+
+**Granica prawdy:** projektant może wiedzieć, jak odtworzyć zjawisko technicznie, lecz nie powinien nadawać mu jednej ujawnionej kosmologii. Ogień i latarnia Niemiru pozostają istniejącym, działającym elementem dawnej infrastruktury zgodnie z decyzją autora; nie potwierdza to skuteczności każdego miejscowego zabobonu.
+
 ## Kosmos i magia
 
 Wieśniak widzi w niebie księżyc (po nim liczy czas), gwiazdy (wróżą podróże) i pory roku. Nie pyta, „czym jest kosmos”, tylko czy zaćmienie wróży chorobę bydła. Kapłani zachodu uczą, że niebiosa są uporządkowane, bo porządek jest cnotą. Znachorzy wschodu mówią, że gwiazdy to „ogień, który płonął przed pierwszym lasem”. Czarodzieje mają teorie i spierają się o nie w listach. Żadnej wersji nie pokazujemy jako słusznej.
