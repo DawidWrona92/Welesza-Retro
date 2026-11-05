@@ -25,7 +25,7 @@ Niezależnie od decyzji twórców, w grze nigdy nie pada odpowiedź na: czy zabo
 
 ### Proponowany gradient grozy i rzeczywistości (05.11.2026)
 
-**Status: propozycja do zatwierdzenia przez autora.** To nowa **oś nastroju w geografii**, uzupełniająca obowiązujący już gradient **mocy/rzadkości potworów**. Nie zastępuje go. Nazwy i rozkład regionów: [Biblia Weleszy II](welesza.md#projekt-przebudowy-swiata-nazwy-i-tozsamosc-krain-propozycja-05112026).
+**Status: propozycja do zatwierdzenia przez autora.** To nowa **oś nastroju w geografii**, uzupełniająca obowiązujący już gradient **mocy/rzadkości potworów**. Nie zastępuje go. Nazwy i rozkład regionów: [Biblia Weleszy II](welesza.md).
 
 **Zasada dramatyczna:** na zachodzie ludzie boją się tego, co znają; ku wschodowi coraz częściej boją się tego, czego nie potrafią zrozumieć. Nie oznacza to automatycznie, że świat fizycznie rozpada się w każdej wschodniej miejscowości, ani że mieszkańcy wschodu są mniej cywilizowani. Gradacja dotyczy **doświadczenia gracza, świadectw, obyczajów i rodzaju spotkań**.
 
