@@ -179,6 +179,22 @@ Każda broń i sylwetka potrzebują osobnego sprawdzenia czytelności w docelowe
 
 Metoda: encounter-director.
 
+### Przenikanie międzyświata a grywalność demo Niemir — doprecyzowanie autora (05.11.2026)
+
+**[DECYZJA AUTORA]** Niemir jest **pośrodku tonalnego gradientu**: ma trochę klasycznego dark fantasy (zwierzęta, zwykłe zagrożenia, walka na czytelnych zasadach), a trochę mistycznej grozy (Drwal, Powrotnik, Żałobnica i niemożliwe powtórzenia). **Drwal, Powrotnik i pokrewne istoty ciągną z serca boru** w kierunku obrzeży; **czasem docierają także na zachód**. Serce boru nie oznacza Starego Serca Imperium i nie wyjaśnia przyczyny zamknięcia doliny.
+
+**[DECYZJA AUTORA] Wariant B:** międzyświat przenika zwykłą rzeczywistość i nie ma oczywistej granicy. Wyjście na znajomą drogę może prowadzić ku niemu, nie tworzymy jednak osobnego ekranu „świata duchów” ani niezapowiedzianego teleportu w trakcie starcia. *Silent Hill* jest odwołaniem do przenikania znajomego i obcego, nie do kopiowania systemów lub estetyki.
+
+**Wytyczne do implementacji i playtestów — propozycje wykonawcze, nie dodatkowe zasady świata:**
+
+- **Kontrast spotkań:** normalne zwierzęta i przeciwnicy mają od razu czytelne motywacje i zachowania. Istoty międzyświata powinny najpierw pokazać dziwną, niedokończoną czynność, a dopiero potem rozpocząć walkę. Nie robimy z każdego starcia sceny grozy.
+- **Kierunek wędrówki zamiast losowych fal:** ślady przyjścia z głębi boru mogą być częścią level designu, lecz **nie wprowadzamy nieograniczonego spawnowania ani pościgów przez całą mapę**. Obowiązują zatwierdzone limity aktywnych przeciwników oraz wcześniej rozpisane spotkania dema.
+- **Informacja zwrotna dla gracza:** przy anomalii sprawdzają się powtarzający się punkt orientacyjny, zmiana ambientu, ślady na drodze lub zachowanie NPC. **Nie ukrywamy sygnałów ataku**, nie naruszamy kolizji ani czytelnego odwrotu.
+- **Brak frustracji zamiast strachu:** żadne nowe przenikanie nie oznacza losowych obrażeń, utraty ekwipunku, skasowania zapisu, trwałego zakleszczenia postaci ani nieskończonego błądzenia. Zamknięcie boru w demo pozostaje rozwiązane według zatwierdzonej fabuły.
+- **Bez narzucania tempa:** konkretne proporcje starć klasycznych i mistycznych, częstotliwość odwiedzin istot na zachodzie oraz miejsca graniczne międzyświata są **DO BALANSU / PLAYTESTÓW**, nie zatwierdzonymi liczbami.
+
+To uzupełnienie **nie zmienia kart ataków Drwala i Powrotnika**, istniejących lokacji spotkań ani ograniczeń z sekcji poniżej.
+
 ### 1. Wspólne reguły spotkań
 
 Proponujemy ręcznie rozmieszczone spotkania dla demo. Zwykłe starcia mają najwyżej dwóch aktywnych przeciwników. Trzeci może występować tylko w wyraźnie oznaczonej, opcjonalnej grupie; nie jest wymagany w projektach poniżej. Bossowie są świadomymi pojedynkami bez dodatkowych fal — wyjątek od zalecenia mieszania ról wynika z celu samotnej, precyzyjnej walki.
